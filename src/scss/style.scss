@@ -3554,7 +3554,7 @@
       font-weight: 400;
       line-height: 30px;
       text-align: center;
-      max-width: 465px;
+      max-width: 1000px;
       margin-inline: auto;
     }
 
@@ -3585,36 +3585,36 @@
   }
 
   .section-title {
-    font-size: 90px;
+    font-size: 80px;
     font-weight: 400;
     line-height: 1.16;
     letter-spacing: -0.01em;
-    max-width: 1070px;
+    max-width: 1400px;
     margin-inline: auto;
 
     @media #{$xxl} {
-      font-size: 80px;
-      max-width: 870px;
+      font-size: 70px;
+      max-width: 1200px;
     }
 
     @media #{$xl} {
-      font-size: 70px;
-      max-width: 770px;
+      font-size: 60px;
+      max-width: 1000px;
     }
 
     @media #{$lg} {
       font-size: 60px;
-      max-width: 670px;
+      max-width: 1000px;
     }
 
     @media #{$md} {
       font-size: 50px;
-      max-width: 570px;
+      max-width: 1000px;
     }
 
     @media #{$sm} {
       font-size: 40px;
-      max-width: 470px;
+      max-width: 1000px;
     }
 
     span {
