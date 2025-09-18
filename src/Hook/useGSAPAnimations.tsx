@@ -19,6 +19,9 @@ interface AnimationSettings {
   scrollTrigger?: ScrollTrigger.Vars;
 }
 
+// Toggle animations on/off - set to false to disable all animations
+const ENABLE_ANIMATIONS = false;
+
 const useGSAPAnimations = (): void => {
   const pathname = usePathname();
   const [isClient, setIsClient] = useState(false);
@@ -29,16 +32,14 @@ const useGSAPAnimations = (): void => {
   }, []);
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient || !ENABLE_ANIMATIONS) return;
 
-    let smoother: ScrollSmoother | null = null;
 
     const initializeGSAP = async () => {
       try {
         const { default: gsap } = await import("gsap");
         const { default: ScrollTrigger } = await import("gsap/ScrollTrigger");
         const { default: ScrollToPlugin } = await import("gsap/ScrollToPlugin");
-        const { default: ScrollSmoother } = await import("gsap/ScrollSmoother");
         const { default: SplitText } = await import("gsap/SplitText");
 
         await new Promise((resolve) => {
@@ -54,7 +55,6 @@ const useGSAPAnimations = (): void => {
         gsap.registerPlugin(
           ScrollTrigger,
           ScrollToPlugin,
-          ScrollSmoother,
           SplitText
         );
         gsap.config({ nullTargetWarn: false });
@@ -62,31 +62,8 @@ const useGSAPAnimations = (): void => {
         const deviceWidth: number = window.innerWidth;
 
         const initGSAP = (): void => {
-          const wrapper: HTMLElement | null =
-            document.querySelector("#smooth-wrapper");
-          const content: HTMLElement | null =
-            document.querySelector("#smooth-content");
-
-          if (!wrapper || !content) {
-            return;
-          }
-
           ScrollTrigger.getAll().forEach((t: ScrollTrigger) => t.kill());
           gsap.killTweensOf("*");
-
-          if (deviceWidth > 767 && wrapper && content) {
-            smoother = ScrollSmoother.create({
-              wrapper: "#smooth-wrapper",
-              content: "#smooth-content",
-              smooth: 0.9,
-              effects: deviceWidth < 1025 ? false : true,
-              smoothTouch: 0.1,
-              normalizeScroll: {
-                allowNestedScroll: true,
-              },
-              ignoreMobileResize: true,
-            });
-          }
 
           const gsapFadeAnimations = (): void => {
             const fadeArrayItems: NodeListOf<Element> =
@@ -668,10 +645,6 @@ const useGSAPAnimations = (): void => {
             })
             .catch(() => {});
         } catch (e) {}
-        if (smoother) {
-          smoother.kill();
-          smoother = null;
-        }
       }
     };
   }, [pathname, isClient]);
