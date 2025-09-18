@@ -11,7 +11,6 @@ import ProcessSection from "@/components/CreativeAgency/ProcessSection";
 import AboutSection from "@/components/CreativeAgency/AboutSection";
 import Hero from "@/components/CreativeAgency/HeroSection";
 import WorkSection from "@/components/CreativeAgency/WorkSection";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
 
 // constant data
 import headerData from "@/constant/CreativeAgency/header";
@@ -58,20 +57,18 @@ const CreativeAgencyPage = (): ReactElement => {
   return (
     <div className="body-wrapper body-creative-agency">
       <Header data={headerData}/>
-      <SmoothScroll>
-        <main>
-          <Hero data={heroData}/>
-          <AboutSection data={aboutData}/>
-          <ProcessSection data={processData}/>
-          <ServiceSection data={servicesData}/>
-          <WorkSection data={workData}/>
-          <TeamSection data={teamsData}/>
-          <BrandSection data={testimonialsData}/>
-          <Testimonial data={testimonialData}/>
-          <BlogSection data={blogData}/>
-        </main>
-        <Footer />
-      </SmoothScroll>
+      <main>
+        <Hero data={heroData}/>
+        <AboutSection data={aboutData}/>
+        <ProcessSection data={processData}/>
+        <ServiceSection data={servicesData}/>
+        <WorkSection data={workData}/>
+        <TeamSection data={teamsData}/>
+        <BrandSection data={testimonialsData}/>
+        <Testimonial data={testimonialData}/>
+        <BlogSection data={blogData}/>
+      </main>
+      <Footer />
     </div>
   );
 }

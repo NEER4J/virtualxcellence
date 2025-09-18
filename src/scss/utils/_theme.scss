@@ -3,22 +3,22 @@
 /*----------------------------------------*/
 
 html {
-  --container-max-widths: 1320px;
+  --container-max-widths: 1520px;
 
   @media #{$xl} {
-    --container-max-widths: 1140px;
+    --container-max-widths: 1340px;
   }
 
   @media #{$lg} {
-    --container-max-widths: 960px;
+    --container-max-widths: 1160px;
   }
 
   @media #{$md} {
-    --container-max-widths: 720px;
+    --container-max-widths: 920px;
   }
 
   @media #{$sm} {
-    --container-max-widths: 540px;
+    --container-max-widths: 740px;
   }
 
   @media #{$xs} {

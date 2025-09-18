@@ -4,8 +4,6 @@ export interface IBrand {
 
 export interface HeroData {
   bgImage: string;
-  shape1: string;
-  shape2: string;
   titleSpanOne: string;
   titleText: string;
   titleSpanTwo: string;
@@ -16,21 +14,21 @@ export interface HeroData {
   secondaryBtnLink: string;
   brandTitle: string;
   brands: IBrand[];
+  mainImage: string;
 }
 
 const heroData: HeroData = {
     bgImage: "/assets/imgs/shape/shape-22.webp",
-    shape1: "/assets/imgs/shape/shape-20.webp",
-    shape2: "/assets/imgs/shape/shape-21.webp",
+    mainImage: "/assets/imgs/shape/shape-54.webp",
     titleSpanOne: "Empowering",
     titleText: "Businesses with AI, Cloud, and",
     titleSpanTwo: "Digital Transformation",
-    subtitle: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 10+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
+    subtitle: "With 10+ years of expertise, we help businesses scale smarter through AI, automation, and cloud innovation.",
     primaryBtnText: "Book a Consultation",
     primaryBtnLink: "/ai-agency/contact",
     secondaryBtnText: "Explore Our Services",
     secondaryBtnLink: "/ai-agency/services",
-    brandTitle: "300+ Trusted Clients Over Worldwide",
+    brandTitle: "Trusted by 300+ clients worldwide",
     brands: [
       { image: "/assets/imgs/brand/brand-10.webp" },
       { image: "/assets/imgs/brand/brand-11.webp" },

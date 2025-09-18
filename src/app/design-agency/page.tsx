@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import SmoothScroll from "@/components/DesignAgency/Animation/SmoothScroll";
 import AboutSection from "@/components/DesignAgency/AboutSection";
 import AwardsSection from "@/components/DesignAgency/AwardsSection";
 import BlogSection from "@/components/DesignAgency/BlogSection";
@@ -62,22 +61,20 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-design-agency">
       <HeaderSection data={headerData}/>
-      <SmoothScroll>
-        <main>
-          <HeroSection data={heroData}/>
-          <BrandSection data={brandData}/>
-          <AboutSection data={aboutData}/>
-          <ProcessSection data={processData}/>
-          <ServiceSection data={serviceData}/>
-          <WorkSection data={workData}/>
-          <TestimonialSection data={testimonialData}/>
-          <TeamSection data={teamData}/>
-          <InfoSection data={infoData}/>
-          <AwardsSection data={awardData}/>
-          <BlogSection data={blogData}/>
-        </main>
-        <FooterSection data={footerData}/>
-      </SmoothScroll>
+      <main>
+        <HeroSection data={heroData}/>
+        <BrandSection data={brandData}/>
+        <AboutSection data={aboutData}/>
+        <ProcessSection data={processData}/>
+        <ServiceSection data={serviceData}/>
+        <WorkSection data={workData}/>
+        <TestimonialSection data={testimonialData}/>
+        <TeamSection data={teamData}/>
+        <InfoSection data={infoData}/>
+        <AwardsSection data={awardData}/>
+        <BlogSection data={blogData}/>
+      </main>
+      <FooterSection data={footerData}/>
     </div>
   );
 };

@@ -10,7 +10,6 @@ import WhyChooseUsSecondRow from "@/components/AiAgency/WhyChooseUsSecondRow";
 import TestimonialSlider from "@/components/AiAgency/TestimonialSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
-import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
 import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
 import DigitalWorkSection from "@/components/DigitalAgency/WorkSection";
 
@@ -58,21 +57,19 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-ai-agency">
       <Header />
-      <SmoothScroll>
-        <main>
-          <HeroSection data={heroData}/>
-          <TextSliderSection data={textSliderData}/>
-          <DigitalAboutSection />
-          <ServiceSection />
-          <ServiceArea5Section />
-          <WorkSection />
-          <DigitalWorkSection pageInnerSlider={true} data={digitalWorkData} />
-          <WhyChooseUsSection />
-          <WhyChooseUsSecondRow />
-          <TestimonialSlider data={testimonialData}/>
-        </main>
-        <FooterSection />
-      </SmoothScroll>
+      <main>
+        <HeroSection data={heroData}/>
+        <TextSliderSection data={textSliderData}/>
+        <DigitalAboutSection />
+        <ServiceSection />
+        <ServiceArea5Section />
+        <WorkSection />
+        <DigitalWorkSection pageInnerSlider={true} data={digitalWorkData} />
+        <WhyChooseUsSection />
+        <WhyChooseUsSecondRow />
+        <TestimonialSlider data={testimonialData}/>
+      </main>
+      <FooterSection />
     </div>
   );
 };

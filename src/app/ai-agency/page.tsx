@@ -12,7 +12,6 @@ import TeamSection from "@/components/AiAgency/TeamSection";
 import TestimonialSlider from "@/components/AiAgency/TestimonialSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
-import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "AI Agency || Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
@@ -61,21 +60,19 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-ai-agency">
       <Header />
-      <SmoothScroll>
-        <main>
-          <HeroSection data={heroData}/>
-          <TextSliderSection data={textSliderData}/>
-          <AboutTwoSection data={aboutTwoData}/>
-          <AboutSection />
-          <ServiceSection />
-          <WorkSection />
-          <TeamSection />
-          <ProcessSection data={processData}/>
-          <TestimonialSlider data={testimonialData}/>
-          <BlogSection data={blogData}/>
-        </main>
-        <FooterSection data={footerData}/>
-      </SmoothScroll>
+      <main>
+        <HeroSection data={heroData}/>
+        <TextSliderSection data={textSliderData}/>
+        <AboutTwoSection data={aboutTwoData}/>
+        <AboutSection />
+        <ServiceSection />
+        <WorkSection />
+        <TeamSection />
+        <ProcessSection data={processData}/>
+        <TestimonialSlider data={testimonialData}/>
+        <BlogSection data={blogData}/>
+      </main>
+      <FooterSection data={footerData}/>
     </div>
   );
 };

@@ -15,31 +15,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data: heroData }) => {
         {/* Background and Shapes */}
         <div className="area-bg">
           <img src={heroData?.bgImage} alt="bg" />
-        </div>
-        <div className="area-shape-1">
-          <img
-            className="fade-anim"
-            data-direction="left"
-            data-delay="1.05"
-            src={heroData?.shape1}
-            alt="shape"
-            suppressHydrationWarning={true}
-          />
-        </div>
-        <div className="area-shape-2">
-          <img
-            className="fade-anim"
-            data-direction="right"
-            data-delay="1.20"
-            src={heroData?.shape2}
-            alt="shape"
-            suppressHydrationWarning={true}
-          />
-        </div>
+          
+        </div>  
+        
 
         {/* Main Hero Content */}
-        <div className="container">
-          <div className="section-content section-spacing-top">
+        <div className="container hero-content-wrapper section-spacing-top">
+          <div className="section-content">
+            
             <div className="section-title-wrapper">
               <div className="title-wrapper move-anim" data-delay="0.45" suppressHydrationWarning={true}>
                 <h1 className="section-title" suppressHydrationWarning={true}>
@@ -65,18 +48,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data: heroData }) => {
                 {heroData?.secondaryBtnText}
               </Link>
             </div>
+            <h5 className="brand-title" suppressHydrationWarning={true}>{heroData?.brandTitle}</h5>
+
+           
           </div>
+          <div className="image-wrapper parallax-view fade-anim" suppressHydrationWarning={true}>
+        <img
+          className="w-100 hero-image"
+          src={heroData?.mainImage}
+          alt="hero visual"
+          data-speed="0.5"
+        />
+      </div>
         </div>
 
         {/* Brand Slider */}
         <div className="brand-area-4">
           <div className="container">
-            <div className="brand-area-4-inner section-spacing">
+            <div className="brand-area-4-inner">
               <div className="section-header">
                 <div className="section-title-wrapper">
-                  <div className="title-wrapper fade-anim" suppressHydrationWarning={true}>
-                    <h2 className="section-title" suppressHydrationWarning={true}>{heroData?.brandTitle}</h2>
-                  </div>
+                  
                 </div>
               </div>
               <div className="brands-wrapper-box">
