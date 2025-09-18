@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
 import Header from "@/components/AiAgency/Header";
-import AboutTwoSection from "@/components/AiAgency/AboutTwoSection";
 import BlogSection from "@/components/AiAgency/BlogSection";
 import FooterSection from "@/components/AiAgency/FooterSection";
 import HeroSection from "@/components/AiAgency/HeroSection";
@@ -51,7 +50,6 @@ export const metadata: Metadata = {
 // all data 
 import heroData from "@/constant/AiAgency/hero";
 import textSliderData from "@/constant/AiAgency/text-slider";
-import aboutTwoData from "@/constant/AiAgency/about2";
 import processData from "@/constant/AiAgency/process";
 import testimonialData from "@/constant/AiAgency/testimonial";
 import blogData from "@/constant/AiAgency/blog";
@@ -66,7 +64,6 @@ const Home = (): ReactElement => {
         <main>
           <HeroSection data={heroData}/>
           <TextSliderSection data={textSliderData}/>
-          {/* <AboutTwoSection data={aboutTwoData}/> */}
           <DigitalAboutSection />
           <ServiceSection />
           <ServiceArea5Section />

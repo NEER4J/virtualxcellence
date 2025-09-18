@@ -51,7 +51,6 @@ export const metadata: Metadata = {
 import heroData from "@/constant/AiAgency/hero";
 import textSliderData from "@/constant/AiAgency/text-slider";
 import aboutTwoData from "@/constant/AiAgency/about2";
-import aboutData from "@/constant/AiAgency/about";
 import processData from "@/constant/AiAgency/process";
 import testimonialData from "@/constant/AiAgency/testimonial";
 import blogData from "@/constant/AiAgency/blog";
@@ -67,7 +66,7 @@ const Home = (): ReactElement => {
           <HeroSection data={heroData}/>
           <TextSliderSection data={textSliderData}/>
           <AboutTwoSection data={aboutTwoData}/>
-          <AboutSection data={aboutData}/>
+          <AboutSection />
           <ServiceSection />
           <WorkSection />
           <TeamSection />

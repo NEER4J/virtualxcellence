@@ -6,20 +6,6 @@ import { Tab, Nav } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-interface IServiceTab {
-  id: string;
-  title: string;
-  number: string;
-  icon: string;
-  desc: string;
-  features: string[];
-}
-
-interface ISlider {
-  id: number;
-  text: string;
-  link: string;
-}
 
 const ServiceArea5Section: React.FC = () => {
   const [activeTab, setActiveTab] = useState("healthcare");

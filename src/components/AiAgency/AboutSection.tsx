@@ -1,9 +1,28 @@
 import Link from "next/link";
-import { AboutData } from "@/constant/AiAgency/about";
-interface AboutProps{
-  data:AboutData;
+
+interface AboutData {
+  subtitle: string;
+  title: string;
+  paragraphs: string[];
+  image: string;
+  imageAlt: string;
+  aboutLink: string;
+  buttonText: string;
 }
-const AboutSection:React.FC<AboutProps> = ({data:aboutData}) => {
+
+const AboutSection:React.FC = () => {
+  const aboutData: AboutData = {
+    subtitle: "WHO WE ARE",
+    title: "Innovators, Strategists, and Technologists",
+    paragraphs: [
+      "We are innovators, strategists, and technologists driven by a single mission — to bridge the gap between business vision and technology execution.",
+      "From startups to enterprises, Virtual Xcellence partners with organizations to digitize processes, modernize infrastructure, and embrace AI-powered solutions.",
+    ],
+    image: "/assets/imgs/shape/shape-23.webp",
+    imageAlt: "About Virtual Xcellence",
+    aboutLink: "/ai-agency/about",
+    buttonText: "About Agency",
+  };
   return (
     <section className="about-area-4">
       <div className="container">

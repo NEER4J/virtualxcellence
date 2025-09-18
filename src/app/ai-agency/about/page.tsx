@@ -12,7 +12,6 @@ import Header from "@/components/AiAgency/common/Header";
 import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
 
 // component data
-import aboutData from "@/constant/AiAgency/about";
 import videoData from "@/constant/AiAgency/About/video";
 import brandData from "@/constant/AiAgency/brand";
 import textSliderData from "@/constant/AiAgency/text-slider";
@@ -59,7 +58,7 @@ const AboutPage = (): ReactElement => {
       <SmoothScroll>
         <main>
           <Breadcrumb title="ABOUT" subTitle="Agency" pageName="ABOUT AGENCY" />
-          <AboutSection data={aboutData} />
+          <AboutSection />
           <VideoSection data={videoData} />
           <BrandSection data={brandData} brandSix={true} />
           <TeamsSection />

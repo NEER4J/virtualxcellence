@@ -16,7 +16,6 @@ import WorkSection from "@/components/DigitalAgency/WorkSection";
 import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
 
 // all data
-import aboutData from "@/constant/DigitalAgency/about";
 import heroData from "@/constant/DigitalAgency/hero";
 import brandData from "@/constant/DigitalAgency/brand";
 import processData from "@/constant/DigitalAgency/process";
@@ -64,7 +63,7 @@ const Home = (): ReactElement => {
         <main>
           <HeroSection data={heroData} />
           <BrandSection data={brandData} />
-          <AboutSection data={aboutData} />
+          <AboutSection />
           <ProcessSection data={processData} />
           <ServiceSection data={serviceData} />
           <WorkSection data={workData} />
