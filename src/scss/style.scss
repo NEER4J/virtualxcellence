@@ -1935,6 +1935,10 @@
   position: relative;
   z-index: 1;
 
+  .t-btn-primary {
+    color: black !important;
+  }
+
   .area-bg {
     position: absolute;
     width: 100%;
@@ -3541,16 +3545,14 @@
 
   .section-content {
     margin-top: 55px;
-    margin-bottom: 47px;
     text-align: center;
+    padding-bottom: 47px;
 
     @media #{$xxl} {
       margin-top: 25px;
-      margin-bottom: 27px;
     }
 
     @media #{$lg} {
-      margin-bottom: 17px;
     }
 
     .text {
@@ -6733,6 +6735,7 @@
 /* service area 4 style  */
 .service-area-4 {
   background-color: var(--primary);
+  padding-bottom: 60px;
 
   .section-header {
     display: grid;
@@ -7007,6 +7010,7 @@
 
 /* service area 5 style  */
 .service-area-5 {
+  padding-bottom: 40px;
 
   .section-header {
     display: grid;
@@ -7194,7 +7198,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: gainsboro;
+    background-color: white;
     border-radius: 10px;
 
     img {
@@ -8196,6 +8200,9 @@
 
 /* work area 4 style  */
 .work-area-4 {
+    background-color: white;
+    width: 100%;
+
   .section-header {
     .title-wrapper {
       margin-top: 17px;
@@ -9109,6 +9116,10 @@
 
 /* work area 8 style  */
 .work-area-8 {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 60px;
+
   .section-header {
     display: grid;
     gap: 20px 60px;
@@ -9946,14 +9957,18 @@
   }
 }
 
+.why-choose-us-second-row {
+  padding-bottom: 80px;
+}
+
 /* team area 4 style  */
 .team-area-4 {
+
   &-inner {
     margin-top: 20px;
     margin-bottom: 20px;
-    display: grid;
+    display: flex;
     gap: 40px 60px;
-    grid-template-columns: 1fr 630px;
     align-items: flex-start;
 
     @media #{$xl} {
@@ -9992,7 +10007,7 @@
       }
 
       .number {
-        font-size: 180px;
+        font-size: 80px;
         font-weight: 600;
         line-height: 0.78;
         letter-spacing: -0.01em;
@@ -10036,12 +10051,11 @@
   }
 
   .team-wrapper {
-    display: grid;
     gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    gap: 30px;
 
     @media #{$xs} {
-      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
@@ -10049,6 +10063,7 @@
 .team-box-4 {
   border: 1px solid rgba(14, 15, 17, 0.08);
   border-radius: 14px;
+  width: 100%;
 
   &:hover {
     .thumb {
@@ -10063,6 +10078,7 @@
     border-radius: 14px;
     margin: -1px -1px 0;
     overflow: hidden;
+    border: solid 1px #f3f3f3;
 
     img {
       width: 100%;
@@ -10089,7 +10105,7 @@
   }
 
   .content {
-    margin: 8px 23px 0;
+    margin: 8px 23px 23px;
 
     @media #{$lg} {
       margin: 8px 14px 0;
@@ -10191,6 +10207,7 @@
   .team-wrapper-box {
     margin-top: 69px;
     margin-bottom: 20px;
+    width: 100%;
 
     @media #{$xxl} {
       margin-top: 49px;
@@ -13037,7 +13054,7 @@
 
   &-inner {
     padding-top: 98px;
-    padding-bottom: 15px;
+    padding-bottom: 98px;
   }
 
   .section-title {
@@ -14664,6 +14681,8 @@
 
 /* testimonial area 4 style  */
 .testimonial-area-4 {
+  background-color: white;
+
   .section-content-wrapper {
     margin-top: 20px;
     display: grid;

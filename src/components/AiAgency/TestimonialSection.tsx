@@ -51,24 +51,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
 
             <div className="testimonial-wrapper-box">
               <div className="testimonial-wrapper fade-anim" suppressHydrationWarning={true}>
-                <div className="slide-nav-wrapper">
-                  <div className="slide-nav">
-                    <div
-                      className="testimonial-4-button-prev slide-nav-button"
-                      role="button"
-                      ref={prevRef}
-                    >
-                      <i className="fa-solid fa-arrow-left"></i>
-                    </div>
-                    <div
-                      className="testimonial-4-button-next slide-nav-button"
-                      role="button"
-                      ref={nextRef}
-                    >
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-                  </div>
-                </div>
+               
 
                 <Swiper
                   modules={[Navigation]}
@@ -112,6 +95,25 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                     </SwiperSlide>
                   ))}
                 </Swiper>
+
+                <div className="slide-nav-wrapper">
+                  <div className="slide-nav">
+                    <div
+                      className="testimonial-4-button-prev slide-nav-button"
+                      role="button"
+                      ref={prevRef}
+                    >
+                      <i className="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div
+                      className="testimonial-4-button-next slide-nav-button"
+                      role="button"
+                      ref={nextRef}
+                    >
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

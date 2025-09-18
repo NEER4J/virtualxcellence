@@ -1,13 +1,12 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import Header from "@/components/AiAgency/Header";
-import BlogSection from "@/components/AiAgency/BlogSection";
-import FooterSection from "@/components/AiAgency/FooterSection";
+import Header from "@/components/Home/Header";
+import FooterSection from "@/components/Home/FooterSection";
 import HeroSection from "@/components/AiAgency/HeroSection";
-import ProcessSection from "@/components/AiAgency/ProcessSection";
 import ServiceSection from "@/components/AiAgency/ServiceSection";
 import ServiceArea5Section from "@/components/AiAgency/ServiceArea5Section";
-import TeamSection from "@/components/AiAgency/TeamSection";
+import WhyChooseUsSection from "@/components/AiAgency/WhyChooseUsSection";
+import WhyChooseUsSecondRow from "@/components/AiAgency/WhyChooseUsSecondRow";
 import TestimonialSlider from "@/components/AiAgency/TestimonialSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
@@ -51,10 +50,7 @@ export const metadata: Metadata = {
 // all data 
 import heroData from "@/constant/AiAgency/hero";
 import textSliderData from "@/constant/AiAgency/text-slider";
-import processData from "@/constant/AiAgency/process";
 import testimonialData from "@/constant/AiAgency/testimonial";
-import blogData from "@/constant/AiAgency/blog";
-import footerData from "@/constant/AiAgency/footer";
 import digitalWorkData from "@/constant/DigitalAgency/work";
 
 
@@ -71,12 +67,11 @@ const Home = (): ReactElement => {
           <ServiceArea5Section />
           <WorkSection />
           <DigitalWorkSection pageInnerSlider={true} data={digitalWorkData} />
-          <TeamSection />
-          <ProcessSection data={processData}/>
+          <WhyChooseUsSection />
+          <WhyChooseUsSecondRow />
           <TestimonialSlider data={testimonialData}/>
-          <BlogSection data={blogData}/>
         </main>
-        <FooterSection data={footerData}/>
+        <FooterSection />
       </SmoothScroll>
     </div>
   );

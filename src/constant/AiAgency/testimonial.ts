@@ -15,7 +15,7 @@ export interface TestimonialData {
 
 const testimonialData: TestimonialData = {
   subtitle: "OUR TESTIMONIALS",
-  title: "The Impact of Our AI Solutions",
+  title: "The Impact of Our Solutions",
   reviewCount: "269+",
   ratingText: "(4.9 rating based reviews)",
   testimonials: [
