@@ -216,43 +216,7 @@ const ServiceArea5Section: React.FC = () => {
         </div>
       </div>
 
-      {/* Text slider area */}
-      <div className="text-slider-area-3 section-spacing-bottom">
-        <div className="text-slider-box">
-          <div className="text-slider fade-anim" suppressHydrationWarning={true}>
-            <Swiper
-              modules={[Autoplay]}
-              className="text-slider-active"
-              slidesPerView="auto"
-              spaceBetween={0}
-              speed={10000}
-              loop={true}
-              autoplay={{
-                delay: 1,
-                disableOnInteraction: false,
-              }}
-            >
-              {serviceData?.sliderItems?.map((item) => (
-                <SwiperSlide key={item?.id}>
-                  <div className="text-slider-item-3">
-                    <Link href={item?.link}>
-                      <h2 className="title">
-                        <span className="icon">
-                          <img
-                            src="/assets/imgs/shape/shape-35.webp"
-                            alt="icon"
-                          />
-                        </span>
-                        <span className="text">{item?.text}</span>
-                      </h2>
-                    </Link>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
-      </div>
+     
     </section>
   );
 };

@@ -7194,6 +7194,8 @@
     top: 0;
     left: 0;
     z-index: -1;
+    background-color: gainsboro;
+    border-radius: 10px;
 
     img {
       width: 100%;
@@ -7779,7 +7781,6 @@
   }
 
   .works-wrapper-box {
-    margin-top: 63px;
     margin-bottom: 20px;
 
     @media #{$xxl} {
@@ -7856,28 +7857,6 @@
 }
 
 .work-box-2 {
-  &:hover {
-    .thumb {
-      &:after {
-        opacity: 0.5;
-      }
-
-      img {
-        transform: scale(1.1);
-      }
-    }
-
-    .meta {
-      top: 30px;
-      opacity: 1;
-    }
-
-    .content {
-      bottom: 36px;
-      opacity: 1;
-    }
-  }
-
   .thumb {
     border-radius: 6px;
     overflow: hidden;
@@ -7888,10 +7867,10 @@
       content: "";
       width: 100%;
       height: 100%;
-      background-color: var(--black);
+      background-color: black;
       top: 0;
       left: 0;
-      opacity: 0;
+      opacity: 0.3;
       transition: all 0.5s;
       pointer-events: none;
     }
@@ -7900,19 +7879,20 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      aspect-ratio: 100 / 92;
+      aspect-ratio: 100 / 82;
       transition: all 0.5s;
+      background-color: black;
     }
   }
 
   .meta {
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: 34px;
     display: flex;
     gap: 10px;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s;
   }
 
@@ -7943,18 +7923,17 @@
     position: absolute;
     left: 0;
     padding: 0 34px;
-    bottom: 46px;
+    bottom: 36px;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s;
   }
 }
 
 .work-area-2.page-portfolio-3 {
   .works-wrapper-box {
-    border-top: 1px solid rgba(14, 15, 17, 0.14);
     padding-top: 70px;
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 20px;
 
     @media #{$xxl} {

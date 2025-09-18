@@ -120,7 +120,7 @@ const Header: React.FC = () => {
     <>
       <Sidebar isOpen={isOpen} handleSidebar={handleSidebar} />
       <header className="header-area-4">
-        <div className="header-main header-sticky">
+        <div className="header-main header-sticky mt-2">
           <div className="container">
             <div className="header-area-4-inner">
               <div className="header-logo">

@@ -103,6 +103,7 @@ const WorkSection: React.FC<WorkProps> = ({
                       <h3 className="title">
                         <Link href={item?.link || "#"}>{item?.title}</Link>
                       </h3>
+                      <p className="result">{item?.result}</p>
                       <div
                         className={`t-btn-group ${type === 7 ? "d-none" : ""}`}
                       >
@@ -144,15 +145,14 @@ const WorkSection: React.FC<WorkProps> = ({
     return (
       <section className="work-area-8">
         <div className="container">
-          <div className="work-area-8-inner section-spacing">
-            <WorkFilter />
+          <div className="work-area-8-inner">
             <div className="work-area-2 page-portfolio-3">
               <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
                 <div className="works-wrapper">
-                  <WorkSlider work={workData} />
+                  <WorkSlider />
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </section>
@@ -230,6 +230,7 @@ const WorkSection: React.FC<WorkProps> = ({
                       <h3 className="title">
                         <Link href={item?.link || "#"}>{item?.title}</Link>
                       </h3>
+                      <p className="result">{item?.result}</p>
                       <div className="t-btn-group">
                         <Link
                           className="t-btn t-btn-circle"

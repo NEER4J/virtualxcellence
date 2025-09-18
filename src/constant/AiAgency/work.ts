@@ -6,68 +6,42 @@ export interface WorkSectionContent {
   exploreLink: string;
 }
 
-export interface PortfolioItem {
-  title: string;
-  tags: string[];
+export interface SuccessStory {
+  industry: string;
+  solution: string;
+  result: string;
   image: string;
   link: string;
 }
 
 export const workSectionContent: WorkSectionContent = {
-  subtitle: "OUR PORTFOLIO",
-  title: "Portfolio of Virtual Xcellence",
-  completedProjects: "150+",
-  projectsText: "Completed Projects",
+  subtitle: "SUCCESS STORIES",
+  title: "Driving Digital Excellence Across Industries",
+  completedProjects: "100%",
+  projectsText: "Client Satisfaction",
   exploreLink: "/portfolio",
 };
 
-export const portfolioItems: PortfolioItem[] = [
+export const portfolioItems: SuccessStory[] = [
   {
-    title: "NexGen Chatbot",
-    tags: ["Business", "Assistant"],
+    industry: "Retail Chain",
+    solution: "AI demand forecasting",
+    result: "35% cost savings",
     image: "/assets/imgs/project/project-7.webp",
     link: "/ai-agency/portfolio-details",
   },
   {
-    title: "Cognitech Creations",
-    tags: ["Business", "Assistant"],
+    industry: "Logistics Provider",
+    solution: "Conversational AI",
+    result: "65% faster response time",
     image: "/assets/imgs/project/project-20.webp",
     link: "/ai-agency/portfolio-details",
   },
   {
-    title: "Synthesized Solutions",
-    tags: ["Business", "Assistant"],
+    industry: "Financial Institution",
+    solution: "Omni Channel customer Experience",
+    result: "100% achieved",
     image: "/assets/imgs/project/project-21.webp",
-    link: "/ai-agency/portfolio-details",
-  },
-  {
-    title: "NovaMind Studio",
-    tags: ["Business", "Assistant"],
-    image: "/assets/imgs/project/project-22.webp",
-    link: "/ai-agency/portfolio-details",
-  },
-  {
-    title: "NexGen Chatbot",
-    tags: ["Business", "Assistant"],
-    image: "/assets/imgs/project/project-7.webp",
-    link: "/ai-agency/portfolio-details",
-  },
-  {
-    title: "Cognitech Creations",
-    tags: ["Business", "Assistant"],
-    image: "/assets/imgs/project/project-20.webp",
-    link: "/ai-agency/portfolio-details",
-  },
-  {
-    title: "Synthesized Solutions",
-    tags: ["Business", "Assistant"],
-    image: "/assets/imgs/project/project-21.webp",
-    link: "/ai-agency/portfolio-details",
-  },
-  {
-    title: "NovaMind Studio",
-    tags: ["Business", "Assistant"],
-    image: "/assets/imgs/project/project-22.webp",
     link: "/ai-agency/portfolio-details",
   },
 ];

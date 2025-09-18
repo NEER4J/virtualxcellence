@@ -6,6 +6,7 @@ import Link from "next/link";
 interface Project {
   id: number;
   title: string;
+  result: string;
   tags: string[];
   image: string;
   link: string;
@@ -19,11 +20,7 @@ interface WorkData {
   projects: Project[];
 }
 
-interface WorkSliderProps {
-  work?: WorkData;
-}
-
-const defaultWork: WorkData = {
+const workData: WorkData = {
   sectionSubtitle: "Our Portfolio",
   sectionTitle: "Selected works",
   viewAllText: "See All Works",
@@ -31,64 +28,32 @@ const defaultWork: WorkData = {
   projects: [
     {
       id: 1,
-      title: "Brand identity overhaul for Luxe Co.",
-      tags: ["BRANDING", "PRODUCT"],
+      title: "Retail Chain: AI demand forecasting",
+      result: "35% cost savings",
+      tags: ["RETAIL", "AI"],
       image: "/assets/imgs/project/project-1.webp",
       link: "/portfolio-details",
     },
     {
       id: 2,
-      title: "E-Commerce platform design for shopy",
-      tags: ["BRANDING", "PRODUCT"],
+      title: "Logistics Provider: Conversational AI",
+      result: "65% faster response time",
+      tags: ["LOGISTICS", "AI"],
       image: "/assets/imgs/project/project-2.webp",
       link: "/portfolio-details",
     },
     {
       id: 3,
-      title: "Mobile app design for FitPro agency",
-      tags: ["BRANDING", "PRODUCT"],
+      title: "Financial Institution: Omni Channel customer Experience",
+      result: "100% achieved",
+      tags: ["FINANCE", "OMNI-CHANNEL"],
       image: "/assets/imgs/project/project-3.webp",
-      link: "/portfolio-details",
-    },
-    {
-      id: 4,
-      title: "Digital Ad campaign for FlexWear",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-4.webp",
-      link: "/portfolio-details",
-    },
-    {
-      id: 5,
-      title: "Canvas of creations app design for Lumina Studio",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-12.webp",
-      link: "/portfolio-details",
-    },
-    {
-      id: 6,
-      title: "Experiences in motion with Eclipse app",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-13.webp",
-      link: "/portfolio-details",
-    },
-    {
-      id: 7,
-      title: "Echo Tech Solutions web development",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-14.webp",
-      link: "/portfolio-details",
-    },
-    {
-      id: 8,
-      title: "Innovative digital trails of Wave Media",
-      tags: ["BRANDING", "PRODUCT"],
-      image: "/assets/imgs/project/project-15.webp",
       link: "/portfolio-details",
     },
   ],
 };
 
-const WorkSlider = ({ work = defaultWork }: WorkSliderProps) => {
+const WorkSlider = () => {
   return (
     <>
       <Swiper
@@ -111,14 +76,14 @@ const WorkSlider = ({ work = defaultWork }: WorkSliderProps) => {
           clickable: true,
         }}
         breakpoints={{
-          576: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          992: { slidesPerView: 2 },
-          1201: { slidesPerView: 3 },
-          1367: { slidesPerView: 3 },
+          576: { slidesPerView: 1.2 },
+          768: { slidesPerView: 1.2 },
+          992: { slidesPerView: 1.5 },
+          1201: { slidesPerView: 2.5 },
+          1367: { slidesPerView: 2.5 },
         }}
       >
-        {work?.projects?.map((item, index) => (
+        {workData?.projects?.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="work-box-2">
               <div className="thumb">
@@ -136,6 +101,7 @@ const WorkSlider = ({ work = defaultWork }: WorkSliderProps) => {
                   <h3 className="title">
                     <Link href={item?.link || "#"}>{item?.title}</Link>
                   </h3>
+                  <p className="result text-white">{item?.result}</p>
                 </div>
               </div>
             </div>
@@ -156,19 +122,19 @@ const WorkSlider = ({ work = defaultWork }: WorkSliderProps) => {
           <div className="t-btn-group">
             <Link
               className="t-btn t-btn-circle"
-              href={work?.viewAllLink || "#"}
+              href={workData?.viewAllLink || "#"}
             >
               <i className="fa-solid fa-arrow-right"></i>
             </Link>
             <Link
               className="t-btn t-btn-primary"
-              href={work?.viewAllLink || "#"}
+              href={workData?.viewAllLink || "#"}
             >
-              Discover All
+              {workData?.viewAllText}
             </Link>
             <Link
               className="t-btn t-btn-circle"
-              href={work?.viewAllLink || "#"}
+              href={workData?.viewAllLink || "#"}
             >
               <i className="fa-solid fa-arrow-right"></i>
             </Link>

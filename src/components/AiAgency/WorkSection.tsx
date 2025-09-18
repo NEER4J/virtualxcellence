@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   workSectionContent,
   portfolioItems,
-  PortfolioItem,
+  SuccessStory,
 } from "@/constant/AiAgency/work";
 
 interface IWorkProps {
@@ -70,55 +70,7 @@ const WorkSection: React.FC<IWorkProps> = ({ all, type }) => {
             </div>
           )}
 
-          <div className={`works-wrapper-box fade-anim ${all && "mt-0"}`} suppressHydrationWarning={true}>
-            <div className="works-wrapper">
-              {totalPortfolio?.map((item: PortfolioItem, index: number) => (
-                <div className="work-box-4 work-panel" key={index}>
-                  <div className="thumb">
-                    <div className="meta">
-                      {item?.tags?.map((tag: string, idx: number) => (
-                        <span className="tag" key={idx}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <img
-                      src={item?.image}
-                      alt={item?.title || "Portfolio Image"}
-                    />
-                  </div>
-
-                  <div className="content-wrapper">
-                    <div className="content">
-                      <p className="text">Project Name:</p>
-                      <h3 className="title">{item?.title}</h3>
-                    </div>
-
-                    <div className="t-btn-group">
-                      <Link
-                        className="t-btn t-btn-circle"
-                        href={item?.link || "#"}
-                      >
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
-                      <Link
-                        className="t-btn t-btn-primary"
-                        href={item?.link || "#"}
-                      >
-                        Full Project
-                      </Link>
-                      <Link
-                        className="t-btn t-btn-circle"
-                        href={item?.link || "#"}
-                      >
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        
         </div>
       </div>
     </section>

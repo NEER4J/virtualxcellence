@@ -13,6 +13,7 @@ import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
 import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
 import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
+import DigitalWorkSection from "@/components/DigitalAgency/WorkSection";
 
 export const metadata: Metadata = {
   title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
@@ -54,6 +55,7 @@ import processData from "@/constant/AiAgency/process";
 import testimonialData from "@/constant/AiAgency/testimonial";
 import blogData from "@/constant/AiAgency/blog";
 import footerData from "@/constant/AiAgency/footer";
+import digitalWorkData from "@/constant/DigitalAgency/work";
 
 
 const Home = (): ReactElement => {
@@ -68,6 +70,7 @@ const Home = (): ReactElement => {
           <ServiceSection />
           <ServiceArea5Section />
           <WorkSection />
+          <DigitalWorkSection pageInnerSlider={true} data={digitalWorkData} />
           <TeamSection />
           <ProcessSection data={processData}/>
           <TestimonialSlider data={testimonialData}/>
