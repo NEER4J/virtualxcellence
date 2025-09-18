@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Tab, Nav } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 
 
 const ServiceArea5Section: React.FC = () => {

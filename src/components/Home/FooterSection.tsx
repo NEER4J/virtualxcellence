@@ -1,17 +1,7 @@
 import Link from "next/link";
 
-interface FooterLink {
-  label: string;
-  url: string;
-}
-
-interface FooterSocial {
-  icon: string;
-  url: string;
-}
-
 interface FooterProps {
-  data?: any;
+  data?: unknown;
 }
 const FooterSection:React.FC<FooterProps> = () => {
   return (
