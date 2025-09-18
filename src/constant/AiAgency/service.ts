@@ -7,8 +7,6 @@ export interface ServiceSectionData {
 export interface Service {
   id: string;
   title: string;
-  projectsAvailable: number;
-  projectsDone: number;
   image: string;
   description: string;
   detailLink: string;
@@ -16,49 +14,73 @@ export interface Service {
 
 export const serviceSectionData: ServiceSectionData = {
   subtitle: "Our Services",
-  title: "Our Best AI Solutions",
+  title: "Comprehensive Technology Solutions",
   exploreLink: "/ai-agency/services",
 };
 
 export const servicesData: Service[] = [
   {
-    id: "data-analytics",
-    title: "AI-Powered Data Analytics",
-    projectsAvailable: 34,
-    projectsDone: 20,
+    id: "development",
+    title: "Development",
     image: "/assets/imgs/gallery/image-17.webp",
     description:
-      "Our team of AI experts, data scientists, and creative technologists work collaboratively to develop customized AI models that solve complex challenges, streamline operations, and enhance user experiences.",
+      "Custom software, web & mobile solutions tailored to your business needs. We build scalable, secure, and user-friendly applications that drive growth and efficiency.",
     detailLink: "/ai-agency/service-details",
   },
   {
-    id: "chatbots",
-    title: "AI Chatbots & Assistants",
-    projectsAvailable: 41,
-    projectsDone: 28,
+    id: "consultation",
+    title: "Consultation",
     image: "/assets/imgs/gallery/image-47.webp",
     description:
-      "Artificial Intelligence (AI) chatbots and virtual assistants have now widely revolutionized how businesses interact with customers and streamline operations.",
+      "Strategic technology advisory to help you make informed decisions. Our experts provide guidance on technology roadmaps, digital transformation, and innovation strategies.",
     detailLink: "/ai-agency/service-details",
   },
   {
-    id: "predictive-modeling",
-    title: "Predictive AI Modeling",
-    projectsAvailable: 28,
-    projectsDone: 18,
+    id: "fractional-cto",
+    title: "Fractional CTO",
     image: "/assets/imgs/gallery/image-46.webp",
     description:
-      "Predictive AI modeling leverages advanced algorithms and machine learning techniques to analyze historical data, identify patterns, and forecast future outcomes.",
+      "On-demand technology leadership for growing companies. Get access to senior-level technical expertise without the full-time commitment, perfect for scaling your tech operations.",
     detailLink: "/ai-agency/service-details",
   },
   {
-    id: "ux-ui",
-    title: "AI-Enhanced UX/UI Design",
-    projectsAvailable: 69,
-    projectsDone: 39,
+    id: "fractional-cfo",
+    title: "Fractional CFO",
     image: "/assets/imgs/gallery/image-45.webp",
     description:
-      "AI is transforming the field of UX/UI design, enabling designers to create user interfaces and experiences that are not only visually appealing but also highly intuitive and personalized.",
+      "Financial strategy & transformation services. We help optimize your financial operations, implement cost-effective solutions, and drive sustainable business growth.",
+    detailLink: "/ai-agency/service-details",
+  },
+  {
+    id: "business-transformation",
+    title: "Business Transformation",
+    image: "/assets/imgs/gallery/image-17.webp",
+    description:
+      "Process redesign, automation, and AI integration to modernize your operations. We help streamline workflows, reduce costs, and improve overall business efficiency.",
+    detailLink: "/ai-agency/service-details",
+  },
+  {
+    id: "cybersecurity",
+    title: "Cybersecurity",
+    image: "/assets/imgs/gallery/image-47.webp",
+    description:
+      "Comprehensive risk management and data protection solutions. We safeguard your digital assets with advanced security measures and compliance frameworks.",
+    detailLink: "/ai-agency/service-details",
+  },
+  {
+    id: "ai-automation",
+    title: "AI & Automation",
+    image: "/assets/imgs/gallery/image-46.webp",
+    description:
+      "Conversational AI, predictive analytics, and RPA solutions. Leverage artificial intelligence to automate processes, gain insights, and enhance customer experiences.",
+    detailLink: "/ai-agency/service-details",
+  },
+  {
+    id: "cloud-infrastructure",
+    title: "Cloud & Infrastructure",
+    image: "/assets/imgs/gallery/image-45.webp",
+    description:
+      "Cloud migration, DevOps, and managed services for scalable infrastructure. We help you transition to the cloud and maintain reliable, secure, and cost-effective systems.",
     detailLink: "/ai-agency/service-details",
   },
 ];

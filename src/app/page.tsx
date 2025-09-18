@@ -1,18 +1,19 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
 import Header from "@/components/AiAgency/Header";
-import AboutSection from "@/components/AiAgency/AboutSection";
 import AboutTwoSection from "@/components/AiAgency/AboutTwoSection";
 import BlogSection from "@/components/AiAgency/BlogSection";
 import FooterSection from "@/components/AiAgency/FooterSection";
 import HeroSection from "@/components/AiAgency/HeroSection";
 import ProcessSection from "@/components/AiAgency/ProcessSection";
 import ServiceSection from "@/components/AiAgency/ServiceSection";
+import ServiceArea5Section from "@/components/AiAgency/ServiceArea5Section";
 import TeamSection from "@/components/AiAgency/TeamSection";
 import TestimonialSlider from "@/components/AiAgency/TestimonialSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
 import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
+import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
 
 export const metadata: Metadata = {
   title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
@@ -51,7 +52,6 @@ export const metadata: Metadata = {
 import heroData from "@/constant/AiAgency/hero";
 import textSliderData from "@/constant/AiAgency/text-slider";
 import aboutTwoData from "@/constant/AiAgency/about2";
-import aboutData from "@/constant/AiAgency/about";
 import processData from "@/constant/AiAgency/process";
 import testimonialData from "@/constant/AiAgency/testimonial";
 import blogData from "@/constant/AiAgency/blog";
@@ -66,9 +66,10 @@ const Home = (): ReactElement => {
         <main>
           <HeroSection data={heroData}/>
           <TextSliderSection data={textSliderData}/>
-          <AboutTwoSection data={aboutTwoData}/>
-          <AboutSection data={aboutData}/>
+          {/* <AboutTwoSection data={aboutTwoData}/> */}
+          <DigitalAboutSection />
           <ServiceSection />
+          <ServiceArea5Section />
           <WorkSection />
           <TeamSection />
           <ProcessSection data={processData}/>

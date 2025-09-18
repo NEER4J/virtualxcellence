@@ -2,14 +2,51 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import counterUp from "counterup2";
-import { AboutData, ICounter } from "@/constant/DigitalAgency/about";
 
-interface AboutProps {
-  className?: string;
-  data:AboutData;
+interface ICounter {
+  value: number;
+  suffix: string;
+  label: string;
+  delay: string;
 }
 
-const AboutSection:React.FC<AboutProps> = ({className:updateClass,data:aboutData}) => {
+interface ICircleImage {
+  textImg: string;
+  iconImg: string;
+  link: string;
+}
+
+interface AboutData {
+  subtitle: string;
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  circleImages: ICircleImage;
+  mainImage: string;
+  counters: ICounter[];
+}
+
+const AboutSection:React.FC<{className?: string}> = ({className:updateClass}) => {
+  const aboutData: AboutData = {
+    subtitle: "WHO WE ARE",
+    title: "Innovators, Strategists, and Technologists",
+    description: "We are innovators, strategists, and technologists driven by a single mission — to bridge the gap between business vision and technology execution. From startups to enterprises, Virtual Xcellence partners with organizations to digitize processes, modernize infrastructure, and embrace AI-powered solutions.",
+    ctaText: "About Agency",
+    ctaLink: "/ai-agency/about",
+    circleImages: {
+      textImg: "/assets/imgs/shape/shape-2.webp",
+      iconImg: "/assets/imgs/shape/shape-3.webp",
+      link: "#awards",
+    },
+    mainImage: "/assets/imgs/shape/shape-23.webp",
+    counters: [
+      { value: 3.5, suffix: "k", label: "Completed Projects", delay: "0.30" },
+      { value: 25, suffix: "+", label: "Years Of Experience", delay: "0.45" },
+      { value: 1.6, suffix: "k", label: "World Wide Clients", delay: "0.60" },
+      { value: 22, suffix: "+", label: "Trusted Companies", delay: "0.75" },
+    ],
+  };
   useEffect(() => {
     const counters = document.querySelectorAll(".t-counter-value");
 

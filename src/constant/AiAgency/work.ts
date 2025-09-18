@@ -15,7 +15,7 @@ export interface PortfolioItem {
 
 export const workSectionContent: WorkSectionContent = {
   subtitle: "OUR PORTFOLIO",
-  title: "Portfolio of AI Excellence",
+  title: "Portfolio of Virtual Xcellence",
   completedProjects: "150+",
   projectsText: "Completed Projects",
   exploreLink: "/portfolio",
