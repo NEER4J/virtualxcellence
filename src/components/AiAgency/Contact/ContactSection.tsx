@@ -67,11 +67,8 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
         <div className="container">
           <div className="contact-area-inner section-spacing">
             <div className="section-content-wrapper">
-              <div className="section-content fade-anim" data-direction="right">
+              <div className="fade-anim" data-direction="right">
                 <div className="section-title-wrapper">
-                  <div className="subtitle-wrapper">
-                    <span className="section-subtitle">{subtitle}</span>
-                  </div>
                   <div className="title-wrapper">
                     <h2 className="section-title">{title}</h2>
                   </div>

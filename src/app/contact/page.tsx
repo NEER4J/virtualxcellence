@@ -47,13 +47,12 @@ const Home = (): ReactElement => {
     <div className="body-wrapper body-inner-page">
         <main>
           <Breadcrumb
-            title="AGENCY"
-            subTitle="Contact"
-            pageName="AGENCY CONTACT"
+            title="Contact"
+            subTitle="Virtual Xcellence"
+            pageName="CONTACT"
           />
           <ContactMetaSection />
           <ContactSection data={contactData} />
-          <ChooseUsSection chooseUSTwo={true} data={chooseUsData} />
         </main>
     </div>
   );

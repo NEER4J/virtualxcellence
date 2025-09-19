@@ -9,53 +9,67 @@ const ContactMetaSection:React.FC = () => {
           <div className="meta-wrapper-box move-anim">
             <div className="meta-wrapper">
               <div className="contact-meta-box">
-                <div className="thumb">
-                  <img src="/assets/imgs/icon/icon-22.webp" alt="image" />
-                </div>
                 <div className="content">
-                  <h3 className="title">Email Us</h3>
+                  <h3 className="title">Visit Us - Canada</h3>
                   <div className="meta-list">
-                    <ul>
+                    <ul className="meta-list-ul-canada">
                       <li>
-                        <Link href="mailto:info@Virtual Xcellence.com">info@Virtual Xcellence.com</Link>
+                        <strong>Alberta:</strong><br />
+                        Virtual Xcellence Canada Inc.<br />
+                        5120 47 St NE Unit #119, Calgary<br />
+                        Alberta T3J4K3
                       </li>
                       <li>
-                        <Link href="mailto:example@Virtual Xcellencegmail.com">
-                          example@Virtual Xcellencegmail.com
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="contact-meta-box active">
-                <div className="thumb">
-                  <img src="/assets/imgs/icon/icon-23.webp" alt="image" />
-                </div>
-                <div className="content">
-                  <h3 className="title">Phone Us</h3>
-                  <div className="meta-list">
-                    <ul>
-                      <li>
-                        <Link href="tel:+12446654852">+1244-665-4852</Link>
+                        <strong>Ontario - Ahmic Harbour:</strong><br />
+                        Virtual Xcellence Canada Inc.<br />
+                        81 Ahmic street, Ahmic Harbour<br />
+                        ON P0A 1P0
                       </li>
                       <li>
-                        <Link href="tel:+12555656856">+1255-565-6856</Link>
+                        <strong>Ontario - Magnetwan:</strong><br />
+                        Virtual Xcellence Canada Inc.<br />
+                        28 Church St. Magnetwan<br />
+                        ON P0A 1P0
+                      </li>
+                      <li>
+                        <strong>Ontario - Mississauga:</strong><br />
+                        Virtual Xcellence Inc.<br />
+                        5160 Explorer Dr, Unit-30<br />
+                        Mississauga, ON L4W 4T7<br />
+                        <strong>Tel: 1-905-823-7677</strong>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="contact-meta-box">
-                <div className="thumb">
-                  <img src="/assets/imgs/icon/icon-24.webp" alt="image" />
-                </div>
                 <div className="content">
-                  <h3 className="title">Visit Us</h3>
+                  <h3 className="title">Visit Us - United States</h3>
                   <div className="meta-list">
                     <ul>
                       <li>
-                        410 Sandtown, California <br /> 56044, USA
+                        <strong>United States:</strong><br />
+                        Virtual Xcellence Ltd.<br />
+                        464 Richmond Rd, Unit 202<br />
+                        Richmond Heights, OH 44143<br />
+                        <strong>Tel: 1-(702) 537-0123</strong>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="contact-meta-box">
+                <div className="content">
+                  <h3 className="title">Visit Us - India</h3>
+                  <div className="meta-list">
+                    <ul>
+                      <li>
+                        <strong>India:</strong><br />
+                        Virtual Xcellence Innovations Pvt. Ltd.<br />
+                        332, Angel Corporate Plaza, 3rd Floor<br />
+                        Angel Mega Mall, Kaushambi<br />
+                        Delhi(NCR)-India<br />
+                        <strong>Tel: +91 120 499 8299</strong>
                       </li>
                     </ul>
                   </div>
