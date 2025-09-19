@@ -56,7 +56,6 @@ import digitalWorkData from "@/constant/DigitalAgency/work";
 const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-ai-agency">
-      <Header />
       <main>
         <HeroSection data={heroData}/>
         <TextSliderSection data={textSliderData}/>
@@ -69,7 +68,6 @@ const Home = (): ReactElement => {
         <WhyChooseUsSecondRow />
         <TestimonialSlider data={testimonialData}/>
       </main>
-      <FooterSection />
     </div>
   );
 };

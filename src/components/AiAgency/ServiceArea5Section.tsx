@@ -177,7 +177,7 @@ const ServiceArea5Section: React.FC = () => {
                 <Tab.Content>
                   {serviceData?.navTabs?.map((tab) => (
                     <Tab.Pane eventKey={tab?.id} key={tab?.id}>
-                      <div className="service-box-5">
+                      <div className="service-box-5 industry-tab">
                         <div className="area-bg">
                           <img
                             src="/assets/imgs/shape/shape-33.webp"

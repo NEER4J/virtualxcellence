@@ -7077,8 +7077,12 @@
   }
 }
 
+
 /* service area 5 style  */
 .service-area-5 {
+
+
+ 
 
   .section-header {
     display: grid;
@@ -7266,7 +7270,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: white;
+    background-color: #f3f3f3;
     border-radius: 10px;
 
     img {
@@ -10303,6 +10307,7 @@
 
   .tab-content{
     height: 100%;
+    background-color: #f3f3f3;
   }
 
   .author {
