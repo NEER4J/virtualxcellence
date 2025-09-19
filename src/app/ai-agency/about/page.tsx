@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import AboutSection from "@/components/AiAgency/AboutSection";
-import VideoSection from "@/components/AiAgency/About/VideoSection";
+import VideoSection from "@/components/About/VideoSection";
 import BrandSection from "@/components/AiAgency/BrandSection";
 import TeamsSection from "@/components/AiAgency/TeamSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
