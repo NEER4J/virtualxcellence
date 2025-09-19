@@ -22,7 +22,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   return (
     <section className="testimonial-area-4">
       <div className="container">
-        <div className={`testimonial-area-4-inner ${type === "v2"?"section-spacing":"section-spacing-top"}`}>
+        <div className={`testimonial-area-4-inner ${type === "v2"?"section-spacing":"section-spacing-top section-spacing-bottom"}`}>
           <div className="section-content-wrapper">
             <div className="section-content fade-anim" data-direction="left" suppressHydrationWarning={true}>
               <div className="section-title-wrapper">

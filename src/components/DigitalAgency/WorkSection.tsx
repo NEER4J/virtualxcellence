@@ -146,7 +146,7 @@ const WorkSection: React.FC<WorkProps> = ({
       <section className="work-area-8">
         <div className="container">
           <div className="work-area-8-inner">
-            <div className="work-area-2 page-portfolio-3">
+            <div className="work-area-2 page-portfolio-3 section-spacing-bottom">
               <div className="works-wrapper-box fade-anim" suppressHydrationWarning={true}>
                 <div className="works-wrapper">
                   <WorkSlider />

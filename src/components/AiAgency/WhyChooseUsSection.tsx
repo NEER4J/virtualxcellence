@@ -26,7 +26,7 @@ const WhyChooseUsSection: React.FC = () => {
   return (
     <section className="team-area-4">
       <div className="container">
-        <div className="team-area-4-inner section-spacing">
+        <div className="team-area-4-inner section-spacing-top">
           <div className="section-content move-anim" suppressHydrationWarning={true}>
             <div className="section-title-wrapper">
               <div className="subtitle-wrapper">

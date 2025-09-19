@@ -113,7 +113,7 @@ const ServiceArea5Section: React.FC = () => {
   return (
     <section className="service-area-5 fade-anim" suppressHydrationWarning={true}>
       <div className="container">
-        <div className="service-area-5-inner section-spacing-top">
+        <div className="service-area-5-inner section-spacing">
           <div className="section-header">
             <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
             <div className="subtitle-wrapper pb-3">

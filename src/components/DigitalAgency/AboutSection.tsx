@@ -73,7 +73,7 @@ const AboutSection:React.FC<{className?: string}> = ({className:updateClass}) =>
   return (
     <section className={`about-area ${updateClass}`}>
       <div className="container">
-        <div className={`about-area-inner ${updateClass ? 'section-spacing' : 'section-spacing-top'}`}>
+        <div className={`about-area-inner ${updateClass ? 'section-spacing' : 'section-spacing'}`}>
           <div className="section-content-wrapper btn-move">
             <div className="section-content">
               <div className="section-title-wrapper fade-anim">
