@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
 import BlogGridSection from "@/components/CreativeAgency/Blog/BlogGridSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/common/Header";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 // all data 
 import blogListData from "@/constant/CreativeAgency/blog/BlogGridData";
@@ -43,14 +43,15 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb title="BLOGS" subTitle="Grid" pageName="BLOGS GRID" />
           <BlogGridSection data={blogListData}/>
         </main>
         <Footer/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

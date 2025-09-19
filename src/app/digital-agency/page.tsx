@@ -13,7 +13,7 @@ import TeamsSection from "@/components/DigitalAgency/TeamsSection";
 import TestimonialSection from "@/components/DigitalAgency/TestimonialSection";
 import TextSliderSection from "@/components/DigitalAgency/TextSliderSection";
 import WorkSection from "@/components/DigitalAgency/WorkSection";
-import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
+
 
 // all data
 import heroData from "@/constant/DigitalAgency/hero";
@@ -59,7 +59,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-digital-agency">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <HeroSection data={heroData} />
           <BrandSection data={brandData} />
@@ -74,8 +74,9 @@ const Home = (): ReactElement => {
           <BlogSection data={blogData} />
         </main>
         <FooterSection data={footerData}/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

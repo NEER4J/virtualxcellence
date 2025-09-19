@@ -7,7 +7,7 @@ import ChooseUsSection from "@/components/AiAgency/common/ChooseUsSection";
 import TestimonialSection from "@/components/AiAgency/TestimonialSection";
 import FooterSection from "@/components/AiAgency/FooterSection";
 import Header from "@/components/AiAgency/common/Header";
-import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
+
 
 // all data
 import processData from "@/constant/AiAgency/process";
@@ -44,7 +44,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -57,8 +57,9 @@ const Home = (): ReactElement => {
           <TestimonialSection type="v2" data={testimonialData}/>
         </main>
         <FooterSection data={footerData} />
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

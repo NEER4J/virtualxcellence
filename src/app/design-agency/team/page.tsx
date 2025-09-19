@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/DesignAgency/common/Breadcrumb";
 import TeamSection from "@/components/DesignAgency/TeamSection";
 import ProcessSection from "@/components/DesignAgency/ProcessSection";
 import BrandSection from "@/components/DesignAgency/BrandSection";
-import SmoothScroll from "@/components/DesignAgency/Animation/SmoothScroll";
+
 import FooterSection from "@/components/DesignAgency/FooterSection";
 
 // all data
@@ -45,7 +45,7 @@ const Home = (): ReactElement => {
       <div className="body-design-agency">
         <Header />
       </div>
-      <SmoothScroll>
+      
         <main>
           <div className="body-design-agency">
             <Breadcrumb
@@ -61,8 +61,9 @@ const Home = (): ReactElement => {
         <div className="body-design-agency">
           <FooterSection data={footerData} />
         </div>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

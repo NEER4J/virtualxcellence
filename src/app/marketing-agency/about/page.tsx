@@ -9,7 +9,7 @@ import TeamsSection from "@/components/MarketingAgency/TeamSection";
 import TextSliderSection from "@/components/MarketingAgency/TextSliderSection";
 import BlogSection from "@/components/MarketingAgency/BlogSection";
 import FooterSection from "@/components/MarketingAgency/FooterSection";
-import SmoothScroll from "@/components/MarketingAgency/Animation/SmoothScroll";
+
 
 // component data
 import aboutData from "@/constant/MarketingAgency/about";
@@ -59,7 +59,7 @@ const AboutPage = (): ReactElement => {
       <div className="body-marketing-agency">
         <Header />
       </div>
-      <SmoothScroll>
+      
         <main>
           <div className="body-marketing-agency">
             <Breadcrumb
@@ -80,8 +80,9 @@ const AboutPage = (): ReactElement => {
         <div className="body-marketing-agency">
           <FooterSection data={footerData} />
         </div>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default AboutPage;
+

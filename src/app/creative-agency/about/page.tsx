@@ -9,7 +9,7 @@ import TextSliderSection from "@/components/CreativeAgency/TextSliderSection";
 import BlogSection from "@/components/CreativeAgency/BlogSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/common/Header";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 // component data
 import aboutData from "@/constant/CreativeAgency/about";
@@ -56,7 +56,7 @@ const AboutPage = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb title="ABOUT" subTitle="Agency" pageName="ABOUT AGENCY" />
           <AboutSection type="v2" data={aboutData} />
@@ -67,8 +67,9 @@ const AboutPage = (): ReactElement => {
           <BlogSection data={blogData} />
         </main>
         <Footer />
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default AboutPage;
+

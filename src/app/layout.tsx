@@ -28,6 +28,8 @@ import ScrollTopWrapper from "@/components/ScrollTopWrapper";
 import AnimationProvider from "@/providers/AnimationProvider";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
+import Header from "@/components/Home/Header";
+import FooterSection from "@/components/Home/FooterSection";
 
 export const metadata: Metadata = {
   title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
@@ -79,10 +81,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}>
+      <Header />
         <AnimationProvider>{children}</AnimationProvider>
         <ScrollTopWrapper width={20} height={20} className="progress-wrap" />
         <Toaster position="top-center" />
+        <FooterSection />
       </body>
     </html>
   );
 }
+

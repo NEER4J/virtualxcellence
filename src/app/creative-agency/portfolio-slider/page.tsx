@@ -5,7 +5,7 @@ import WorkSection from "@/components/CreativeAgency/WorkTwoSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import TestimonialSection from "@/components/CreativeAgency/Testimonial";
 import Header from "@/components/CreativeAgency/common/Header";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 // all data 
 import workData from "@/constant/CreativeAgency/workTwo";
@@ -42,7 +42,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -53,8 +53,9 @@ const Home = (): ReactElement => {
           <TestimonialSection type="v2" data={testimonialData}/>
         </main>
         <Footer/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

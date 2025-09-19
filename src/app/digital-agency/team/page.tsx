@@ -5,7 +5,7 @@ import TeamSection from "@/components/DigitalAgency/TeamsSection";
 import ProcessSection from "@/components/DigitalAgency/ProcessSection";
 import FooterSection from "@/components/DigitalAgency/FooterSection";
 import Header from "@/components/DigitalAgency/common/Header";
-import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
+
 
 
 // all data 
@@ -43,7 +43,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -54,8 +54,9 @@ const Home = (): ReactElement => {
           <ProcessSection processSix={true} data={processData}/>
         </main>
         <FooterSection data={footerData}/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

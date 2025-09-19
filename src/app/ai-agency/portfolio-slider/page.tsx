@@ -5,7 +5,7 @@ import WorkTwoSection from "@/components/AiAgency/WorkTwoSection";
 import FooterSection from "@/components/AiAgency/FooterSection";
 import TestimonialSlider from "@/components/AiAgency/TestimonialSection";
 import Header from "@/components/AiAgency/common/Header";
-import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
+
 
 // all data 
 import workTwoData from "@/constant/AiAgency/workTwo";
@@ -43,7 +43,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -54,8 +54,9 @@ const Home = (): ReactElement => {
           <TestimonialSlider type="v2" data={testimonialData}/>
         </main>
         <FooterSection data={footerData}/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

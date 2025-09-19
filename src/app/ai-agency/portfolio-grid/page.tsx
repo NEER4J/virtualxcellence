@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import WorkTwoSection from "@/components/AiAgency/WorkTwoSection";
 import FooterSection from "@/components/AiAgency/FooterSection";
 import Header from "@/components/AiAgency/common/Header";
-import SmoothScroll from "@/components/AiAgency/Animation/SmoothScroll";
+
 
 
 // all data 
@@ -42,7 +42,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -52,8 +52,9 @@ const Home = (): ReactElement => {
           <WorkTwoSection pageInner={true} type={7} data={workTwoData}/>
         </main>
         <FooterSection data={footerData}/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

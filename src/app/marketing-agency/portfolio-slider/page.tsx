@@ -5,7 +5,7 @@ import WorkSection from "@/components/MarketingAgency/WorkSection";
 import FooterSection from "@/components/MarketingAgency/FooterSection";
 import TestimonialsSection from "@/components/MarketingAgency/TestimonialSection";
 import Header from "@/components/MarketingAgency/common/Header";
-import SmoothScroll from "@/components/MarketingAgency/Animation/SmoothScroll";
+
 
 // all data 
 import workData from "@/constant/MarketingAgency/work";
@@ -45,7 +45,7 @@ const Home = (): ReactElement => {
       <div className="body-marketing-agency">
       <Header />
       </div>
-      <SmoothScroll>
+      
         <main>
         <div className="body-marketing-agency">
           <Breadcrumb
@@ -63,8 +63,9 @@ const Home = (): ReactElement => {
         <div className="body-marketing-agency">
         <FooterSection data={footerData}/>
         </div>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

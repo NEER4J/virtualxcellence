@@ -11,7 +11,6 @@ import ServiceSection from "@/components/MarketingAgency/ServiceSection";
 import TeamSection from "@/components/MarketingAgency/TeamSection";
 import TestimonialsSection from "@/components/MarketingAgency/TestimonialSection";
 import WorkSection from "@/components/MarketingAgency/WorkSection";
-import SmoothScroll from "@/components/MarketingAgency/Animation/SmoothScroll";
 
 export const metadata:Metadata = {
   title: "Marketing Agency || Virtual Xcellence - Creative Digital Agency NextJS Template",
@@ -56,20 +55,19 @@ const Home = ():ReactElement => {
   return (
     <div className="body-wrapper body-marketing-agency">
       <Header />
-      <SmoothScroll>
-        <main>
-          <HeroSection data={heroData}/>
-          <AboutSection data={aboutData}/>
-          <ServiceSection data={serviceData}/>
-          <WorkSection data={workData}/>
-          <TestimonialsSection data={testimonialData}/>
-          <BrandSection data={brandsData}/>
-          <TeamSection data={teamData}/>
-          <BlogSection data={blogData}/>
-        </main>
-        <FooterSection data={footerData}/>
-      </SmoothScroll>
+      <main>
+        <HeroSection data={heroData}/>
+        <AboutSection data={aboutData}/>
+        <ServiceSection data={serviceData}/>
+        <WorkSection data={workData}/>
+        <TestimonialsSection data={testimonialData}/>
+        <BrandSection data={brandsData}/>
+        <TeamSection data={teamData}/>
+        <BlogSection data={blogData}/>
+      </main>
+      <FooterSection data={footerData}/>
     </div>
   );
 };
 export default Home;
+

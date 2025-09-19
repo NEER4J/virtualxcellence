@@ -8,7 +8,7 @@ import TextSliderSection from "@/components/CreativeAgency/TextSliderSection";
 import FaqSection from "@/components/CreativeAgency/Faq/FaqSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/common/Header";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 
 // all data 
@@ -48,7 +48,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -62,8 +62,9 @@ const Home = (): ReactElement => {
           <FaqSection type={2} data={faqData} />
         </main>
         <Footer/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

@@ -1,27 +1,22 @@
-import Link from "next/link";
 
 interface AboutData {
-  subtitle: string;
   title: string;
   paragraphs: string[];
   image: string;
   imageAlt: string;
-  aboutLink: string;
-  buttonText: string;
 }
 
 const AboutSection:React.FC = () => {
   const aboutData: AboutData = {
-    subtitle: "WHO WE ARE",
-    title: "Innovators, Strategists, and Technologists",
+    title: "Our Story",
     paragraphs: [
-      "We are innovators, strategists, and technologists driven by a single mission — to bridge the gap between business vision and technology execution.",
-      "From startups to enterprises, Virtual Xcellence partners with organizations to digitize processes, modernize infrastructure, and embrace AI-powered solutions.",
+      "Founded in Canada, Virtual Xcellence began as a software development firm and has since grown into a full-spectrum digital transformation company.",
+      "Today, we help organizations of all sizes reimagine their operations with AI, automation, cloud, and leadership advisory services.",
+      "Our mission is simple:",
+      "to empower businesses to embrace technology as a growth accelerator.",
     ],
     image: "/assets/imgs/shape/shape-23.webp",
     imageAlt: "About Virtual Xcellence",
-    aboutLink: "/ai-agency/about",
-    buttonText: "About Agency",
   };
   return (
     <section className="about-area-4">
@@ -36,11 +31,6 @@ const AboutSection:React.FC = () => {
             </div>
             <div className="section-content">
               <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
-                <div className="subtitle-wrapper">
-                  <span className="section-subtitle">
-                    {aboutData?.subtitle}
-                  </span>
-                </div>
                 <div className="title-wrapper">
                   <h2 className="section-title">{aboutData?.title}</h2>
                 </div>
@@ -52,35 +42,9 @@ const AboutSection:React.FC = () => {
               >
                 {aboutData?.paragraphs?.map((text, idx) => (
                   <p className="text" key={idx}>
-                    {text}
+                    {idx === 2 ? <strong>{text}</strong> : text}
                   </p>
                 ))}
-              </div>
-              <div
-                className="btn-wrapper fade-anim"
-                data-direction="right"
-                suppressHydrationWarning={true}
-              >
-                <div className="t-btn-group">
-                  <Link
-                    className="t-btn t-btn-circle"
-                    href={aboutData?.aboutLink || "#"}
-                  >
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                  <Link
-                    className="t-btn t-btn-primary"
-                    href={aboutData?.aboutLink || "#"}
-                  >
-                    {aboutData?.buttonText || "About Agency"}
-                  </Link>
-                  <Link
-                    className="t-btn t-btn-circle"
-                    href={aboutData?.aboutLink || "#"}
-                  >
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

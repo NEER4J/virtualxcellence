@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
 import BlogSingle from "@/components/CreativeAgency/Blog/BlogSingle";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/common/Header";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 
 // all data 
@@ -45,7 +45,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="BLOGS"
@@ -55,8 +55,9 @@ const Home = (): ReactElement => {
           <BlogSingle post={blogSingleData} comments={comments} />
         </main>
         <Footer/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

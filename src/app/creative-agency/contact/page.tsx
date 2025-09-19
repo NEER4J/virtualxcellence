@@ -6,7 +6,7 @@ import ContactMetaSection from "@/components/CreativeAgency/Contact/ContactMetaS
 import ContactSection from "@/components/CreativeAgency/Contact/ContactSection";
 import Header from "@/components/CreativeAgency/common/Header";
 import Footer from "@/components/CreativeAgency/Footer";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 // all data 
 import contactData from "@/constant/CreativeAgency/Contact/contact";
@@ -45,7 +45,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -58,8 +58,9 @@ const Home = (): ReactElement => {
         </main>
         <Footer/>
 
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

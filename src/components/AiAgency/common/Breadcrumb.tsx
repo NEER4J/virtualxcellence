@@ -5,11 +5,15 @@ interface BreadcrumbProps {
     title: string;
     subTitle: string;
     pageName: string;
+    subtitle?: string;
+    subtext?: string;
 }
-const Breadcrumb:React.FC<BreadcrumbProps> = ({ title, subTitle, pageName }) => {
+const Breadcrumb:React.FC<BreadcrumbProps> = ({ title, subTitle, pageName, subtitle, subtext }) => {
   const finalTitle = title?.trim() || "TITLE";
   const finalSubTitle = subTitle?.trim() || "Sub Title";
   const finalPageName = pageName?.trim() || "Page Name";
+  const finalSubtitle = subtitle?.trim() || "";
+  const finalSubtext = subtext?.trim() || "";
 
   return (
     <section className="page-title-area">
@@ -55,6 +59,20 @@ const Breadcrumb:React.FC<BreadcrumbProps> = ({ title, subTitle, pageName }) => 
                     {finalSubTitle}
                   </span>
                 </div>
+                {finalSubtitle && (
+                  <div className="subtitle-content-wrapper">
+                    <h2 className="subtitle-content char-anim" data-delay="0.90">
+                      {finalSubtitle}
+                    </h2>
+                  </div>
+                )}
+                {finalSubtext && (
+                  <div className="subtext-wrapper">
+                    <p className="subtext-content char-anim" data-delay="1.05">
+                      {finalSubtext}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
             <div

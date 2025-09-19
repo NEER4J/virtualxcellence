@@ -3,10 +3,11 @@ import type { Metadata } from "next";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import AboutSection from "@/components/AiAgency/AboutSection";
 import VideoSection from "@/components/AiAgency/About/VideoSection";
+import CoreValuesSection from "@/components/AiAgency/About/CoreValuesSection";
+import JourneySection from "@/components/AiAgency/About/JourneySection";
 import BrandSection from "@/components/AiAgency/BrandSection";
 import TeamsSection from "@/components/AiAgency/TeamSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
-import BlogSection from "@/components/AiAgency/BlogSection";
 import FooterSection from "@/components/AiAgency/FooterSection";
 import Header from "@/components/AiAgency/common/Header";
 
@@ -15,7 +16,6 @@ import Header from "@/components/AiAgency/common/Header";
 import videoData from "@/constant/AiAgency/About/video";
 import brandData from "@/constant/AiAgency/brand";
 import textSliderData from "@/constant/AiAgency/text-slider";
-import blogData from "@/constant/AiAgency/blog";
 import footerData from "@/constant/AiAgency/footer";
 
 export const metadata: Metadata = {
@@ -54,17 +54,21 @@ export const metadata: Metadata = {
 const AboutPage = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
-
+      
         <main>
-          <Breadcrumb title="ABOUT" subTitle="Agency" pageName="ABOUT AGENCY" />
+          <Breadcrumb 
+            title="ABOUT" 
+            subTitle="Your Trusted Partner in Digital Transformation and Technology Innovation" 
+            pageName="ABOUT"
+            subtext="Headquartered in Ontario, Canada, Virtual Xcellence has been helping organizations for over a decade to innovate, automate, and transform with cutting-edge digital solutions. We specialize in delivering comprehensive technology solutions that drive business growth, enhance operational efficiency, and create sustainable competitive advantages in today's rapidly evolving digital landscape."
+          />
           <AboutSection />
           <VideoSection data={videoData} />
-          <BrandSection data={brandData} brandSix={true} />
-          <TeamsSection />
+          <CoreValuesSection />
           <TextSliderSection data={textSliderData} />
-          <BlogSection data={blogData} />
+          <JourneySection />
         </main>
-
+      
     </div>
   );
 };

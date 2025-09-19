@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
 import WorkSection from "@/components/CreativeAgency/WorkTwoSection";
 import Footer from "@/components/CreativeAgency/Footer";
 import Header from "@/components/CreativeAgency/common/Header";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 
 
 // all data 
@@ -41,7 +41,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -51,8 +51,9 @@ const Home = (): ReactElement => {
           <WorkSection pageInner={true} type={7} data={workData}/>
         </main>
         <Footer/>
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

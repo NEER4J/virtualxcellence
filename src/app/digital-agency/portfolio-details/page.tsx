@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
+
 import Breadcrumb from "@/components/DigitalAgency/common/Breadcrumb";
 import Header from "@/components/DigitalAgency/common/Header";
 import FooterSection from "@/components/DigitalAgency/FooterSection";
@@ -44,7 +44,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -55,8 +55,9 @@ const Home = (): ReactElement => {
           <PortfolioSliderSection data={portfolioSliderData} />
         </main>
         <FooterSection data={footerData} />
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

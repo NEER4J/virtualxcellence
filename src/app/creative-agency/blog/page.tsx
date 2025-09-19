@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ReactElement } from "react";
-import SmoothScroll from "@/components/CreativeAgency/Animation/SmoothScroll";
+
 import BlogSection from "@/components/CreativeAgency/Blog/BlogSection";
 import Breadcrumb from "@/components/CreativeAgency/common/Breadcrumb";
 import Header from "@/components/CreativeAgency/common/Header";
@@ -46,7 +46,7 @@ const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
-      <SmoothScroll>
+      
         <main>
           <Breadcrumb
             title="BLOGS"
@@ -56,8 +56,9 @@ const Home = (): ReactElement => {
           <BlogSection data={blogData}/>
         </main>
         <Footer />
-      </SmoothScroll>
+      
     </div>
   );
 };
 export default Home;
+

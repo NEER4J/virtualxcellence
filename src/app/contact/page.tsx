@@ -1,19 +1,19 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import Breadcrumb from "@/components/DigitalAgency/common/Breadcrumb";
-import ChooseUsSection from "@/components/DigitalAgency/common/ChooseUsSection";
-import ContactMetaSection from "@/components/DigitalAgency/Contact/ContactMetaSection";
-import ContactSection from "@/components/DigitalAgency/Contact/ContactSection";
-import Header from "@/components/DigitalAgency/common/Header";
-import FooterSection from "@/components/DigitalAgency/FooterSection";
+import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+import ChooseUsSection from "@/components/AiAgency/common/ChooseUsSection";
+import ContactMetaSection from "@/components/AiAgency/Contact/ContactMetaSection";
+import ContactSection from "@/components/AiAgency/Contact/ContactSection";
+import Header from "@/components/AiAgency/common/Header";
+import FooterSection from "@/components/AiAgency/FooterSection";
 
 
-// all data 
-import footerData from "@/constant/DigitalAgency/footer";
-import contactData from "@/constant/DigitalAgency/Contact/contact";
-import chooseUsData from "@/constant/DigitalAgency/common/choose-us";
+// all data
+import footerData from "@/constant/AiAgency/footer";
+import contactData from "@/constant/AiAgency/Contact/contact";
+import chooseUsData from "@/constant/AiAgency/common/choose-us";
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Contact || Virtual Xcellence - Creative Digital Agency NextJS Template",
   description:
     "Get in touch with the Virtual Xcellence team. Whether you have questions, project inquiries, or want to collaborate, our contact page makes it easy to connect.",
@@ -45,8 +45,6 @@ export const metadata:Metadata = {
 const Home = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
-      <Header />
-      
         <main>
           <Breadcrumb
             title="AGENCY"
@@ -54,12 +52,9 @@ const Home = (): ReactElement => {
             pageName="AGENCY CONTACT"
           />
           <ContactMetaSection />
-          <ContactSection data={contactData}/>
-          <ChooseUsSection chooseUSTwo={true} data={chooseUsData}/>
+          <ContactSection data={contactData} />
+          <ChooseUsSection chooseUSTwo={true} data={chooseUsData} />
         </main>
-        <FooterSection data={footerData}/>
-
-      
     </div>
   );
 };
