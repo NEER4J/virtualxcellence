@@ -6,6 +6,7 @@ import VideoSection from "@/components/About/VideoSection";
 import CoreValuesSection from "@/components/About/CoreValuesSection";
 import JourneySection from "@/components/About/JourneySection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
+import FooterSection from "@/components/Home/FooterSection";
 
 
 // component data
@@ -61,6 +62,7 @@ const AboutPage = (): ReactElement => {
           <CoreValuesSection />
           <TextSliderSection data={textSliderData} />
           <JourneySection />
+          <FooterSection />
         </main>
       
     </div>

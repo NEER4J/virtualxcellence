@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ContactMetaSection from "@/components/AiAgency/Contact/ContactMetaSection";
 import ContactSection from "@/components/AiAgency/Contact/ContactSection";
+import FooterSection from "@/components/Home/FooterSection";
 
 
 // all data
@@ -48,6 +49,7 @@ const Home = (): ReactElement => {
           />
           <ContactMetaSection />
           <ContactSection data={contactData} />
+          <FooterSection />
         </main>
     </div>
   );

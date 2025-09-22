@@ -3675,7 +3675,7 @@
   }
 
   .section-title {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 400;
     line-height: 1.16;
     letter-spacing: -0.01em;
@@ -3683,23 +3683,23 @@
     text-align: left;
 
     @media #{$xxl} {
-      font-size: 70px;
+      font-size: 60px;
     }
 
     @media #{$xl} {
-      font-size: 60px;
-    }
-
-    @media #{$lg} {
-      font-size: 60px;
-    }
-
-    @media #{$md} {
       font-size: 50px;
     }
 
+    @media #{$lg} {
+      font-size: 50px;
+    }
+
+    @media #{$md} {
+      font-size: 40px;
+    }
+
     @media #{$sm} {
-      font-size: 44px;
+      font-size: 40px;
     }
 
     span {
@@ -13356,12 +13356,12 @@
   }
 
   .section-title {
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 600;
     line-height: 1.08;
 
     @media #{$xxl} {
-      font-size: 80px;
+      font-size: 70px;
     }
 
     @media #{$xl} {
@@ -13369,11 +13369,11 @@
     }
 
     @media #{$md} {
-      font-size: 70px;
+      font-size: 60px;
     }
 
     @media #{$sm} {
-      font-size: 55px;
+      font-size: 50px;
     }
 
     @media #{$xs} {
@@ -13382,32 +13382,32 @@
   }
 
   .section-subtitle {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 30px;
     font-style: italic;
     font-weight: 500;
-    line-height: 1.13;
+    line-height: 1.32;
     display: inline-block;
 
     @media #{$xxl} {
-      font-size: 50px;
+      font-size: 40px;
     }
 
     @media #{$xl} {
-      font-size: 50px;
+      font-size: 40px;
     }
 
     @media #{$md} {
-      font-size: 50px;
+      font-size: 40px;
       margin-bottom: 20px;
     }
 
     @media #{$sm} {
-      font-size: 40px;
+      font-size: 30px;
     }
 
     @media #{$xs} {
-      font-size: 32px;
+      font-size: 24px;
     }
 
     &:before {
@@ -13417,7 +13417,7 @@
 
   .section-content {
     .subtitle-wrapper {
-      margin-top: 9px;
+      margin-top: 20px;
     }
   }
 
@@ -13461,12 +13461,13 @@
     grid-template-columns: 1fr auto;
     align-items: flex-end;
     position: relative;
-    margin-top: 102px;
-    padding-bottom: 77px;
+    margin-top: 122px;
+    padding-bottom: 107px;
 
     @media #{$sm} {
       grid-template-columns: 1fr;
       padding-bottom: 37px;
+      margin-top: 82px;
     }
 
     .content-shape-1 {
@@ -16148,5 +16149,64 @@
 .tool-name {
   font-size: 16px;
   color: #666;
+}
+
+/* Loading Bar Styles */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loading-bar-container {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fecaca;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444, #dc2626, #ef4444);
+  background-size: 200% 100%;
+  border-radius: 2px;
+  animation: loading-progress 2s ease-in-out infinite;
+}
+
+@keyframes loading-progress {
+  0% {
+    width: 0%;
+    background-position: 0% 50%;
+  }
+  50% {
+    width: 70%;
+    background-position: 100% 50%;
+  }
+  100% {
+    width: 100%;
+    background-position: 0% 50%;
+  }
 }
 
