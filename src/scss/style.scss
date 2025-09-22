@@ -13355,16 +13355,16 @@
   }
 
   .section-title {
-    font-size: 120px;
+    font-size: 80px;
     font-weight: 600;
     line-height: 1.08;
 
     @media #{$xxl} {
-      font-size: 110px;
+      font-size: 80px;
     }
 
     @media #{$xl} {
-      font-size: 90px;
+      font-size: 70px;
     }
 
     @media #{$md} {
@@ -13399,7 +13399,6 @@
     @media #{$md} {
       font-size: 50px;
       margin-bottom: 20px;
-
     }
 
     @media #{$sm} {
