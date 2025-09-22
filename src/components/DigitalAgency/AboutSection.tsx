@@ -31,7 +31,7 @@ const AboutSection:React.FC<{className?: string}> = ({className:updateClass}) =>
   const aboutData: AboutData = {
     subtitle: "WHO WE ARE",
     title: "Innovators, Strategists, and Technologists",
-    description: "We are innovators, strategists, and technologists driven by a single mission — to bridge the gap between business vision and technology execution. From startups to enterprises, Virtual Xcellence partners with organizations to digitize processes, modernize infrastructure, and embrace AI-powered solutions.",
+    description: "We are innovators, strategists, and technologists driven by a single mission ,  to bridge the gap between business vision and technology execution. From startups to enterprises, Virtual Xcellence partners with organizations to digitize processes, modernize infrastructure, and embrace AI-powered solutions.",
     ctaText: "About Agency",
     ctaLink: "/ai-agency/about",
     circleImages: {

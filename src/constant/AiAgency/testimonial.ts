@@ -38,7 +38,7 @@ const testimonialData: TestimonialData = {
       avatar: "/assets/imgs/client/client-9.webp",
     },
     {
-      text: `"Virtual Xcellence helped us harness the power of AI to enhance our customer support system. Their chatbot integration was seamless, and the results were instant—reduced response times and happier customers! Their attention to detail and forward-thinking approach is second to none."`,
+      text: `"Virtual Xcellence helped us harness the power of AI to enhance our customer support system. Their chatbot integration was seamless, and the results were instant, reduced response times and happier customers! Their attention to detail and forward-thinking approach is second to none."`,
       name: "Emily Collins",
       post: "Product Manager, Zenith",
       avatar: "/assets/imgs/client/client-10.webp",

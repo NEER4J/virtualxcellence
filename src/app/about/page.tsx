@@ -5,18 +5,12 @@ import AboutSection from "@/components/AiAgency/AboutSection";
 import VideoSection from "@/components/About/VideoSection";
 import CoreValuesSection from "@/components/About/CoreValuesSection";
 import JourneySection from "@/components/About/JourneySection";
-import BrandSection from "@/components/AiAgency/BrandSection";
-import TeamsSection from "@/components/AiAgency/TeamSection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
-import FooterSection from "@/components/AiAgency/FooterSection";
-import Header from "@/components/AiAgency/common/Header";
 
 
 // component data
 import videoData from "@/constant/AiAgency/About/video";
-import brandData from "@/constant/AiAgency/brand";
 import textSliderData from "@/constant/AiAgency/text-slider";
-import footerData from "@/constant/AiAgency/footer";
 
 export const metadata: Metadata = {
   title: "About Us || Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",

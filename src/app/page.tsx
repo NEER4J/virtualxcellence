@@ -1,7 +1,5 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import Header from "@/components/Home/Header";
-import FooterSection from "@/components/Home/FooterSection";
 import HeroSection from "@/components/AiAgency/HeroSection";
 import ServiceSection from "@/components/AiAgency/ServiceSection";
 import ServiceArea5Section from "@/components/AiAgency/ServiceArea5Section";

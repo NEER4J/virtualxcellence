@@ -27,7 +27,7 @@ import  blogData  from "@/constant/CreativeAgency/blog";
 export const metadata: Metadata = {
   title: "Creative Agency || Virtual Xcellence - Creative Digital Agency NextJS Template",
   description:
-    "Welcome to Virtual Xcellence Creative Agency template — a stylish and modern Next.js homepage designed for creative agencies. Showcasing portfolio, services, team, and innovative projects with performance and SEO in mind.",
+    "Welcome to Virtual Xcellence Creative Agency template ,  a stylish and modern Next.js homepage designed for creative agencies. Showcasing portfolio, services, team, and innovative projects with performance and SEO in mind.",
   keywords: [
     "Virtual Xcellence creative agency",
     "NextJS creative agency template",

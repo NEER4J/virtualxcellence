@@ -1,17 +1,12 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ChooseUsSection from "@/components/AiAgency/common/ChooseUsSection";
 import ContactMetaSection from "@/components/AiAgency/Contact/ContactMetaSection";
 import ContactSection from "@/components/AiAgency/Contact/ContactSection";
-import Header from "@/components/AiAgency/common/Header";
-import FooterSection from "@/components/AiAgency/FooterSection";
 
 
 // all data
-import footerData from "@/constant/AiAgency/footer";
 import contactData from "@/constant/AiAgency/Contact/contact";
-import chooseUsData from "@/constant/AiAgency/common/choose-us";
 
 export const metadata: Metadata = {
   title: "Contact || Virtual Xcellence - Creative Digital Agency NextJS Template",

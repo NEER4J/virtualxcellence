@@ -16,7 +16,6 @@ interface ContactProps {
 
 const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
   const {
-    subtitle,
     title,
     description,
     contactInfo,
