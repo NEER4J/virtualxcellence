@@ -280,7 +280,7 @@ const CybersecurityPage = (): ReactElement => {
   const faqData = [
     {
       question: "How quickly can you respond to a breach?",
-      answer: "Within minutes—our SOC operates 24/7 with incident response playbooks.",
+      answer: "Within minutes, our SOC operates 24/7 with incident response playbooks.",
     },
     {
       question: "Do you offer compliance audits?",
@@ -288,7 +288,7 @@ const CybersecurityPage = (): ReactElement => {
     },
     {
       question: "Can you secure hybrid environments?",
-      answer: "Absolutely—we specialize in cloud + on-premise security models.",
+      answer: "Absolutely, we specialize in cloud + on-premise security models.",
     },
   ];
 

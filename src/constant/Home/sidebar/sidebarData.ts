@@ -75,20 +75,15 @@ const sidebar: SidebarData = {
   closeIcon: "fas fa-times",
   title: "Hello There!",
   description:
-    "We offer comprehensive range of AI, cloud, and digital transformation services to help your business thrive in the modern digital landscape.",
+    "Get a free consultation and discover how our services can accelerate your digital transformation.",
   cta: {
     text: "Let's Connect",
     href: "/contact",
   },
   ctaIcon: "fa-solid fa-arrow-right",
-  gallery: [
-    "/assets/imgs/gallery/image-48.webp",
-    "/assets/imgs/gallery/image-49.webp",
-    "/assets/imgs/gallery/image-50.webp",
-    "/assets/imgs/gallery/image-51.webp",
-  ],
+  gallery: [],
   contact: {
-    phone: { text: "+1 (555) 123-4567", href: "tel:+15551234567" },
+    phone: { text: "1-905-823-7677  ", href: "tel:+19058237677" },
     email: { text: "info@virtualxcellence.com", href: "mailto:info@virtualxcellence.com" },
     address: "Toronto, Ontario, Canada",
   },

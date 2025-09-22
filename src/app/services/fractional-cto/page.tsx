@@ -42,7 +42,7 @@ const FractionalCTOPage = (): ReactElement => {
   const challengeData = {
     subtitle: "",
     title: "The Challenges Businesses Face",
-    description: "Our Fractional CTO model ensures you get strategic leadership at flexible engagement levels—weekly, monthly, or project-based.",
+    description: "Our Fractional CTO model ensures you get strategic leadership at flexible engagement levels, weekly, monthly, or project-based.",
     challenges: [
       "Lack of technology leadership and vision",
       "Poor alignment between business strategy and IT investments",
@@ -286,11 +286,11 @@ const FractionalCTOPage = (): ReactElement => {
     },
     {
       question: "Can we scale up from Fractional CTO to full-time later?",
-      answer: "Yes—our model adapts as your company grows.",
+      answer: "Yes, our model adapts as your company grows.",
     },
     {
       question: "Do you work with startups raising funding?",
-      answer: "Absolutely—we prepare your product and tech vision to impress investors.",
+      answer: "Absolutely, we prepare your product and tech vision to impress investors.",
     },
   ];
 
@@ -301,7 +301,7 @@ const FractionalCTOPage = (): ReactElement => {
             title="FRACTIONAL CTO"
             subTitle="Technology Leadership Without the Full-Time Overhead"
             pageName="FRACTIONAL CTO"
-            subtext="In the digital age, having the right technology vision is the difference between scaling successfully and failing to compete. Yet, many companies—especially startups and mid-sized enterprises—struggle to afford or retain an experienced Chief Technology Officer (CTO)."
+            subtext="In the digital age, having the right technology vision is the difference between scaling successfully and failing to compete. Yet, many companies, especially startups and mid-sized enterprises, struggle to afford or retain an experienced Chief Technology Officer (CTO)."
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 

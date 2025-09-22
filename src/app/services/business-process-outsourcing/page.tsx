@@ -47,7 +47,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
   const challengeData = {
     subtitle: "",
     title: "Why Choose VirtualXcellence for BPO?",
-    description: "Focus on what matters most — growing your business. Leave the rest to us.",
+    description: "Focus on what matters most ,  growing your business. Leave the rest to us.",
     challenges: [
       "Proven Expertise → Over a decade of managing critical business functions",
       "Scalable Teams → On-demand workforce to match your business cycles",

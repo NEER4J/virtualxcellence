@@ -287,11 +287,11 @@ const FractionalCFOPage = (): ReactElement => {
     },
     {
       question: "Do you work with investor-backed startups?",
-      answer: "Yes—many of our clients are venture-funded startups preparing for growth.",
+      answer: "Yes, many of our clients are venture-funded startups preparing for growth.",
     },
     {
       question: "Can you support cross-border compliance?",
-      answer: "Absolutely—we specialize in Middle East & North American financial regulations.",
+      answer: "Absolutely, we specialize in Middle East & North American financial regulations.",
     },
   ];
 

@@ -284,11 +284,11 @@ const ConsultationPage = (): ReactElement => {
     },
     {
       question: "Can you work alongside our existing IT vendors?",
-      answer: "Yes—we act as an independent advisor, ensuring alignment and ROI.",
+      answer: "Yes, we act as an independent advisor, ensuring alignment and ROI.",
     },
     {
       question: "Do you provide consulting only, or also execution?",
-      answer: "Both—we consult, design, and can execute through our development and transformation teams.",
+      answer: "Both, we consult, design, and can execute through our development and transformation teams.",
     },
   ];
 
@@ -299,7 +299,7 @@ const ConsultationPage = (): ReactElement => {
             title="CONSULTATION"
             subTitle="Turning Complex Challenges into Strategic Opportunities"
             pageName="CONSULTATION"
-            subtext="Technology is only as powerful as the strategy behind it. At Virtual Xcellence, we don't just advise — we partner with you to design and execute strategies that align digital transformation with business growth."
+            subtext="Technology is only as powerful as the strategy behind it. At Virtual Xcellence, we don't just advise ,  we partner with you to design and execute strategies that align digital transformation with business growth."
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 

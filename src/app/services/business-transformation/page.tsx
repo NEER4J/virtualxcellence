@@ -304,7 +304,7 @@ const BusinessTransformationPage = (): ReactElement => {
     },
     {
       question: "Do you work only with large enterprises?",
-      answer: "No—we work with startups, SMEs, governments, and enterprises alike.",
+      answer: "No, we work with startups, SMEs, governments, and enterprises alike.",
     },
     {
       question: "How soon can we see ROI from transformation projects?",
@@ -319,7 +319,7 @@ const BusinessTransformationPage = (): ReactElement => {
             title="BUSINESS TRANSFORMATION"
             subTitle="Redefining the Future of Work and Business"
             pageName="BUSINESS TRANSFORMATION"
-            subtext="Digital disruption is no longer a buzzword—it's a necessity. Organizations that fail to transform risk losing market share, efficiency, and customer trust. At VirtualXcellence, we empower companies to rethink business models, modernize processes, and embrace technology-driven change through structured Business Transformation Services."
+            subtext="Digital disruption is no longer a buzzword, it's a necessity. Organizations that fail to transform risk losing market share, efficiency, and customer trust. At VirtualXcellence, we empower companies to rethink business models, modernize processes, and embrace technology-driven change through structured Business Transformation Services."
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 

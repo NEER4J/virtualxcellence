@@ -47,7 +47,7 @@ const AIAutomationPage = (): ReactElement => {
       "Manual processes slow down growth",
       "Businesses struggle to leverage the data they already own",
       "Customers demand personalized, real-time experiences",
-      "AI can predict, automate, and optimize — at scale",
+      "AI can predict, automate, and optimize ,  at scale",
     ],
   };
 
@@ -291,11 +291,11 @@ const AIAutomationPage = (): ReactElement => {
   const faqData = [
     {
       question: "Can AI replace my employees?",
-      answer: "No — our solutions are designed to empower teams, reduce repetitive work, and free people to focus on high-value tasks.",
+      answer: "No ,  our solutions are designed to empower teams, reduce repetitive work, and free people to focus on high-value tasks.",
     },
     {
       question: "Do you offer custom AI solutions?",
-      answer: "Yes — we design, train, and deploy industry-specific AI models tailored to your needs.",
+      answer: "Yes ,  we design, train, and deploy industry-specific AI models tailored to your needs.",
     },
     {
       question: "How secure are AI-driven solutions?",
@@ -310,7 +310,7 @@ const AIAutomationPage = (): ReactElement => {
             title="AI & AUTOMATION"
             subTitle="Smarter, Faster, Future-Ready Businesses"
             pageName="AI & AUTOMATION"
-            subtext="Artificial Intelligence (AI) and Intelligent Automation are no longer 'emerging trends' — they're the driving force behind global business transformation. At VirtualXcellence, we help organizations harness AI to reduce costs, improve efficiency, and create entirely new business models."
+            subtext="Artificial Intelligence (AI) and Intelligent Automation are no longer 'emerging trends' ,  they're the driving force behind global business transformation. At VirtualXcellence, we help organizations harness AI to reduce costs, improve efficiency, and create entirely new business models."
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 

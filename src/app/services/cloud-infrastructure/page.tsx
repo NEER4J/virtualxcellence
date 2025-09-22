@@ -299,11 +299,11 @@ const CloudInfrastructurePage = (): ReactElement => {
     },
     {
       question: "Can you work with our in-house IT team?",
-      answer: "Yes — we often co-create cloud strategies with client IT departments for smoother adoption.",
+      answer: "Yes ,  we often co-create cloud strategies with client IT departments for smoother adoption.",
     },
     {
       question: "Is cloud really secure?",
-      answer: "Yes — when designed properly. We implement enterprise-grade security and compliance controls across every deployment.",
+      answer: "Yes ,  when designed properly. We implement enterprise-grade security and compliance controls across every deployment.",
     },
   ];
 
@@ -314,7 +314,7 @@ const CloudInfrastructurePage = (): ReactElement => {
             title="CLOUD & INFRASTRUCTURE"
             subTitle="Scalable, Secure, and Future-Ready IT Foundations"
             pageName="CLOUD & INFRASTRUCTURE"
-            subtext="In today's digital-first economy, cloud computing is not just about reducing IT costs — it's about agility, scalability, and innovation. Virtual Xcellence helps businesses modernize infrastructure, migrate to the cloud, and optimize operations with end-to-end cloud and infrastructure services."
+            subtext="In today's digital-first economy, cloud computing is not just about reducing IT costs ,  it's about agility, scalability, and innovation. Virtual Xcellence helps businesses modernize infrastructure, migrate to the cloud, and optimize operations with end-to-end cloud and infrastructure services."
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 

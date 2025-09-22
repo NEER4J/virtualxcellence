@@ -309,7 +309,7 @@ const DevelopmentPage = (): ReactElement => {
     },
     {
       question: "Can you modernize legacy systems?",
-      answer: "Absolutely—we migrate outdated systems to modern, cloud-ready platforms.",
+      answer: "Absolutely, we migrate outdated systems to modern, cloud-ready platforms.",
     },
   ];
 
