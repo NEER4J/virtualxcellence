@@ -85,7 +85,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <AnimationProvider>{children}</AnimationProvider>
         <ScrollTopWrapper width={20} height={20} className="progress-wrap" />
         <Toaster position="top-center" />
-        <FooterSection />
       </body>
     </html>
   );

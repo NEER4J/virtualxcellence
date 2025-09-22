@@ -36,14 +36,15 @@ const headerData:HeaderData = {
     {
       title: "Services",
       children: [
-        { title: "AI Solutions", href: "/services/ai-solutions" },
-        { title: "Cloud Services", href: "/services/cloud-services" },
-        { title: "Digital Transformation", href: "/services/digital-transformation" },
-        { title: "Business Automation", href: "/services/business-automation" },
-        { title: "Data Analytics", href: "/services/data-analytics" },
         { title: "Cybersecurity", href: "/services/cybersecurity" },
-        { title: "Mobile App Development", href: "/services/mobile-app-development" },
-        { title: "Consulting", href: "/services/consulting" },
+        { title: "Development", href: "/services/development" },
+        { title: "Consultation", href: "/services/consultation" },
+        { title: "Fractional CTO", href: "/services/fractional-cto" },
+        { title: "Fractional CFO", href: "/services/fractional-cfo" },
+        { title: "Business Transformation", href: "/services/business-transformation" },
+        { title: "AI & Automation", href: "/services/ai-automation" },
+        { title: "Cloud & Infrastructure", href: "/services/cloud-infrastructure" },
+        { title: "Business Process Outsourcing", href: "/services/business-process-outsourcing" },
       ],
     },
     {

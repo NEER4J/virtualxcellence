@@ -15,7 +15,7 @@ interface IServiceDetails {
   };
 }
 
-const CybersecurityServiceDetailsSection: React.FC = () => {
+const ServiceDetailsSection: React.FC = () => {
   const serviceDetailsData: IServiceDetails = {
     sectionHeader: {
       subtitle: "Security Approach",
@@ -84,4 +84,4 @@ const CybersecurityServiceDetailsSection: React.FC = () => {
   );
 };
 
-export default CybersecurityServiceDetailsSection;
+export default ServiceDetailsSection;

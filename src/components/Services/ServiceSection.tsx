@@ -8,20 +8,18 @@ interface IChallengeData {
   challenges: string[];
 }
 
-const CybersecurityChallengeSection: React.FC = () => {
-  const challengeData: IChallengeData = {
-    subtitle: "",
-    title: "The Challenges Businesses Face",
-    description:
-      "We understand these challenges and deliver tailored security frameworks to safeguard your assets.",
-    challenges: [
-      "Increasing ransomware and phishing attacks targeting employees",
-      "Cloud misconfigurations leaving critical data exposed",
-      "Insider threats leading to unauthorized access",
-      "Regulatory compliance requirements (HIPAA, PCI-DSS, GDPR, ISO)",
-      "Lack of visibility into security posture",
-    ],
-  };
+interface ServiceChallengeSectionProps {
+  challengeData?: IChallengeData;
+  imageSrc?: string;
+}
+
+const ServiceChallengeSection: React.FC<ServiceChallengeSectionProps> = ({ 
+  challengeData,
+  imageSrc = "/assets/imgs/gallery/image-52.webp"
+}) => {
+  if (!challengeData) {
+    return null; // Safety check
+  }
 
   return (
     <section className="service-area-6">
@@ -64,16 +62,16 @@ const CybersecurityChallengeSection: React.FC = () => {
                 </div>
               )}
             </div>
-            <div className="section-content fade-anim" data-direction="left">
-              
-               <div className="image-wrapper">
-                 <img 
-                   src="/assets/imgs/gallery/image-52.webp" 
-                   alt="Cybersecurity Challenge" 
-                   className="fade-anim"
-                 />
-               </div>
-            </div>
+             <div className="section-content fade-anim" data-direction="left">
+               
+                <div className="image-wrapper">
+                  <img 
+                    src={imageSrc} 
+                    alt={challengeData?.title || "Service Challenge"} 
+                    className="fade-anim"
+                  />
+                </div>
+             </div>
           </div>
 
         </div>
@@ -82,7 +80,7 @@ const CybersecurityChallengeSection: React.FC = () => {
   );
 };
 
-export default CybersecurityChallengeSection;
+export default ServiceChallengeSection;
 
 // New service section component
 interface IService {
@@ -104,85 +102,14 @@ interface ServiceData {
   services: IService[];
 }
 
-const CybersecurityServiceSection: React.FC = () => {
-  const serviceData: ServiceData = {
-    sectionSubtitle: "",
-    sectionTitle: "Our Cybersecurity Offerings",
-    viewAllLink: "#",
-    viewAllText: "View All Services",
-    services: [
-      {
-        id: 1,
-        number: "01",
-        title: "Managed Security Services (MSS)",
-        description: "Round-the-clock monitoring of your IT environment with advanced SIEM (Splunk, IBM QRadar) and threat detection.",
-        items: [
-          "24/7 Security Operations Center (SOC)",
-          "Real-time threat intelligence",
-          "Automated response workflows"
-        ],
-        detailsLink: "#",
-        itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
-      },
-      {
-        id: 2,
-        number: "02",
-        title: "Risk Assessment & Compliance",
-        description: "Comprehensive audits to identify vulnerabilities and align with compliance frameworks.",
-        items: [
-          "Gap analysis against global standards (ISO 27001, NIST)",
-          "Penetration testing & vulnerability assessments",
-          "Data protection & privacy compliance"
-        ],
-        detailsLink: "#",
-        itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
-      },
-      {
-        id: 3,
-        number: "03",
-        title: "Cloud & Infrastructure Security",
-        description: "Protecting your cloud (AWS, Azure, GCP) and hybrid IT environments.",
-        items: [
-          "Cloud Security Posture Management (CSPM)",
-          "Zero Trust access architecture",
-          "Container & DevSecOps security"
-        ],
-        detailsLink: "#",
-        itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
-      },
-      {
-        id: 4,
-        number: "04",
-        title: "Identity & Access Management (IAM)",
-        description: "Securing access to critical systems with robust IAM solutions.",
-        items: [
-          "Multi-Factor Authentication (MFA)",
-          "Privileged Access Management (PAM)",
-          "Single Sign-On (SSO)"
-        ],
-        detailsLink: "#",
-        itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
-      },
-      {
-        id: 5,
-        number: "05",
-        title: "Incident Response & Forensics",
-        description: "Rapid detection, containment, and recovery from cyber incidents.",
-        items: [
-          "24/7 response team",
-          "Digital forensics to trace root cause",
-          "Business continuity planning"
-        ],
-        detailsLink: "#",
-        itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
-      }
-    ]
-  };
+interface ServiceSectionProps {
+  serviceData?: ServiceData;
+}
+
+const ServiceSection: React.FC<ServiceSectionProps> = ({ serviceData }) => {
+  if (!serviceData) {
+    return null; // or return a loading state or error message
+  }
 
   return (
     <section className="service-area">
@@ -235,4 +162,4 @@ const CybersecurityServiceSection: React.FC = () => {
   );
 };
 
-export { CybersecurityServiceSection };
+export { ServiceSection };

@@ -2,8 +2,15 @@ import Link from "next/link";
 
 interface FooterProps {
   data?: unknown;
+  ctaHeading?: string;
+  buttonLabel?: string;
+  buttonLink?: string;
 }
-const FooterSection:React.FC<FooterProps> = () => {
+const FooterSection:React.FC<FooterProps> = ({ 
+  ctaHeading = "Transform Your Business Into a Digital Powerhouse",
+  buttonLabel = "Contact Us",
+  buttonLink = "/contact"
+}) => {
   return (
     <footer className="footer-area-2">
       <div className="area-bg">
@@ -17,18 +24,18 @@ const FooterSection:React.FC<FooterProps> = () => {
               <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
                
                 <div className="title-wrapper">
-                  <h2 className="section-title">Transform Your Business Into a Digital Powerhouse</h2>
+                  <h2 className="section-title">{ctaHeading}</h2>
                 </div>
               </div>
               <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
                 <div className="t-btn-group">
-                  <Link className="t-btn t-btn-circle" href="/contact">
+                  <Link className="t-btn t-btn-circle" href={buttonLink}>
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
-                  <Link className="t-btn t-btn-primary" href="/contact">
-                    Contact Us
+                  <Link className="t-btn t-btn-primary" href={buttonLink}>
+                    {buttonLabel}
                   </Link>
-                  <Link className="t-btn t-btn-circle" href="/contact">
+                  <Link className="t-btn t-btn-circle" href={buttonLink}>
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                 </div>

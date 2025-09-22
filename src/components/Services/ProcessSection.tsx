@@ -6,34 +6,20 @@ interface ProcessItem {
   number: string;
 }
 
-const CybersecurityProcessSection: React.FC = () => {
-  const processData: ProcessItem[] = [
-    {
-      title: "Assess",
-      text: "Understand your current security posture",
-      number: "01"
-    },
-    {
-      title: "Protect", 
-      text: "Deploy safeguards and policies",
-      number: "02"
-    },
-    {
-      title: "Detect",
-      text: "Continuous monitoring for threats",
-      number: "03"
-    },
-    {
-      title: "Respond",
-      text: "Rapid containment of incidents",
-      number: "04"
-    },
-    {
-      title: "Evolve",
-      text: "Ongoing adaptation as threats grow",
-      number: "05"
-    }
-  ];
+interface ServiceProcessSectionProps {
+  processData?: ProcessItem[];
+  sectionTitle?: string;
+  sectionSubtitle?: string;
+}
+
+const ServiceProcessSection: React.FC<ServiceProcessSectionProps> = ({ 
+  processData,
+  sectionTitle = "Our Approach",
+  sectionSubtitle = "We follow a structured, proven framework"
+}) => {
+  if (!processData) {
+    return null; // Safety check
+  }
 
   return (
     <section className="process-area-3">
@@ -42,10 +28,10 @@ const CybersecurityProcessSection: React.FC = () => {
           <div className="section-header">
             <div className="section-title-wrapper fade-anim">
               <div className="title-wrapper">
-                <h2 className="section-title">Our Approach</h2>
+                <h2 className="section-title">{sectionTitle}</h2>
               </div>
               <div className="text-wrapper mb-3">
-                <p className="text">We follow a structured, proven framework</p>
+                <p className="text">{sectionSubtitle}</p>
               </div>
             </div>
           </div>
@@ -68,4 +54,4 @@ const CybersecurityProcessSection: React.FC = () => {
   );
 };
 
-export default CybersecurityProcessSection;
+export default ServiceProcessSection;

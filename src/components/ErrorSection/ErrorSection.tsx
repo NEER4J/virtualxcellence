@@ -8,7 +8,7 @@ const ErrorSection: React.FC = () => {
         <div className="error-area-inner d-flex justify-content-center align-items-center h-100">
           <div className="error-content text-center">
             <div className="image-wrapper">
-              <img src="/assets/imgs/404-animate.svg" alt="" />
+              <img src="/assets/imgs/404-v2.svg" alt="" />
             </div>
             <h2 className="mt-n3">Page Not Found</h2>
             <p className="mt-3">

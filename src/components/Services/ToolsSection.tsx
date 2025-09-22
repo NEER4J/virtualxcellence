@@ -12,40 +12,18 @@ interface ToolCategory {
   tools: ToolItem[];
 }
 
-const CybersecurityToolsSection: React.FC = () => {
-  const toolsData: ToolCategory[] = [
-    {
-      title: "SIEM & Monitoring",
-      tools: [
-        { name: "Splunk", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "QRadar", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Elastic Security", icon: "/assets/imgs/client/client-1.webp" }
-      ]
-    },
-    {
-      title: "Cloud Security", 
-      tools: [
-        { name: "Prisma Cloud", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Azure Security Center", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "AWS GuardDuty", icon: "/assets/imgs/client/client-1.webp" }
-      ]
-    },
-    {
-      title: "IAM",
-      tools: [
-        { name: "Okta", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Entra", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "CyberArk", icon: "/assets/imgs/client/client-1.webp" }
-      ]
-    },
-    {
-      title: "Endpoint Security",
-      tools: [
-        { name: "CrowdStrike", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "SentinelOne", icon: "/assets/imgs/client/client-1.webp" }
-      ]
-    }
-  ];
+interface ServiceToolsSectionProps {
+  toolsData?: ToolCategory[];
+  sectionTitle?: string;
+}
+
+const ServiceToolsSection: React.FC<ServiceToolsSectionProps> = ({ 
+  toolsData,
+  sectionTitle = "Tools & Technologies We Use"
+}) => {
+  if (!toolsData) {
+    return null; // Safety check
+  }
 
   return (
     <section className="process-area-3">
@@ -54,7 +32,7 @@ const CybersecurityToolsSection: React.FC = () => {
             <div className="section-header">
               <div className="section-title-wrapper fade-anim">
                 <div className="title-wrapper">
-                  <h2 className="section-title">Tools & Technologies We Use</h2>
+                  <h2 className="section-title">{sectionTitle}</h2>
                 </div>
               </div>
             </div>
@@ -85,4 +63,4 @@ const CybersecurityToolsSection: React.FC = () => {
   );
 };
 
-export default CybersecurityToolsSection;
+export default ServiceToolsSection;

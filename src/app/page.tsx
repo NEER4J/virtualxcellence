@@ -10,6 +10,7 @@ import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
 import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
 import DigitalWorkSection from "@/components/DigitalAgency/WorkSection";
+import FooterSection from "@/components/Home/FooterSection";
 
 export const metadata: Metadata = {
   title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
@@ -66,6 +67,7 @@ const Home = (): ReactElement => {
         <WhyChooseUsSecondRow />
         <TestimonialSlider data={testimonialData}/>
       </main>
+      <FooterSection />
     </div>
   );
 };

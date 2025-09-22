@@ -1955,7 +1955,7 @@
   position: relative;
   z-index: 1;
 
-  
+ 
 
   .area-bg {
     position: absolute;
@@ -2159,6 +2159,10 @@
         color: var(--primary);
       }
     }
+  }
+
+  .btn-wrapper{
+    margin-bottom: 10px !important;
   }
 }
 
@@ -6476,7 +6480,7 @@
     line-height: 26px;
     display: inline-block;
     color: #5f6062;
-    margin-left: 3px;
+    margin-left: 20px;
     margin-top: 12px;
 
     @media #{$xl} {
@@ -15256,7 +15260,7 @@
   .faq-thumb {
     border-radius: 14px;
     overflow: hidden;
-    max-width: 520px;
+    max-width: 420px;
   }
 
   .section-content-wrapper {

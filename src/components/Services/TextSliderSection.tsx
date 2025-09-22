@@ -13,51 +13,16 @@ interface TextSliderData {
   items: ITextSlide[];
 }
 
-const CybersecurityTextSliderSection: React.FC = () => {
-  const textSliderData: TextSliderData = {
-    items: [
-      {
-        id: 1,
-        text: `Where Security Meets Innovation`,
-        suffix: `Protecting Your Digital Future`,
-      },
-      {
-        id: 2,
-        text: `Advanced Cybersecurity Solutions`,
-        suffix: `Defending Against Modern Threats`,
-      },
-      {
-        id: 3,
-        text: `Security. Protection. Peace of Mind.`,
-        suffix: `We Shield Your Business`,
-      },
-      {
-        id: 4,
-        text: `Intelligent Threat Detection`,
-        suffix: `Securing Your Digital Assets`,
-      },
-      {
-        id: 5,
-        text: `Where Security Meets Innovation`,
-        suffix: `Protecting Your Digital Future`,
-      },
-      {
-        id: 6,
-        text: `Advanced Cybersecurity Solutions`,
-        suffix: `Defending Against Modern Threats`,
-      },
-      {
-        id: 7,
-        text: `Security. Protection. Peace of Mind.`,
-        suffix: `We Shield Your Business`,
-      },
-      {
-        id: 8,
-        text: `Intelligent Threat Detection`,
-        suffix: `Securing Your Digital Assets`,
-      },
-    ],
-  };
+interface ServiceTextSliderSectionProps {
+  textSliderData?: TextSliderData;
+}
+
+const ServiceTextSliderSection: React.FC<ServiceTextSliderSectionProps> = ({ 
+  textSliderData
+}) => {
+  if (!textSliderData) {
+    return null; // Safety check
+  }
 
   return (
     <div className="text-slider-area-2">
@@ -95,4 +60,4 @@ const CybersecurityTextSliderSection: React.FC = () => {
   );
 };
 
-export default CybersecurityTextSliderSection;
+export default ServiceTextSliderSection;
