@@ -2120,6 +2120,16 @@
   }
 
   .copyright-nav-list {
+    
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @media #{$md} {
+      text-align: center;
+      justify-content: center;
+    }
+
     li {
       font-size: 18px;
       font-weight: 400;

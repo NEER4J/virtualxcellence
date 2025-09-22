@@ -61,13 +61,13 @@ const FooterSection:React.FC<FooterProps> = ({
                   <p className="text">Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation.</p>
                 </div>
                 <div className="social-links">
-                  <Link target="_blank" href="#">
+                  <Link target="_blank" href="https://www.facebook.com/vxcellence/">
                     <i className="fa-brands fa-facebook-f"></i>
                   </Link>
-                  <Link target="_blank" href="#">
+                  <Link target="_blank" href="https://twitter.com/vxinnovation">
                     <i className="fa-brands fa-twitter"></i>
                   </Link>
-                  <Link target="_blank" href="#">
+                  <Link target="_blank" href="https://www.linkedin.com/company/virtualxcellence/">
                     <i className="fa-brands fa-linkedin-in"></i>
                   </Link>
                 </div>
@@ -133,8 +133,10 @@ const FooterSection:React.FC<FooterProps> = ({
               </p>
             </div>
             <ul className="copyright-nav-list">
-              <li><Link href="#">Terms & Conditions</Link></li>
-              <li><Link href="#">Privacy Policy</Link></li>
+              <li><Link href="/terms-conditions">Terms & Conditions</Link></li>
+              <li><Link href="/terms-of-sale">Terms of Sale</Link></li>
+              <li><Link href="/refund-policy">Refund Policy</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

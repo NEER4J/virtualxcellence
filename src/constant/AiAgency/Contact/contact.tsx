@@ -34,8 +34,8 @@ const contactData: IContact = {
     },
     {
       icon: "/assets/imgs/icon/icon-17.webp",
-      label: "sales@virtualxcellence.com",
-      link: "mailto:sales@virtualxcellence.com",
+      label: "support@virtualxcellence.com",
+      link: "mailto:support@virtualxcellence.com",
     },
     {
       icon: "/assets/imgs/icon/icon-18.webp",
@@ -52,11 +52,16 @@ const contactData: IContact = {
       label: "+91-120-4286226 (India)",
       link: "tel:+911204286226",
     },
+    {
+      icon: "/assets/imgs/icon/icon-18.webp",
+      label: "3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA",
+      link: "#",
+    },
   ],
   socialLinks: [
-    { icon: "fa-facebook-f", link: "#" },
-    { icon: "fa-twitter", link: "#" },
-    { icon: "fa-linkedin-in", link: "#" },
+    { icon: "fa-facebook-f", link: "https://www.facebook.com/vxcellence/" },
+    { icon: "fa-twitter", link: "https://twitter.com/vxinnovation" },
+    { icon: "fa-linkedin-in", link: "https://www.linkedin.com/company/virtualxcellence/" },
   ],
   formFields: [
     {

@@ -48,14 +48,15 @@ const sidebar: SidebarData = {
     {
       label: "Services",
       children: [
-        { label: "AI Solutions", href: "/services/ai-solutions" },
-        { label: "Cloud Services", href: "/services/cloud-services" },
-        { label: "Digital Transformation", href: "/services/digital-transformation" },
-        { label: "Business Automation", href: "/services/business-automation" },
-        { label: "Data Analytics", href: "/services/data-analytics" },
         { label: "Cybersecurity", href: "/services/cybersecurity" },
-        { label: "Mobile App Development", href: "/services/mobile-app-development" },
-        { label: "Consulting", href: "/services/consulting" },
+        { label: "Development", href: "/services/development" },
+        { label: "Consultation", href: "/services/consultation" },
+        { label: "Fractional CTO", href: "/services/fractional-cto" },
+        { label: "Fractional CFO", href: "/services/fractional-cfo" },
+        { label: "Business Transformation", href: "/services/business-transformation" },
+        { label: "AI & Automation", href: "/services/ai-automation" },
+        { label: "Cloud & Infrastructure", href: "/services/cloud-infrastructure" },
+        { label: "Business Process Outsourcing", href: "/services/business-process-outsourcing" },
       ],
     },
     {
@@ -88,10 +89,10 @@ const sidebar: SidebarData = {
     address: "Toronto, Ontario, Canada",
   },
   social: [
-    { label: "FB", href: "#" },
-    { label: "LN", href: "#" },
+    { label: "FB", href: "https://www.facebook.com/vxcellence/" },
+    { label: "TW", href: "https://twitter.com/vxinnovation" },
+    { label: "LN", href: "https://www.linkedin.com/company/virtualxcellence/" },
     { label: "IN", href: "#" },
-    { label: "BE", href: "#" },
   ],
   footerLogo: "/assets/imgs/logo/VX-Logo.png",
 };

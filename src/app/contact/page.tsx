@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import Header from "@/components/Home/Header";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ContactMetaSection from "@/components/AiAgency/Contact/ContactMetaSection";
 import ContactSection from "@/components/AiAgency/Contact/ContactSection";
@@ -38,21 +39,22 @@ export const metadata: Metadata = {
   },
 };
 
-const Home = (): ReactElement => {
+const ContactPage = (): ReactElement => {
   return (
     <div className="body-wrapper body-inner-page">
-        <main>
-          <Breadcrumb
-            title="Contact"
-            subTitle="Virtual Xcellence"
-            pageName="CONTACT"
-          />
-          <ContactMetaSection />
-          <ContactSection data={contactData} />
-          <FooterSection />
-        </main>
+      <Header />
+      <main>
+        <Breadcrumb
+          title="Contact"
+          subTitle="Virtual Xcellence"
+          pageName="CONTACT"
+        />
+        <ContactMetaSection />
+        <ContactSection data={contactData} />
+        <FooterSection />
+      </main>
     </div>
   );
 };
-export default Home;
+export default ContactPage;
 

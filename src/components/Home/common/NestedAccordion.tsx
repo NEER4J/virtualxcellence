@@ -14,9 +14,10 @@ interface AccordionItemData {
 interface NestedAccordionProps {
   items: AccordionItemData[];
   parentKey?: string;
+  onLinkClick?: () => void;
 }
 
-  const NestedAccordion: React.FC<NestedAccordionProps> = ({ items, parentKey = "" }) => {
+  const NestedAccordion: React.FC<NestedAccordionProps> = ({ items, parentKey = "", onLinkClick }) => {
 
     const [activeKey, setActiveKey] = useState<string | null>(null);
 
@@ -39,7 +40,7 @@ interface NestedAccordionProps {
               </span>
             </Accordion.Header>
             <Accordion.Body>
-              <NestedAccordion items={item.children ?? []} parentKey={eventKey} />
+              <NestedAccordion items={item.children ?? []} parentKey={eventKey} onLinkClick={onLinkClick} />
             </Accordion.Body>
           </Accordion.Item>
         ) : (
@@ -47,7 +48,13 @@ interface NestedAccordionProps {
             <h2 className="accordion-header">
               <div className="accordion-button">
                 <div className="accordion-link w-100">
-                  <Link href={item.href || "#"} className="d-block w-100">{item.label}</Link>
+                  <Link 
+                    href={item.href || "#"} 
+                    className="d-block w-100"
+                    onClick={onLinkClick}
+                  >
+                    {item.label}
+                  </Link>
                 </div>
               </div>
             </h2>

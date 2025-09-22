@@ -39,7 +39,7 @@ const Sidebar = ({
 
             {/* Mobile menu container (if needed for JS menu toggle logic) */}
             <div className={`mobile-menu fix ${menuClass}`}>
-              <NestedAccordion items={sidebarData.menus} />
+              <NestedAccordion items={sidebarData.menus} onLinkClick={handleSidebar} />
             </div>
 
             {/* Info Box */}
