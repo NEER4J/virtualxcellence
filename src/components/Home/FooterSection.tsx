@@ -13,7 +13,7 @@ const FooterSection:React.FC<FooterProps> = ({
 }) => {
   return (
     <footer className="footer-area-2">
-      <div className="area-bg">
+      <div className="area-bg" style={{display: 'none'}}>
         <img src="/assets/imgs/shape/shape-42.webp" alt="image" />
       </div>
 
@@ -76,11 +76,17 @@ const FooterSection:React.FC<FooterProps> = ({
 
             {/* Quick Links */}
             <div className="footer-widget-box">
-              <h2 className="title">Quick Links</h2>
+              <h2 className="title">Services</h2>
               <ul className="footer-nav-list">
-                <li><Link href="/services">Services</Link></li>
-                <li><Link href="/industries">Industries</Link></li>
-                <li><Link href="/case-studies">Case Studies</Link></li>
+              <li><Link href="/services/cybersecurity">Cybersecurity</Link></li>
+                <li><Link href="/services/development">Development</Link></li>
+                <li><Link href="/services/consultation">Consultation</Link></li>
+                <li><Link href="/services/fractional-cto">Fractional CTO</Link></li>
+                <li><Link href="/services/fractional-cfo">Fractional CFO</Link></li>
+                <li><Link href="/services/business-transformation">Business Transformation</Link></li>
+                <li><Link href="/services/ai-automation">AI & Automation</Link></li>
+                <li><Link href="/services/cloud-infrastructure">Cloud & Infrastructure</Link></li>
+                <li><Link href="/services/business-process-outsourcing">Business Process Outsourcing</Link></li>
               </ul>
             </div>
 

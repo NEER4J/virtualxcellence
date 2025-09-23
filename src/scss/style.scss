@@ -1794,7 +1794,7 @@
     margin-top: 25px;
 
     li {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       color: var(--white);
@@ -1953,8 +1953,19 @@
 /* footer area 2 style  */
 .footer-area-2 {
   background-color: var(--black);
+  background: linear-gradient(to bottom right, #ff2f36 1%, #000000 20%);
   position: relative;
   z-index: 1;
+
+  @media #{$md} {
+    background: var(--black);
+  }
+
+  .footer-logo {
+    img {
+      max-width: 200px;
+    }
+  }
 
  
 
@@ -1983,8 +1994,8 @@
     }
 
     @media #{$lg} {
-      padding-top: 60px;
-      padding-bottom: 52px;
+      padding-top: 40px;
+      padding-bottom: 32px;
     }
   }
 
@@ -2033,6 +2044,7 @@
       color: var(--white);
       opacity: 0.74;
       max-width: 300px;
+      text-align: left;
     }
 
     .text-wrapper {
@@ -2044,23 +2056,25 @@
     margin-top: 23px;
 
     li {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       color: var(--white);
-      opacity: 0.74;
+
+      font-weight: normal;
 
       &:not(:first-child) {
-        margin-top: 15px;
+        margin-top: 5px;
 
         @media #{$lg} {
-          margin-top: 10px;
+          margin-top: 5px;
         }
       }
 
       a {
         &:hover {
-          color: var(--action);
+          color: var(--white);
+          text-decoration: underline;
         }
       }
     }
@@ -2107,11 +2121,12 @@
 
   .copyright-text {
     .text {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       color: var(--white);
       opacity: 0.74;
+      text-align: left;
 
       a {
         color: var(--white);
@@ -2127,19 +2142,18 @@
 
     @media #{$md} {
       text-align: center;
-      justify-content: center;
     }
 
     li {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       color: var(--white);
-      opacity: 0.74;
 
       a {
         &:hover {
-          color: var(--action);
+          color: var(--white);
+          text-decoration: underline;
         }
       }
     }
@@ -2155,7 +2169,7 @@
     }
 
     a {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--white);
       width: 40px;
       height: 40px;
@@ -2168,6 +2182,7 @@
       &:hover {
         background-color: var(--white);
         color: var(--primary);
+        text-decoration: underline;
       }
     }
   }
@@ -2275,7 +2290,7 @@
       width: 160px;
 
       @media #{$xl} {
-        width: 130px;
+        width: 100px;
       }
     }
   }
@@ -2378,7 +2393,7 @@
 
   .copyright-text {
     .text {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       color: var(--white);
@@ -2567,7 +2582,7 @@
 
   .copyright-text {
     .text {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 34px;
       color: var(--white);
