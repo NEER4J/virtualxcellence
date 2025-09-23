@@ -15990,6 +15990,10 @@
 
       img {
         max-width: 600px;
+
+        @media #{$md} {
+          max-width: 300px;
+        }
         // transform: scale(1.5);
       }
     }
