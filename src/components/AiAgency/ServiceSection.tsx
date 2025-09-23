@@ -85,10 +85,10 @@ const ServiceSection: React.FC = () => {
   ];
 
   return (
-    <div className="service-area-4">
-      <div className="service-area-4-inner section-spacing">
+    <div className="service-area-4" >
+      <div className="service-area-4-inner section-spacing" id="services">
         <Container>
-          <div className="section-header">
+          <div className="section-header" >
             <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
               <div className="subtitle-wrapper">
                 <span className="section-subtitle">

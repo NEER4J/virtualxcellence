@@ -25,9 +25,9 @@ const heroData: HeroData = {
     titleSpanTwo: "Digital Transformation",
     subtitle: "With 10+ years of expertise, we help businesses scale smarter through AI, automation, and cloud innovation.",
     primaryBtnText: "Book a Consultation",
-    primaryBtnLink: "/ai-agency/contact",
+    primaryBtnLink: "/contact",
     secondaryBtnText: "Explore Our Services",
-    secondaryBtnLink: "/ai-agency/services",
+    secondaryBtnLink: "#services",
     brandTitle: "Trusted by 300+ clients worldwide",
     brands: [
       { image: "/assets/imgs/brand/brand-10.webp" },

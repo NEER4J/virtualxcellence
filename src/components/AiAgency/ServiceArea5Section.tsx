@@ -90,22 +90,27 @@ const ServiceArea5Section: React.FC = () => {
       {
         id: 1,
         text: "SERVE YOUR INDUSTRY",
-        link: "/ai-agency/contact",
+        link: "/healthcare",
       },
       {
         id: 2,
         text: "TRANSFORM YOUR SECTOR",
-        link: "/ai-agency/contact",
+        link: "/finance",
       },
       {
         id: 3,
         text: "INNOVATE YOUR INDUSTRY",
-        link: "/ai-agency/contact",
+        link: "/government",
       },
       {
         id: 4,
         text: "LEAD YOUR MARKET",
-        link: "/ai-agency/contact",
+        link: "/retail",
+      },
+      {
+        id: 5,
+        text: "OPTIMIZE YOUR OPERATIONS",
+        link: "/manufacturing",
       },
     ],
   };
@@ -198,10 +203,10 @@ const ServiceArea5Section: React.FC = () => {
                             </ul>
                           </div>
                           <Link
-                            className="t-btn t-btn-primary"
-                            href="/ai-agency/service-details"
+                            className="t-btn t-btn-primary "
+                            href={`/industry/${tab?.id}`}
                           >
-                            View Details
+                            View {tab?.title} Details
                           </Link>
                         </div>
                       </div>
