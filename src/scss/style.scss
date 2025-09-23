@@ -452,8 +452,8 @@
   }
 
   @media #{$xs} {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -4455,7 +4455,6 @@
     grid-template-columns: 630px 520px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
 
     @media #{$xxl} {
       grid-template-columns: 530px 500px;
@@ -4501,6 +4500,10 @@
 
       img {
         border-radius: 8px;
+
+        @media #{$md} {
+          display: none;
+        }
       }
     }
 
@@ -4620,7 +4623,7 @@
     }
 
     @media #{$xs} {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -4630,7 +4633,7 @@
     margin-top: 105px;
 
     @media #{$md} {
-      margin-top: 60px;
+      margin-top: 40px;
     }
   }
 }
@@ -6080,7 +6083,7 @@
   .services-wrapper {
     @media #{$md} {
       display: grid;
-      gap: 40px;
+      gap: 0px;
     }
   }
 }
@@ -7054,17 +7057,6 @@
       font-size: 20px;
     }
 
-    @media #{$lg} {
-      font-size: 18px;
-    }
-
-    @media #{$md} {
-      font-size: 18px;
-    }
-
-    @media #{$sm} {
-      font-size: 16px;
-    }
   }
 
   .text {
@@ -7161,7 +7153,7 @@
     }
 
     @media #{$xs} {
-      padding: 20px 15px 10px 15px;
+      padding: 0;
     }
 
     .area-bg {
@@ -10076,14 +10068,13 @@
 .team-area-4 {
 
   &-inner {
-    margin-top: 20px;
-    margin-bottom: 20px;
     display: flex;
     gap: 40px 60px;
     align-items: flex-start;
 
     @media #{$xl} {
       grid-template-columns: 1fr 560px;
+      display: grid !important;
     }
 
     @media #{$lg} {
@@ -10093,10 +10084,18 @@
     @media #{$md} {
       grid-template-columns: 1fr;
     }
+
+    .team-wrapper{
+      @media #{$md} {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
   }
 
   .section-content {
-    margin-top: 24px;
+    margin-top: 0px;
 
     .title-wrapper {
       margin-top: 17px;
@@ -10162,9 +10161,8 @@
   }
 
   .team-wrapper {
-    gap: 30px;
+    gap: 20px;
     display: flex;
-    gap: 30px;
 
     @media #{$xs} {
     }
@@ -10219,7 +10217,7 @@
     margin: 8px 23px 23px;
 
     @media #{$lg} {
-      margin: 8px 14px 0;
+      margin: 20px;
     }
   }
 
@@ -13167,6 +13165,11 @@
   &-inner {
     padding-top: 98px;
     padding-bottom: 98px;
+
+    @media #{$md} {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
   .section-title {
@@ -16220,3 +16223,9 @@
   }
 }
 
+
+.home-services-box{
+  @media #{$md} {
+    padding: 0 !important;
+  }
+}

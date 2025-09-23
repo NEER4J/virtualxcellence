@@ -110,7 +110,7 @@ const ServiceSection: React.FC = () => {
             <div className="services-wrapper">
               <div className="row">
                 {servicesData?.map((service) => (
-                  <div key={service?.id} className="col-lg-4 col-md-6 mb-4">
+                  <div key={service?.id} className="col-lg-4 col-md-6 mb-4 home-services-box">
                     <div className="service-box-4 h-100">
                       <div className="thumb">
                         <img
