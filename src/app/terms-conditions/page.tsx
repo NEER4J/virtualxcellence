@@ -50,8 +50,8 @@ const TermsConditionsPage = (): ReactElement => {
                   <div className="terms-section mb-5">
                     <h2 className="section-title mb-4">1. Introduction</h2>
                     <p className="mb-3">
-                      Welcome to Virtual Xcellence. These Terms of Service ("Terms") govern your use of our website, 
-                      services, and products operated by Virtual Xcellence ("Company," "we," "us," or "our") located at 
+                      Welcome to Virtual Xcellence. These Terms of Service (&quot;Terms&quot;) govern your use of our website, 
+                      services, and products operated by Virtual Xcellence (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) located at 
                       3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA.
                     </p>
                     <p className="mb-3">

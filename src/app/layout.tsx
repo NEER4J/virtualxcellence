@@ -29,7 +29,6 @@ import AnimationProvider from "@/providers/AnimationProvider";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 import Header from "@/components/Home/Header";
-import FooterSection from "@/components/Home/FooterSection";
 
 export const metadata: Metadata = {
   title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",

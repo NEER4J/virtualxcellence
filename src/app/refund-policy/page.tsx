@@ -84,7 +84,7 @@ const RefundPolicyPage = (): ReactElement => {
                     <ul className="list-unstyled ms-4">
                       <li className="mb-2">• Packaged software must be returned with seal intact</li>
                       <li className="mb-2">• All media and product keys must be included</li>
-                      <li className="mb-2">• Opened software may be returned if you're unsatisfied with the license agreement</li>
+                      <li className="mb-2">• Opened software may be returned if you&apos;re unsatisfied with the license agreement</li>
                       <li className="mb-2">• No copies of the software may be made or retained</li>
                     </ul>
                   </div>

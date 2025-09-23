@@ -50,7 +50,7 @@ const PrivacyPolicyPage = (): ReactElement => {
                   <div className="privacy-section mb-5">
                     <h2 className="section-title mb-4">1. Introduction</h2>
                     <p className="mb-3">
-                      Virtual Xcellence ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy 
+                      Virtual Xcellence (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy 
                       explains how we collect, use, disclose, and safeguard your information when you visit our website 
                       or use our services.
                     </p>
@@ -178,7 +178,7 @@ const PrivacyPolicyPage = (): ReactElement => {
 
                   {/* Children's Privacy */}
                   <div className="privacy-section mb-5">
-                    <h2 className="section-title mb-4">10. Children's Privacy</h2>
+                    <h2 className="section-title mb-4">10. Children&apos;s Privacy</h2>
                     <p className="mb-3">
                       Our services are not intended for children under 13 years of age. We do not knowingly collect 
                       personal information from children under 13. If you are a parent or guardian and believe your 
@@ -191,7 +191,7 @@ const PrivacyPolicyPage = (): ReactElement => {
                     <h2 className="section-title mb-4">11. Changes to This Privacy Policy</h2>
                     <p className="mb-3">
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
-                      the new Privacy Policy on this page and updating the "Last updated" date.
+                      the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
                     </p>
                   </div>
 

@@ -53,11 +53,11 @@ const TermsOfSalePage = (): ReactElement => {
                       <strong>United States and Canada Consumer Store</strong>
                     </p>
                     <p className="mb-3">
-                      Welcome to Virtual Xcellence online and retail Stores operated by Virtual Xcellence ("Virtual Xcellence," 
-                      "We," "Us," "Our"), located at 3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA.
+                      Welcome to Virtual Xcellence online and retail Stores operated by Virtual Xcellence (&quot;Virtual Xcellence,&quot; 
+                      &quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;), located at 3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA.
                     </p>
                     <p className="mb-3">
-                      "Store" refers to our online and retail venues that allow you to browse, view, acquire, purchase, and 
+                      &quot;Store&quot; refers to our online and retail venues that allow you to browse, view, acquire, purchase, and 
                       rate and review products and services including devices, game consoles, digital content, applications, 
                       services, and more.
                     </p>
@@ -67,16 +67,16 @@ const TermsOfSalePage = (): ReactElement => {
                   <div className="terms-section mb-5">
                     <h2 className="section-title mb-4">1. Store Policies</h2>
                     <p className="mb-3">
-                      These Terms of Sale ("Terms of Sale") cover use of the online and retail stores, and other services 
-                      that refer to these Terms of Sale (collectively "Store"). Through the Store, Virtual Xcellence provides 
+                      These Terms of Sale (&quot;Terms of Sale&quot;) cover use of the online and retail stores, and other services 
+                      that refer to these Terms of Sale (collectively &quot;Store&quot;). Through the Store, Virtual Xcellence provides 
                       access to a variety of resources, including download areas, software, tools, and information about 
-                      software, services and other merchandise (collectively "Services").
+                      software, services and other merchandise (collectively &quot;Services&quot;).
                     </p>
                     <p className="mb-3">
                       By using the Online Store, or by acquiring products or services from the Store, you accept and agree 
-                      to these Terms of Sale, Virtual Xcellence's Privacy Statement, and applicable terms and conditions, 
+                      to these Terms of Sale, Virtual Xcellence&apos;s Privacy Statement, and applicable terms and conditions, 
                       policies or disclaimers found in the Store or referenced in these Terms of Sale (collectively the 
-                      "Store Policies").
+                      &quot;Store Policies&quot;).
                     </p>
                     <p className="mb-3 text-danger">
                       <strong>YOU MAY NOT USE THE STORE IF YOU DO NOT AGREE TO THE STORE POLICIES.</strong>
@@ -97,7 +97,7 @@ const TermsOfSalePage = (): ReactElement => {
                     <p className="mb-3">
                       Virtual Xcellence is providing these links to you only as a convenience, and the inclusion of any 
                       link does not imply endorsement by Virtual Xcellence of the site. Your use of the third-party 
-                      website may be subject to that third party's terms and conditions.
+                      website may be subject to that third party&apos;s terms and conditions.
                     </p>
                   </div>
 
@@ -214,7 +214,7 @@ const TermsOfSalePage = (): ReactElement => {
                     <h2 className="section-title mb-4">10. Refund Process</h2>
                     <p className="mb-3">
                       When you make a qualifying return, we will credit the full amount, less the original shipping and 
-                      handling charges (if any) except we won't deduct those charges for returns because you are unsatisfied 
+                      handling charges (if any) except we won&apos;t deduct those charges for returns because you are unsatisfied 
                       with the license agreement or warranty, and you will typically receive your refund in approximately 
                       3-5 business days.
                     </p>
@@ -238,16 +238,16 @@ const TermsOfSalePage = (): ReactElement => {
                     <p className="mb-3">
                       Your privacy is important to us. We use certain information that we collect from you to operate 
                       and provide the Store. Please read the Virtual Xcellence Privacy Statement as it describes the 
-                      types of data we collect from you and your devices ("Data") and how we use your Data.
+                      types of data we collect from you and your devices (&quot;Data&quot;) and how we use your Data.
                     </p>
                     <p className="mb-3">
                       The Privacy Statement also describes how Virtual Xcellence uses your communications with others; 
                       postings or feedback submitted by you to Virtual Xcellence via the Store; and the files, photos, 
                       documents, audio, digital works, and videos that you upload, store or share on your devices or 
-                      through the Store ("Your Content").
+                      through the Store (&quot;Your Content&quot;).
                     </p>
                     <p className="mb-3">
-                      By using the Store, you expressly consent to Virtual Xcellence's collection, use and disclosure 
+                      By using the Store, you expressly consent to Virtual Xcellence&apos;s collection, use and disclosure 
                       of Your Content and Data as described in the Privacy Statement.
                     </p>
                   </div>
