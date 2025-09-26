@@ -7,44 +7,43 @@ import CoreValuesSection from "@/components/About/CoreValuesSection";
 import JourneySection from "@/components/About/JourneySection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import FooterSection from "@/components/Home/FooterSection";
-
+import { createPageMetadata } from "@/lib/page-seo";
 
 // component data
 import videoData from "@/constant/AiAgency/About/video";
 import textSliderData from "@/constant/AiAgency/text-slider";
 
-export const metadata: Metadata = {
-  title: "About Us || Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
-  description:
-    "Explore the About Us page of Virtual Xcellence – a modern, high-performance agency template built with Next.js. Meet the team, learn our mission, and discover why Virtual Xcellence is trusted by creative professionals and businesses.",
-  keywords: [
-    "Virtual Xcellence About Us",
-    "NextJS about page",
-    "agency template",
-    "digital agency",
-    "creative team template",
-    "business website template",
-    "responsive NextJS template",
-    "modern agency design",
-    "SEO friendly template",
-    "professional web agency",
-    "agency team page",
-    "company profile",
-    "NextJS clean UI",
-    "startup website",
-    "web design agency",
-    "agency portfolio",
-    "fast NextJS website",
-    "customizable template",
-    "about page design",
-    "Virtual Xcellence template",
-  ],
-  creator: "Virtual Xcellence",
-  other: {
-    developer: "Virtual Xcellence",
-    section: "About Page",
-  },
-};
+// Dynamic SEO metadata - will use database data if available, fallback to defaults
+export async function generateMetadata(): Promise<Metadata> {
+  return createPageMetadata('/about', {
+    title: "About Us || Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
+    description: "Explore the About Us page of Virtual Xcellence – a modern, high-performance agency template built with Next.js. Meet the team, learn our mission, and discover why Virtual Xcellence is trusted by creative professionals and businesses.",
+    keywords: [
+      "Virtual Xcellence About Us",
+      "NextJS about page",
+      "agency template",
+      "digital agency",
+      "creative team template",
+      "business website template",
+      "responsive NextJS template",
+      "modern agency design",
+      "SEO friendly template",
+      "professional web agency",
+      "agency team page",
+      "company profile",
+      "NextJS clean UI",
+      "startup website",
+      "web design agency",
+      "agency portfolio",
+      "fast NextJS website",
+      "customizable template",
+      "about page design",
+      "Virtual Xcellence template",
+    ],
+    ogImage: "https://virtualxcellence.com/about-og.jpg",
+    canonicalUrl: "https://virtualxcellence.com/about"
+  });
+}
 
 const AboutPage = (): ReactElement => {
   return (

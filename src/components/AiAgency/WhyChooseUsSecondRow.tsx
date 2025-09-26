@@ -3,21 +3,25 @@ import React from "react";
 interface WhyChooseUsItem {
   title: string;
   description: string;
+  image: string;
 }
 
 const WhyChooseUsSecondRow: React.FC = () => {
   const whyChooseUsItems: WhyChooseUsItem[] = [
     {
       title: "Leadership-as-a-Service",
-      description: "CTO/CFO for flexible, high-value advisory"
+      description: "CTO/CFO for flexible, high-value advisory",
+      image: "/assets/imgs/new/Leadership-as-a-Service-300x208.jpg"
     },
     {
       title: "Future-Focused",
-      description: "AI, cloud, cybersecurity, and transformation"
+      description: "AI, cloud, cybersecurity, and transformation",
+      image: "/assets/imgs/new/Future-Focused 300x208.jpg"
     },
     {
       title: "Measurable ROI",
-      description: "With every engagement"
+      description: "With every engagement",
+      image: "/assets/imgs/new/Measurable-ROI-300x208.jpg"
     }
   ];
 
@@ -37,7 +41,7 @@ const WhyChooseUsSecondRow: React.FC = () => {
                 >
                   <div className="thumb">
                     <img
-                      src="/assets/imgs/team/team-12.webp"
+                      src={item?.image}
                       alt={item?.title || "Why Choose Us"}
                     />
                   </div>

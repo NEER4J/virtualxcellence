@@ -13,7 +13,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "development",
       title: "Development",
-      image: "/assets/imgs/gallery/image-17.webp",
+      image: "/assets/imgs/new/Development-600x354.jpg",
       description:
         "Custom software, web & mobile solutions tailored to your business needs. We build scalable, secure, and user-friendly applications that drive growth and efficiency.",
       detailLink: "/services/development",
@@ -21,7 +21,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "consultation",
       title: "Consultation",
-      image: "/assets/imgs/gallery/image-47.webp",
+      image: "/assets/imgs/new/Consultation-600x354.jpg",
       description:
         "Strategic technology advisory to help you make informed decisions. Our experts provide guidance on technology roadmaps, digital transformation, and innovation strategies.",
       detailLink: "/services/consultation",
@@ -29,7 +29,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "fractional-cto",
       title: "Fractional CTO",
-      image: "/assets/imgs/gallery/image-46.webp",
+      image: "/assets/imgs/new/CTO-600x354.jpg",
       description:
         "On-demand technology leadership for growing companies. Get access to senior-level technical expertise without the full-time commitment, perfect for scaling your tech operations.",
       detailLink: "/services/fractional-cto",
@@ -37,7 +37,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "fractional-cfo",
       title: "Fractional CFO",
-      image: "/assets/imgs/gallery/image-45.webp",
+      image: "/assets/imgs/new/CFO-600x354.jpg",
       description:
         "Financial strategy & transformation services. We help optimize your financial operations, implement cost-effective solutions, and drive sustainable business growth.",
       detailLink: "/services/fractional-cfo",
@@ -45,7 +45,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "business-transformation",
       title: "Business Transformation",
-      image: "/assets/imgs/gallery/image-17.webp",
+      image: "/assets/imgs/new/Business-Transformation-600x354.jpg",
       description:
         "Process redesign, automation, and AI integration to modernize your operations. We help streamline workflows, reduce costs, and improve overall business efficiency.",
       detailLink: "/services/business-transformation",
@@ -53,7 +53,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "cybersecurity",
       title: "Cybersecurity",
-      image: "/assets/imgs/gallery/image-47.webp",
+      image: "/assets/imgs/new/Cybersecurity-600x354.jpg",
       description:
         "Comprehensive risk management and data protection solutions. We safeguard your digital assets with advanced security measures and compliance frameworks.",
       detailLink: "/services/cybersecurity",
@@ -61,7 +61,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "ai-automation",
       title: "AI & Automation",
-      image: "/assets/imgs/gallery/image-46.webp",
+      image: "/assets/imgs/new/AI-&-Automation-600x354.jpg",
       description:
         "Conversational AI, predictive analytics, and RPA solutions. Leverage artificial intelligence to automate processes, gain insights, and enhance customer experiences.",
       detailLink: "/services/ai-automation",
@@ -69,7 +69,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "cloud-infrastructure",
       title: "Cloud & Infrastructure",
-      image: "/assets/imgs/gallery/image-45.webp",
+      image: "/assets/imgs/new/Cloud-&-Infrastructure-600x354.jpg",
       description:
         "Cloud migration, DevOps, and managed services for scalable infrastructure. We help you transition to the cloud and maintain reliable, secure, and cost-effective systems.",
       detailLink: "/services/cloud-infrastructure",
@@ -77,7 +77,7 @@ const ServiceSection: React.FC = () => {
     {
       id: "business-process-outsourcing",
       title: "BPO & Support Services",
-      image: "/assets/imgs/gallery/image-17.webp",
+      image: "/assets/imgs/new/Development-600x354.jpg",
       description:
         "Transform your operations with scalable, cost-effective outsourcing. Customer support, back-office operations, sales & lead generation, and AI-powered solutions.",
       detailLink: "/services/business-process-outsourcing",

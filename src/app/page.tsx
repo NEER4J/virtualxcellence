@@ -11,39 +11,39 @@ import WorkSection from "@/components/AiAgency/WorkSection";
 import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
 import DigitalWorkSection from "@/components/DigitalAgency/WorkSection";
 import FooterSection from "@/components/Home/FooterSection";
+import { createPageMetadata } from "@/lib/page-seo";
 
-export const metadata: Metadata = {
-  title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
-  description:
-    "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 10+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
-  keywords: [
-    "AI solutions",
-    "cloud transformation",
-    "digital transformation",
-    "business automation",
-    "technology consulting",
-    "AI implementation",
-    "cloud migration",
-    "business innovation",
-    "Canada technology company",
-    "enterprise solutions",
-    "AI consulting",
-    "cloud services",
-    "digital strategy",
-    "technology consulting",
-    "business transformation",
-    "AI automation",
-    "cloud computing",
-    "digital innovation",
-    "technology solutions",
-    "business growth",
-  ],
-  creator: "Virtual Xcellence",
-  other: {
-    developer: "Virtual Xcellence",
-    section: "Home",
-  },
-};
+// Dynamic SEO metadata - will use database data if available, fallback to defaults
+export async function generateMetadata(): Promise<Metadata> {
+  return createPageMetadata('/', {
+    title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
+    description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 10+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
+    keywords: [
+      "AI solutions",
+      "cloud transformation", 
+      "digital transformation",
+      "business automation",
+      "technology consulting",
+      "AI implementation",
+      "cloud migration",
+      "business innovation",
+      "Canada technology company",
+      "enterprise solutions",
+      "AI consulting",
+      "cloud services",
+      "digital strategy",
+      "technology consulting",
+      "business transformation",
+      "AI automation",
+      "cloud computing",
+      "digital innovation",
+      "technology solutions",
+      "business growth",
+    ],
+    ogImage: "https://virtualxcellence.com/og-home.jpg",
+    canonicalUrl: "https://virtualxcellence.com"
+  });
+}
 
 // all data 
 import heroData from "@/constant/AiAgency/hero";

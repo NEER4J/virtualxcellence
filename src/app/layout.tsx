@@ -26,49 +26,25 @@ import "nice-select2/dist/css/nice-select2.css";
 import "@/scss/style.scss";
 import ScrollTopWrapper from "@/components/ScrollTopWrapper";
 import AnimationProvider from "@/providers/AnimationProvider";
+import { AuthProvider } from "@/contexts/AuthContext";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
-import Header from "@/components/Home/Header";
+import ConditionalHeader from "@/components/ConditionalHeader";
 
+// Default metadata - will be overridden by individual pages
 export const metadata: Metadata = {
   title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
-  description:
-    "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 10+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
-  keywords: [
-    "AI solutions",
-    "cloud transformation",
-    "digital transformation",
-    "business automation",
-    "technology consulting",
-    "AI implementation",
-    "cloud migration",
-    "business innovation",
-    "Canada technology company",
-    "enterprise solutions",
-    "AI consulting",
-    "cloud services",
-    "digital strategy",
-    "technology consulting",
-    "business transformation",
-    "AI automation",
-    "cloud computing",
-    "digital innovation",
-    "technology solutions",
-    "business growth",
-    "Virtual Xcellence",
-    "AI agency",
-    "digital agency",
-    "technology company",
-    "business consulting",
-    "AI services",
-    "cloud consulting",
-    "digital consulting",
-    "technology solutions",
-    "business transformation",
-  ],
-  creator: "Virtual Xcellence",
-  other: {
-    developer: "Virtual Xcellence",
+  description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation.",
+  keywords: ["AI solutions", "cloud transformation", "digital transformation", "business automation", "technology consulting"],
+  openGraph: {
+    title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
+    description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
+    description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation.",
   },
 };
 
@@ -80,10 +56,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}>
-      <Header />
-        <AnimationProvider>{children}</AnimationProvider>
-        <ScrollTopWrapper width={20} height={20} className="progress-wrap" />
-        <Toaster position="top-center" />
+        <AuthProvider>
+          <ConditionalHeader />
+          <AnimationProvider>{children}</AnimationProvider>
+          <ScrollTopWrapper width={20} height={20} className="progress-wrap" />
+          <Toaster position="top-center" />
+        </AuthProvider>
       </body>
     </html>
   );

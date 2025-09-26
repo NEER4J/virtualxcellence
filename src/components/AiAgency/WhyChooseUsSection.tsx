@@ -3,6 +3,7 @@ import React from "react";
 interface WhyChooseUsItem {
   title: string;
   description: string;
+  image: string;
 }
 
 const WhyChooseUsSection: React.FC = () => {
@@ -15,11 +16,13 @@ const WhyChooseUsSection: React.FC = () => {
   const whyChooseUsItems: WhyChooseUsItem[] = [
     {
       title: "Canada-Headquartered",
-      description: "10+ years of proven success"
+      description: "10+ years of proven success",
+      image: "/assets/imgs/new/Headquater-300x208.jpg"
     },
     {
       title: "Cross-Industry Expertise",
-      description: "Across healthcare, finance, retail, and more"
+      description: "Across healthcare, finance, retail, and more",
+      image: "/assets/imgs/new/Cross-Industry-Expertise-300x208.jpg"
     }
   ];
 
@@ -59,7 +62,7 @@ const WhyChooseUsSection: React.FC = () => {
                 >
                   <div className="thumb">
                     <img
-                      src="/assets/imgs/team/team-12.webp"
+                      src={item?.image}
                       alt={item?.title || "Why Choose Us"}
                     />
                   </div>

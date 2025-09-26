@@ -3,6 +3,8 @@ import { useState } from "react";
 import Sidebar from "@/components/AiAgency/SideBar/SideBar";
 import Link from "next/link";
 import useStickyHeader from "@/Hook/useStickyHeader";
+import { useAuth } from "@/contexts/AuthContext";
+import UserProfile from "@/components/Auth/UserProfile";
 
 // --- TYPE DEFINITIONS ---
 interface MenuItem {
@@ -100,6 +102,7 @@ const headerData:HeaderData = {
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user } = useAuth();
   const handleSidebar = () => setIsOpen((prev) => !prev);
   useStickyHeader();
 
@@ -141,7 +144,25 @@ const Header: React.FC = () => {
                 </nav>
               </div>
 
-              <div className="header-button">
+              <div className="header-button flex items-center space-x-3">
+                {user ? (
+                  <UserProfile />
+                ) : (
+                  <>
+                    <Link
+                      href="/admin/login"
+                      className="text-slate-700 hover:text-slate-900 font-medium transition-colors hidden lg:block"
+                    >
+                      Sign In
+                    </Link>
+                    <Link
+                      href="/signup"
+                      className="bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-lg font-medium transition-colors hidden lg:block"
+                    >
+                      Sign Up
+                    </Link>
+                  </>
+                )}
                 <Link
                   href={headerData?.cta?.href}
                   className="t-btn t-btn-primary bg-active"

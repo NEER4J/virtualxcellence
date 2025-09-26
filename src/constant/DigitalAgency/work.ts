@@ -27,7 +27,7 @@ const workData:WorkData = {
         title: "Retail Chain: AI demand forecasting",
         result: "35% cost savings",
         tags: ["RETAIL", "AI"],
-        image: "/assets/imgs/project/project-1.webp",
+        image: "/assets/imgs/new/AI-demand-forecasting-740x515.jpg",
         link: "/ai-agency/portfolio-details",
       },
       {
@@ -35,7 +35,7 @@ const workData:WorkData = {
         title: "Logistics Provider: Conversational AI",
         result: "65% faster response time",
         tags: ["LOGISTICS", "AI"],
-        image: "/assets/imgs/project/project-2.webp",
+        image: "/assets/imgs/new/Logistics-Provider-740x515.jpg",
         link: "/ai-agency/portfolio-details",
       },
       {
@@ -43,7 +43,7 @@ const workData:WorkData = {
         title: "Financial Institution: Omni Channel customer Experience",
         result: "100% achieved",
         tags: ["FINANCE", "OMNI-CHANNEL"],
-        image: "/assets/imgs/project/project-3.webp",
+        image: "/assets/imgs/new/Omnichannel-Customer-Experience-740x515.jpg",
         link: "/ai-agency/portfolio-details",
       },
       {
@@ -51,7 +51,7 @@ const workData:WorkData = {
         title: "Healthcare Provider: AI-powered diagnostics",
         result: "40% accuracy improvement",
         tags: ["HEALTHCARE", "AI"],
-        image: "/assets/imgs/project/project-4.webp",
+        image: "/assets/imgs/new/AI-&-Automation-600x354.jpg",
         link: "/ai-agency/portfolio-details",
       },
     ],
