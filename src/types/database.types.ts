@@ -124,6 +124,133 @@ export interface Database {
           updated_at?: string
         }
       }
+      careers_posts: {
+        Row: {
+          id: string
+          title: string
+          slug: string
+          description: string | null
+          content: string
+          location: string | null
+          employment_type: string
+          experience_level: string
+          department: string | null
+          salary_range: string | null
+          benefits: string[] | null
+          requirements: string[] | null
+          responsibilities: string[] | null
+          skills_required: string[] | null
+          is_active: boolean
+          is_featured: boolean
+          application_deadline: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          title: string
+          slug: string
+          description?: string | null
+          content: string
+          location?: string | null
+          employment_type: string
+          experience_level: string
+          department?: string | null
+          salary_range?: string | null
+          benefits?: string[] | null
+          requirements?: string[] | null
+          responsibilities?: string[] | null
+          skills_required?: string[] | null
+          is_active?: boolean
+          is_featured?: boolean
+          application_deadline?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          title?: string
+          slug?: string
+          description?: string | null
+          content?: string
+          location?: string | null
+          employment_type?: string
+          experience_level?: string
+          department?: string | null
+          salary_range?: string | null
+          benefits?: string[] | null
+          requirements?: string[] | null
+          responsibilities?: string[] | null
+          skills_required?: string[] | null
+          is_active?: boolean
+          is_featured?: boolean
+          application_deadline?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+      }
+      career_applications: {
+        Row: {
+          id: string
+          career_post_id: string
+          applicant_name: string
+          applicant_email: string
+          applicant_phone: string | null
+          cover_letter: string | null
+          resume_url: string | null
+          portfolio_url: string | null
+          linkedin_url: string | null
+          experience_years: number | null
+          current_position: string | null
+          current_company: string | null
+          expected_salary: string | null
+          availability_date: string | null
+          status: string
+          notes: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          career_post_id: string
+          applicant_name: string
+          applicant_email: string
+          applicant_phone?: string | null
+          cover_letter?: string | null
+          resume_url?: string | null
+          portfolio_url?: string | null
+          linkedin_url?: string | null
+          experience_years?: number | null
+          current_position?: string | null
+          current_company?: string | null
+          expected_salary?: string | null
+          availability_date?: string | null
+          status?: string
+          notes?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          career_post_id?: string
+          applicant_name?: string
+          applicant_email?: string
+          applicant_phone?: string | null
+          cover_letter?: string | null
+          resume_url?: string | null
+          portfolio_url?: string | null
+          linkedin_url?: string | null
+          experience_years?: number | null
+          current_position?: string | null
+          current_company?: string | null
+          expected_salary?: string | null
+          availability_date?: string | null
+          status?: string
+          notes?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+      }
     }
     Views: {
       [_ in never]: never
@@ -149,3 +276,11 @@ export type AdminUser = Database['public']['Tables']['admin_users']['Row']
 export type Lead = Database['public']['Tables']['leads']['Row']
 export type LeadInsert = Database['public']['Tables']['leads']['Insert']
 export type LeadUpdate = Database['public']['Tables']['leads']['Update']
+
+export type CareerPost = Database['public']['Tables']['careers_posts']['Row']
+export type CareerPostInsert = Database['public']['Tables']['careers_posts']['Insert']
+export type CareerPostUpdate = Database['public']['Tables']['careers_posts']['Update']
+
+export type CareerApplication = Database['public']['Tables']['career_applications']['Row']
+export type CareerApplicationInsert = Database['public']['Tables']['career_applications']['Insert']
+export type CareerApplicationUpdate = Database['public']['Tables']['career_applications']['Update']
