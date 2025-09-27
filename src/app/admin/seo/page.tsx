@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import AdminSidebar from '@/components/Admin/AdminSidebar'
 import { 
@@ -8,9 +8,7 @@ import {
   Plus,
   Edit,
   Trash2,
-  Download,
-  ArrowUpRight,
-  MoreHorizontal
+  Download
 } from 'lucide-react'
 import Link from 'next/link'
 import { SeoPage } from '@/types/database.types'
@@ -26,7 +24,7 @@ export default function SeoManagement() {
 
   useEffect(() => {
     fetchSeoPages()
-  }, [])
+  }, [fetchSeoPages])
 
   useEffect(() => {
     const filtered = seoPages.filter(page =>
@@ -37,7 +35,7 @@ export default function SeoManagement() {
     setFilteredPages(filtered)
   }, [seoPages, searchTerm])
 
-  const fetchSeoPages = async () => {
+  const fetchSeoPages = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('seo_pages')
@@ -53,7 +51,7 @@ export default function SeoManagement() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [supabase])
 
   const deletePage = async (id: string) => {
     if (!confirm('Are you sure you want to delete this SEO page?')) return

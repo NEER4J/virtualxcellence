@@ -7,12 +7,9 @@ import { createClient } from '@/lib/supabase/client'
 import { 
   LayoutDashboard, 
   Search, 
-  Settings, 
   LogOut, 
   Menu, 
-  X,
-  FileText,
-  Grid3X3
+  X
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
@@ -44,7 +41,7 @@ export default function AdminSidebar({ className = '' }: AdminSidebarProps) {
       await supabase.auth.signOut()
       toast.success('Logged out successfully')
       router.push('/admin/login')
-    } catch (error) {
+    } catch {
       toast.error('Error logging out')
     }
   }

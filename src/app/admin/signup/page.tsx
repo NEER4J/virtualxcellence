@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
-import { Eye, EyeOff, Lock, Mail, User, ArrowRight } from 'lucide-react'
+import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react'
 import toast from 'react-hot-toast'
-import Link from 'next/link'
 
 export default function SignUp() {
   const [email, setEmail] = useState('')
@@ -48,7 +47,7 @@ export default function SignUp() {
         // Optionally redirect to a confirmation page or sign-in
         router.push('/admin/login?message=Please check your email to verify your account')
       }
-    } catch (error) {
+    } catch {
       toast.error('An unexpected error occurred')
     } finally {
       setLoading(false)

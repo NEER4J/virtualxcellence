@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { Loader, AlertCircle } from 'lucide-react'
@@ -12,9 +12,9 @@ export default function AdminIndex() {
 
   useEffect(() => {
     checkAuth()
-  }, [])
+  }, [checkAuth])
 
-  const checkAuth = async () => {
+  const checkAuth = useCallback(async () => {
     try {
       setLoading(true)
       setError(null)
@@ -56,12 +56,12 @@ export default function AdminIndex() {
       
       // If not authenticated, redirect to sign-in page
       router.push('/admin/login?redirect=/admin')
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error checking auth:', error)
-      setError(error.message || 'An error occurred while checking authentication')
+      setError(error instanceof Error ? error.message : 'An error occurred while checking authentication')
       setLoading(false)
     }
-  }
+  }, [router])
 
   if (error) {
     return (

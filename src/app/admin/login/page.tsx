@@ -46,7 +46,7 @@ export default function AdminLogin() {
         toast.success('Login successful!')
         router.push('/admin/dashboard')
       }
-    } catch (error) {
+    } catch {
       toast.error('An unexpected error occurred')
     } finally {
       setLoading(false)

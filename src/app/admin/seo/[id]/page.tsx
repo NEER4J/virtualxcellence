@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import AdminSidebar from '@/components/Admin/AdminSidebar'
 import SeoForm from '@/components/Admin/SeoForm'
@@ -24,9 +24,9 @@ export default function EditSeoPage({ params }: EditSeoPageProps) {
 
   useEffect(() => {
     fetchSeoPage()
-  }, [params.id])
+  }, [params.id, fetchSeoPage])
 
-  const fetchSeoPage = async () => {
+  const fetchSeoPage = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('seo_pages')
@@ -43,13 +43,13 @@ export default function EditSeoPage({ params }: EditSeoPageProps) {
       }
 
       setSeoPage(data)
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error fetching SEO page:', error)
-      setError(error.message)
+      setError(error instanceof Error ? error.message : 'An error occurred')
     } finally {
       setLoading(false)
     }
-  }
+  }, [supabase, params.id])
 
   if (loading) {
     return (
@@ -77,7 +77,7 @@ export default function EditSeoPage({ params }: EditSeoPageProps) {
           <div className="p-8">
             <div className="text-center py-12">
               <h1 className="text-xl font-semibold text-gray-900 mb-2">Page Not Found</h1>
-              <p className="text-gray-500 text-sm mb-6">The SEO page you're looking for doesn't exist.</p>
+              <p className="text-gray-500 text-sm mb-6">The SEO page you&apos;re looking for doesn&apos;t exist.</p>
               <Link
                 href="/admin/seo"
                 className="inline-flex items-center space-x-2 bg-gray-900 text-white px-4 py-2 hover:bg-gray-800 transition-colors text-sm font-medium"

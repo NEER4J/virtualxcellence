@@ -6,7 +6,7 @@ import { SeoData } from '@/lib/seo'
 
 interface StructuredDataProps {
   seoData?: SeoData | null
-  pageData?: any
+  pageData?: Record<string, unknown>
 }
 
 export default function StructuredData({ seoData, pageData }: StructuredDataProps) {

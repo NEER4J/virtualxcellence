@@ -14,7 +14,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
     <>
       {/* Tailwind CSS CDN for admin pages */}
-      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.tailwindcss.com" async></script>
       <script dangerouslySetInnerHTML={{
         __html: `
           tailwind.config = {

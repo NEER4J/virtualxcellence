@@ -13,26 +13,9 @@ import {
   FileText,
   Hash,
   Link as LinkIcon,
-  ExternalLink,
   Facebook,
   Twitter,
-  Chrome,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Eye,
-  Target,
-  Zap,
-  BarChart3,
-  Settings,
-  Code,
-  Tag,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
-  User,
-  Building
+  Chrome
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
@@ -62,7 +45,6 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
   })
   
   const [keywordInput, setKeywordInput] = useState('')
-  const [loading, setLoading] = useState(false)
   const [saving, setSaving] = useState(false)
 
   const supabase = createClient()
@@ -158,9 +140,9 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
       }
 
       router.push('/admin/seo')
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error saving SEO page:', error)
-      toast.error(error.message || 'Failed to save SEO page')
+      toast.error(error instanceof Error ? error.message : 'Failed to save SEO page')
     } finally {
       setSaving(false)
     }
@@ -348,7 +330,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               OG Image URL
             </label>
             <div className="relative">
-              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" alt="" />
               <input
                 id="og_image"
                 type="url"
@@ -420,7 +402,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               Twitter Image URL
             </label>
             <div className="relative">
-              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" alt="" />
               <input
                 id="twitter_image"
                 type="url"
@@ -521,7 +503,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               <div className="aspect-video bg-gray-100 relative">
                 <img
                   src={formData.og_image}
-                  alt="Preview"
+                  alt="Open Graph preview image"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none'
@@ -532,12 +514,12 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100" style={{display: 'none'}}>
-                  <Image className="w-8 h-8 text-gray-400" />
+                  <Image className="w-8 h-8 text-gray-400" alt="" />
                 </div>
               </div>
             ) : (
               <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                <Image className="w-8 h-8 text-gray-400" />
+                <Image className="w-8 h-8 text-gray-400" alt="" />
               </div>
             )}
             
@@ -567,7 +549,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               <div className="aspect-video bg-gray-100 relative">
                 <img
                   src={formData.twitter_image}
-                  alt="Preview"
+                  alt="Twitter preview image"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none'
@@ -578,12 +560,12 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100" style={{display: 'none'}}>
-                  <Image className="w-8 h-8 text-gray-400" />
+                  <Image className="w-8 h-8 text-gray-400" alt="" />
                 </div>
               </div>
             ) : (
               <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                <Image className="w-8 h-8 text-gray-400" />
+                <Image className="w-8 h-8 text-gray-400" alt="" />
               </div>
             )}
             
@@ -614,7 +596,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                 <div className="w-16 h-16 bg-gray-100 rounded flex-shrink-0 relative">
                   <img
                     src={formData.og_image}
-                    alt="Preview"
+                    alt="Google search preview image"
                     className="w-full h-full object-cover rounded"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
@@ -625,7 +607,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                     }}
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded" style={{display: 'none'}}>
-                    <Image className="w-6 h-6 text-gray-400" />
+                    <Image className="w-6 h-6 text-gray-400" alt="" />
                   </div>
                 </div>
               )}
