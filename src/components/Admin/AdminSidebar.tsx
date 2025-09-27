@@ -9,7 +9,8 @@ import {
   Search, 
   LogOut, 
   Menu, 
-  X
+  X,
+  Users
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
@@ -22,6 +23,11 @@ const sidebarItems = [
     title: 'Dashboard',
     href: '/admin/dashboard',
     icon: LayoutDashboard,
+  },
+  {
+    title: 'Lead Management',
+    href: '/admin/leads',
+    icon: Users,
   },
   {
     title: 'SEO Pages',

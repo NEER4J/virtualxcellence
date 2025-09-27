@@ -42,11 +42,7 @@ const contactData: IContact = {
       label: "+1-905-823-7677 (Canada)",
       link: "tel:+19058237677",
     },
-    {
-      icon: "/assets/imgs/icon/icon-18.webp",
-      label: "+1-702-537-0123 (United States)",
-      link: "tel:+17025370123",
-    },
+
     {
       icon: "/assets/imgs/icon/icon-18.webp",
       label: "+91-120-4286226 (India)",
@@ -66,17 +62,24 @@ const contactData: IContact = {
   formFields: [
     {
       icon: "/assets/imgs/icon/icon-19.webp",
-      label: "What’s your name?",
+      label: "What's your name?",
       name: "Name",
       placeholder: "Full name here",
       type: "text",
     },
     {
       icon: "/assets/imgs/icon/icon-20.webp",
-      label: "What’s your e-mail?",
+      label: "What's your e-mail?",
       name: "Email",
       placeholder: "Enter your mail here",
       type: "email",
+    },
+    {
+      icon: "/assets/imgs/icon/icon-18.webp",
+      label: "What's your phone number?",
+      name: "Phone",
+      placeholder: "Enter your phone number",
+      type: "tel",
     },
     {
       icon: "/assets/imgs/icon/icon-21.webp",

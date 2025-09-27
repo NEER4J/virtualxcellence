@@ -111,7 +111,7 @@ export async function generatePageSeoMetadata(
 /**
  * Generate structured data (JSON-LD) for schema markup
  */
-export function generateStructuredData(seoData: SeoData | null, _pageData?: Record<string, unknown>) {
+export function generateStructuredData(seoData: SeoData | null) {
   if (seoData?.schema_markup) {
     return seoData.schema_markup
   }

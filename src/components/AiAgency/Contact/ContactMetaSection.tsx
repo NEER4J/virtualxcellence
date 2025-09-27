@@ -41,22 +41,7 @@ const ContactMetaSection:React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="contact-meta-box">
-                <div className="content">
-                  <h3 className="title">Visit Us - United States</h3>
-                  <div className="meta-list">
-                    <ul>
-                      <li>
-                        <strong>United States:</strong><br />
-                        Virtual Xcellence Ltd.<br />
-                        464 Richmond Rd, Unit 202<br />
-                        Richmond Heights, OH 44143<br />
-                        <strong>Tel: 1-(702) 537-0123</strong>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+        
               <div className="contact-meta-box">
                 <div className="content">
                   <h3 className="title">Visit Us - India</h3>

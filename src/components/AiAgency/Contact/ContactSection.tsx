@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { IContact } from "@/constant/AiAgency/Contact/contact";
 import Link from "next/link";
+import { createClient } from '@/lib/supabase/client';
 
 interface FormData {
   Name: string;
   Email: string;
+  Phone: string;
   Messages: string;
 }
 
@@ -27,41 +29,86 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
   const [formData, setFormData] = useState<FormData>({
     Name: "",
     Email: "",
+    Phone: "",
     Messages: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { Name, Email, Messages } = formData;
+    const { Name, Email, Phone, Messages } = formData;
     if (!Name.trim() || !Email.trim() || !Messages.trim()) {
-      toast.error("Please fill in all the fields before submitting.");
+      toast.error("Please fill in all the required fields before submitting.");
       return;
     }
 
-    console.log(formData);
     const toastId = toast.loading("Sending your message...");
     try {
-      await new Promise((r) => setTimeout(r, 900));
-      toast.success("Your message has been sent successfully!", {
+      const supabase = createClient();
+      
+      // Save lead to database
+      const { error } = await supabase
+        .from('leads')
+        .insert({
+          name: Name.trim(),
+          email: Email.trim(),
+          phone: Phone.trim() || null,
+          message: Messages.trim(),
+          source: 'Contact Form',
+          status: 'new'
+        } as never);
+
+      if (error) throw error;
+
+      toast.success("Your message has been sent successfully! We'll get back to you soon.", {
         id: toastId,
       });
-      setFormData({
-        Name: "",
-        Email: "",
-        Messages: "",
-      });
-    } catch {
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error saving lead:', error);
       toast.error("Something went wrong. Please try again.", { id: toastId });
     }
   };
 
   return (
     <>
+      <style jsx>{`
+        .success-message {
+              text-align: center;
+    border-radius: .5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        }
+        
+        .success-icon {
+          font-size: 2.5rem;
+          color: #6b7280;
+          margin-bottom: 1rem;
+        }
+        
+        .success-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #111827;
+          margin-bottom: 0.75rem;
+        }
+        
+        .success-description {
+          font-size: 1rem;
+          color: #6b7280;
+          margin-bottom: 1.5rem;
+          line-height: 1.5;
+        }
+        
+      `}</style>
       <section className="contact-area">
         <div className="container">
           <div className="contact-area-inner section-spacing">
@@ -97,44 +144,86 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                 </div>
               </div>
               <div className="contact-wrap fade-anim" data-direction="left">
-                <form onSubmit={handleSubmit}>
-                  <div className="contact-formwrap">
-                    {formFields?.map((field, index) => (
-                      <div
-                        className={`contact-formfield${
-                          field?.name === "Messages" ? " messages" : ""
-                        }`}
-                        key={index}
-                      >
-                        <img
-                          className="input-icon"
-                          src={field?.icon}
-                          alt="icon"
-                        />
-                        <h3 className="title">{field?.label}</h3>
-                        <input
-                          type={field?.type}
-                          name={field?.name}
-                          id={field?.name}
-                          placeholder={field?.placeholder}
-                          value={formData[field?.name as keyof FormData] || ""}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="submit-btn">
-                    <button type="submit" className="t-btn t-btn-group">
+                {isSubmitted ? (
+                  <div className="success-message">
+                    <div className="success-icon">
+                    </div>
+                    <h3 className="success-title">Thank You!</h3>
+                    <p className="success-description">
+                      Your message has been sent successfully. We&apos;ll get back to you soon.
+                    </p>
+                    <button 
+                      onClick={() => {
+                        setIsSubmitted(false);
+                        setFormData({
+                          Name: "",
+                          Email: "",
+                          Phone: "",
+                          Messages: "",
+                        });
+                      }}
+                      className="t-btn t-btn-group"
+                    >
                       <span className="t-btn t-btn-circle">
-                        <i className="fa-solid fa-arrow-right"></i>
+                        <i className="fa-solid fa-plus"></i>
                       </span>
-                      <span className="t-btn t-btn-primary">{buttonText}</span>
+                      <span className="t-btn t-btn-primary">Send Another Message</span>
                       <span className="t-btn t-btn-circle">
-                        <i className="fa-solid fa-arrow-right"></i>
+                        <i className="fa-solid fa-plus"></i>
                       </span>
                     </button>
                   </div>
-                </form>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    <div className="contact-formwrap">
+                      {formFields?.map((field, index) => (
+                        <div
+                          className={`contact-formfield${
+                            field?.name === "Messages" ? " messages" : ""
+                          }`}
+                          key={index}
+                        >
+                          <img
+                            className="input-icon"
+                            src={field?.icon}
+                            alt="icon"
+                          />
+                          <h3 className="title">{field?.label}</h3>
+                          {field?.name === "Messages" ? (
+                            <textarea
+                              name={field?.name}
+                              id={field?.name}
+                              placeholder={field?.placeholder}
+                              value={formData[field?.name as keyof FormData] || ""}
+                              onChange={handleChange}
+                              rows={4}
+                            />
+                          ) : (
+                            <input
+                              type={field?.type}
+                              name={field?.name}
+                              id={field?.name}
+                              placeholder={field?.placeholder}
+                              value={formData[field?.name as keyof FormData] || ""}
+                              onChange={handleChange}
+                            />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="submit-btn">
+                      <button type="submit" className="t-btn t-btn-group">
+                        <span className="t-btn t-btn-circle">
+                          <i className="fa-solid fa-arrow-right"></i>
+                        </span>
+                        <span className="t-btn t-btn-primary">{buttonText}</span>
+                        <span className="t-btn t-btn-circle">
+                          <i className="fa-solid fa-arrow-right"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                )}
               </div>
             </div>
           </div>

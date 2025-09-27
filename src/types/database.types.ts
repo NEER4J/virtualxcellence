@@ -89,6 +89,41 @@ export interface Database {
           updated_at?: string
         }
       }
+      leads: {
+        Row: {
+          id: string
+          name: string
+          email: string
+          phone: string | null
+          message: string
+          source: string
+          status: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          name: string
+          email: string
+          phone?: string | null
+          message: string
+          source: string
+          status?: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          name?: string
+          email?: string
+          phone?: string | null
+          message?: string
+          source?: string
+          status?: string
+          created_at?: string
+          updated_at?: string
+        }
+      }
     }
     Views: {
       [_ in never]: never
@@ -110,3 +145,7 @@ export type SeoPageInsert = Database['public']['Tables']['seo_pages']['Insert']
 export type SeoPageUpdate = Database['public']['Tables']['seo_pages']['Update']
 
 export type AdminUser = Database['public']['Tables']['admin_users']['Row']
+
+export type Lead = Database['public']['Tables']['leads']['Row']
+export type LeadInsert = Database['public']['Tables']['leads']['Insert']
+export type LeadUpdate = Database['public']['Tables']['leads']['Update']

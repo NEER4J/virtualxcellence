@@ -30,6 +30,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 import ConditionalHeader from "@/components/ConditionalHeader";
+import { Analytics } from '@vercel/analytics/next';
 
 // Default metadata - will be overridden by individual pages
 export const metadata: Metadata = {
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <AnimationProvider>{children}</AnimationProvider>
           <ScrollTopWrapper width={20} height={20} className="progress-wrap" />
           <Toaster position="top-center" />
+          <Analytics />
         </AuthProvider>
       </body>
     </html>

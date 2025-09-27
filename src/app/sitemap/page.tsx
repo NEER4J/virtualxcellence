@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { SeoPage } from '@/types/database.types'
 import Link from 'next/link'
-import { FileText, Home, ChevronRight } from 'lucide-react'
+import { FileText, ChevronRight } from 'lucide-react'
 import Head from 'next/head'
 import '@/scss/sitemap.scss'
 

@@ -7,7 +7,7 @@ import { Loader, AlertCircle } from 'lucide-react'
 
 export default function AdminIndex() {
   const router = useRouter()
-  const [loading, setLoading] = useState(true)
+  const [, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   const checkAuth = useCallback(async () => {
@@ -36,7 +36,7 @@ export default function AdminIndex() {
         const { data: adminUser, error: adminError } = await supabase
           .from('admin_users')
           .select('*')
-          .eq('email', user.email)
+          .eq('email', user.email || '')
           .single()
 
         if (!adminError && adminUser) {
@@ -45,7 +45,7 @@ export default function AdminIndex() {
         } else {
           console.log('User is not an admin')
           // Redirect to sign-in page with message
-          router.push('/admin/login?message=Admin access required')
+          router.push('/admin/login?message=Admin%20access%20required')
           return
         }
       }
