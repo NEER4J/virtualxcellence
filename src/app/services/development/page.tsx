@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Development Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Building future-ready digital solutions with Virtual Xcellence. Custom web & mobile app development, cloud-native solutions, AI-powered applications, and enterprise software development.",
-  keywords: [
-    "Virtual Xcellence development",
-    "custom software development",
-    "web application development",
-    "mobile app development",
-    "cloud-native development",
-    "AI-powered applications",
-    "enterprise software solutions",
-    "digital transformation",
-    "software modernization",
-    "MVP development",
-    "legacy system migration",
-    "progressive web apps",
-    "microservices architecture",
-    "blockchain solutions",
-    "IoT applications",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Development Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Development Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Building future-ready digital solutions with Virtual Xcellence. Custom web & mobile app development, cloud-native solutions, AI-powered applications, and enterprise software development.",
+    keywords: [
+      "Virtual Xcellence development",
+      "custom software development",
+      "web application development",
+      "mobile app development",
+      "cloud-native development",
+      "AI-powered applications",
+      "enterprise software solutions",
+      "digital transformation",
+      "software modernization",
+      "MVP development",
+      "legacy system migration",
+      "progressive web apps",
+      "microservices architecture",
+      "blockchain solutions",
+      "IoT applications",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Development Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/development', fallbackMetadata);
+}
 
 const DevelopmentPage = (): ReactElement => {
   // Challenge Data for Development

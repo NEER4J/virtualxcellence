@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Consultation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Turning complex challenges into strategic opportunities with Virtual Xcellence. Digital transformation strategy, technology advisory, business process re-engineering, and enterprise architecture consulting.",
-  keywords: [
-    "Virtual Xcellence consultation",
-    "digital transformation consulting",
-    "technology advisory services",
-    "business process re-engineering",
-    "enterprise architecture consulting",
-    "IT strategy consulting",
-    "digital transformation roadmap",
-    "cloud adoption consulting",
-    "AI strategy consulting",
-    "innovation consulting",
-    "technology assessment",
-    "legacy modernization consulting",
-    "change management consulting",
-    "digital strategy planning",
-    "technology ROI optimization",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Consultation Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Consultation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Turning complex challenges into strategic opportunities with Virtual Xcellence. Digital transformation strategy, technology advisory, business process re-engineering, and enterprise architecture consulting.",
+    keywords: [
+      "Virtual Xcellence consultation",
+      "digital transformation consulting",
+      "technology advisory services",
+      "business process re-engineering",
+      "enterprise architecture consulting",
+      "IT strategy consulting",
+      "digital transformation roadmap",
+      "cloud adoption consulting",
+      "AI strategy consulting",
+      "innovation consulting",
+      "technology assessment",
+      "legacy modernization consulting",
+      "change management consulting",
+      "digital strategy planning",
+      "technology ROI optimization",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Consultation Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/consultation', fallbackMetadata);
+}
 
 const ConsultationPage = (): ReactElement => {
   // Challenge Data for Consultation

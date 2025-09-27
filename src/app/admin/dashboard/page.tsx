@@ -25,10 +25,6 @@ export default function AdminDashboard() {
 
   const supabase = createClient()
 
-  useEffect(() => {
-    fetchSeoPages()
-  }, [fetchSeoPages])
-
   const fetchSeoPages = useCallback(async () => {
     try {
       const { data, error } = await supabase
@@ -60,6 +56,10 @@ export default function AdminDashboard() {
       setLoading(false)
     }
   }, [supabase])
+
+  useEffect(() => {
+    fetchSeoPages()
+  }, [fetchSeoPages])
 
   const deletePage = async (id: string) => {
     if (!confirm('Are you sure you want to delete this SEO page?')) return

@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Fractional CTO Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Technology leadership without the full-time overhead. Virtual Xcellence offers Fractional CTO services providing on-demand access to senior technology leadership for startups, SMEs, and enterprises.",
-  keywords: [
-    "Virtual Xcellence Fractional CTO",
-    "fractional CTO services",
-    "technology leadership consulting",
-    "interim CTO services",
-    "startup technology advisor",
-    "CTO as a service",
-    "technology strategy consulting",
-    "product development oversight",
-    "IT governance consulting",
-    "technology roadmap planning",
-    "vendor management consulting",
-    "team leadership mentoring",
-    "scaling technology infrastructure",
-    "digital transformation leadership",
-    "technology executive services",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Fractional CTO Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Fractional CTO Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Technology leadership without the full-time overhead. Virtual Xcellence offers Fractional CTO services providing on-demand access to senior technology leadership for startups, SMEs, and enterprises.",
+    keywords: [
+      "Virtual Xcellence Fractional CTO",
+      "fractional CTO services",
+      "technology leadership consulting",
+      "interim CTO services",
+      "startup technology advisor",
+      "CTO as a service",
+      "technology strategy consulting",
+      "product development oversight",
+      "IT governance consulting",
+      "technology roadmap planning",
+      "vendor management consulting",
+      "team leadership mentoring",
+      "scaling technology infrastructure",
+      "digital transformation leadership",
+      "technology executive services",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Fractional CTO Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/fractional-cto', fallbackMetadata);
+}
 
 const FractionalCTOPage = (): ReactElement => {
   // Challenge Data for Fractional CTO

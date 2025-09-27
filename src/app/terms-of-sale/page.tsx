@@ -1,31 +1,41 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Header from "@/components/Home/Header";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Terms of Sale || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Read Virtual Xcellence's Terms of Sale for online and retail stores. Understand our terms for purchasing products, services, and digital content.",
-  keywords: [
-    "Virtual Xcellence terms of sale",
-    "online store terms",
-    "retail terms",
-    "purchase terms",
-    "e-commerce terms",
-    "digital content terms",
-    "product purchase terms",
-    "service purchase terms",
-    "store policies",
-    "purchase agreement",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Terms of Sale Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Terms of Sale || Virtual Xcellence - AI, Automation & Business Transformation",
+    description:
+      "Read Virtual Xcellence's Terms of Sale for online and retail stores. Understand our terms for purchasing products, services, and digital content.",
+    keywords: [
+      "Virtual Xcellence terms of sale",
+      "technology consulting purchase terms",
+      "AI automation purchase terms",
+      "business transformation purchase terms",
+      "cybersecurity purchase terms",
+      "cloud consulting purchase terms",
+      "fractional CTO purchase terms",
+      "fractional CFO purchase terms",
+      "business process outsourcing purchase terms",
+      "digital transformation purchase terms",
+      "technology solutions purchase terms",
+      "online store terms",
+      "retail terms",
+      "purchase terms",
+      "e-commerce terms",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Terms of Sale Page",
+    },
+  };
+
+  return generateSeoMetadata('/terms-of-sale', fallbackMetadata);
+}
 
 const TermsOfSalePage = (): ReactElement => {
   return (

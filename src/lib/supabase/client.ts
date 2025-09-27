@@ -7,6 +7,23 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
 }
 
+// Create a singleton client instance to avoid multiple connections
+let supabaseClient: ReturnType<typeof createSupabaseClient> | null = null
+
 export const createClient = () => {
-  return createSupabaseClient(supabaseUrl, supabaseAnonKey)
+  if (!supabaseClient) {
+    supabaseClient = createSupabaseClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true
+      },
+      global: {
+        headers: {
+          'X-Client-Info': 'virtualxcellence-admin'
+        }
+      }
+    })
+  }
+  return supabaseClient
 }

@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,31 +10,34 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Cybersecurity Services || Virtual Xcellence - AI, Automation & Business Transformation",
+    description:
+      "Explore our comprehensive cybersecurity services with Virtual Xcellence. Professional security solutions, threat protection, and digital safety for your business with advanced security measures.",
+    keywords: [
+      "Virtual Xcellence cybersecurity",
+      "cybersecurity services",
+      "digital security solutions",
+      "threat protection",
+      "cyber defense",
+      "security consulting",
+      "vulnerability assessment",
+      "penetration testing",
+      "security monitoring",
+      "incident response",
+      "cyber risk management",
+      "data protection",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Cybersecurity Services Page",
+    },
+  };
 
-export const metadata: Metadata = {
-  title: "Cybersecurity Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Explore our comprehensive cybersecurity services with Virtual Xcellence. Professional security solutions, threat protection, and digital safety for your business with advanced security measures.",
-  keywords: [
-    "Virtual Xcellence cybersecurity",
-    "cybersecurity services",
-    "digital security solutions",
-    "threat protection",
-    "cyber defense",
-    "security consulting",
-    "vulnerability assessment",
-    "penetration testing",
-    "security monitoring",
-    "incident response",
-    "cyber risk management",
-    "data protection",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Cybersecurity Services Page",
-  },
-};
+  return generateSeoMetadata('/services/cybersecurity', fallbackMetadata);
+}
 
 const CybersecurityPage = (): ReactElement => {
   // Challenge Data for Cybersecurity

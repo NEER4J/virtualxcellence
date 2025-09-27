@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,38 +10,42 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Business Process Outsourcing (BPO) & Support Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Transform your operations with scalable, cost-effective outsourcing. Virtual Xcellence BPO services include customer support, back-office operations, sales & lead generation, technical support, and AI-powered solutions.",
-  keywords: [
-    "Virtual Xcellence BPO services",
-    "business process outsourcing",
-    "customer support outsourcing",
-    "back-office operations",
-    "sales lead generation",
-    "technical support outsourcing",
-    "AI-powered outsourcing",
-    "conversational AI agents",
-    "call center solutions",
-    "data entry processing",
-    "document management",
-    "HR recruitment outsourcing",
-    "telemarketing services",
-    "helpdesk services",
-    "cost-effective outsourcing",
-    "scalable business operations",
-    "24/7 customer support",
-    "multichannel support",
-    "intelligent ticket routing",
-    "customer behavior analytics",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Business Process Outsourcing Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Business Process Outsourcing (BPO) & Support Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Transform your operations with scalable, cost-effective outsourcing. Virtual Xcellence BPO services include customer support, back-office operations, sales & lead generation, technical support, and AI-powered solutions.",
+    keywords: [
+      "Virtual Xcellence BPO services",
+      "business process outsourcing",
+      "customer support outsourcing",
+      "back-office operations",
+      "sales lead generation",
+      "technical support outsourcing",
+      "AI-powered outsourcing",
+      "conversational AI agents",
+      "call center solutions",
+      "data entry processing",
+      "document management",
+      "HR recruitment outsourcing",
+      "telemarketing services",
+      "helpdesk services",
+      "cost-effective outsourcing",
+      "scalable business operations",
+      "24/7 customer support",
+      "multichannel support",
+      "intelligent ticket routing",
+      "customer behavior analytics",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Business Process Outsourcing Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/business-process-outsourcing', fallbackMetadata);
+}
 
 const BusinessProcessOutsourcingPage = (): ReactElement => {
   // Challenge Data for BPO

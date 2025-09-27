@@ -1,31 +1,41 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Header from "@/components/Home/Header";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Read Virtual Xcellence's Terms & Conditions. Understand our terms of service, user agreements, and policies for using our digital solutions and services.",
-  keywords: [
-    "Virtual Xcellence terms and conditions",
-    "terms of service",
-    "user agreement",
-    "legal terms",
-    "service terms",
-    "digital agency terms",
-    "business terms",
-    "legal policy",
-    "terms of use",
-    "service agreement",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Terms & Conditions Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Terms & Conditions || Virtual Xcellence - AI, Automation & Business Transformation",
+    description:
+      "Read Virtual Xcellence's Terms & Conditions. Understand our terms of service, user agreements, and policies for using our digital solutions and services.",
+    keywords: [
+      "Virtual Xcellence terms and conditions",
+      "technology consulting terms",
+      "AI automation terms",
+      "business transformation terms",
+      "cybersecurity terms",
+      "cloud consulting terms",
+      "fractional CTO terms",
+      "fractional CFO terms",
+      "business process outsourcing terms",
+      "digital transformation terms",
+      "technology solutions terms",
+      "terms of service",
+      "user agreement",
+      "legal terms",
+      "service agreement",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Terms & Conditions Page",
+    },
+  };
+
+  return generateSeoMetadata('/terms-conditions', fallbackMetadata);
+}
 
 const TermsConditionsPage = (): ReactElement => {
   return (

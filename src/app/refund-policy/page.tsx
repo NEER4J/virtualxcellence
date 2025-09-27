@@ -1,31 +1,41 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Header from "@/components/Home/Header";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Refund Policy || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Read Virtual Xcellence's Refund Policy. Learn about our return and refund terms for products and services, including eligibility, timeframes, and process.",
-  keywords: [
-    "Virtual Xcellence refund policy",
-    "return policy",
-    "refund terms",
-    "money back guarantee",
-    "return process",
-    "refund eligibility",
-    "customer refunds",
-    "return conditions",
-    "refund timeframe",
-    "return policy terms",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Refund Policy Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Refund Policy || Virtual Xcellence - AI, Automation & Business Transformation",
+    description:
+      "Read Virtual Xcellence's Refund Policy. Learn about our return and refund terms for products and services, including eligibility, timeframes, and process.",
+    keywords: [
+      "Virtual Xcellence refund policy",
+      "technology consulting refund policy",
+      "AI automation refund policy",
+      "business transformation refund policy",
+      "cybersecurity refund policy",
+      "cloud consulting refund policy",
+      "fractional CTO refund policy",
+      "fractional CFO refund policy",
+      "business process outsourcing refund policy",
+      "digital transformation refund policy",
+      "technology solutions refund policy",
+      "return policy",
+      "refund terms",
+      "money back guarantee",
+      "return process",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Refund Policy Page",
+    },
+  };
+
+  return generateSeoMetadata('/refund-policy', fallbackMetadata);
+}
 
 const RefundPolicyPage = (): ReactElement => {
   return (

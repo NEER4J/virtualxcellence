@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "AI & Automation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Smarter, faster, future-ready businesses with AI & Automation. Virtual Xcellence helps organizations harness AI to reduce costs, improve efficiency, and create new business models through intelligent automation.",
-  keywords: [
-    "Virtual Xcellence AI automation",
-    "AI services",
-    "intelligent automation",
-    "conversational AI",
-    "business process automation",
-    "predictive analytics",
-    "machine learning services",
-    "generative AI solutions",
-    "RPA services",
-    "AI strategy consulting",
-    "voice automation",
-    "document processing AI",
-    "AI chatbots",
-    "automation platforms",
-    "AI transformation",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "AI & Automation Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "AI & Automation Services || Virtual Xcellence - AI, Automation & Business Transformation",
+    description:
+      "Smarter, faster, future-ready businesses with AI & Automation. Virtual Xcellence helps organizations harness AI to reduce costs, improve efficiency, and create new business models through intelligent automation.",
+    keywords: [
+      "Virtual Xcellence AI automation",
+      "AI services",
+      "intelligent automation",
+      "conversational AI",
+      "business process automation",
+      "predictive analytics",
+      "machine learning services",
+      "generative AI solutions",
+      "RPA services",
+      "AI strategy consulting",
+      "voice automation",
+      "document processing AI",
+      "AI chatbots",
+      "automation platforms",
+      "AI transformation",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "AI & Automation Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/ai-automation', fallbackMetadata);
+}
 
 const AIAutomationPage = (): ReactElement => {
   // Challenge Data for AI & Automation

@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Business Transformation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Redefining the future of work and business with Virtual Xcellence. Digital transformation services including process automation, AI integration, cloud modernization, and organizational change management.",
-  keywords: [
-    "Virtual Xcellence business transformation",
-    "digital transformation services",
-    "business process automation",
-    "digital process automation",
-    "organizational change management",
-    "AI integration services",
-    "cloud modernization",
-    "sustainability transformation",
-    "green IT consulting",
-    "digital culture building",
-    "workflow orchestration",
-    "predictive analytics",
-    "change adoption frameworks",
-    "digital-first transformation",
-    "business model innovation",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Business Transformation Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Business Transformation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Redefining the future of work and business with Virtual Xcellence. Digital transformation services including process automation, AI integration, cloud modernization, and organizational change management.",
+    keywords: [
+      "Virtual Xcellence business transformation",
+      "digital transformation services",
+      "business process automation",
+      "digital process automation",
+      "organizational change management",
+      "AI integration services",
+      "cloud modernization",
+      "sustainability transformation",
+      "green IT consulting",
+      "digital culture building",
+      "workflow orchestration",
+      "predictive analytics",
+      "change adoption frameworks",
+      "digital-first transformation",
+      "business model innovation",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Business Transformation Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/business-transformation', fallbackMetadata);
+}
 
 const BusinessTransformationPage = (): ReactElement => {
   // Challenge Data for Business Transformation

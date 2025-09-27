@@ -1,31 +1,41 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Header from "@/components/Home/Header";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Read Virtual Xcellence's Privacy Policy. Learn how we collect, use, and protect your personal information when you use our digital solutions and services.",
-  keywords: [
-    "Virtual Xcellence privacy policy",
-    "data protection",
-    "privacy statement",
-    "personal information",
-    "data collection",
-    "GDPR compliance",
-    "privacy rights",
-    "data security",
-    "information protection",
-    "privacy practices",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Privacy Policy Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Privacy Policy || Virtual Xcellence - AI, Automation & Business Transformation",
+    description:
+      "Read Virtual Xcellence's Privacy Policy. Learn how we collect, use, and protect your personal information when you use our digital solutions and services.",
+    keywords: [
+      "Virtual Xcellence privacy policy",
+      "technology consulting privacy policy",
+      "AI automation privacy policy",
+      "business transformation privacy policy",
+      "cybersecurity privacy policy",
+      "cloud consulting privacy policy",
+      "fractional CTO privacy policy",
+      "fractional CFO privacy policy",
+      "business process outsourcing privacy policy",
+      "digital transformation privacy policy",
+      "technology solutions privacy policy",
+      "data protection",
+      "privacy statement",
+      "personal information",
+      "data collection",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Privacy Policy Page",
+    },
+  };
+
+  return generateSeoMetadata('/privacy-policy', fallbackMetadata);
+}
 
 const PrivacyPolicyPage = (): ReactElement => {
   return (

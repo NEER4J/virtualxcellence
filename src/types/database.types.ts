@@ -19,6 +19,7 @@ export interface Database {
           canonical_url: string | null
           robots: string | null
           schema_markup: Record<string, unknown> | null
+          sitemap_included: boolean
           created_at: string
           updated_at: string
         }
@@ -39,6 +40,7 @@ export interface Database {
           canonical_url?: string | null
           robots?: string | null
           schema_markup?: Record<string, unknown> | null
+          sitemap_included?: boolean
           created_at?: string
           updated_at?: string
         }
@@ -59,6 +61,7 @@ export interface Database {
           canonical_url?: string | null
           robots?: string | null
           schema_markup?: Record<string, unknown> | null
+          sitemap_included?: boolean
           created_at?: string
           updated_at?: string
         }

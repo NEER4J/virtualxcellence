@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Cloud & Infrastructure Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Scalable, secure, and future-ready IT foundations with Virtual Xcellence. Cloud migration, modernization, hybrid solutions, DevOps automation, and managed cloud services for enterprise-grade infrastructure.",
-  keywords: [
-    "Virtual Xcellence cloud services",
-    "cloud migration services",
-    "infrastructure modernization",
-    "hybrid cloud solutions",
-    "DevOps automation",
-    "cloud security services",
-    "AWS migration",
-    "Azure cloud services",
-    "Google Cloud Platform",
-    "infrastructure as code",
-    "cloud managed services",
-    "multi-cloud solutions",
-    "cloud compliance",
-    "cloud cost optimization",
-    "cloud architecture",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Cloud & Infrastructure Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Cloud & Infrastructure Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Scalable, secure, and future-ready IT foundations with Virtual Xcellence. Cloud migration, modernization, hybrid solutions, DevOps automation, and managed cloud services for enterprise-grade infrastructure.",
+    keywords: [
+      "Virtual Xcellence cloud services",
+      "cloud migration services",
+      "infrastructure modernization",
+      "hybrid cloud solutions",
+      "DevOps automation",
+      "cloud security services",
+      "AWS migration",
+      "Azure cloud services",
+      "Google Cloud Platform",
+      "infrastructure as code",
+      "cloud managed services",
+      "multi-cloud solutions",
+      "cloud compliance",
+      "cloud cost optimization",
+      "cloud architecture",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Cloud & Infrastructure Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/cloud-infrastructure', fallbackMetadata);
+}
 
 const CloudInfrastructurePage = (): ReactElement => {
   // Challenge Data for Cloud & Infrastructure

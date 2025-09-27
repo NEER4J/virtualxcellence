@@ -22,10 +22,6 @@ export default function EditSeoPage({ params }: EditSeoPageProps) {
 
   const supabase = createClient()
 
-  useEffect(() => {
-    fetchSeoPage()
-  }, [params.id, fetchSeoPage])
-
   const fetchSeoPage = useCallback(async () => {
     try {
       const { data, error } = await supabase
@@ -50,6 +46,10 @@ export default function EditSeoPage({ params }: EditSeoPageProps) {
       setLoading(false)
     }
   }, [supabase, params.id])
+
+  useEffect(() => {
+    fetchSeoPage()
+  }, [params.id, fetchSeoPage])
 
   if (loading) {
     return (

@@ -10,10 +10,6 @@ export default function AdminIndex() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  useEffect(() => {
-    checkAuth()
-  }, [checkAuth])
-
   const checkAuth = useCallback(async () => {
     try {
       setLoading(true)
@@ -62,6 +58,10 @@ export default function AdminIndex() {
       setLoading(false)
     }
   }, [router])
+
+  useEffect(() => {
+    checkAuth()
+  }, [checkAuth])
 
   if (error) {
     return (

@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
+import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
@@ -9,33 +10,37 @@ import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
-export const metadata: Metadata = {
-  title: "Fractional CFO Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-  description:
-    "Strategic financial leadership on-demand. Virtual Xcellence offers Fractional CFO services providing experienced finance leaders for cash flow optimization, fundraising support, and financial planning.",
-  keywords: [
-    "Virtual Xcellence Fractional CFO",
-    "fractional CFO services",
-    "financial leadership consulting",
-    "interim CFO services",
-    "startup financial advisor",
-    "CFO as a service",
-    "financial planning consulting",
-    "cash flow management",
-    "fundraising support",
-    "financial modeling",
-    "compliance consulting",
-    "M&A advisory",
-    "investor relations",
-    "financial forecasting",
-    "working capital management",
-  ],
-  creator: "PixaVation",
-  other: {
-    developer: "PixaVation",
-    section: "Fractional CFO Services Page",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fallbackMetadata: Metadata = {
+    title: "Fractional CFO Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
+    description:
+      "Strategic financial leadership on-demand. Virtual Xcellence offers Fractional CFO services providing experienced finance leaders for cash flow optimization, fundraising support, and financial planning.",
+    keywords: [
+      "Virtual Xcellence Fractional CFO",
+      "fractional CFO services",
+      "financial leadership consulting",
+      "interim CFO services",
+      "startup financial advisor",
+      "CFO as a service",
+      "financial planning consulting",
+      "cash flow management",
+      "fundraising support",
+      "financial modeling",
+      "compliance consulting",
+      "M&A advisory",
+      "investor relations",
+      "financial forecasting",
+      "working capital management",
+    ],
+    creator: "Virtual Xcellence",
+    other: {
+      developer: "Virtual Xcellence",
+      section: "Fractional CFO Services Page",
+    },
+  };
+
+  return generateSeoMetadata('/services/fractional-cfo', fallbackMetadata);
+}
 
 const FractionalCFOPage = (): ReactElement => {
   // Challenge Data for Fractional CFO

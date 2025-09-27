@@ -42,6 +42,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
     canonical_url: '',
     robots: 'index, follow',
     schema_markup: null,
+    sitemap_included: true,
   })
   
   const [keywordInput, setKeywordInput] = useState('')
@@ -68,11 +69,12 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
         canonical_url: initialData.canonical_url,
         robots: initialData.robots,
         schema_markup: initialData.schema_markup,
+        sitemap_included: initialData.sitemap_included,
       })
     }
   }, [initialData])
 
-  const handleInputChange = (field: keyof SeoPageInsert, value: string | string[] | null) => {
+  const handleInputChange = (field: keyof SeoPageInsert, value: string | string[] | boolean | null) => {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
@@ -114,35 +116,55 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
     e.preventDefault()
     setSaving(true)
 
-    try {
-      if (pageId) {
-        // Update existing page
-        const updateData: SeoPageUpdate = {
-          ...formData,
-          updated_at: new Date().toISOString(),
+    const maxRetries = 3
+    let retryCount = 0
+
+    const saveWithRetry = async (): Promise<void> => {
+      try {
+        if (pageId) {
+          // Update existing page
+          const updateData: SeoPageUpdate = {
+            ...formData,
+            updated_at: new Date().toISOString(),
+          }
+          
+          const { error } = await supabase
+            .from('seo_pages')
+            .update(updateData)
+            .eq('id', pageId)
+
+          if (error) throw error
+          toast.success('SEO page updated successfully')
+        } else {
+          // Create new page
+          const { error } = await supabase
+            .from('seo_pages')
+            .insert([formData])
+
+          if (error) throw error
+          toast.success('SEO page created successfully')
+        }
+
+        router.push('/admin/seo')
+      } catch (error: unknown) {
+        retryCount++
+        
+        if (retryCount < maxRetries) {
+          console.warn(`Retry attempt ${retryCount} for SEO save operation`)
+          await new Promise(resolve => setTimeout(resolve, 1000 * retryCount)) // Exponential backoff
+          return saveWithRetry()
         }
         
-        const { error } = await supabase
-          .from('seo_pages')
-          .update(updateData)
-          .eq('id', pageId)
-
-        if (error) throw error
-        toast.success('SEO page updated successfully')
-      } else {
-        // Create new page
-        const { error } = await supabase
-          .from('seo_pages')
-          .insert([formData])
-
-        if (error) throw error
-        toast.success('SEO page created successfully')
+        throw error
       }
+    }
 
-      router.push('/admin/seo')
+    try {
+      await saveWithRetry()
     } catch (error: unknown) {
-      console.error('Error saving SEO page:', error)
-      toast.error(error instanceof Error ? error.message : 'Failed to save SEO page')
+      console.error('Error saving SEO page after retries:', error)
+      const errorMessage = error instanceof Error ? error.message : 'Failed to save SEO page'
+      toast.error(`${errorMessage} (Attempted ${maxRetries} times)`)
     } finally {
       setSaving(false)
     }
@@ -453,6 +475,24 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               <option value="index, nofollow">Index, No Follow</option>
               <option value="noindex, nofollow">No Index, No Follow</option>
             </select>
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3">
+              <input
+                id="sitemap_included"
+                type="checkbox"
+                checked={formData.sitemap_included || false}
+                onChange={(e) => handleInputChange('sitemap_included', e.target.checked)}
+                className="w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900 focus:ring-2"
+              />
+              <label htmlFor="sitemap_included" className="text-sm font-medium text-gray-700">
+                Include this page in XML sitemap
+              </label>
+            </div>
+            <p className="mt-1 text-xs text-gray-500">
+              When enabled, this page will be included in the automatically generated sitemap.xml
+            </p>
           </div>
         </div>
       </div>

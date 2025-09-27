@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useMemo } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import AdminSidebar from '@/components/Admin/AdminSidebar'
 import { 
@@ -19,27 +19,23 @@ export default function SeoManagement() {
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredPages, setFilteredPages] = useState<SeoPage[]>([])
+  const [isRefreshing, setIsRefreshing] = useState(false)
 
   const supabase = createClient()
 
-  useEffect(() => {
-    fetchSeoPages()
-  }, [fetchSeoPages])
-
-  useEffect(() => {
-    const filtered = seoPages.filter(page =>
-      page.page_path.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      page.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    setFilteredPages(filtered)
-  }, [seoPages, searchTerm])
-
-  const fetchSeoPages = useCallback(async () => {
+  const fetchSeoPages = useCallback(async (isRefresh = false) => {
+    if (isRefresh && isRefreshing) return // Prevent multiple simultaneous requests
+    
     try {
+      if (isRefresh) {
+        setIsRefreshing(true)
+      } else {
+        setLoading(true)
+      }
+      
       const { data, error } = await supabase
         .from('seo_pages')
-        .select('*')
+        .select('id, page_path, title, description, keywords, updated_at')
         .order('updated_at', { ascending: false })
 
       if (error) throw error
@@ -50,8 +46,33 @@ export default function SeoManagement() {
       toast.error('Failed to fetch SEO pages')
     } finally {
       setLoading(false)
+      setIsRefreshing(false)
     }
-  }, [supabase])
+  }, [supabase, isRefreshing])
+
+  useEffect(() => {
+    fetchSeoPages()
+  }, [fetchSeoPages])
+
+  // Debounced search to prevent excessive filtering
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm)
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [searchTerm])
+
+  useEffect(() => {
+    const filtered = seoPages.filter(page =>
+      page.page_path.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+      page.title.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+      page.description.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
+    )
+    setFilteredPages(filtered)
+  }, [seoPages, debouncedSearchTerm])
 
   const deletePage = async (id: string) => {
     if (!confirm('Are you sure you want to delete this SEO page?')) return
@@ -64,7 +85,8 @@ export default function SeoManagement() {
 
       if (error) throw error
 
-      setSeoPages(seoPages.filter(page => page.id !== id))
+      // Refresh the list instead of local state manipulation
+      await fetchSeoPages(true)
       toast.success('SEO page deleted successfully')
     } catch (error) {
       console.error('Error deleting page:', error)
