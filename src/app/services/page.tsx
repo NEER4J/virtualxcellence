@@ -158,6 +158,16 @@ const ServicesPage = (): ReactElement => {
                           <a href="/services/business-process-outsourcing" className="service-link">Learn More</a>
                         </div>
                       </div>
+
+                      <div className="col-md-6 col-lg-4 mb-4">
+                        <div className="service-card">
+                          <h3 className="service-title">Systems Integration & Customization</h3>
+                          <p className="service-description">
+                            Seamless integration and customization of third-party software like Zoho, Salesforce, and more.
+                          </p>
+                          <a href="/services/systems-integration-customization" className="service-link">Learn More</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
 

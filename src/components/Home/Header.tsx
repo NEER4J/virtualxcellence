@@ -17,7 +17,8 @@ import {
   CreditCard,
   Factory,
   ShoppingCart,
-  GraduationCap
+  GraduationCap,
+  Settings
 } from "lucide-react";
 
 // --- TYPE DEFINITIONS ---
@@ -108,6 +109,12 @@ const headerData:HeaderData = {
           icon: Building2,
           subtitle: "Streamlined business operations"
         },
+        { 
+          title: "Integration & Professional Services", 
+          href: "/services/integration-and-professional-services",
+          icon: Settings,
+          subtitle: "AI platform integration & consulting"
+        },
       ],
     },
     {
@@ -145,7 +152,7 @@ const headerData:HeaderData = {
         },
       ],
     },
-    { title: "Case Studies", href: "/case-studies" },
+    // { title: "Case Studies", href: "/case-studies" },
     { title: "Careers", href: "/careers" },
     { title: "Contact", href: "/contact" },
   ],

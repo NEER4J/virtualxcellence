@@ -72,7 +72,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/vx-cybersecurity/MSS 630x440.png"
       },
       {
         id: 2,
@@ -86,7 +86,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/vx-cybersecurity/Risk Assesment 630x440.png"
       },
       {
         id: 3,
@@ -100,7 +100,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/vx-cybersecurity/Cloud Security 630x440.png"
       },
       {
         id: 4,
@@ -114,7 +114,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/vx-cybersecurity/IAM 630x440.png"
       },
       {
         id: 5,
@@ -128,7 +128,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/vx-cybersecurity/Forensic 630x440.png"
       }
     ]
   };
@@ -168,32 +168,32 @@ const CybersecurityPage = (): ReactElement => {
     {
       title: "SIEM & Monitoring",
       tools: [
-        { name: "Splunk", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "QRadar", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Elastic Security", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Splunk", icon: "/assets/imgs/vx-cybersecurity/splunk 90x90.png" },
+        { name: "QRadar", icon: "/assets/imgs/vx-cybersecurity/Qradar 90x90.png" },
+        { name: "Elastic Security", icon: "/assets/imgs/vx-cybersecurity/Elastic Security 90x90.png" }
       ]
     },
     {
       title: "Cloud Security", 
       tools: [
-        { name: "Prisma Cloud", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Azure Security Center", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "AWS GuardDuty", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Prisma Cloud", icon: "/assets/imgs/vx-cybersecurity/Prisma Cloud 90x90.png" },
+        { name: "Azure Security Center", icon: "/assets/imgs/vx-cybersecurity/Azure Security Center 90x90.png" },
+        { name: "AWS GuardDuty", icon: "/assets/imgs/vx-cybersecurity/AWS GuardDuty 90x90.png" }
       ]
     },
     {
       title: "IAM",
       tools: [
-        { name: "Okta", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Entra", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "CyberArk", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Okta", icon: "/assets/imgs/vx-cybersecurity/Okta 90x90.png" },
+        { name: "Microsoft Entra", icon: "/assets/imgs/vx-cybersecurity/Microsoft Entra 90x90.png" },
+        { name: "CyberArk", icon: "/assets/imgs/vx-cybersecurity/CyberArk 90x90.png" }
       ]
     },
     {
       title: "Endpoint Security",
       tools: [
-        { name: "CrowdStrike", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "SentinelOne", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "CrowdStrike", icon: "/assets/imgs/vx-cybersecurity/CrowdStrike 90x90.png" },
+        { name: "SentinelOne", icon: "/assets/imgs/vx-cybersecurity/SentinelOne 90x90.png" }
       ]
     }
   ];
@@ -292,12 +292,12 @@ const CybersecurityPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/vx-cybersecurity/Challenges 630x440.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/vx-cybersecurity/Banking 630x440.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -306,7 +306,7 @@ const CybersecurityPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/vx-cybersecurity/Healthcare 630x440.png"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
@@ -314,7 +314,7 @@ const CybersecurityPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/vx-cybersecurity/Government 630x440.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

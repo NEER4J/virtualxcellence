@@ -48,7 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data: heroData }) => {
                 {heroData?.secondaryBtnText}
               </Link>
             </div>
-            <h5 className="brand-title" suppressHydrationWarning={true}>{heroData?.brandTitle}</h5>
+            <h5 className="brand-title" style={{opacity: 0}} suppressHydrationWarning={true}>{heroData?.brandTitle}</h5>
 
            
           </div>
@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data: heroData }) => {
         </div>
 
         {/* Brand Slider */}
-        <div className="brand-area-4">
+        <div className="brand-area-4" style={{display: "none"}}>
           <div className="container">
             <div className="brand-area-4-inner">
               <div className="section-header">

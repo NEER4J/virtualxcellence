@@ -6,6 +6,7 @@ interface JourneyItem {
   id: number;
   period: string;
   description: string;
+  image: string;
 }
 
 const JourneySection: React.FC = () => {
@@ -15,27 +16,32 @@ const JourneySection: React.FC = () => {
     {
       id: 1,
       period: "2004–2015",
-      description: "Founded in Ontario, delivering software solutions to SMEs."
+      description: "Founded in Ontario, delivering software solutions to SMEs.",
+      image: "/assets/imgs/about/Founded-420x420.png"
     },
     {
       id: 2,
       period: "2016–2018",
-      description: "Expanded into consulting and leadership services."
+      description: "Expanded into consulting and leadership services.",
+      image: "/assets/imgs/about/Expanded-420x420.png"
     },
     {
       id: 3,
       period: "2019–2021",
-      description: "Strengthened expertise in AI, automation, and cloud adoption."
+      description: "Strengthened expertise in AI, automation, and cloud adoption.",
+      image: "/assets/imgs/about/AI-Automation-420x420.png"
     },
     {
       id: 4,
       period: "2022–2024",
-      description: "Partnered with enterprises on large-scale transformation projects."
+      description: "Partnered with enterprises on large-scale transformation projects.",
+      image: "/assets/imgs/about/Partnered-420x420.png"
     },
     {
       id: 5,
       period: "2025 & Beyond",
-      description: "Continuing to drive AI-led innovation and digital growth across industries."
+      description: "Continuing to drive AI-led innovation and digital growth across industries.",
+      image: "/assets/imgs/about/Digital-Growth-420x420.png"
     }
   ];
 
@@ -92,7 +98,7 @@ const JourneySection: React.FC = () => {
                     <div className="team-box">
                       <div className="thumb">
                         <img
-                          src="/assets/imgs/team/team-14.webp"
+                          src={item?.image}
                           alt={item?.period}
                           loading="lazy"
                         />

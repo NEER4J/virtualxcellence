@@ -15,7 +15,7 @@ const AboutSection:React.FC = () => {
       "Our mission is simple:",
       "to empower businesses to embrace technology as a growth accelerator.",
     ],
-    image: "/assets/imgs/shape/shape-23.webp",
+    image: "/assets/imgs/about/Founded-420x420.png",
     imageAlt: "About Virtual Xcellence",
   };
   return (

@@ -87,6 +87,7 @@ const FooterSection:React.FC<FooterProps> = ({
                 <li><Link href="/services/ai-automation">AI & Automation</Link></li>
                 <li><Link href="/services/cloud-infrastructure">Cloud & Infrastructure</Link></li>
                 <li><Link href="/services/business-process-outsourcing">Business Process Outsourcing</Link></li>
+                <li><Link href="/services/integration-and-professional-services">Integration & Professional Services</Link></li>
               </ul>
             </div>
 

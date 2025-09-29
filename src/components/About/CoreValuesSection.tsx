@@ -11,31 +11,31 @@ const CoreValuesSection: React.FC = () => {
   const features: IFeature[] = [
     {
       id: 1,
-      img: "/assets/imgs/gallery/image-42.webp",
+      img: "/assets/imgs/about/Innovation-180-x-188.png",
       title: "Innovation First",
       text: "We embrace emerging technologies to stay ahead."
     },
     {
       id: 2,
-      img: "/assets/imgs/gallery/image-42.webp",
+      img: "/assets/imgs/about/Client-centric-180x188.png",
       title: "Client-Centricity",
       text: "Every solution is designed with your business goals in mind."
     },
     {
       id: 3,
-      img: "/assets/imgs/gallery/image-42.webp",
+      img: "/assets/imgs/about/Integrity-&-Trust-180x188.png",
       title: "Integrity & Trust",
       text: "Transparent, ethical, and reliable partnerships."
     },
     {
       id: 4,
-      img: "/assets/imgs/gallery/image-42.webp",
+      img: "/assets/imgs/about/Scalability-180x188.png",
       title: "Scalability",
       text: "Building future-ready solutions that evolve with your growth."
     },
     {
       id: 5,
-      img: "/assets/imgs/gallery/image-42.webp",
+      img: "/assets/imgs/about/Excellence-180x188.png",
       title: "Excellence",
       text: "Consistently delivering beyond expectations."
     }
