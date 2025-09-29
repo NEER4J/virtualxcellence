@@ -18,7 +18,7 @@ const ServiceArea5Section: React.FC = () => {
     subtitle: "Industries We Serve",
     title: "Tailored Solutions for Every Industry",
     buttonText: "Our Industries",
-    buttonLink: "/ai-agency/services",
+    buttonLink: "/industries",
     navTabs: [
       {
         id: "healthcare",
@@ -90,27 +90,27 @@ const ServiceArea5Section: React.FC = () => {
       {
         id: 1,
         text: "SERVE YOUR INDUSTRY",
-        link: "/healthcare",
+        link: "/industries/healthcare",
       },
       {
         id: 2,
         text: "TRANSFORM YOUR SECTOR",
-        link: "/finance",
+        link: "/industries/financial-services",
       },
       {
         id: 3,
         text: "INNOVATE YOUR INDUSTRY",
-        link: "/government",
+        link: "/industries/government",
       },
       {
         id: 4,
         text: "LEAD YOUR MARKET",
-        link: "/retail",
+        link: "/industries/retail-ecommerce",
       },
       {
         id: 5,
         text: "OPTIMIZE YOUR OPERATIONS",
-        link: "/manufacturing",
+        link: "/industries/manufacturing",
       },
     ],
   };
@@ -204,7 +204,7 @@ const ServiceArea5Section: React.FC = () => {
                           </div>
                           <Link
                             className="t-btn t-btn-primary "
-                            href={`/industry/${tab?.id}`}
+                            href={`/industries/${tab?.id}`}
                           >
                             View {tab?.title} Details
                           </Link>

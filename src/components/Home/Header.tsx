@@ -120,8 +120,8 @@ const headerData:HeaderData = {
           subtitle: "Healthcare technology solutions"
         },
         { 
-          title: "Financial Services", 
-          href: "/industries/financial-services",
+          title: "Finance", 
+          href: "/industries/finance",
           icon: CreditCard,
           subtitle: "Fintech and banking solutions"
         },
@@ -133,7 +133,7 @@ const headerData:HeaderData = {
         },
         { 
           title: "Retail & E-commerce", 
-          href: "/industries/retail-ecommerce",
+          href: "/industries/retail",
           icon: ShoppingCart,
           subtitle: "Digital commerce platforms"
         },
