@@ -105,24 +105,39 @@ const HealthcarePage = (): ReactElement => {
       title: "Technologies We Use",
       technologies: [
         {
-          category: "AI/ML",
-          technologies: ["TensorFlow", "PyTorch", "OpenAI APIs"]
+          title: "AI/ML",
+          technologies: [
+            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
+            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
+            { name: "OpenAI APIs", icon: "/assets/imgs/icons/openai.svg" }
+          ]
         },
         {
-          category: "Cloud",
-          technologies: ["Microsoft Azure Health Cloud", "Google Cloud Healthcare API"]
+          title: "Cloud",
+          technologies: [
+            { name: "Microsoft Azure Health Cloud", icon: "/assets/imgs/icons/azure.svg" },
+            { name: "Google Cloud Healthcare API", icon: "/assets/imgs/icons/google-cloud.svg" }
+          ]
         },
         {
-          category: "EHR/EMR Integration",
-          technologies: ["HL7", "FHIR standards"]
+          title: "EHR/EMR Integration",
+          technologies: [
+            { name: "HL7", icon: "/assets/imgs/icons/hl7.svg" },
+            { name: "FHIR standards", icon: "/assets/imgs/icons/fhir.svg" }
+          ]
         },
         {
-          category: "Cybersecurity",
-          technologies: ["SOC2 frameworks", "Zero-Trust architecture"]
+          title: "Cybersecurity",
+          technologies: [
+            { name: "SOC2 frameworks", icon: "/assets/imgs/icons/soc2.svg" },
+            { name: "Zero-Trust architecture", icon: "/assets/imgs/icons/zero-trust.svg" }
+          ]
         },
         {
-          category: "Automation",
-          technologies: ["RPA for claims & billing processes"]
+          title: "Automation",
+          technologies: [
+            { name: "RPA for claims & billing processes", icon: "/assets/imgs/icons/rpa.svg" }
+          ]
         }
       ]
     },
