@@ -10077,6 +10077,7 @@
 
 .why-choose-us-second-row {
   padding-bottom: 80px;
+  margin-top: 20px;
 }
 
 /* team area 4 style  */
@@ -15620,7 +15621,8 @@
       }
     }
 
-    input {
+    input,
+    textarea {
       font-size: 18px;
       font-weight: 400;
       line-height: 26px;
@@ -15641,6 +15643,13 @@
       &::placeholder {
         color: rgba(14, 15, 17, 0.2);
       }
+    }
+
+    textarea {
+      height: auto;
+      min-height: 100px;
+      resize: vertical;
+      padding-top: 10px;
     }
   }
 

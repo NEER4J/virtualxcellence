@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { IPortfolioSliderData } from "@/constant/AiAgency/PortfolioDetails/portfolio-data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
@@ -65,22 +64,21 @@ const PortfolioSliderSection: React.FC<IPortfolioSliderProps> = ({
                           <div className="meta">
                             {project?.tags?.map(
                               (tag: string, tagIndex: number) => (
-                                <Link
+                                <span
                                   className="tag"
-                                  href={project?.link}
                                   key={tagIndex}
                                 >
                                   {tag}
-                                </Link>
+                                </span>
                               )
                             )}
                           </div>
-                          <Link href={project?.link}>
+                          <div>
                             <img src={project?.image} alt="project image" />
-                          </Link>
+                          </div>
                           <div className="content">
                             <h3 className="title">
-                              <Link href={project?.link}>{project?.title}</Link>
+                              {project?.title}
                             </h3>
                           </div>
                         </div>

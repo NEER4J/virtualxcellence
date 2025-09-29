@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import {
   workSectionContent,
 } from "@/constant/AiAgency/work";
@@ -36,24 +35,21 @@ const WorkSection: React.FC<IWorkProps> = ({ all, type }) => {
 
                 <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
                   <div className="t-btn-group">
-                    <Link
+                    <button
                       className="t-btn t-btn-circle"
-                      href={workSectionContent?.exploreLink || "#"}
                     >
                       <i className="fa-solid fa-arrow-right"></i>
-                    </Link>
-                    <Link
+                    </button>
+                    <button
                       className="t-btn t-btn-primary"
-                      href={workSectionContent?.exploreLink || "#"}
                     >
                       Explore More
-                    </Link>
-                    <Link
+                    </button>
+                    <button
                       className="t-btn t-btn-circle"
-                      href={workSectionContent?.exploreLink || "#"}
                     >
                       <i className="fa-solid fa-arrow-right"></i>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>

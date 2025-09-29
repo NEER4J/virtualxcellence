@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { IProject, WorkData } from "@/constant/AiAgency/workTwo";
 import NiceSelectWrapper from "@/components/AiAgency/NiceSelect/NiceSelectWrapper";
 import WorkSlider from "@/components/AiAgency/Portfolio/WorkSlider";
@@ -91,12 +90,12 @@ const WorkSection: React.FC<WorkProps> = ({
                         ))}
                       </div>
                       <div className="img_anim_reveal" suppressHydrationWarning={true}>
-                        <Link href={item?.link || "#"}>
+                        <div>
                           <img
                             src={item?.image}
                             alt={item?.title || "Project image"}
                           />
-                        </Link>
+                        </div>
                       </div>
                     </div>
                     <div className="content">
@@ -105,29 +104,26 @@ const WorkSection: React.FC<WorkProps> = ({
                         <span className="shape">/</span>
                       </span>
                       <h3 className="title">
-                        <Link href={item?.link || "#"}>{item?.title}</Link>
+                        {item?.title}
                       </h3>
                       <div
                         className={`t-btn-group ${type === 7 ? "d-none" : ""}`}
                       >
-                        <Link
+                        <button
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
-                        <Link
+                        </button>
+                        <button
                           className="t-btn t-btn-primary"
-                          href={item?.link || "#"}
                         >
                           View Full Project
-                        </Link>
-                        <Link
+                        </button>
+                        <button
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -185,24 +181,21 @@ const WorkSection: React.FC<WorkProps> = ({
               </div>
               <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
                 <div className="t-btn-group">
-                  <Link
+                  <button
                     className="t-btn t-btn-circle"
-                    href={workData?.viewAllLink || "#"}
                   >
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                  <Link
+                  </button>
+                  <button
                     className="t-btn t-btn-primary"
-                    href={workData?.viewAllLink || "#"}
                   >
                     {workData?.viewAllText}
-                  </Link>
-                  <Link
+                  </button>
+                  <button
                     className="t-btn t-btn-circle"
-                    href={workData?.viewAllLink || "#"}
                   >
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -222,12 +215,12 @@ const WorkSection: React.FC<WorkProps> = ({
                         ))}
                       </div>
                       <div className="img_anim_reveal" suppressHydrationWarning={true}>
-                        <Link href={item?.link || "#"}>
+                        <div>
                           <img
                             src={item?.image}
                             alt={item?.title || "Project image"}
                           />
-                        </Link>
+                        </div>
                       </div>
                     </div>
                     <div className="content">
@@ -236,27 +229,24 @@ const WorkSection: React.FC<WorkProps> = ({
                         <span className="shape">/</span>
                       </span>
                       <h3 className="title">
-                        <Link href={item?.link || "#"}>{item?.title}</Link>
+                        {item?.title}
                       </h3>
                       <div className="t-btn-group">
-                        <Link
+                        <button
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
-                        <Link
+                        </button>
+                        <button
                           className="t-btn t-btn-primary"
-                          href={item?.link || "#"}
                         >
                           View Full Project
-                        </Link>
-                        <Link
+                        </button>
+                        <button
                           className="t-btn t-btn-circle"
-                          href={item?.link || "#"}
                         >
                           <i className="fa-solid fa-arrow-right"></i>
-                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>

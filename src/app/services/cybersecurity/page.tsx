@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -163,41 +162,6 @@ const CybersecurityPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for Cybersecurity
-  const industryData = [
-    {
-      title: "Banking & Finance",
-      description: "PCI-DSS compliance, fraud prevention",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Healthcare",
-      description: "HIPAA compliance, patient data protection",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government",
-      description: "Protecting critical infrastructure",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Retail & eCommerce",
-      description: "Securing customer data and transactions",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for Cybersecurity
   const toolsData = [
@@ -280,6 +244,27 @@ const CybersecurityPage = (): ReactElement => {
     ],
   };
 
+  // Business Impact Data for Cybersecurity
+  const businessImpactData = {
+    title: "The Business Impact of Cybersecurity",
+    description: "Our comprehensive cybersecurity solutions protect your digital assets while enabling business growth. Organizations with robust security frameworks experience fewer disruptions and maintain customer trust.",
+    description2: "We help prevent costly data breaches, ensure regulatory compliance, and maintain business continuity. Our clients report 99.9% uptime, reduced security incidents, and improved customer confidence, leading to sustained business growth and competitive advantage."
+  };
+
+  // Industry Applications Data for Cybersecurity
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our cybersecurity solutions are tailored to meet the unique security requirements and compliance standards across different industries.",
+    description2: "From healthcare with HIPAA compliance and patient data protection, to finance with PCI-DSS standards and fraud prevention, government with critical infrastructure protection, and retail with secure customer data and transaction protection. Our industry expertise ensures compliance and optimal security posture."
+  };
+
+  // Why Work With Us Data for Cybersecurity
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine deep cybersecurity expertise with business understanding to deliver security solutions that protect without hindering operations. With 24/7 SOC monitoring and rapid incident response capabilities.",
+    description2: "Our certified security professionals, proven track record in threat prevention, and comprehensive compliance support ensure your business stays secure and compliant. We provide ongoing security awareness training and continuous monitoring for peace of mind."
+  };
+
   // FAQ Data for Cybersecurity
   const faqData = [
     {
@@ -310,18 +295,26 @@ const CybersecurityPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Cybersecurity Approach"
             sectionSubtitle="We follow a structured, proven framework"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industries We Serve"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Security Tools & Technologies"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

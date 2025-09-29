@@ -196,7 +196,7 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
                               placeholder={field?.placeholder}
                               value={formData[field?.name as keyof FormData] || ""}
                               onChange={handleChange}
-                              rows={4}
+                              rows={2}
                             />
                           ) : (
                             <input

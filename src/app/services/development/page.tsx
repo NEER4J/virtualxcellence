@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -166,49 +165,6 @@ const DevelopmentPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for Development
-  const industryData = [
-    {
-      title: "Healthcare",
-      description: "Digital patient portals, AI triage assistants",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Finance",
-      description: "Secure mobile banking apps, compliance-driven solutions",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Retail & eCommerce",
-      description: "Omni-channel shopping platforms",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government",
-      description: "Citizen service portals and smart city apps",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Manufacturing",
-      description: "IoT-driven process automation",
-      number: "05",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for Development
   const toolsData = [
@@ -302,6 +258,27 @@ const DevelopmentPage = (): ReactElement => {
     ],
   };
 
+  // Business Impact Data for Development
+  const businessImpactData = {
+    title: "The Business Impact of Custom Development",
+    description: "Our custom software solutions drive operational efficiency and competitive advantage. Organizations see immediate improvements in productivity, user satisfaction, and business processes.",
+    description2: "We help achieve faster time-to-market, reduced operational costs, and improved customer experiences. Our clients report 40% faster development cycles, 60% reduction in maintenance costs, and 95% user satisfaction rates with scalable, future-ready solutions."
+  };
+
+  // Industry Applications Data for Development
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our development solutions are tailored to meet the unique requirements and challenges across different industries.",
+    description2: "From healthcare with digital patient portals and AI triage assistants, to finance with secure mobile banking apps, retail with omni-channel shopping platforms, government with citizen service portals, and manufacturing with IoT-driven process automation. Our industry expertise ensures solutions that drive real business value."
+  };
+
+  // Why Work With Us Data for Development
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine cutting-edge technology expertise with agile development methodologies to deliver high-quality software solutions. Our experienced team of developers, designers, and architects ensures successful project delivery.",
+    description2: "Our proven track record includes 200+ successful projects, modern tech stack expertise, and comprehensive support from development to deployment. We provide ongoing maintenance, feature updates, and scaling support to ensure your software grows with your business."
+  };
+
   // FAQ Data for Development
   const faqData = [
     {
@@ -332,18 +309,26 @@ const DevelopmentPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Development Approach"
             sectionSubtitle="We follow an Agile + DevOps methodology to ensure faster delivery, quality, and scalability"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industry Applications"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Technologies We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

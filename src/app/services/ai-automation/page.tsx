@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -165,49 +164,6 @@ const AIAutomationPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for AI & Automation
-  const industryData = [
-    {
-      title: "Healthcare",
-      description: "AI diagnostic support, automated patient scheduling",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Retail",
-      description: "Personalized shopping experiences, demand forecasting",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Finance",
-      description: "Fraud detection, compliance automation",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government",
-      description: "AI-driven citizen engagement, automated e-services",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Manufacturing",
-      description: "Predictive maintenance, AI-driven supply chain",
-      number: "05",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for AI & Automation
   const toolsData = [
@@ -292,6 +248,27 @@ const AIAutomationPage = (): ReactElement => {
     ],
   };
 
+  // Business Impact Data for AI & Automation
+  const businessImpactData = {
+    title: "The Business Impact of AI & Automation",
+    description: "Our AI and automation solutions deliver tangible business value through improved efficiency, reduced costs, and enhanced customer experiences. Organizations typically see measurable ROI within the first quarter of implementation.",
+    description2: "We help achieve up to 40% reduction in operational costs, 60% faster process completion times, and 95% accuracy in automated decision-making. Teams can focus on strategic initiatives rather than repetitive tasks, leading to higher innovation rates and improved competitive positioning."
+  };
+
+  // Industry Applications Data for AI & Automation
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our AI and automation solutions are tailored to meet the unique challenges and opportunities across different industries. Each sector presents distinct requirements and compliance standards that demand specialized approaches.",
+    description2: "From healthcare with AI-powered diagnostics, to finance with fraud detection, retail with personalized shopping experiences, manufacturing with predictive maintenance, government with citizen service automation, and education with personalized learning. Our cross-industry experience enables us to identify best practices while respecting unique regulatory requirements."
+  };
+
+  // Why Work With Us Data for AI & Automation
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine deep technical expertise with business acumen to deliver AI solutions that drive real business value. With 100+ successful AI implementations, our expert team provides end-to-end support from strategy to deployment and maintenance.",
+    description2: "We offer industry-specific expertise, agile methodology for rapid time-to-value, and ongoing support for continuous improvement. Our 98% client satisfaction rate, comprehensive training programs, and 24/7 technical support ensure long-term partnerships and scalable solutions."
+  };
+
   // FAQ Data for AI & Automation
   const faqData = [
     {
@@ -322,18 +299,26 @@ const AIAutomationPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our AI Implementation Approach"
             sectionSubtitle="We follow a structured methodology to ensure successful AI adoption and ROI"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industry Applications"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Technologies We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

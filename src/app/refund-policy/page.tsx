@@ -195,9 +195,7 @@ const RefundPolicyPage = (): ReactElement => {
                     <div className="contact-info">
                       <p className="mb-2"><strong>Email:</strong> support@virtualxcellence.com</p>
                       <p className="mb-2"><strong>Canada:</strong> +1-905-823-7677</p>
-                      <p className="mb-2"><strong>United States:</strong> +1-702-537-0123</p>
                       <p className="mb-2"><strong>India:</strong> +91-120-4286226</p>
-                      <p className="mb-2"><strong>Address:</strong> 3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA</p>
                     </div>
                   </div>
 

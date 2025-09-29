@@ -128,7 +128,8 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
             updated_at: new Date().toISOString(),
           }
           
-          const { error } = await supabase
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const { error } = await (supabase as any)
             .from('seo_pages')
             .update(updateData)
             .eq('id', pageId)
@@ -137,7 +138,8 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
           toast.success('SEO page updated successfully')
         } else {
           // Create new page
-          const { error } = await supabase
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const { error } = await (supabase as any)
             .from('seo_pages')
             .insert([formData])
 
@@ -352,7 +354,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               OG Image URL
             </label>
             <div className="relative">
-              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" alt="" />
+              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-label="Image icon" />
               <input
                 id="og_image"
                 type="url"
@@ -424,7 +426,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
               Twitter Image URL
             </label>
             <div className="relative">
-              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" alt="" />
+              <Image className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-label="Image icon" />
               <input
                 id="twitter_image"
                 type="url"
@@ -554,12 +556,12 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100" style={{display: 'none'}}>
-                  <Image className="w-8 h-8 text-gray-400" alt="" />
+                  <Image className="w-8 h-8 text-gray-400" aria-label="Placeholder image" />
                 </div>
               </div>
             ) : (
               <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                <Image className="w-8 h-8 text-gray-400" alt="" />
+                <Image className="w-8 h-8 text-gray-400" aria-label="Placeholder image" />
               </div>
             )}
             
@@ -600,12 +602,12 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                   }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100" style={{display: 'none'}}>
-                  <Image className="w-8 h-8 text-gray-400" alt="" />
+                  <Image className="w-8 h-8 text-gray-400" aria-label="Placeholder image" />
                 </div>
               </div>
             ) : (
               <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                <Image className="w-8 h-8 text-gray-400" alt="" />
+                <Image className="w-8 h-8 text-gray-400" aria-label="Placeholder image" />
               </div>
             )}
             
@@ -647,7 +649,7 @@ export default function SeoForm({ pageId, initialData }: SeoFormProps) {
                     }}
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded" style={{display: 'none'}}>
-                    <Image className="w-6 h-6 text-gray-400" alt="" />
+                    <Image className="w-6 h-6 text-gray-400" aria-label="Placeholder image" />
                   </div>
                 </div>
               )}

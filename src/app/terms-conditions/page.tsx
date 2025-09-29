@@ -62,7 +62,7 @@ const TermsConditionsPage = (): ReactElement => {
                     <p className="mb-3">
                       Welcome to Virtual Xcellence. These Terms of Service (&quot;Terms&quot;) govern your use of our website, 
                       services, and products operated by Virtual Xcellence (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) located at 
-                      3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA.
+                      28 Church St. Magnetwan ON P0A 1P0 Ontario - Magnetwan.
                     </p>
                     <p className="mb-3">
                       By accessing or using our services, you agree to be bound by these Terms. If you disagree with 
@@ -184,9 +184,7 @@ const TermsConditionsPage = (): ReactElement => {
                     <div className="contact-info">
                       <p className="mb-2"><strong>Email:</strong> info@virtualxcellence.com</p>
                       <p className="mb-2"><strong>Canada:</strong> +1-905-823-7677</p>
-                      <p className="mb-2"><strong>United States:</strong> +1-702-537-0123</p>
                       <p className="mb-2"><strong>India:</strong> +91-120-4286226</p>
-                      <p className="mb-2"><strong>Address:</strong> 3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA</p>
                     </div>
                   </div>
 
@@ -194,7 +192,7 @@ const TermsConditionsPage = (): ReactElement => {
                   <div className="terms-section mb-5">
                     <h2 className="section-title mb-4">12. Governing Law</h2>
                     <p className="mb-3">
-                      These Terms shall be interpreted and governed by the laws of the State of Ohio, United States, 
+                      These Terms shall be interpreted and governed by the laws of the State of Ontario, Canada, 
                       without regard to its conflict of law provisions.
                     </p>
                   </div>

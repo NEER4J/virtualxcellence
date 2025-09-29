@@ -65,7 +65,7 @@ const headerData: HeaderData = {
             { title: "Portfolio", href: "/ai-agency/portfolio" },
             { title: "Portfolio Grid", href: "/ai-agency/portfolio-grid" },
             { title: "Portfolio Slider", href: "/ai-agency/portfolio-slider" },
-            { title: "Portfolio Details", href: "/ai-agency/portfolio-details" },
+            { title: "Portfolio Details" },
           ],
         },
         { title: "Team", href: "/ai-agency/team" },

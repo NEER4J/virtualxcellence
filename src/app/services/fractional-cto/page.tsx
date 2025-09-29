@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -166,41 +165,6 @@ const FractionalCTOPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for Fractional CTO
-  const industryData = [
-    {
-      title: "Startups",
-      description: "Early-stage product development & funding readiness",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "SMEs",
-      description: "Scaling technology without hiring a full-time CTO",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Enterprises",
-      description: "Interim CTO leadership during transitions",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government & NGOs",
-      description: "Strategic digital transformation guidance",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for Fractional CTO
   const toolsData = [
@@ -283,6 +247,27 @@ const FractionalCTOPage = (): ReactElement => {
     ],
   };
 
+  // Business Impact Data for Fractional CTO
+  const businessImpactData = {
+    title: "The Business Impact of Fractional CTO Leadership",
+    description: "Our Fractional CTO services provide strategic technology leadership without the full-time overhead. Organizations gain access to senior-level expertise and strategic guidance at a fraction of the cost.",
+    description2: "We help achieve 50% faster technology decision-making, 40% reduction in technical debt, and 60% improvement in team productivity. Our clients report better technology alignment with business goals, improved vendor relationships, and accelerated product development cycles."
+  };
+
+  // Industry Applications Data for Fractional CTO
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our Fractional CTO services are tailored to meet the unique technology leadership needs across different industries and company stages.",
+    description2: "From startups needing technology strategy for fundraising, to mid-market companies requiring digital transformation leadership, and enterprises needing interim CTO support during transitions. Our experience spans healthcare, fintech, e-commerce, SaaS, and manufacturing sectors."
+  };
+
+  // Why Work With Us Data for Fractional CTO
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine deep technology expertise with proven leadership experience to deliver strategic CTO services. Our Fractional CTOs have led technology teams at successful companies and understand both technical and business challenges.",
+    description2: "Our track record includes 100+ successful technology transformations, flexible engagement models, and comprehensive support from strategy to execution. We provide ongoing mentorship, team building, and technology roadmap development to ensure long-term success."
+  };
+
   // FAQ Data for Fractional CTO
   const faqData = [
     {
@@ -313,18 +298,26 @@ const FractionalCTOPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Approach"
             sectionSubtitle="We combine strategic vision with hands-on execution"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Ideal for..."
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Expertise We Bring"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

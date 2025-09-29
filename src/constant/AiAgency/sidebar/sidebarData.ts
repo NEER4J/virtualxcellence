@@ -70,7 +70,7 @@ const sidebar: SidebarData = {
             { label: "Portfolio", href: "/ai-agency/portfolio" },
             { label: "Portfolio 02", href: "/ai-agency/portfolio-02" },
             { label: "Portfolio 03", href: "/ai-agency/portfolio-03" },
-            { label: "Portfolio Details", href: "/ai-agency/portfolio-details" },
+            { label: "Portfolio Details" },
           ],
         },
         { label: "Team", href: "/ai-agency/team" },
@@ -90,7 +90,7 @@ const sidebar: SidebarData = {
       label: "Portfolio",
       children: [
         { label: "Portfolio", href: "/ai-agency/portfolio" },
-        { label: "Portfolio Details", href: "/ai-agency/portfolio-details" },
+        { label: "Portfolio Details" },
       ],
     },
     { label: "Contact Us", href: "/ai-agency/contact" },

@@ -108,10 +108,7 @@ const FooterSection:React.FC<FooterProps> = ({
                   <span className="nav-title">Canada</span>
                   <Link href="tel:+19058237677">+1-905-823-7677</Link>
                 </li>
-                <li>
-                  <span className="nav-title">United States</span>
-                  <Link href="tel:+17025370123">1-(702) 537-0123</Link>
-                </li>
+               
                 <li>
                   <span className="nav-title">India</span>
                   <Link href="tel:+911204286226">+91-120-4286226</Link>

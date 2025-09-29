@@ -1,4 +1,5 @@
 import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+import { Database } from '@/types/database.types'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -8,11 +9,11 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 // Create a singleton client instance to avoid multiple connections
-let supabaseClient: ReturnType<typeof createSupabaseClient> | null = null
+let supabaseClient: ReturnType<typeof createSupabaseClient<Database>> | null = null
 
 export const createClient = () => {
   if (!supabaseClient) {
-    supabaseClient = createSupabaseClient(supabaseUrl, supabaseAnonKey, {
+    supabaseClient = createSupabaseClient<Database>(supabaseUrl, supabaseAnonKey, {
       auth: {
         persistSession: true,
         autoRefreshToken: true,

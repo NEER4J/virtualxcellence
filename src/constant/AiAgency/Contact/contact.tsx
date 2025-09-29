@@ -25,7 +25,7 @@ const contactData: IContact = {
   subtitle: "Get in touch",
   title: "Talk to a sales representative",
   description:
-    "Connect with our team across multiple locations. We have offices in Canada, United States, and India to serve you better. Reach out to us via phone or email for any inquiries.",
+    "Connect with our team across multiple locations. We have offices in Canada, and India to serve you better. Reach out to us via phone or email for any inquiries.",
   contactInfo: [
     {
       icon: "/assets/imgs/icon/icon-17.webp",
@@ -50,7 +50,7 @@ const contactData: IContact = {
     },
     {
       icon: "/assets/imgs/icon/icon-18.webp",
-      label: "3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA",
+      label: "28 Church St. Magnetwan ON P0A 1P0 Ontario - Magnetwan",
       link: "#",
     },
   ],

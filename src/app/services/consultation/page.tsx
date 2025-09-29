@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -166,41 +165,6 @@ const ConsultationPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for Consultation
-  const industryData = [
-    {
-      title: "Healthcare",
-      description: "Consulting on AI-driven patient management systems",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Finance",
-      description: "Digital-first banking models & risk assessment frameworks",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government",
-      description: "Smart city and e-governance roadmaps",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Manufacturing",
-      description: "Industry 4.0 adoption strategy",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for Consultation
   const toolsData = [
@@ -281,6 +245,27 @@ const ConsultationPage = (): ReactElement => {
     ],
   };
 
+  // Business Impact Data for Consultation
+  const businessImpactData = {
+    title: "The Business Impact of Strategic Consulting",
+    description: "Our consulting services drive digital transformation and operational excellence. Organizations see immediate improvements in process efficiency, technology alignment, and strategic clarity.",
+    description2: "We help achieve 30% cost reduction through process optimization, 50% faster decision-making with clear roadmaps, and 80% improvement in technology ROI. Our clients report enhanced competitive positioning and sustainable growth through strategic technology investments."
+  };
+
+  // Industry Applications Data for Consultation
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our consulting solutions are tailored to meet the unique challenges and opportunities across different industries.",
+    description2: "From healthcare with AI-driven patient management systems, to finance with digital-first banking models, government with smart city roadmaps, and manufacturing with Industry 4.0 adoption strategies. Our industry expertise ensures solutions that drive measurable business outcomes."
+  };
+
+  // Why Work With Us Data for Consultation
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine deep industry expertise with proven consulting methodologies to deliver strategic technology solutions. Our experienced consultants provide unbiased, vendor-neutral advice that aligns with your business goals.",
+    description2: "Our track record includes 150+ successful transformation projects, certified consultants across multiple domains, and comprehensive support from strategy to execution. We provide ongoing advisory services and continuous optimization to ensure long-term success."
+  };
+
   // FAQ Data for Consultation
   const faqData = [
     {
@@ -311,18 +296,26 @@ const ConsultationPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Consulting Approach"
             sectionSubtitle="Our consulting methodology blends business vision with technology execution"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industry Applications"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Frameworks We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

@@ -163,3 +163,6 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ serviceData }) => {
 };
 
 export { ServiceSection };
+export { default as BusinessImpactSection } from './BusinessImpactSection';
+export { default as IndustryApplicationsSection } from './IndustryApplicationsSection';
+export { default as WhyWorkWithUsSection } from './WhyWorkWithUsSection';

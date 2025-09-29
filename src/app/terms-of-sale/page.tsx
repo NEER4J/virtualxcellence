@@ -64,7 +64,7 @@ const TermsOfSalePage = (): ReactElement => {
                     </p>
                     <p className="mb-3">
                       Welcome to Virtual Xcellence online and retail Stores operated by Virtual Xcellence (&quot;Virtual Xcellence,&quot; 
-                      &quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;), located at 3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA.
+                      &quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;), located 28 Church St. Magnetwan ON P0A 1P0 Ontario - Magnetwan.
                     </p>
                     <p className="mb-3">
                       &quot;Store&quot; refers to our online and retail venues that allow you to browse, view, acquire, purchase, and 
@@ -271,9 +271,8 @@ const TermsOfSalePage = (): ReactElement => {
                     <div className="contact-info">
                       <p className="mb-2"><strong>Email:</strong> support@virtualxcellence.com</p>
                       <p className="mb-2"><strong>Canada:</strong> +1-905-823-7677</p>
-                      <p className="mb-2"><strong>United States:</strong> +1-702-537-0123</p>
                       <p className="mb-2"><strong>India:</strong> +91-120-4286226</p>
-                      <p className="mb-2"><strong>Address:</strong> 3900 Ravine Hollow Ct. Maumee, Ohio, 43537, USA</p>
+                      <p className="mb-2"><strong>Address:</strong> 28 Church St. Magnetwan ON P0A 1P0 Ontario - Magnetwan  </p>
                     </div>
                   </div>
 

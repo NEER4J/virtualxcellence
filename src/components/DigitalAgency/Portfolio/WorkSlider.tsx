@@ -1,7 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import Link from "next/link";
 
 interface Project {
   id: number;
@@ -9,14 +8,12 @@ interface Project {
   result: string;
   tags: string[];
   image: string;
-  link: string;
 }
 
 interface WorkData {
   sectionSubtitle: string;
   sectionTitle: string;
   viewAllText: string;
-  viewAllLink: string;
   projects: Project[];
 }
 
@@ -24,7 +21,6 @@ const workData: WorkData = {
   sectionSubtitle: "Our Portfolio",
   sectionTitle: "Selected works",
   viewAllText: "See All Works",
-  viewAllLink: "/portfolio",
   projects: [
     {
       id: 1,
@@ -32,7 +28,6 @@ const workData: WorkData = {
       result: "35% cost savings",
       tags: ["RETAIL", "AI"],
       image: "/assets/imgs/new/AI-demand-forecasting-740x515.jpg",
-      link: "/portfolio-details",
     },
     {
       id: 2,
@@ -40,7 +35,6 @@ const workData: WorkData = {
       result: "65% faster response time",
       tags: ["LOGISTICS", "AI"],
       image: "/assets/imgs/new/Logistics-Provider-740x515.jpg",
-      link: "/portfolio-details",
     },
     {
       id: 3,
@@ -48,7 +42,6 @@ const workData: WorkData = {
       result: "100% achieved",
       tags: ["FINANCE", "OMNI-CHANNEL"],
       image: "/assets/imgs/new/Omnichannel-Customer-Experience-740x515.jpg",
-      link: "/portfolio-details",
     },
   ],
 };
@@ -94,12 +87,12 @@ const WorkSlider = () => {
                     </span>
                   ))}
                 </div>
-                <Link href={item?.link || "#"}>
+                <div>
                   <img src={item?.image} alt={item?.title || "Project image"} />
-                </Link>
+                </div>
                 <div className="content">
                   <h3 className="title">
-                    <Link href={item?.link || "#"}>{item?.title}</Link>
+                    {item?.title}
                   </h3>
                   <p className="result text-white">{item?.result}</p>
                 </div>
@@ -120,24 +113,21 @@ const WorkSlider = () => {
         </div>
         <div className="btn-wrapper fade-anim">
           <div className="t-btn-group">
-            <Link
+            <button
               className="t-btn t-btn-circle"
-              href={workData?.viewAllLink || "#"}
             >
               <i className="fa-solid fa-arrow-right"></i>
-            </Link>
-            <Link
+            </button>
+            <button
               className="t-btn t-btn-primary"
-              href={workData?.viewAllLink || "#"}
             >
               {workData?.viewAllText}
-            </Link>
-            <Link
+            </button>
+            <button
               className="t-btn t-btn-circle"
-              href={workData?.viewAllLink || "#"}
             >
               <i className="fa-solid fa-arrow-right"></i>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
