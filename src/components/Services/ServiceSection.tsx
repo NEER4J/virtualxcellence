@@ -132,7 +132,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ serviceData }) => {
                   
                   <div className="service-box-inner body">
                      <div className="btn-wrapper">
-                       <img src="/assets/imgs/gallery/image-52.webp" alt="Cybersecurity Service" />
+                       <img src={srv?.image} alt={srv?.title || "Service"} />
                      </div>
                     <div className="content">
                     <h3 className="title">

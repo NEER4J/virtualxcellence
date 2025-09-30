@@ -35,13 +35,8 @@ const ServiceFaqSection: React.FC<ServiceFaqSectionProps> = ({
             type === 2 ? "faq-area-2-inner" : "faq-area-inner"
           }  section-spacing`}
         >
-          <div className="section-content-wrapper">
-            <div
-              className={`faq-thumb fade-anim order-${type === 2 ? 1 : 0}`}
-              data-direction={type === 2 ? "right" : "left"}
-            >
-              <img src={imageSrc} alt="Cybersecurity FAQ Image" />
-            </div>
+          <div className="">
+            
             <div
               className={`section-content fade-anim order-${
                 type === 2 ? 0 : 1

@@ -75,7 +75,7 @@ const DevelopmentPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/development/mob-web-dev.png"
       },
       {
         id: 2,
@@ -89,7 +89,7 @@ const DevelopmentPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/development/cloud-dev.png"
       },
       {
         id: 3,
@@ -103,7 +103,7 @@ const DevelopmentPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/development/ai.png"
       },
       {
         id: 4,
@@ -117,7 +117,7 @@ const DevelopmentPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/development/custom.png"
       },
       {
         id: 5,
@@ -131,7 +131,7 @@ const DevelopmentPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/development/emerging.png"
       }
     ]
   };
@@ -306,12 +306,12 @@ const DevelopmentPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/development/challenge.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/development/imapct.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -320,7 +320,7 @@ const DevelopmentPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/development/application.png"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
@@ -328,7 +328,7 @@ const DevelopmentPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/development/why-work-with-us.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

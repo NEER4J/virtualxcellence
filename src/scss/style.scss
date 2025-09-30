@@ -6137,6 +6137,13 @@
     }
   }
 
+  img {
+    aspect-ratio: 1.6/1;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
   .header {
     display: grid;
     gap: 20px 60px;
@@ -7419,8 +7426,8 @@
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid rgba(14, 15, 17, 0.1);
       overflow: hidden;
+      aspect-ratio: 1.6/1;
     }
   }
 

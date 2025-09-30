@@ -72,7 +72,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/vx-cybersecurity/MSS 630x440.png"
+        image: "/assets/imgs/services/cybersecurity/mss.png"
       },
       {
         id: 2,
@@ -86,7 +86,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/vx-cybersecurity/Risk Assesment 630x440.png"
+        image: "/assets/imgs/services/cybersecurity/risk-assessment.png"
       },
       {
         id: 3,
@@ -100,7 +100,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/vx-cybersecurity/Cloud Security 630x440.png"
+        image: "/assets/imgs/services/cybersecurity/cloud.png"
       },
       {
         id: 4,
@@ -114,7 +114,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/vx-cybersecurity/IAM 630x440.png"
+        image: "/assets/imgs/services/cybersecurity/indentity.png"
       },
       {
         id: 5,
@@ -128,7 +128,7 @@ const CybersecurityPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/vx-cybersecurity/Forensic 630x440.png"
+        image: "/assets/imgs/services/cybersecurity/incident.png"
       }
     ]
   };
@@ -292,12 +292,12 @@ const CybersecurityPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/vx-cybersecurity/Challenges 630x440.png"
+            imageSrc="/assets/imgs/services/cybersecurity/challenges.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/vx-cybersecurity/Banking 630x440.png"
+            imageSrc="/assets/imgs/services/cybersecurity/impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -306,7 +306,7 @@ const CybersecurityPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/vx-cybersecurity/Healthcare 630x440.png"
+            imageSrc="/assets/imgs/services/cybersecurity/application.png"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
@@ -314,7 +314,7 @@ const CybersecurityPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/vx-cybersecurity/Government 630x440.png"
+            imageSrc="/assets/imgs/services/cybersecurity/incident.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 
