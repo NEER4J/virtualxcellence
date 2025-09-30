@@ -1,4 +1,6 @@
-import { ReactElement } from "react";
+"use client";
+
+import React, { useState, ReactElement } from "react";
 
 interface Solution {
   title: string;
@@ -7,41 +9,52 @@ interface Solution {
 
 interface OurSolutionsProps {
   title: string;
+  description?: string;
   solutions: Solution[];
 }
 
-const OurSolutions = ({ title, solutions }: OurSolutionsProps): ReactElement => {
-  return (
-    <section className="service-area-6">
-      <div className="container">
-        <div className="service-area-6-inner section-spacing">
-          <div className="section-content-wrapper">
-            
-            <div
-              className="services-wrapper-box fade-anim"
-              data-direction="right"
-            >
-              <div className="section-title-wrapper">
-                <div className="title-wrapper">
-                  <h2 className="section-title">{title}</h2>
-                </div>
-              </div>
+const OurSolutions = ({ title, description, solutions }: OurSolutionsProps): ReactElement => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
-              <div className="solutions-list">
-                {solutions.map((solution, index) => (
-                  <div key={index} className="solution-item mb-4">
-                    <h4 className="solution-title mb-3">{solution.title}</h4>
-                    <ul className="list-unstyled">
-                      {solution.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="solution-item-text d-flex align-items-start mb-2">
-                          <span className="solution-icon me-3">o</span>
-                          <span className="solution-text">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+  return (
+    <section className="process-area-2">
+      <div className="container">
+        <div className="process-area-2-inner section-spacing">
+          <div className="section-header">
+            <div className="section-title-wrapper fade-anim" suppressHydrationWarning={true}>
+              <div className="title-wrapper">
+                <h2 className="section-title">{title}</h2>
               </div>
+              {description && (
+                <div className="text-wrapper">
+                  <p className="text">{description}</p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="process-wrapper-box">
+            <div className="process-wrapper process-hover-active fade-anim" suppressHydrationWarning={true}>
+              {solutions.map((solution, index) => (
+                <div
+                  key={index}
+                  className={`process-box-2 ${
+                    index === activeIndex ? "active" : ""
+                  }`}
+                  onMouseOver={() => setActiveIndex(index)}
+                >
+                  <div className="content">
+                    <h3 className="title">{solution.title}</h3>
+                    <div className="process-list">
+                      <ul>
+                        {solution.items.map((item, idx) => (
+                          <li key={idx}><i className="fa-solid fa-circle-check"></i>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

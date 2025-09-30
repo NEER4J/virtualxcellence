@@ -9,6 +9,7 @@ import KeyChallenges from "@/components/Industries/KeyChallenges";
 import OurSolutions from "@/components/Industries/OurSolutions";
 import TechnologiesWeUse from "@/components/Industries/TechnologiesWeUse";
 import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
+import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const fallbackMetadata: Metadata = {
@@ -63,6 +64,7 @@ const HealthcarePage = (): ReactElement => {
     },
     solutions: {
       title: "Our Solutions",
+      description: "Comprehensive healthcare technology solutions that address modern medical challenges. Below are the detailed solutions we offer:",
       solutions: [
         {
           title: "AI-Powered Diagnostics & Clinical Decision Support",
@@ -152,6 +154,20 @@ const HealthcarePage = (): ReactElement => {
     }
   };
 
+  // Text Slider Data for Healthcare
+  const textSliderData = {
+    items: [
+      { id: 1, text: "AI-Powered Diagnostics", suffix: "for Better Patient Outcomes" },
+      { id: 2, text: "Telemedicine Solutions", suffix: "for Remote Healthcare" },
+      { id: 3, text: "HIPAA Compliant Systems", suffix: "for Secure Data Management" },
+      { id: 4, text: "Healthcare Automation", suffix: "for Operational Efficiency" },
+      { id: 5, text: "Digital Health Platforms", suffix: "for Modern Medical Practices" },
+      { id: 6, text: "Clinical Decision Support", suffix: "for Enhanced Care Delivery" },
+      { id: 7, text: "Patient Engagement Tools", suffix: "for Better Experience" },
+      { id: 8, text: "Healthcare Analytics", suffix: "for Data-Driven Insights" }
+    ]
+  };
+
   // FAQ Data for Healthcare
   const faqData = [
     {
@@ -194,11 +210,14 @@ const HealthcarePage = (): ReactElement => {
         <KeyChallenges 
           title={industryData.challenges.title}
           challenges={industryData.challenges.challenges}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
         />
 
         {/* Our Solutions */}
         <OurSolutions 
           title={industryData.solutions.title}
+          description={industryData.solutions.description}
           solutions={industryData.solutions.solutions}
         />
 
@@ -213,12 +232,18 @@ const HealthcarePage = (): ReactElement => {
         <ImpactWeDeliver 
           title={industryData.impact.title}
           impacts={industryData.impact.impacts}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
+
+        <ServiceTextSliderSection 
+          textSliderData={textSliderData}
         />
 
         <IndustriesFaqSection 
           faqData={faqData}
           type={2}
-          sectionTitle="Healthcare Technology FAQ"
+          sectionTitle="FAQ's"
         />
       </main>
       

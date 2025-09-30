@@ -7,18 +7,30 @@ interface Challenge {
 interface KeyChallengesProps {
   title: string;
   challenges: Challenge[];
+  imageSrc: string;
+  imageAlt: string;
 }
 
-const KeyChallenges = ({ title, challenges }: KeyChallengesProps): ReactElement => {
+const KeyChallenges = ({ title, challenges, imageSrc, imageAlt }: KeyChallengesProps): ReactElement => {
   return (
     <section className="service-area-6 bg-light">
       <div className="container">
         <div className="service-area-6-inner section-spacing">
           <div className="section-content-wrapper">
             
+            <div className="section-content fade-anim" data-direction="right">
+              <div className="image-wrapper">
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt} 
+                  className="fade-anim"
+                />
+              </div>
+            </div>
+            
             <div
               className="services-wrapper-box fade-anim"
-              data-direction="right"
+              data-direction="left"
             >
               <div className="section-title-wrapper">
                 <div className="title-wrapper">

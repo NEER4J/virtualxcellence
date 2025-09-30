@@ -4,6 +4,12 @@ import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
+import IndustryOverview from "@/components/Industries/IndustryOverview";
+import KeyChallenges from "@/components/Industries/KeyChallenges";
+import OurSolutions from "@/components/Industries/OurSolutions";
+import TechnologiesWeUse from "@/components/Industries/TechnologiesWeUse";
+import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
+import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const fallbackMetadata: Metadata = {
@@ -38,6 +44,133 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const RetailEcommercePage = (): ReactElement => {
+  // Retail & E-commerce Industry Data
+  const industryData = {
+    overview: {
+      title: "Retail & E-commerce Industry",
+      description: "Retail and e-commerce businesses face intense competition and rapidly changing consumer expectations. From omnichannel experiences to AI-powered personalization, the sector demands innovative technology solutions. At Virtual Xcellence, we empower retailers and e-commerce businesses to leverage cutting-edge technology for enhanced customer experiences, operational efficiency, and sustainable growth.",
+      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageAlt: "Retail & E-commerce Technology Solutions"
+    },
+    challenges: {
+      title: "Key Challenges",
+      challenges: [
+        { text: "Creating seamless omnichannel customer experiences" },
+        { text: "Managing complex inventory across multiple channels" },
+        { text: "Personalizing customer interactions at scale" },
+        { text: "Ensuring secure payment processing and PCI compliance" },
+        { text: "Optimizing supply chain and logistics operations" }
+      ]
+    },
+    solutions: {
+      title: "Our Solutions",
+      description: "Comprehensive retail and e-commerce technology solutions that address modern business challenges. Below are the detailed solutions we offer:",
+      solutions: [
+        {
+          title: "E-commerce Platforms & Marketplaces",
+          items: [
+            "Custom e-commerce website development",
+            "Multi-vendor marketplace solutions"
+          ]
+        },
+        {
+          title: "Omnichannel Customer Experience",
+          items: [
+            "Unified customer data platforms",
+            "Cross-channel inventory management systems"
+          ]
+        },
+        {
+          title: "AI-Powered Personalization & Analytics",
+          items: [
+            "Recommendation engines and personalization",
+            "Customer behavior analytics and insights"
+          ]
+        },
+        {
+          title: "Mobile Commerce & Apps",
+          items: [
+            "Native and cross-platform mobile apps",
+            "Progressive Web App (PWA) solutions"
+          ]
+        },
+        {
+          title: "Payment & Security Solutions",
+          items: [
+            "Secure payment gateway integration",
+            "Fraud detection and prevention systems"
+          ]
+        }
+      ]
+    },
+    technologies: {
+      title: "Technologies We Use",
+      technologies: [
+        {
+          title: "E-commerce Platforms",
+          technologies: [
+            { name: "Shopify", icon: "/assets/imgs/icons/shopify.svg" },
+            { name: "Magento", icon: "/assets/imgs/icons/magento.svg" },
+            { name: "WooCommerce", icon: "/assets/imgs/icons/woocommerce.svg" }
+          ]
+        },
+        {
+          title: "AI/ML",
+          technologies: [
+            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
+            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
+            { name: "Recommendation APIs", icon: "/assets/imgs/icons/recommendation.svg" }
+          ]
+        },
+        {
+          title: "Cloud & Infrastructure",
+          technologies: [
+            { name: "AWS Commerce", icon: "/assets/imgs/icons/aws.svg" },
+            { name: "Google Cloud", icon: "/assets/imgs/icons/google-cloud.svg" }
+          ]
+        },
+        {
+          title: "Payment & Security",
+          technologies: [
+            { name: "Stripe", icon: "/assets/imgs/icons/stripe.svg" },
+            { name: "PayPal", icon: "/assets/imgs/icons/paypal.svg" },
+            { name: "PCI-DSS compliance", icon: "/assets/imgs/icons/pci.svg" }
+          ]
+        },
+        {
+          title: "Mobile Development",
+          technologies: [
+            { name: "React Native", icon: "/assets/imgs/icons/react-native.svg" },
+            { name: "Flutter", icon: "/assets/imgs/icons/flutter.svg" }
+          ]
+        }
+      ]
+    },
+    impact: {
+      title: "Impact We Deliver",
+      impacts: [
+        { text: "Increased conversion rates and customer satisfaction" },
+        { text: "Reduced operational costs by up to 35%" },
+        { text: "Enhanced personalization leading to higher customer lifetime value" },
+        { text: "Streamlined inventory management and reduced stockouts" }
+      ]
+    }
+  };
+
+  // Text Slider Data for Retail & E-commerce
+  const textSliderData = {
+    items: [
+      { id: 1, text: "E-commerce Platforms", suffix: "for Digital Commerce" },
+      { id: 2, text: "Omnichannel Solutions", suffix: "for Seamless Experiences" },
+      { id: 3, text: "AI Personalization", suffix: "for Customer Engagement" },
+      { id: 4, text: "Mobile Commerce", suffix: "for Anytime Shopping" },
+      { id: 5, text: "Payment Solutions", suffix: "for Secure Transactions" },
+      { id: 6, text: "Inventory Management", suffix: "for Supply Chain Optimization" },
+      { id: 7, text: "Customer Analytics", suffix: "for Data-Driven Insights" },
+      { id: 8, text: "Marketplace Solutions", suffix: "for Multi-Vendor Platforms" }
+    ]
+  };
+
   // FAQ Data for Retail & E-commerce
   const faqData = [
     {
@@ -68,45 +201,46 @@ const RetailEcommercePage = (): ReactElement => {
           subtext="The retail and e-commerce industry is rapidly evolving with digital technologies reshaping how customers discover, purchase, and interact with brands. At Virtual Xcellence, we help retailers and e-commerce businesses leverage cutting-edge technology to create seamless, personalized shopping experiences."
         />
         
-        {/* Main Content Section */}
-        <section className="service-area-6">
-          <div className="container">
-            <div className="service-area-6-inner section-spacing">
-              <div className="section-content-wrapper">
-                
-                <div
-                  className="services-wrapper-box fade-anim"
-                  data-direction="right"
-                >
-                  <div className="section-title-wrapper">
-                    <div className="title-wrapper">
-                      <h2 className="section-title">Retail & E-commerce Technology Solutions</h2>
-                    </div>
-                  </div>
+        {/* Industry Overview */}
+        <IndustryOverview 
+          title={industryData.overview.title}
+          description={industryData.overview.description}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
 
-                  <div className="text-wrapper">
-                    <p className="text mb-4">
-                      We specialize in developing comprehensive technology solutions for the retail and e-commerce industry. Our expertise spans from omnichannel platforms to AI-powered personalization engines that enhance customer engagement and drive sales growth.
-                    </p>
-                    <p className="text">
-                      Our retail solutions are designed to create seamless shopping experiences across all channels, including online stores, mobile apps, and physical locations. We help retailers and e-commerce businesses modernize their technology infrastructure while maintaining the highest standards of security and performance.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="section-content fade-anim" data-direction="left">
-                  <div className="image-wrapper">
-                    <img 
-                      src="/assets/imgs/gallery/image-52.webp" 
-                      alt="Retail & E-commerce Technology Solutions" 
-                      className="fade-anim"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Key Challenges */}
+        <KeyChallenges 
+          title={industryData.challenges.title}
+          challenges={industryData.challenges.challenges}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
+
+        {/* Our Solutions */}
+        <OurSolutions 
+          title={industryData.solutions.title}
+          description={industryData.solutions.description}
+          solutions={industryData.solutions.solutions}
+        />
+
+        {/* Technologies We Use */}
+        <TechnologiesWeUse 
+          title={industryData.technologies.title}
+          technologies={industryData.technologies.technologies}
+        />
+
+        {/* Impact We Deliver */}
+        <ImpactWeDeliver 
+          title={industryData.impact.title}
+          impacts={industryData.impact.impacts}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
+
+        <ServiceTextSliderSection 
+          textSliderData={textSliderData}
+        />
 
         <IndustriesFaqSection 
           faqData={faqData}

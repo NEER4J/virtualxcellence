@@ -4,6 +4,12 @@ import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
+import IndustryOverview from "@/components/Industries/IndustryOverview";
+import KeyChallenges from "@/components/Industries/KeyChallenges";
+import OurSolutions from "@/components/Industries/OurSolutions";
+import TechnologiesWeUse from "@/components/Industries/TechnologiesWeUse";
+import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
+import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const fallbackMetadata: Metadata = {
@@ -38,6 +44,134 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const ManufacturingPage = (): ReactElement => {
+  // Manufacturing Industry Data
+  const industryData = {
+    overview: {
+      title: "Manufacturing Industry",
+      description: "Manufacturing companies face increasing pressure to optimize production, reduce costs, and improve quality while adapting to Industry 4.0 technologies. From IoT integration to predictive analytics, the sector demands innovative automation solutions. At Virtual Xcellence, we empower manufacturers to leverage smart technologies for enhanced operational efficiency, quality control, and sustainable production processes.",
+      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageAlt: "Manufacturing Technology Solutions"
+    },
+    challenges: {
+      title: "Key Challenges",
+      challenges: [
+        { text: "Implementing Industry 4.0 and smart factory technologies" },
+        { text: "Optimizing production efficiency and reducing downtime" },
+        { text: "Ensuring quality control and compliance standards" },
+        { text: "Managing complex supply chain operations" },
+        { text: "Integrating legacy systems with modern technology" }
+      ]
+    },
+    solutions: {
+      title: "Our Solutions",
+      description: "Comprehensive manufacturing technology solutions that address modern production challenges. Below are the detailed solutions we offer:",
+      solutions: [
+        {
+          title: "Smart Factory & IoT Integration",
+          items: [
+            "IoT sensor networks for real-time monitoring",
+            "Connected equipment and production line automation"
+          ]
+        },
+        {
+          title: "Predictive Maintenance & Analytics",
+          items: [
+            "AI-powered equipment failure prediction",
+            "Maintenance scheduling optimization"
+          ]
+        },
+        {
+          title: "Quality Control & Inspection Systems",
+          items: [
+            "Automated quality inspection using computer vision",
+            "Real-time quality monitoring and reporting"
+          ]
+        },
+        {
+          title: "Supply Chain & Inventory Management",
+          items: [
+            "End-to-end supply chain visibility",
+            "Automated inventory optimization"
+          ]
+        },
+        {
+          title: "Production Planning & Optimization",
+          items: [
+            "AI-driven production scheduling",
+            "Resource allocation and capacity planning"
+          ]
+        }
+      ]
+    },
+    technologies: {
+      title: "Technologies We Use",
+      technologies: [
+        {
+          title: "IoT & Sensors",
+          technologies: [
+            { name: "Industrial IoT", icon: "/assets/imgs/icons/iot.svg" },
+            { name: "Edge Computing", icon: "/assets/imgs/icons/edge.svg" },
+            { name: "Sensor Networks", icon: "/assets/imgs/icons/sensors.svg" }
+          ]
+        },
+        {
+          title: "AI/ML",
+          technologies: [
+            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
+            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
+            { name: "Computer Vision", icon: "/assets/imgs/icons/computer-vision.svg" }
+          ]
+        },
+        {
+          title: "Cloud & Analytics",
+          technologies: [
+            { name: "AWS IoT", icon: "/assets/imgs/icons/aws.svg" },
+            { name: "Azure IoT", icon: "/assets/imgs/icons/azure.svg" },
+            { name: "Time Series Analytics", icon: "/assets/imgs/icons/analytics.svg" }
+          ]
+        },
+        {
+          title: "Automation",
+          technologies: [
+            { name: "PLC Integration", icon: "/assets/imgs/icons/plc.svg" },
+            { name: "SCADA Systems", icon: "/assets/imgs/icons/scada.svg" },
+            { name: "RPA for Manufacturing", icon: "/assets/imgs/icons/rpa.svg" }
+          ]
+        },
+        {
+          title: "Security",
+          technologies: [
+            { name: "Industrial Cybersecurity", icon: "/assets/imgs/icons/cybersecurity.svg" },
+            { name: "Network Segmentation", icon: "/assets/imgs/icons/network.svg" }
+          ]
+        }
+      ]
+    },
+    impact: {
+      title: "Impact We Deliver",
+      impacts: [
+        { text: "Reduced equipment downtime by up to 50%" },
+        { text: "Improved production efficiency and throughput" },
+        { text: "Enhanced quality control and defect reduction" },
+        { text: "Optimized supply chain and inventory management" }
+      ]
+    }
+  };
+
+  // Text Slider Data for Manufacturing
+  const textSliderData = {
+    items: [
+      { id: 1, text: "Smart Factories", suffix: "for Industry 4.0" },
+      { id: 2, text: "IoT Integration", suffix: "for Connected Manufacturing" },
+      { id: 3, text: "Predictive Maintenance", suffix: "for Equipment Optimization" },
+      { id: 4, text: "Quality Control", suffix: "for Enhanced Standards" },
+      { id: 5, text: "Supply Chain Automation", suffix: "for Operational Efficiency" },
+      { id: 6, text: "Production Analytics", suffix: "for Data-Driven Insights" },
+      { id: 7, text: "Digital Twins", suffix: "for Virtual Modeling" },
+      { id: 8, text: "Robotic Automation", suffix: "for Process Optimization" }
+    ]
+  };
+
   // FAQ Data for Manufacturing
   const faqData = [
     {
@@ -68,45 +202,46 @@ const ManufacturingPage = (): ReactElement => {
           subtext="The manufacturing industry is experiencing a digital revolution with Industry 4.0 technologies transforming how products are designed, produced, and delivered. At Virtual Xcellence, we help manufacturers leverage smart technologies to improve efficiency, reduce costs, and enhance product quality."
         />
         
-        {/* Main Content Section */}
-        <section className="service-area-6">
-          <div className="container">
-            <div className="service-area-6-inner section-spacing">
-              <div className="section-content-wrapper">
-                
-                <div
-                  className="services-wrapper-box fade-anim"
-                  data-direction="right"
-                >
-                  <div className="section-title-wrapper">
-                    <div className="title-wrapper">
-                      <h2 className="section-title">Manufacturing Technology Solutions</h2>
-                    </div>
-                  </div>
+        {/* Industry Overview */}
+        <IndustryOverview 
+          title={industryData.overview.title}
+          description={industryData.overview.description}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
 
-                  <div className="text-wrapper">
-                    <p className="text mb-4">
-                      We specialize in developing cutting-edge technology solutions for the manufacturing industry. Our expertise spans from IoT integration to AI-powered predictive analytics that optimize production processes and improve operational efficiency.
-                    </p>
-                    <p className="text">
-                      Our manufacturing solutions are designed to help companies embrace Industry 4.0 principles, including smart factories, predictive maintenance, and automated quality control. We help manufacturers modernize their operations while maintaining the highest standards of security and reliability.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="section-content fade-anim" data-direction="left">
-                  <div className="image-wrapper">
-                    <img 
-                      src="/assets/imgs/gallery/image-52.webp" 
-                      alt="Manufacturing Technology Solutions" 
-                      className="fade-anim"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Key Challenges */}
+        <KeyChallenges 
+          title={industryData.challenges.title}
+          challenges={industryData.challenges.challenges}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
+
+        {/* Our Solutions */}
+        <OurSolutions 
+          title={industryData.solutions.title}
+          description={industryData.solutions.description}
+          solutions={industryData.solutions.solutions}
+        />
+
+        {/* Technologies We Use */}
+        <TechnologiesWeUse 
+          title={industryData.technologies.title}
+          technologies={industryData.technologies.technologies}
+        />
+
+        {/* Impact We Deliver */}
+        <ImpactWeDeliver 
+          title={industryData.impact.title}
+          impacts={industryData.impact.impacts}
+          imageSrc={industryData.overview.imageSrc}
+          imageAlt={industryData.overview.imageAlt}
+        />
+
+        <ServiceTextSliderSection 
+          textSliderData={textSliderData}
+        />
 
         <IndustriesFaqSection 
           faqData={faqData}

@@ -5478,6 +5478,15 @@
 .process-area-2 {
   background-color: var(--black);
 
+  .section-title-wrapper{
+    text-align: left;
+
+    .text{
+      color: var(--white);
+      margin-top: 20px;
+    }
+  }
+
   .section-header {
     margin-top: 20px;
     text-align: center;
@@ -5488,6 +5497,7 @@
   }
 
   .section-subtitle {
+    text-align: left;
     flex-direction: column;
     color: var(--white);
 
@@ -5499,10 +5509,11 @@
 
   .section-title {
     color: var(--white);
+    text-align: left;
   }
 
   .process-wrapper-box {
-    margin-top: 59px;
+    margin-top: 40px;
 
     @media #{$lg} {
       margin-top: 49px;
@@ -5531,13 +5542,13 @@
 .process-box-2 {
   position: relative;
   padding: 41px 30px;
-  border-left: 1px dashed rgba(255, 255, 255, 0.2);
-  border-right: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   min-height: 405px;
   transition: all 0.5s;
 
   @media #{$xl} {
-    padding: 21px 20px;
+    padding: 30px;
     min-height: 335px;
   }
 
@@ -5550,6 +5561,7 @@
 
     .number {
       border-color: var(--white);
+      display: none;
     }
 
     .process-list {
@@ -5600,7 +5612,7 @@
   }
 
   .process-list {
-    margin-top: 61px;
+    margin-top: 20px;
     opacity: 0.7;
     transition: all 0.5s;
 
@@ -5611,15 +5623,15 @@
     }
 
     li {
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 16px;
+      font-weight: normal;
       line-height: 26px;
       color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      padding: 8px 18px;
       display: inline-block;
       transition: all 0.5s;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
 
       &:not(:first-child) {
         margin-top: 20px;
@@ -7417,6 +7429,7 @@
     display: grid;
     gap: 40px 60px;
     grid-template-columns: 1fr 610px;
+    align-items: center;
 
     @media #{$lg} {
       grid-template-columns: 1fr 460px;

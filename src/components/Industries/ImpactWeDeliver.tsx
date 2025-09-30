@@ -7,18 +7,30 @@ interface Impact {
 interface ImpactWeDeliverProps {
   title: string;
   impacts: Impact[];
+  imageSrc: string;
+  imageAlt: string;
 }
 
-const ImpactWeDeliver = ({ title, impacts }: ImpactWeDeliverProps): ReactElement => {
+const ImpactWeDeliver = ({ title, impacts, imageSrc, imageAlt }: ImpactWeDeliverProps): ReactElement => {
   return (
-    <section className="service-area-6 bg-light">
+    <section className="service-area-6">
       <div className="container">
         <div className="service-area-6-inner section-spacing">
           <div className="section-content-wrapper">
             
+            <div className="section-content fade-anim" data-direction="right">
+              <div className="image-wrapper">
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt} 
+                  className="fade-anim"
+                />
+              </div>
+            </div>
+            
             <div
               className="services-wrapper-box fade-anim"
-              data-direction="right"
+              data-direction="left"
             >
               <div className="section-title-wrapper">
                 <div className="title-wrapper">
