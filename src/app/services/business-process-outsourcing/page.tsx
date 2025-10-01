@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -171,49 +170,6 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for BPO
-  const industryData = [
-    {
-      title: "Healthcare",
-      description: "Patient support, medical billing, and administrative services",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Finance & Banking",
-      description: "Customer service, compliance support, and back-office operations",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Retail & eCommerce",
-      description: "Customer support, order processing, and sales operations",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Technology & SaaS",
-      description: "Technical support, customer success, and lead generation",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government & Public Sector",
-      description: "Citizen services, administrative support, and compliance",
-      number: "05",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for BPO
   const toolsData = [
@@ -262,6 +218,27 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
       ]
     }
   ];
+
+  // Business Impact Data for BPO
+  const businessImpactData = {
+    title: "The Business Impact of BPO Services",
+    description: "Our BPO solutions drive operational efficiency and cost savings. Organizations see immediate improvements in customer satisfaction, operational costs, and business focus.",
+    description2: "We help achieve 40% cost reduction, 95% customer satisfaction rates, and 60% faster response times. Our clients report improved focus on core business activities, reduced overhead costs, and enhanced service quality through our technology-driven BPO solutions."
+  };
+
+  // Industry Applications Data for BPO
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our BPO solutions are tailored to meet the unique requirements and challenges across different industries.",
+    description2: "From healthcare with patient support and medical billing, to finance with customer service and compliance support, retail with customer support and order processing, technology with technical support and lead generation, and government with citizen services and administrative support. Our industry expertise ensures solutions that drive real business value."
+  };
+
+  // Why Work With Us Data for BPO
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine proven BPO expertise with cutting-edge technology to deliver exceptional outsourcing results. Our experienced team ensures seamless operations and superior service quality.",
+    description2: "Our proven track record includes 10+ years of BPO excellence, technology-driven processes, and comprehensive support from implementation to optimization. We provide scalable solutions, 24/7 support, and continuous improvement to ensure your business operations grow with your needs."
+  };
 
   // Text Slider Data for BPO
   const textSliderData = {
@@ -343,18 +320,27 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our BPO Approach"
             sectionSubtitle="We follow a structured methodology to deliver exceptional outsourcing results"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industries We Support"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
+      
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Technologies We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

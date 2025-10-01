@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -238,6 +238,27 @@ const FractionalCFOPage = (): ReactElement => {
     }
   ];
 
+  // Business Impact Data for Fractional CFO
+  const businessImpactData = {
+    title: "The Business Impact of Fractional CFO Services",
+    description: "Our Fractional CFO services drive financial clarity and strategic growth. Organizations see immediate improvements in cash flow management, financial planning, and investor readiness.",
+    description2: "We help achieve 30% improvement in cash flow, 50% reduction in financial reporting time, and 90% success rate in fundraising. Our clients report better financial visibility, improved decision-making, and enhanced investor confidence through our strategic financial leadership."
+  };
+
+  // Industry Applications Data for Fractional CFO
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our Fractional CFO services are tailored to meet the unique requirements and challenges across different business types and growth stages.",
+    description2: "From startups needing fundraising and investor-ready models, to SMEs wanting to scale profitably with financial discipline, enterprises requiring interim CFO during leadership transitions, and global expansions entering the Middle East & North America. Our financial expertise ensures solutions that drive real business value."
+  };
+
+  // Why Work With Us Data for Fractional CFO
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine strategic financial vision with hands-on execution to deliver exceptional CFO services. Our experienced team ensures financial clarity and strategic growth.",
+    description2: "Our proven track record includes 100+ successful financial transformations, cross-border expertise, and comprehensive support from planning to execution. We provide flexible engagement models, ongoing financial guidance, and strategic support to ensure your business grows with sound financial foundations."
+  };
+
   // Text Slider Data for Fractional CFO
   const textSliderData = {
     items: [
@@ -314,10 +335,18 @@ const FractionalCFOPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Approach"
             sectionSubtitle="We combine strategic financial vision with hands-on execution"
+          />
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceIndustrySection 
             industryData={industryData}
@@ -326,6 +355,10 @@ const FractionalCFOPage = (): ReactElement => {
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Technologies We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

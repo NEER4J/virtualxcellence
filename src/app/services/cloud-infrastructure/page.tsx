@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -165,49 +164,7 @@ const CloudInfrastructurePage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for Cloud & Infrastructure
-  const industryData = [
-    {
-      title: "Healthcare",
-      description: "HIPAA-compliant cloud hosting for patient data",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Finance",
-      description: "Secure multi-cloud solutions for high-frequency transactions",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government",
-      description: "Smart city and e-governance platforms hosted on secure clouds",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Retail",
-      description: "Scalable eCommerce platforms with AI-driven personalization",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Manufacturing",
-      description: "Cloud-enabled IoT for Industry 4.0 adoption",
-      number: "05",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
+  
 
   // Tools Data for Cloud & Infrastructure
   const toolsData = [
@@ -249,6 +206,27 @@ const CloudInfrastructurePage = (): ReactElement => {
       ]
     }
   ];
+
+  // Business Impact Data for Cloud & Infrastructure
+  const businessImpactData = {
+    title: "The Business Impact of Cloud Infrastructure",
+    description: "Our cloud solutions drive operational efficiency and competitive advantage. Organizations see immediate improvements in scalability, security, and cost optimization.",
+    description2: "We help achieve 50% cost reduction, 99.9% uptime, and 3x faster deployment cycles. Our clients report improved agility, reduced infrastructure costs, and enhanced security through our cloud-native solutions and managed services."
+  };
+
+  // Industry Applications Data for Cloud & Infrastructure
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our cloud infrastructure solutions are tailored to meet the unique requirements and challenges across different industries.",
+    description2: "From healthcare with HIPAA-compliant cloud hosting for patient data, to finance with secure multi-cloud solutions for high-frequency transactions, government with smart city and e-governance platforms, retail with scalable eCommerce platforms, and manufacturing with cloud-enabled IoT for Industry 4.0. Our industry expertise ensures solutions that drive real business value."
+  };
+
+  // Why Work With Us Data for Cloud & Infrastructure
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine cloud expertise with proven methodologies to deliver exceptional infrastructure solutions. Our experienced team ensures seamless cloud adoption and optimization.",
+    description2: "Our proven track record includes 200+ successful cloud migrations, multi-cloud expertise, and comprehensive support from strategy to operations. We provide ongoing monitoring, optimization, and scaling support to ensure your cloud infrastructure grows with your business."
+  };
 
   // Text Slider Data for Cloud & Infrastructure
   const textSliderData = {
@@ -326,18 +304,27 @@ const CloudInfrastructurePage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Cloud Implementation Approach"
             sectionSubtitle="We follow a proven methodology to ensure successful cloud adoption and optimization"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industry Applications"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
+        
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Technologies We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

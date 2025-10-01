@@ -2,9 +2,8 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
-import ServiceChallengeSection, { ServiceSection } from "@/components/Services/ServiceSection";
+import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
-import ServiceIndustrySection from "@/components/Services/IndustrySection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 import ServiceFaqSection from "@/components/Services/FaqSection";
@@ -166,49 +165,6 @@ const BusinessTransformationPage = (): ReactElement => {
     }
   ];
 
-  // Industry Data for Business Transformation
-  const industryData = [
-    {
-      title: "Healthcare",
-      description: "Digitized patient management, AI diagnostics, eHealth platforms",
-      number: "01",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Finance",
-      description: "Automated compliance reporting, AI-powered fraud detection",
-      number: "02",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Government",
-      description: "Smart city initiatives, digital citizen services",
-      number: "03",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Retail",
-      description: "Omnichannel experience with AI-driven personalization",
-      number: "04",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    },
-    {
-      title: "Manufacturing",
-      description: "Industry 4.0 adoption, predictive maintenance",
-      number: "05",
-      link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
-    }
-  ];
 
   // Tools Data for Business Transformation
   const toolsData = [
@@ -254,6 +210,27 @@ const BusinessTransformationPage = (): ReactElement => {
       ]
     }
   ];
+
+  // Business Impact Data for Business Transformation
+  const businessImpactData = {
+    title: "The Business Impact of Business Transformation",
+    description: "Our transformation services drive operational excellence and competitive advantage. Organizations see immediate improvements in efficiency, agility, and innovation capabilities.",
+    description2: "We help achieve 60% process efficiency gains, 40% cost reduction, and 3x faster time-to-market. Our clients report improved customer satisfaction, enhanced employee productivity, and sustainable growth through our comprehensive transformation approach."
+  };
+
+  // Industry Applications Data for Business Transformation
+  const industryApplicationsData = {
+    title: "Industry Applications",
+    description: "Our business transformation solutions are tailored to meet the unique requirements and challenges across different industries.",
+    description2: "From healthcare with digitized patient management and AI diagnostics, to finance with automated compliance reporting and AI-powered fraud detection, government with smart city initiatives and digital citizen services, retail with omnichannel experience and AI-driven personalization, and manufacturing with Industry 4.0 adoption and predictive maintenance. Our industry expertise ensures solutions that drive real business value."
+  };
+
+  // Why Work With Us Data for Business Transformation
+  const whyWorkWithUsData = {
+    title: "Why Work With Us",
+    description: "We combine transformation expertise with proven methodologies to deliver exceptional business results. Our experienced team ensures successful digital transformation and organizational change.",
+    description2: "Our proven track record includes 150+ successful transformations, end-to-end expertise, and comprehensive support from strategy to execution. We provide ongoing optimization, change management, and scaling support to ensure your business transformation delivers lasting value."
+  };
 
   // Text Slider Data for Business Transformation
   const textSliderData = {
@@ -331,18 +308,27 @@ const BusinessTransformationPage = (): ReactElement => {
             imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceSection serviceData={serviceData} />
+          <BusinessImpactSection 
+            impactData={businessImpactData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
+          />
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our Approach"
             sectionSubtitle="We follow a 5-step transformation lifecycle"
           />
-          <ServiceIndustrySection 
-            industryData={industryData}
-            sectionTitle="Industry Applications"
+          <IndustryApplicationsSection 
+            applicationsData={industryApplicationsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
+        
           <ServiceToolsSection 
             toolsData={toolsData}
             sectionTitle="Tools & Technologies We Use"
+          />
+          <WhyWorkWithUsSection 
+            whyWorkWithUsData={whyWorkWithUsData} 
+            imageSrc="/assets/imgs/gallery/image-52.webp"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 
