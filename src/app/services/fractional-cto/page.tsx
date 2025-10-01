@@ -75,7 +75,7 @@ const FractionalCTOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/fractional-cto/roadmap.png"
       },
       {
         id: 2,
@@ -89,7 +89,7 @@ const FractionalCTOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/fractional-cto/development-oversight.png"
       },
       {
         id: 3,
@@ -103,7 +103,7 @@ const FractionalCTOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/fractional-cto/partner-management.png"
       },
       {
         id: 4,
@@ -117,7 +117,7 @@ const FractionalCTOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/fractional-cto/it-governance.png"
       },
       {
         id: 5,
@@ -131,7 +131,7 @@ const FractionalCTOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/fractional-cto/team-leadership.png"
       }
     ]
   };
@@ -295,12 +295,12 @@ const FractionalCTOPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cto/challenges.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cto/impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -309,7 +309,7 @@ const FractionalCTOPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cto/applications.png"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
@@ -317,7 +317,7 @@ const FractionalCTOPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cto/team-leadership.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 
