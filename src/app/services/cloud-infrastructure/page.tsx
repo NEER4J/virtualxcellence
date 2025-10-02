@@ -74,7 +74,7 @@ const CloudInfrastructurePage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/cloud-infrastructure/cloud-migration.png"
       },
       {
         id: 2,
@@ -88,7 +88,7 @@ const CloudInfrastructurePage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/cloud-infrastructure/hybrid-multi-cloud.png"
       },
       {
         id: 3,
@@ -102,7 +102,7 @@ const CloudInfrastructurePage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/cloud-infrastructure/devops.png"
       },
       {
         id: 4,
@@ -116,7 +116,7 @@ const CloudInfrastructurePage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/cloud-infrastructure/security-compliance.png"
       },
       {
         id: 5,
@@ -130,7 +130,7 @@ const CloudInfrastructurePage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/cloud-infrastructure/scalable-hosting.png"
       }
     ]
   };
@@ -301,12 +301,12 @@ const CloudInfrastructurePage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/cloud-infrastructure/why-cloud.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/cloud-infrastructure/business-impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -315,7 +315,7 @@ const CloudInfrastructurePage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/cloud-infrastructure/industry-application.png"
           />
         
           <ServiceToolsSection 
@@ -324,7 +324,7 @@ const CloudInfrastructurePage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/cloud-infrastructure/why-us.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

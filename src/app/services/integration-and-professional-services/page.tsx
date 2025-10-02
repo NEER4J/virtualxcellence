@@ -76,7 +76,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/integration-and-professional-services/zoho.png"
       },
       {
         id: 2,
@@ -91,7 +91,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/integration-and-professional-services/open-ai.png"
       },
       {
         id: 3,
@@ -106,7 +106,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/integration-and-professional-services/datadogs.png"
       },
       {
         id: 4,
@@ -121,7 +121,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/integration-and-professional-services/gemma.png"
       },
       {
         id: 5,
@@ -136,7 +136,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/integration-and-professional-services/meta-ai.png"
       }
     ]
   };
@@ -321,12 +321,12 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/integration-and-professional-services/integration-challenges.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/integration-and-professional-services/business-impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -335,7 +335,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/integration-and-professional-services/industry-application.png"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
@@ -343,7 +343,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/integration-and-professional-services/why-us.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

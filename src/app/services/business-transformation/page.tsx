@@ -75,7 +75,7 @@ const BusinessTransformationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/business-transformation/digital-process.png"
       },
       {
         id: 2,
@@ -89,7 +89,7 @@ const BusinessTransformationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/business-transformation/data-ai-integration.png"
       },
       {
         id: 3,
@@ -103,7 +103,7 @@ const BusinessTransformationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/business-transformation/cloud.png"
       },
       {
         id: 4,
@@ -117,7 +117,7 @@ const BusinessTransformationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/business-transformation/organizational.png"
       },
       {
         id: 5,
@@ -131,7 +131,7 @@ const BusinessTransformationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/business-transformation/sustainability.png"
       }
     ]
   };
@@ -305,12 +305,12 @@ const BusinessTransformationPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-transformation/challenges.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-transformation/the-business.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -319,7 +319,7 @@ const BusinessTransformationPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-transformation/industry.png"
           />
         
           <ServiceToolsSection 
@@ -328,7 +328,7 @@ const BusinessTransformationPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-transformation/why-work-us-with.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

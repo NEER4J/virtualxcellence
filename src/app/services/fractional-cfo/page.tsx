@@ -76,7 +76,7 @@ const FractionalCFOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/fractional-cfo/financial.png"
       },
       {
         id: 2,
@@ -90,7 +90,7 @@ const FractionalCFOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/fractional-cfo/cash-flow.png"
       },
       {
         id: 3,
@@ -104,7 +104,7 @@ const FractionalCFOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/fractional-cfo/fundraising.png"
       },
       {
         id: 4,
@@ -118,7 +118,7 @@ const FractionalCFOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/fractional-cfo/compliance.png"
       },
       {
         id: 5,
@@ -132,7 +132,7 @@ const FractionalCFOPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/fractional-cfo/expansion.png"
       }
     ]
   };
@@ -332,12 +332,12 @@ const FractionalCFOPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cfo/challenges.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cfo/impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -346,7 +346,7 @@ const FractionalCFOPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cfo/industry-application.png"
           />
           <ServiceIndustrySection 
             industryData={industryData}
@@ -358,7 +358,7 @@ const FractionalCFOPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/fractional-cfo/why-work-with-us.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

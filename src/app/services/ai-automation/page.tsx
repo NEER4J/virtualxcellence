@@ -74,7 +74,7 @@ const AIAutomationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/ai-automation/conversational-ai.png"
       },
       {
         id: 2,
@@ -88,7 +88,7 @@ const AIAutomationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/ai-automation/business-process-automation.png"
       },
       {
         id: 3,
@@ -102,7 +102,7 @@ const AIAutomationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/ai-automation/predictive-analytics.png"
       },
       {
         id: 4,
@@ -116,7 +116,7 @@ const AIAutomationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/ai-automation/genrative-ai.png"
       },
       {
         id: 5,
@@ -130,7 +130,7 @@ const AIAutomationPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/ai-automation/ai-strategy.png"
       }
     ]
   };
@@ -296,12 +296,12 @@ const AIAutomationPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/ai-automation/why-ai.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/ai-automation/business-impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -310,7 +310,7 @@ const AIAutomationPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/ai-automation/industry-application.png"
           />
           <ServiceToolsSection 
             toolsData={toolsData}
@@ -318,7 +318,7 @@ const AIAutomationPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/ai-automation/why-us.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 

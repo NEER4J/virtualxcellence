@@ -80,7 +80,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-1.webp"
+        image: "/assets/imgs/services/business-process-outsourcing/customer-support.png"
       },
       {
         id: 2,
@@ -95,7 +95,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-2.webp"
+        image: "/assets/imgs/services/business-process-outsourcing/back-office.png"
       },
       {
         id: 3,
@@ -109,7 +109,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-3.webp"
+        image: "/assets/imgs/services/business-process-outsourcing/sales-and-leads.png"
       },
       {
         id: 4,
@@ -123,7 +123,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-4.webp"
+        image: "/assets/imgs/services/business-process-outsourcing/tech-support.png"
       },
       {
         id: 5,
@@ -136,7 +136,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
         ],
         detailsLink: "#",
         itemLink: "#",
-        image: "/assets/imgs/icon/icon-5.webp"
+        image: "/assets/imgs/services/business-process-outsourcing/ai-outsourcing.png"
       }
     ]
   };
@@ -317,12 +317,12 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
           />
           <ServiceChallengeSection 
             challengeData={challengeData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-process-outsourcing/why-bpo.png"
           />
           <ServiceSection serviceData={serviceData} />
           <BusinessImpactSection 
             impactData={businessImpactData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-process-outsourcing/business-impact.png"
           />
           <ServiceProcessSection 
             processData={processData}
@@ -331,7 +331,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
           />
           <IndustryApplicationsSection 
             applicationsData={industryApplicationsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-process-outsourcing/industry-application.png"
           />
       
           <ServiceToolsSection 
@@ -340,7 +340,7 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
           />
           <WhyWorkWithUsSection 
             whyWorkWithUsData={whyWorkWithUsData} 
-            imageSrc="/assets/imgs/gallery/image-52.webp"
+            imageSrc="/assets/imgs/services/business-process-outsourcing/why-us.png"
           />
           <ServiceTextSliderSection textSliderData={textSliderData} />
           <ServiceFaqSection 
