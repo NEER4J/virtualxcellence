@@ -49,7 +49,7 @@ const FinancialServicesPage = (): ReactElement => {
     overview: {
       title: "Financial Services Industry",
       description: "Financial institutions face mounting pressure to deliver seamless digital experiences while maintaining strict regulatory compliance and security standards. From digital banking to AI-powered fraud detection, the sector demands innovative fintech solutions. At Virtual Xcellence, we empower banks, credit unions, and financial service providers to leverage cutting-edge technology for enhanced customer experiences, operational efficiency, and regulatory compliance.",
-      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageSrc: "/assets/imgs/industries/finance/industry.jpg",
       imageAlt: "Financial Services Technology Solutions"
     },
     challenges: {
@@ -214,8 +214,8 @@ const FinancialServicesPage = (): ReactElement => {
         <KeyChallenges 
           title={industryData.challenges.title}
           challenges={industryData.challenges.challenges}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/finance/challenges.jpg"
+          imageAlt="Financial Services Industry Challenges"
         />
 
         {/* Our Solutions */}
@@ -235,8 +235,8 @@ const FinancialServicesPage = (): ReactElement => {
         <ImpactWeDeliver 
           title={industryData.impact.title}
           impacts={industryData.impact.impacts}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/finance/impact.jpg"
+          imageAlt="Financial Services Industry Impact"
         />
 
         <ServiceTextSliderSection 

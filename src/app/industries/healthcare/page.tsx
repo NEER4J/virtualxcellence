@@ -49,7 +49,7 @@ const HealthcarePage = (): ReactElement => {
     overview: {
       title: "Healthcare Industry",
       description: "Healthcare organizations face mounting pressure to improve patient outcomes, meet regulatory requirements, and embrace digital-first care delivery. From telemedicine to AI-powered diagnostics, the sector demands innovation without compromising compliance and security. At Virtual Xcellence, we empower healthcare providers, insurers, and life sciences organizations to leverage AI, automation, and cloud solutions for smarter, patient-centered care.",
-      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageSrc: "/assets/imgs/industries/healthcare/industry.jpg",
       imageAlt: "Healthcare Technology Solutions"
     },
     challenges: {
@@ -210,8 +210,8 @@ const HealthcarePage = (): ReactElement => {
         <KeyChallenges 
           title={industryData.challenges.title}
           challenges={industryData.challenges.challenges}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/healthcare/challenges.jpg"
+          imageAlt="Healthcare Industry Challenges"
         />
 
         {/* Our Solutions */}
@@ -232,8 +232,8 @@ const HealthcarePage = (): ReactElement => {
         <ImpactWeDeliver 
           title={industryData.impact.title}
           impacts={industryData.impact.impacts}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/healthcare/impact.jpg"
+          imageAlt="Healthcare Industry Impact"
         />
 
         <ServiceTextSliderSection 

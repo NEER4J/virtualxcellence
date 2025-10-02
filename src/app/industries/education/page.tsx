@@ -49,7 +49,7 @@ const EducationPage = (): ReactElement => {
     overview: {
       title: "Education Industry",
       description: "Educational institutions face increasing pressure to deliver engaging, accessible, and effective learning experiences while managing complex administrative processes. From virtual classrooms to AI-powered learning analytics, the sector demands innovative technology solutions. At Virtual Xcellence, we empower schools, universities, and training organizations to leverage cutting-edge technology for enhanced learning outcomes and operational efficiency.",
-      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageSrc: "/assets/imgs/industries/education/industry.jpg",
       imageAlt: "Education Technology Solutions"
     },
     challenges: {
@@ -212,8 +212,8 @@ const EducationPage = (): ReactElement => {
         <KeyChallenges 
           title={industryData.challenges.title}
           challenges={industryData.challenges.challenges}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/education/challenges.jpg"
+          imageAlt="Education Industry Challenges"
         />
 
         {/* Our Solutions */}
@@ -233,8 +233,8 @@ const EducationPage = (): ReactElement => {
         <ImpactWeDeliver 
           title={industryData.impact.title}
           impacts={industryData.impact.impacts}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/education/impact.jpg"
+          imageAlt="Education Industry Impact"
         />
 
         <ServiceTextSliderSection 

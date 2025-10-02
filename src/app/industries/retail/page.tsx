@@ -49,7 +49,7 @@ const RetailEcommercePage = (): ReactElement => {
     overview: {
       title: "Retail & E-commerce Industry",
       description: "Retail and e-commerce businesses face intense competition and rapidly changing consumer expectations. From omnichannel experiences to AI-powered personalization, the sector demands innovative technology solutions. At Virtual Xcellence, we empower retailers and e-commerce businesses to leverage cutting-edge technology for enhanced customer experiences, operational efficiency, and sustainable growth.",
-      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageSrc: "/assets/imgs/industries/retail/industry.jpg",
       imageAlt: "Retail & E-commerce Technology Solutions"
     },
     challenges: {
@@ -213,8 +213,8 @@ const RetailEcommercePage = (): ReactElement => {
         <KeyChallenges 
           title={industryData.challenges.title}
           challenges={industryData.challenges.challenges}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/retail/challenges.jpg"
+          imageAlt="Retail & E-commerce Industry Challenges"
         />
 
         {/* Our Solutions */}
@@ -234,8 +234,8 @@ const RetailEcommercePage = (): ReactElement => {
         <ImpactWeDeliver 
           title={industryData.impact.title}
           impacts={industryData.impact.impacts}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/retail/impact.jpg"
+          imageAlt="Retail & E-commerce Industry Impact"
         />
 
         <ServiceTextSliderSection 

@@ -49,7 +49,7 @@ const ManufacturingPage = (): ReactElement => {
     overview: {
       title: "Manufacturing Industry",
       description: "Manufacturing companies face increasing pressure to optimize production, reduce costs, and improve quality while adapting to Industry 4.0 technologies. From IoT integration to predictive analytics, the sector demands innovative automation solutions. At Virtual Xcellence, we empower manufacturers to leverage smart technologies for enhanced operational efficiency, quality control, and sustainable production processes.",
-      imageSrc: "/assets/imgs/gallery/image-52.webp",
+      imageSrc: "/assets/imgs/industries/manufacturing/industry.jpg",
       imageAlt: "Manufacturing Technology Solutions"
     },
     challenges: {
@@ -214,8 +214,8 @@ const ManufacturingPage = (): ReactElement => {
         <KeyChallenges 
           title={industryData.challenges.title}
           challenges={industryData.challenges.challenges}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/manufacturing/challenges.jpg"
+          imageAlt="Manufacturing Industry Challenges"
         />
 
         {/* Our Solutions */}
@@ -235,8 +235,8 @@ const ManufacturingPage = (): ReactElement => {
         <ImpactWeDeliver 
           title={industryData.impact.title}
           impacts={industryData.impact.impacts}
-          imageSrc={industryData.overview.imageSrc}
-          imageAlt={industryData.overview.imageAlt}
+          imageSrc="/assets/imgs/industries/manufacturing/impact.jpg"
+          imageAlt="Manufacturing Industry Impact"
         />
 
         <ServiceTextSliderSection 
