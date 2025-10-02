@@ -17,12 +17,12 @@ const WhyChooseUsSection: React.FC = () => {
     {
       title: "Canada-Headquartered",
       description: "10+ years of proven success",
-      image: "/assets/imgs/new/Headquater-300x208.jpg"
+      image: "/assets/imgs/home-pages/why-us/Canada-Headquartered.jpg"
     },
     {
       title: "Cross-Industry Expertise",
       description: "Across healthcare, finance, retail, and more",
-      image: "/assets/imgs/new/Cross-Industry-Expertise-300x208.jpg"
+      image: "/assets/imgs/home-pages/why-us/Cross-Industry Expertise.jpg"
     }
   ];
 

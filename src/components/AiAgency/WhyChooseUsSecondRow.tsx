@@ -11,17 +11,17 @@ const WhyChooseUsSecondRow: React.FC = () => {
     {
       title: "Leadership-as-a-Service",
       description: "CTO/CFO for flexible, high-value advisory",
-      image: "/assets/imgs/new/Leadership-as-a-Service-300x208.jpg"
+      image: "/assets/imgs/home-pages/why-us/Leadership-as-a-Service.jpg"
     },
     {
       title: "Future-Focused",
       description: "AI, cloud, cybersecurity, and transformation",
-      image: "/assets/imgs/new/Future-Focused 300x208.jpg"
+      image: "/assets/imgs/home-pages/why-us/Future-Focused.jpg"
     },
     {
       title: "Measurable ROI",
       description: "With every engagement",
-      image: "/assets/imgs/new/Measurable-ROI-300x208.jpg"
+      image: "/assets/imgs/home-pages/why-us/Measurable ROI.jpg"
     }
   ];
 
