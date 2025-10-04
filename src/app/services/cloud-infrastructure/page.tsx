@@ -174,34 +174,35 @@ const CloudInfrastructurePage = (): ReactElement => {
         { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
         { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
         { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" },
-        { name: "Prisma Cloud", icon: "/assets/imgs/tools/prisma-cloude.png" }
+        { name: "Oracle Cloud", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Automation & DevOps", 
       tools: [
-        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
-        { name: "Scrum", icon: "/assets/imgs/tools/scrum.png" },
-        { name: "SAFe", icon: "/assets/imgs/tools/safe.png" }
+        { name: "Terraform", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Ansible", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Jenkins", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Kubernetes", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Docker", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Security Tools",
       tools: [
+        { name: "Palo Alto", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Fortinet", icon: "/assets/imgs/client/client-1.webp" },
         { name: "CrowdStrike", icon: "/assets/imgs/tools/crowd-strike.png" },
-        { name: "SentinelOne", icon: "/assets/imgs/tools/sentinelone.png" },
-        { name: "Okta", icon: "/assets/imgs/tools/okta.png" },
-        { name: "Microsoft Entra", icon: "/assets/imgs/tools/microsoft-entra.png" }
+        { name: "Okta", icon: "/assets/imgs/tools/okta.png" }
       ]
     },
     {
       title: "Monitoring & Optimization",
       tools: [
-        { name: "Splunk", icon: "/assets/imgs/tools/splunk.png" },
-        { name: "QRadar", icon: "/assets/imgs/tools/qradar.png" },
-        { name: "Elastic Security", icon: "/assets/imgs/tools/elasic-security.png" },
-        { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" }
+        { name: "Datadog", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "New Relic", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Prometheus", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Grafana", icon: "/assets/imgs/client/client-1.webp" }
       ]
     }
   ];

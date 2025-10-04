@@ -186,7 +186,7 @@ const ConsultationPage = (): ReactElement => {
       title: "Cloud Strategy",
       tools: [
         { name: "AWS Well-Architected", icon: "/assets/imgs/tools/aws-well-architected.png" },
-        { name: "Azure Security Center", icon: "/assets/imgs/tools/azure-security-center.png" }
+        { name: "Azure CAF", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {

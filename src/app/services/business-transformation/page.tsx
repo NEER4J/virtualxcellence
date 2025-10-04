@@ -171,9 +171,9 @@ const BusinessTransformationPage = (): ReactElement => {
     {
       title: "Automation",
       tools: [
-        { name: "RPA", icon: "/assets/imgs/tools/rpa.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
-        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" }
+        { name: "UiPath", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Automation Anywhere", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Power Automate", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
@@ -190,8 +190,8 @@ const BusinessTransformationPage = (): ReactElement => {
       tools: [
         { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
         { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
-        { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" },
-        { name: "Prisma Cloud", icon: "/assets/imgs/tools/prisma-cloude.png" }
+        { name: "GCP", icon: "/assets/imgs/tools/google-cloude.png" },
+        { name: "Oracle Cloud", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
@@ -199,14 +199,14 @@ const BusinessTransformationPage = (): ReactElement => {
       tools: [
         { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" },
         { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" },
-        { name: "Google Data Studio", icon: "/assets/imgs/tools/google-data-studio.png" }
+        { name: "Qlik", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Change Management",
       tools: [
-        { name: "Lean Six Sigma", icon: "/assets/imgs/tools/lean-six-sigma.png" },
-        { name: "BPMN", icon: "/assets/imgs/tools/bpnm.png" }
+        { name: "Prosci ADKAR", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Agile Frameworks", icon: "/assets/imgs/client/client-1.webp" }
       ]
     }
   ];

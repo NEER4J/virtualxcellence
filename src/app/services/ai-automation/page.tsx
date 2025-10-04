@@ -172,15 +172,15 @@ const AIAutomationPage = (): ReactElement => {
       tools: [
         { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
         { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
-        { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" }
+        { name: "Keras", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Automation Platforms", 
       tools: [
-        { name: "RPA", icon: "/assets/imgs/tools/rpa.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
-        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" }
+        { name: "UiPath", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Automation Anywhere", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Power Automate", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
@@ -188,15 +188,16 @@ const AIAutomationPage = (): ReactElement => {
       tools: [
         { name: "Azure AI", icon: "/assets/imgs/tools/azure.png" },
         { name: "AWS AI/ML", icon: "/assets/imgs/tools/aws.png" },
-        { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" }
+        { name: "Google Vertex AI", icon: "/assets/imgs/tools/google-cloude.png" }
       ]
     },
     {
       title: "Conversational AI",
       tools: [
+        { name: "Dialogflow", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Rasa", icon: "/assets/imgs/client/client-1.webp" },
         { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
-        { name: "2FA Security", icon: "/assets/imgs/tools/2fa.png" }
+        { name: "Twilio Voice AI", icon: "/assets/imgs/client/client-1.webp" }
       ]
     }
   ];

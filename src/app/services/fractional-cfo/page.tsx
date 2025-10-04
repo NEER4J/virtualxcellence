@@ -216,7 +216,7 @@ const FractionalCFOPage = (): ReactElement => {
     {
       title: "Forecasting & Modeling", 
       tools: [
-        { name: "Excel", icon: "/assets/imgs/tools/excel.png" },
+        { name: "Excel Advanced Models", icon: "/assets/imgs/tools/excel.png" },
         { name: "Adaptive Insights", icon: "/assets/imgs/tools/adaptive-insight.png" }
       ]
     },
@@ -233,7 +233,7 @@ const FractionalCFOPage = (): ReactElement => {
       tools: [
         { name: "IFRS", icon: "/assets/imgs/tools/IFRS.png" },
         { name: "GAAP", icon: "/assets/imgs/tools/gaap.png" },
-        { name: "SOX", icon: "/assets/imgs/tools/sox.png" }
+        { name: "SOX Frameworks", icon: "/assets/imgs/tools/sox.png" }
       ]
     }
   ];

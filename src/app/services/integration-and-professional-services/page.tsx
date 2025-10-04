@@ -176,36 +176,36 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
       title: "AI Platforms",
       tools: [
         { name: "OpenAI", icon: "/assets/imgs/tools/openai.png" },
-        { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
-        { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" }
+        { name: "Google Gemma 2", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Meta AI", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "BLOOM", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Business Platforms", 
       tools: [
-        { name: "SAP", icon: "/assets/imgs/tools/sap.png" },
-        { name: "Oracle NetSuite", icon: "/assets/imgs/tools/oracle-netsuite.png" },
-        { name: "Splunk", icon: "/assets/imgs/tools/splunk.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" }
+        { name: "Zoho Suite", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Command R+", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "DataDog", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Custom APIs", icon: "/assets/imgs/tools/api.png" }
       ]
     },
     {
       title: "Integration Tools",
       tools: [
-        { name: "RPA", icon: "/assets/imgs/tools/rpa.png" },
-        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" },
-        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" }
+        { name: "Zapier", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Microsoft Power Automate", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "MuleSoft", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Custom Middleware", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Development Tools",
       tools: [
-        { name: "Excel", icon: "/assets/imgs/tools/excel.png" },
-        { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" },
-        { name: "Google Data Studio", icon: "/assets/imgs/tools/google-data-studio.png" },
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" }
+        { name: "Postman", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Insomnia", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Swagger", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Git", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
@@ -214,7 +214,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
         { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
         { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" },
-        { name: "Prisma Cloud", icon: "/assets/imgs/tools/prisma-cloude.png" }
+        { name: "Zoho Cloud", icon: "/assets/imgs/client/client-1.webp" }
       ]
     }
   ];

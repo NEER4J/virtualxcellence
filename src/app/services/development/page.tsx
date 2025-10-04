@@ -171,18 +171,18 @@ const DevelopmentPage = (): ReactElement => {
     {
       title: "Frontend Technologies",
       tools: [
-        { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
-        { name: "Flutter", icon: "/assets/imgs/tools/flutter.png" },
-        { name: "PWA", icon: "/assets/imgs/tools/pwa.png" }
+        { name: "React", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Angular", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Vue.js", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
       title: "Backend Technologies", 
       tools: [
-        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
-        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" },
-        { name: "SAP", icon: "/assets/imgs/tools/sap.png" },
-        { name: "Oracle NetSuite", icon: "/assets/imgs/tools/oracle-netsuite.png" }
+        { name: "Node.js", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Python", icon: "/assets/imgs/client/client-1.webp" },
+        { name: ".NET", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Java", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
@@ -190,8 +190,8 @@ const DevelopmentPage = (): ReactElement => {
       tools: [
         { name: "Flutter", icon: "/assets/imgs/tools/flutter.png" },
         { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
-        { name: "PWA", icon: "/assets/imgs/tools/pwa.png" },
-        { name: "2FA Security", icon: "/assets/imgs/tools/2fa.png" }
+        { name: "Swift", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Kotlin", icon: "/assets/imgs/client/client-1.webp" }
       ]
     },
     {
