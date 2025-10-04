@@ -109,40 +109,40 @@ const ManufacturingPage = (): ReactElement => {
         {
           title: "IoT & Sensors",
           technologies: [
-            { name: "Industrial IoT", icon: "/assets/imgs/icons/iot.svg" },
-            { name: "Edge Computing", icon: "/assets/imgs/icons/edge.svg" },
-            { name: "Sensor Networks", icon: "/assets/imgs/icons/sensors.svg" }
+            { name: "Industrial IoT", icon: "/assets/imgs/tools/industriai-iot.png" },
+            { name: "Edge Computing", icon: "/assets/imgs/tools/edge-computing.png" },
+            { name: "Sensor Networks", icon: "/assets/imgs/tools/sensor-netwrok.png" }
           ]
         },
         {
           title: "AI/ML",
           technologies: [
-            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
-            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
-            { name: "Computer Vision", icon: "/assets/imgs/icons/computer-vision.svg" }
+            { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+            { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+            { name: "Computer Vision", icon: "/assets/imgs/tools/computer-vison.png" }
           ]
         },
         {
           title: "Cloud & Analytics",
           technologies: [
-            { name: "AWS IoT", icon: "/assets/imgs/icons/aws.svg" },
-            { name: "Azure IoT", icon: "/assets/imgs/icons/azure.svg" },
-            { name: "Time Series Analytics", icon: "/assets/imgs/icons/analytics.svg" }
+            { name: "AWS IoT", icon: "/assets/imgs/tools/aws.png" },
+            { name: "Azure IoT", icon: "/assets/imgs/tools/azure.png" },
+            { name: "Time Series Analytics", icon: "/assets/imgs/tools/time-series-analytics.png" }
           ]
         },
         {
           title: "Automation",
           technologies: [
-            { name: "PLC Integration", icon: "/assets/imgs/icons/plc.svg" },
-            { name: "SCADA Systems", icon: "/assets/imgs/icons/scada.svg" },
-            { name: "RPA for Manufacturing", icon: "/assets/imgs/icons/rpa.svg" }
+            { name: "PLC Integration", icon: "/assets/imgs/tools/plc.png" },
+            { name: "SCADA Systems", icon: "/assets/imgs/tools/scada.png" },
+            { name: "RPA for Manufacturing", icon: "/assets/imgs/tools/rpa.png" }
           ]
         },
         {
           title: "Security",
           technologies: [
-            { name: "Industrial Cybersecurity", icon: "/assets/imgs/icons/cybersecurity.svg" },
-            { name: "Network Segmentation", icon: "/assets/imgs/icons/network.svg" }
+            { name: "Industrial Cybersecurity", icon: "/assets/imgs/tools/industrial-cybersecurity.png" },
+            { name: "Network Segmentation", icon: "/assets/imgs/tools/network-segmentation.png" }
           ]
         }
       ]

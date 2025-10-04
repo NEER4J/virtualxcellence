@@ -109,36 +109,36 @@ const HealthcarePage = (): ReactElement => {
         {
           title: "AI/ML",
           technologies: [
-            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
-            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
-            { name: "OpenAI APIs", icon: "/assets/imgs/icons/openai.svg" }
+            { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+            { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+            { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" }
           ]
         },
         {
           title: "Cloud",
           technologies: [
-            { name: "Microsoft Azure Health Cloud", icon: "/assets/imgs/icons/azure.svg" },
-            { name: "Google Cloud Healthcare API", icon: "/assets/imgs/icons/google-cloud.svg" }
+            { name: "Microsoft Azure Health Cloud", icon: "/assets/imgs/tools/azure.png" },
+            { name: "Google Cloud Healthcare API", icon: "/assets/imgs/tools/google-cloude.png" }
           ]
         },
         {
           title: "EHR/EMR Integration",
           technologies: [
-            { name: "HL7", icon: "/assets/imgs/icons/hl7.svg" },
-            { name: "FHIR standards", icon: "/assets/imgs/icons/fhir.svg" }
+            { name: "HL7", icon: "/assets/imgs/tools/hl7.png" },
+            { name: "FHIR standards", icon: "/assets/imgs/tools/fhir.png" }
           ]
         },
         {
           title: "Cybersecurity",
           technologies: [
-            { name: "SOC2 frameworks", icon: "/assets/imgs/icons/soc2.svg" },
-            { name: "Zero-Trust architecture", icon: "/assets/imgs/icons/zero-trust.svg" }
+            { name: "SOC2 frameworks", icon: "/assets/imgs/tools/soc2.png" },
+            { name: "Zero-Trust architecture", icon: "/assets/imgs/tools/zero-trust.png" }
           ]
         },
         {
           title: "Automation",
           technologies: [
-            { name: "RPA for claims & billing processes", icon: "/assets/imgs/icons/rpa.svg" }
+            { name: "RPA for claims & billing processes", icon: "/assets/imgs/tools/rpa.png" }
           ]
         }
       ]

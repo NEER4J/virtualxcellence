@@ -109,38 +109,38 @@ const EducationPage = (): ReactElement => {
         {
           title: "Learning Platforms",
           technologies: [
-            { name: "Moodle", icon: "/assets/imgs/icons/moodle.svg" },
-            { name: "Canvas LMS", icon: "/assets/imgs/icons/canvas.svg" },
-            { name: "Blackboard", icon: "/assets/imgs/icons/blackboard.svg" }
+            { name: "Moodle", icon: "/assets/imgs/tools/moodle.png" },
+            { name: "Canvas LMS", icon: "/assets/imgs/tools/canvas.png" },
+            { name: "Blackboard", icon: "/assets/imgs/tools/blackboard.png" }
           ]
         },
         {
           title: "AI/ML",
           technologies: [
-            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
-            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
-            { name: "OpenAI APIs", icon: "/assets/imgs/icons/openai.svg" }
+            { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+            { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+            { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" }
           ]
         },
         {
           title: "Cloud",
           technologies: [
-            { name: "AWS Education", icon: "/assets/imgs/icons/aws.svg" },
-            { name: "Google Workspace for Education", icon: "/assets/imgs/icons/google-workspace.svg" }
+            { name: "AWS Education", icon: "/assets/imgs/tools/aws.png" },
+            { name: "Google Workspace", icon: "/assets/imgs/tools/google-wrokspace.png" }
           ]
         },
         {
           title: "Security & Compliance",
           technologies: [
-            { name: "FERPA compliance", icon: "/assets/imgs/icons/ferpa.svg" },
-            { name: "Data encryption", icon: "/assets/imgs/icons/encryption.svg" }
+            { name: "FERPA compliance", icon: "/assets/imgs/tools/ferpa.png" },
+            { name: "Data encryption", icon: "/assets/imgs/tools/encryption.png" }
           ]
         },
         {
           title: "Mobile Development",
           technologies: [
-            { name: "React Native", icon: "/assets/imgs/icons/react-native.svg" },
-            { name: "Flutter", icon: "/assets/imgs/icons/flutter.svg" }
+            { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
+            { name: "Flutter", icon: "/assets/imgs/tools/flutter.png" }
           ]
         }
       ]

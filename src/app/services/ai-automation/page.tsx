@@ -170,34 +170,33 @@ const AIAutomationPage = (): ReactElement => {
     {
       title: "AI Frameworks",
       tools: [
-        { name: "TensorFlow", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "PyTorch", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Keras", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+        { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+        { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" }
       ]
     },
     {
       title: "Automation Platforms", 
       tools: [
-        { name: "UiPath", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Automation Anywhere", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Power Automate", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "RPA", icon: "/assets/imgs/tools/rpa.png" },
+        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
+        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" }
       ]
     },
     {
       title: "Cloud AI Services",
       tools: [
-        { name: "Azure AI", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "AWS AI/ML", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Google Vertex AI", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Azure AI", icon: "/assets/imgs/tools/azure.png" },
+        { name: "AWS AI/ML", icon: "/assets/imgs/tools/aws.png" },
+        { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" }
       ]
     },
     {
       title: "Conversational AI",
       tools: [
-        { name: "Dialogflow", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Rasa", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "OpenAI APIs", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Twilio Voice AI", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" },
+        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
+        { name: "2FA Security", icon: "/assets/imgs/tools/2fa.png" }
       ]
     }
   ];

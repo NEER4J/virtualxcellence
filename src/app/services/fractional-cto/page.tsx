@@ -171,32 +171,32 @@ const FractionalCTOPage = (): ReactElement => {
     {
       title: "Cloud & Infrastructure",
       tools: [
-        { name: "AWS", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Azure", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "GCP", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
+        { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
+        { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" }
       ]
     },
     {
       title: "Agile & DevOps", 
       tools: [
-        { name: "Scrum", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Kanban", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "CI/CD Pipelines", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Scrum", icon: "/assets/imgs/tools/scrum.png" },
+        { name: "SAFe", icon: "/assets/imgs/tools/safe.png" },
+        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" }
       ]
     },
     {
       title: "Product Strategy",
       tools: [
-        { name: "Design Thinking", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Lean Startup", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "BPMN", icon: "/assets/imgs/tools/bpnm.png" },
+        { name: "Lean Six Sigma", icon: "/assets/imgs/tools/lean-six-sigma.png" }
       ]
     },
     {
       title: "Security & Compliance",
       tools: [
-        { name: "NIST", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "ISO", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "HIPAA", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Zero Trust", icon: "/assets/imgs/tools/zero-trust.png" },
+        { name: "SOC2", icon: "/assets/imgs/tools/soc2.png" },
+        { name: "PCI-DSS", icon: "/assets/imgs/tools/pci-dss.png" }
       ]
     }
   ];

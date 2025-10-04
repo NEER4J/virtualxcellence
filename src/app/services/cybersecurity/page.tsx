@@ -168,32 +168,32 @@ const CybersecurityPage = (): ReactElement => {
     {
       title: "SIEM & Monitoring",
       tools: [
-        { name: "Splunk", icon: "/assets/imgs/vx-cybersecurity/splunk 90x90.png" },
-        { name: "QRadar", icon: "/assets/imgs/vx-cybersecurity/Qradar 90x90.png" },
-        { name: "Elastic Security", icon: "/assets/imgs/vx-cybersecurity/Elastic Security 90x90.png" }
+        { name: "Splunk", icon: "/assets/imgs/tools/splunk.png" },
+        { name: "QRadar", icon: "/assets/imgs/tools/qradar.png" },
+        { name: "Elastic Security", icon: "/assets/imgs/tools/elasic-security.png" }
       ]
     },
     {
       title: "Cloud Security", 
       tools: [
-        { name: "Prisma Cloud", icon: "/assets/imgs/vx-cybersecurity/Prisma Cloud 90x90.png" },
-        { name: "Azure Security Center", icon: "/assets/imgs/vx-cybersecurity/Azure Security Center 90x90.png" },
-        { name: "AWS GuardDuty", icon: "/assets/imgs/vx-cybersecurity/AWS GuardDuty 90x90.png" }
+        { name: "Prisma Cloud", icon: "/assets/imgs/tools/prisma-cloude.png" },
+        { name: "Azure Security Center", icon: "/assets/imgs/tools/azure-security-center.png" },
+        { name: "AWS GuardDuty", icon: "/assets/imgs/tools/aws-guard-duty.png" }
       ]
     },
     {
       title: "IAM",
       tools: [
-        { name: "Okta", icon: "/assets/imgs/vx-cybersecurity/Okta 90x90.png" },
-        { name: "Microsoft Entra", icon: "/assets/imgs/vx-cybersecurity/Microsoft Entra 90x90.png" },
-        { name: "CyberArk", icon: "/assets/imgs/vx-cybersecurity/CyberArk 90x90.png" }
+        { name: "Okta", icon: "/assets/imgs/tools/okta.png" },
+        { name: "Microsoft Entra", icon: "/assets/imgs/tools/microsoft-entra.png" },
+        { name: "CyberArk", icon: "/assets/imgs/tools/cyberark.png" }
       ]
     },
     {
       title: "Endpoint Security",
       tools: [
-        { name: "CrowdStrike", icon: "/assets/imgs/vx-cybersecurity/CrowdStrike 90x90.png" },
-        { name: "SentinelOne", icon: "/assets/imgs/vx-cybersecurity/SentinelOne 90x90.png" }
+        { name: "CrowdStrike", icon: "/assets/imgs/tools/crowd-strike.png" },
+        { name: "SentinelOne", icon: "/assets/imgs/tools/sentinelone.png" }
       ]
     }
   ];

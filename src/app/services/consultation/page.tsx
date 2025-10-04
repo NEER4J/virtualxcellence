@@ -171,30 +171,30 @@ const ConsultationPage = (): ReactElement => {
     {
       title: "Process Improvement",
       tools: [
-        { name: "Lean Six Sigma", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "BPMN", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Lean Six Sigma", icon: "/assets/imgs/tools/lean-six-sigma.png" },
+        { name: "BPMN", icon: "/assets/imgs/tools/bpnm.png" }
       ]
     },
     {
       title: "Enterprise Architecture", 
       tools: [
-        { name: "TOGAF", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Zachman", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "TOGAF", icon: "/assets/imgs/tools/togaf.png" },
+        { name: "Zachman", icon: "/assets/imgs/tools/zachman.png" }
       ]
     },
     {
       title: "Cloud Strategy",
       tools: [
-        { name: "AWS Well-Architected", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Azure CAF", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "AWS Well-Architected", icon: "/assets/imgs/tools/aws-well-architected.png" },
+        { name: "Azure Security Center", icon: "/assets/imgs/tools/azure-security-center.png" }
       ]
     },
     {
       title: "Agile Consulting",
       tools: [
-        { name: "Scrum", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "SAFe", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "DevOps", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Scrum", icon: "/assets/imgs/tools/scrum.png" },
+        { name: "SAFe", icon: "/assets/imgs/tools/safe.png" },
+        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" }
       ]
     }
   ];

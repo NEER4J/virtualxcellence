@@ -171,43 +171,43 @@ const DevelopmentPage = (): ReactElement => {
     {
       title: "Frontend Technologies",
       tools: [
-        { name: "React", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Angular", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Vue.js", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
+        { name: "Flutter", icon: "/assets/imgs/tools/flutter.png" },
+        { name: "PWA", icon: "/assets/imgs/tools/pwa.png" }
       ]
     },
     {
       title: "Backend Technologies", 
       tools: [
-        { name: "Node.js", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Python", icon: "/assets/imgs/client/client-1.webp" },
-        { name: ".NET", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Java", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
+        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" },
+        { name: "SAP", icon: "/assets/imgs/tools/sap.png" },
+        { name: "Oracle NetSuite", icon: "/assets/imgs/tools/oracle-netsuite.png" }
       ]
     },
     {
       title: "Mobile Development",
       tools: [
-        { name: "Flutter", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "React Native", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Swift", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Kotlin", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Flutter", icon: "/assets/imgs/tools/flutter.png" },
+        { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
+        { name: "PWA", icon: "/assets/imgs/tools/pwa.png" },
+        { name: "2FA Security", icon: "/assets/imgs/tools/2fa.png" }
       ]
     },
     {
       title: "Cloud Platforms",
       tools: [
-        { name: "AWS", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Azure", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Google Cloud", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
+        { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
+        { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" }
       ]
     },
     {
       title: "AI/ML Technologies",
       tools: [
-        { name: "TensorFlow", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "PyTorch", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "OpenAI APIs", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+        { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+        { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" }
       ]
     }
   ];

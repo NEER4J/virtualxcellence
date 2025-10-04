@@ -207,33 +207,33 @@ const FractionalCFOPage = (): ReactElement => {
     {
       title: "Accounting & Finance Tools",
       tools: [
-        { name: "QuickBooks", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Xero", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "SAP", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Oracle NetSuite", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "QuickBooks", icon: "/assets/imgs/tools/quickbooks.png" },
+        { name: "Xero", icon: "/assets/imgs/tools/xero.png" },
+        { name: "SAP", icon: "/assets/imgs/tools/sap.png" },
+        { name: "Oracle NetSuite", icon: "/assets/imgs/tools/oracle-netsuite.png" }
       ]
     },
     {
       title: "Forecasting & Modeling", 
       tools: [
-        { name: "Excel Advanced Models", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Adaptive Insights", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Excel", icon: "/assets/imgs/tools/excel.png" },
+        { name: "Adaptive Insights", icon: "/assets/imgs/tools/adaptive-insight.png" }
       ]
     },
     {
       title: "BI & Dashboards",
       tools: [
-        { name: "Power BI", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Tableau", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Google Data Studio", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" },
+        { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" },
+        { name: "Google Data Studio", icon: "/assets/imgs/tools/google-data-studio.png" }
       ]
     },
     {
       title: "Compliance & Audit",
       tools: [
-        { name: "IFRS", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "GAAP", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "SOX Frameworks", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "IFRS", icon: "/assets/imgs/tools/IFRS.png" },
+        { name: "GAAP", icon: "/assets/imgs/tools/gaap.png" },
+        { name: "SOX", icon: "/assets/imgs/tools/sox.png" }
       ]
     }
   ];

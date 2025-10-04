@@ -176,45 +176,45 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
     {
       title: "Customer Support",
       tools: [
-        { name: "Zendesk", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Freshdesk", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Intercom", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "LiveChat", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
+        { name: "2FA Security", icon: "/assets/imgs/tools/2fa.png" },
+        { name: "PWA Solutions", icon: "/assets/imgs/tools/pwa.png" },
+        { name: "RPA Automation", icon: "/assets/imgs/tools/rpa.png" }
       ]
     },
     {
       title: "Communication", 
       tools: [
-        { name: "Twilio", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "RingCentral", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Slack", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Teams", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Microsoft Entra", icon: "/assets/imgs/tools/microsoft-entra.png" },
+        { name: "Okta", icon: "/assets/imgs/tools/okta.png" },
+        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
+        { name: "DevOps", icon: "/assets/imgs/tools/devops.png" }
       ]
     },
     {
       title: "CRM & Sales",
       tools: [
-        { name: "Salesforce", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "HubSpot", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Pipedrive", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Zoho CRM", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "SAP", icon: "/assets/imgs/tools/sap.png" },
+        { name: "Oracle NetSuite", icon: "/assets/imgs/tools/oracle-netsuite.png" },
+        { name: "API Integration", icon: "/assets/imgs/tools/api.png" },
+        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" }
       ]
     },
     {
       title: "AI & Automation",
       tools: [
-        { name: "Dialogflow", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "IBM Watson", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Bot Framework", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Rasa", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" },
+        { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+        { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+        { name: "RPA", icon: "/assets/imgs/tools/rpa.png" }
       ]
     },
     {
       title: "Analytics & Reporting",
       tools: [
-        { name: "Google Analytics", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Tableau", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Power BI", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Google Data Studio", icon: "/assets/imgs/tools/google-data-studio.png" },
+        { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" },
+        { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" }
       ]
     }
   ];

@@ -109,40 +109,40 @@ const FinancialServicesPage = (): ReactElement => {
         {
           title: "Banking Platforms",
           technologies: [
-            { name: "Core Banking Systems", icon: "/assets/imgs/icons/core-banking.svg" },
-            { name: "Payment Gateways", icon: "/assets/imgs/icons/payment-gateway.svg" },
-            { name: "Blockchain", icon: "/assets/imgs/icons/blockchain.svg" }
+            { name: "Core Banking Systems", icon: "/assets/imgs/tools/core-banking.png" },
+            { name: "Payment Gateways", icon: "/assets/imgs/tools/payment-gateway.png" },
+            { name: "Blockchain", icon: "/assets/imgs/tools/blockchain.png" }
           ]
         },
         {
           title: "AI/ML",
           technologies: [
-            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
-            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
-            { name: "Fraud Detection APIs", icon: "/assets/imgs/icons/fraud-detection.svg" }
+            { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+            { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+            { name: "Fraud Detection APIs", icon: "/assets/imgs/tools/fraud-detection.png" }
           ]
         },
         {
           title: "Cloud & Security",
           technologies: [
-            { name: "AWS Financial Services", icon: "/assets/imgs/icons/aws.svg" },
-            { name: "Azure Financial Services", icon: "/assets/imgs/icons/azure.svg" },
-            { name: "End-to-End Encryption", icon: "/assets/imgs/icons/encryption.svg" }
+            { name: "AWS Financial Services", icon: "/assets/imgs/tools/aws.png" },
+            { name: "Azure Financial Services", icon: "/assets/imgs/tools/azure.png" },
+            { name: "End-to-End Encryption", icon: "/assets/imgs/tools/encryption.png" }
           ]
         },
         {
           title: "Compliance & Security",
           technologies: [
-            { name: "PCI-DSS Compliance", icon: "/assets/imgs/icons/pci.svg" },
-            { name: "SOX Compliance", icon: "/assets/imgs/icons/sox.svg" },
-            { name: "Multi-Factor Authentication", icon: "/assets/imgs/icons/mfa.svg" }
+            { name: "PCI-DSS Compliance", icon: "/assets/imgs/tools/pci-dss.png" },
+            { name: "SOX Compliance", icon: "/assets/imgs/tools/sox.png" },
+            { name: "Multi-Factor Authentication", icon: "/assets/imgs/tools/2fa.png" }
           ]
         },
         {
           title: "Mobile & Web",
           technologies: [
-            { name: "React Native", icon: "/assets/imgs/icons/react-native.svg" },
-            { name: "Progressive Web Apps", icon: "/assets/imgs/icons/pwa.svg" }
+            { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
+            { name: "Progressive Web Apps", icon: "/assets/imgs/tools/pwa.png" }
           ]
         }
       ]

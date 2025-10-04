@@ -109,39 +109,39 @@ const RetailEcommercePage = (): ReactElement => {
         {
           title: "E-commerce Platforms",
           technologies: [
-            { name: "Shopify", icon: "/assets/imgs/icons/shopify.svg" },
-            { name: "Magento", icon: "/assets/imgs/icons/magento.svg" },
-            { name: "WooCommerce", icon: "/assets/imgs/icons/woocommerce.svg" }
+            { name: "Shopify", icon: "/assets/imgs/tools/shopify.png" },
+            { name: "Magento", icon: "/assets/imgs/tools/magento.png" },
+            { name: "WooCommerce", icon: "/assets/imgs/tools/woocommerce.png" }
           ]
         },
         {
           title: "AI/ML",
           technologies: [
-            { name: "TensorFlow", icon: "/assets/imgs/icons/tensorflow.svg" },
-            { name: "PyTorch", icon: "/assets/imgs/icons/pytorch.svg" },
-            { name: "Recommendation APIs", icon: "/assets/imgs/icons/recommendation.svg" }
+            { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
+            { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
+            { name: "Recommendation APIs", icon: "/assets/imgs/tools/api.png" }
           ]
         },
         {
           title: "Cloud & Infrastructure",
           technologies: [
-            { name: "AWS Commerce", icon: "/assets/imgs/icons/aws.svg" },
-            { name: "Google Cloud", icon: "/assets/imgs/icons/google-cloud.svg" }
+            { name: "AWS Commerce", icon: "/assets/imgs/tools/aws.png" },
+            { name: "Google Cloud", icon: "/assets/imgs/tools/cloude.png" }
           ]
         },
         {
           title: "Payment & Security",
           technologies: [
-            { name: "Stripe", icon: "/assets/imgs/icons/stripe.svg" },
-            { name: "PayPal", icon: "/assets/imgs/icons/paypal.svg" },
-            { name: "PCI-DSS compliance", icon: "/assets/imgs/icons/pci.svg" }
+            { name: "Stripe", icon: "/assets/imgs/tools/stripe.png" },
+            { name: "PayPal", icon: "/assets/imgs/tools/paypal.png" },
+            { name: "PCI-DSS compliance", icon: "/assets/imgs/tools/pci-dss.png" }
           ]
         },
         {
           title: "Mobile Development",
           technologies: [
-            { name: "React Native", icon: "/assets/imgs/icons/react-native.svg" },
-            { name: "Flutter", icon: "/assets/imgs/icons/flutter.svg" }
+            { name: "React Native", icon: "/assets/imgs/tools/react-native.png" },
+            { name: "Flutter", icon: "/assets/imgs/tools/flutter.png" }
           ]
         }
       ]
