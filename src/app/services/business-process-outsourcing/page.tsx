@@ -187,8 +187,8 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
       tools: [
         { name: "Twilio", icon: "/assets/imgs/client/client-1.webp" },
         { name: "RingCentral", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Slack", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Teams", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Slack", icon: "/assets/imgs/tools/slack.jpg" },
+        { name: "Microsoft Teams", icon: "/assets/imgs/tools/microsoft-teams.jpg" }
       ]
     },
     {

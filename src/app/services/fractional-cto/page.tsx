@@ -196,7 +196,7 @@ const FractionalCTOPage = (): ReactElement => {
       tools: [
         { name: "NIST", icon: "/assets/imgs/client/client-1.webp" },
         { name: "ISO", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "HIPAA", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "HIPAA", icon: "/assets/imgs/tools/ferpa.png" }
       ]
     }
   ];

@@ -180,11 +180,11 @@ const CloudInfrastructurePage = (): ReactElement => {
     {
       title: "Automation & DevOps", 
       tools: [
-        { name: "Terraform", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Ansible", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Jenkins", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Kubernetes", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Docker", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Terraform", icon: "/assets/imgs/tools/terraform.jpg" },
+        { name: "Ansible", icon: "/assets/imgs/tools/ansible.jpg" },
+        { name: "Jenkins", icon: "/assets/imgs/tools/jenkins.jpg" },
+        { name: "Kubernetes", icon: "/assets/imgs/tools/kubernetes.jpg" },
+        { name: "Docker", icon: "/assets/imgs/tools/docker.jpg" }
       ]
     },
     {
