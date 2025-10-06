@@ -172,15 +172,15 @@ const AIAutomationPage = (): ReactElement => {
       tools: [
         { name: "TensorFlow", icon: "/assets/imgs/tools/tensorflow.png" },
         { name: "PyTorch", icon: "/assets/imgs/tools/pytorch.png" },
-        { name: "Keras", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Keras", icon: "/assets/imgs/tools/keras.png" }
       ]
     },
     {
       title: "Automation Platforms", 
       tools: [
-        { name: "UiPath", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Automation Anywhere", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Power Automate", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "UiPath", icon: "/assets/imgs/tools/uipath.png" },
+        { name: "Automation Anywhere", icon: "/assets/imgs/tools/automation-anywhere.png" },
+        { name: "Power Automate", icon: "/assets/imgs/tools/power-automate.png" }
       ]
     },
     {
@@ -194,10 +194,10 @@ const AIAutomationPage = (): ReactElement => {
     {
       title: "Conversational AI",
       tools: [
-        { name: "Dialogflow", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Rasa", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Dialogflow", icon: "/assets/imgs/tools/dialogflow.png" },
+        { name: "Rasa", icon: "/assets/imgs/tools/rasa.png" },
         { name: "OpenAI APIs", icon: "/assets/imgs/tools/openai.png" },
-        { name: "Twilio Voice AI", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Twilio Voice AI", icon: "/assets/imgs/tools/twilio-voice-ai.png" }
       ]
     }
   ];

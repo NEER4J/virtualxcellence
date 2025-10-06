@@ -45,13 +45,8 @@ const contactData: IContact = {
 
     {
       icon: "/assets/imgs/icon/icon-18.webp",
-      label: "+91-120-4286226 (India)",
-      link: "tel:+911204286226",
-    },
-    {
-      icon: "/assets/imgs/icon/icon-18.webp",
-      label: "28 Church St. Magnetwan ON P0A 1P0 Ontario - Magnetwan",
-      link: "#",
+      label: "+91-8447100088 (India)",
+      link: "tel:+918447100088",
     },
   ],
   socialLinks: [

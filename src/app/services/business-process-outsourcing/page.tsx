@@ -176,17 +176,17 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
     {
       title: "Customer Support",
       tools: [
-        { name: "Zendesk", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Freshdesk", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Intercom", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "LiveChat", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Zendesk", icon: "/assets/imgs/tools/zendesk.png" },
+        { name: "Freshdesk", icon: "/assets/imgs/tools/freshdesk.png" },
+        { name: "Intercom", icon: "/assets/imgs/tools/intercom.png" },
+        { name: "LiveChat", icon: "/assets/imgs/tools/livechat.png" }
       ]
     },
     {
       title: "Communication", 
       tools: [
-        { name: "Twilio", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "RingCentral", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Twilio", icon: "/assets/imgs/tools/twilio.png" },
+        { name: "RingCentral", icon: "/assets/imgs/tools/ringcentral.png" },
         { name: "Slack", icon: "/assets/imgs/tools/slack.jpg" },
         { name: "Microsoft Teams", icon: "/assets/imgs/tools/microsoft-teams.jpg" }
       ]
@@ -194,25 +194,25 @@ const BusinessProcessOutsourcingPage = (): ReactElement => {
     {
       title: "CRM & Sales",
       tools: [
-        { name: "Salesforce", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "HubSpot", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Pipedrive", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Zoho CRM", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Salesforce", icon: "/assets/imgs/tools/salesforce.png" },
+        { name: "HubSpot", icon: "/assets/imgs/tools/hubspot.png" },
+        { name: "Pipedrive", icon: "/assets/imgs/tools/pipedrive.png" },
+        { name: "Zoho CRM", icon: "/assets/imgs/tools/zoho-crm.png" }
       ]
     },
     {
       title: "AI & Automation",
       tools: [
-        { name: "Dialogflow", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "IBM Watson", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Bot Framework", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Rasa", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Dialogflow", icon: "/assets/imgs/tools/dialogflow.png" },
+        { name: "IBM Watson", icon: "/assets/imgs/tools/ibm-watson.png" },
+        { name: "Microsoft Bot Framework", icon: "/assets/imgs/tools/microsoft-bot-framework.png" },
+        { name: "Rasa", icon: "/assets/imgs/tools/rasa.png" }
       ]
     },
     {
       title: "Analytics & Reporting",
       tools: [
-        { name: "Google Analytics", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Google Analytics", icon: "/assets/imgs/tools/google-analytics.png" },
         { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" },
         { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" }
       ]

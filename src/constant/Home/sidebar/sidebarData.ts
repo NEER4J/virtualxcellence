@@ -48,13 +48,14 @@ const sidebar: SidebarData = {
     {
       label: "Services",
       children: [
-        { label: "Cybersecurity", href: "/services/cybersecurity" },
-        { label: "Development", href: "/services/development" },
+        { label: "AI & Automation", href: "/services/ai-automation" },
+        { label: "Integration & Professional Services", href: "/services/integration-and-professional-services" },
         { label: "Consultation", href: "/services/consultation" },
         { label: "Fractional CTO", href: "/services/fractional-cto" },
+        { label: "Cybersecurity", href: "/services/cybersecurity" },
+        { label: "Development", href: "/services/development" },
         { label: "Fractional CFO", href: "/services/fractional-cfo" },
         { label: "Business Transformation", href: "/services/business-transformation" },
-        { label: "AI & Automation", href: "/services/ai-automation" },
         { label: "Cloud & Infrastructure", href: "/services/cloud-infrastructure" },
         { label: "Business Process Outsourcing", href: "/services/business-process-outsourcing" },
       ],

@@ -172,7 +172,7 @@ const DevelopmentPage = (): ReactElement => {
       title: "Frontend Technologies",
       tools: [
         { name: "React", icon: "/assets/imgs/tools/react.jpg" },
-        { name: "Angular", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Angular", icon: "/assets/imgs/tools/angular.png" },
         { name: "Vue.js", icon: "/assets/imgs/tools/vue.jpg" }
       ]
     },

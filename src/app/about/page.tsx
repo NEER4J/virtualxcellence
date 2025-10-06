@@ -2,6 +2,9 @@ import { ReactElement } from "react";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import AboutSection from "@/components/AiAgency/AboutSection";
+import VisionMissionSection from "@/components/About/VisionMissionSection";
+import LifeAtVXSection from "@/components/About/LifeAtVXSection";
+import InnovationSection from "@/components/About/InnovationSection";
 import VideoSection from "@/components/About/VideoSection";
 import CoreValuesSection from "@/components/About/CoreValuesSection";
 import JourneySection from "@/components/About/JourneySection";
@@ -58,6 +61,9 @@ const AboutPage = (): ReactElement => {
           />
           <AboutSection />
           <VideoSection data={videoData} />
+          <VisionMissionSection />
+          <LifeAtVXSection />
+          <InnovationSection />
           <CoreValuesSection />
           <TextSliderSection data={textSliderData} />
           <JourneySection />

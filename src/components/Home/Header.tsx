@@ -56,16 +56,16 @@ const headerData:HeaderData = {
       title: "Services",
       children: [
         { 
-          title: "Cybersecurity", 
-          href: "/services/cybersecurity",
-          icon: Shield,
-          subtitle: "Protect your digital assets"
+          title: "AI & Automation", 
+          href: "/services/ai-automation",
+          icon: Bot,
+          subtitle: "Intelligent automation systems"
         },
         { 
-          title: "Development", 
-          href: "/services/development",
-          icon: Code,
-          subtitle: "Custom software solutions"
+          title: "Integration & Professional Services", 
+          href: "/services/integration-and-professional-services",
+          icon: Settings,
+          subtitle: "AI platform integration & consulting"
         },
         { 
           title: "Consultation", 
@@ -80,6 +80,18 @@ const headerData:HeaderData = {
           subtitle: "Part-time technology leadership"
         },
         { 
+          title: "Cybersecurity", 
+          href: "/services/cybersecurity",
+          icon: Shield,
+          subtitle: "Protect your digital assets"
+        },
+        { 
+          title: "Development", 
+          href: "/services/development",
+          icon: Code,
+          subtitle: "Custom software solutions"
+        },
+        { 
           title: "Fractional CFO", 
           href: "/services/fractional-cfo",
           icon: DollarSign,
@@ -92,12 +104,6 @@ const headerData:HeaderData = {
           subtitle: "Digital transformation solutions"
         },
         { 
-          title: "AI & Automation", 
-          href: "/services/ai-automation",
-          icon: Bot,
-          subtitle: "Intelligent automation systems"
-        },
-        { 
           title: "Cloud & Infrastructure", 
           href: "/services/cloud-infrastructure",
           icon: Cloud,
@@ -108,12 +114,6 @@ const headerData:HeaderData = {
           href: "/services/business-process-outsourcing",
           icon: Building2,
           subtitle: "Streamlined business operations"
-        },
-        { 
-          title: "Integration & Professional Services", 
-          href: "/services/integration-and-professional-services",
-          icon: Settings,
-          subtitle: "AI platform integration & consulting"
         },
       ],
     },

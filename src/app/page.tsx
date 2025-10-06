@@ -10,6 +10,7 @@ import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import WorkSection from "@/components/AiAgency/WorkSection";
 import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
 import DigitalWorkSection from "@/components/DigitalAgency/WorkSection";
+import ClientsSection from "@/components/AiAgency/ClientsSection";
 import FooterSection from "@/components/Home/FooterSection";
 import { createPageMetadata } from "@/lib/page-seo";
 
@@ -17,7 +18,7 @@ import { createPageMetadata } from "@/lib/page-seo";
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata('/', {
     title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
-    description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 10+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
+    description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 21+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
     keywords: [
       "AI solutions",
       "cloud transformation", 
@@ -65,7 +66,8 @@ const Home = (): ReactElement => {
         <DigitalWorkSection pageInnerSlider={true} data={digitalWorkData} />
         <WhyChooseUsSection />
         <WhyChooseUsSecondRow />
-        <TestimonialSlider data={testimonialData}/>
+        {/* <TestimonialSlider data={testimonialData}/> */}
+        <ClientsSection />
       </main>
       <FooterSection />
     </div>

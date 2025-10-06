@@ -106,7 +106,7 @@ This role offers the opportunity to work with the latest AI technologies, contri
   'Engineering',
   '$120,000 - $160,000 CAD',
   ARRAY['Health & Dental Insurance', 'Flexible Work Hours', 'Professional Development Budget', 'Stock Options', 'Remote Work Support'],
-  ARRAY['5+ years of experience in AI/ML', 'Strong programming skills in Python', 'Experience with TensorFlow or PyTorch', 'Bachelor''s degree in Computer Science or related field'],
+  ARRAY['21+ years of experience in AI/ML', 'Strong programming skills in Python', 'Experience with TensorFlow or PyTorch', 'Bachelor''s degree in Computer Science or related field'],
   ARRAY['Design and implement ML models', 'Collaborate with data scientists and engineers', 'Optimize model performance', 'Mentor junior team members'],
   ARRAY['Python', 'TensorFlow', 'PyTorch', 'AWS', 'Docker', 'Kubernetes', 'SQL', 'Git'],
   true

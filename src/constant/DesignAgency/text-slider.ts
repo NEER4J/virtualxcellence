@@ -11,13 +11,13 @@ const textSliderData: TextSliderData = {
   items: [
     {
       id: 1,
-      text: `Elevate your brand with design-driven solutions`,
-      suffix: `Empowering brands through intelligent creativity`,
+      text: `Exhibiting at Gytex 2025`,
+      suffix: `Meet us at the premier technology exhibition`,
     },
     {
       id: 2,
-      text: `Transform brand success with design-powered strategies`,
-      suffix: `Redefining success through innovative design`,
+      text: `Elevate your brand with design-driven solutions`,
+      suffix: `Empowering brands through intelligent creativity`,
     },
     {
       id: 3,
@@ -31,8 +31,8 @@ const textSliderData: TextSliderData = {
     },
     {
       id: 5,
-      text: `Elevate your brand with design-driven solutions`,
-      suffix: `Empowering brands through intelligent creativity`,
+      text: `Exhibiting at Gytex 2025`,
+      suffix: `Meet us at the premier technology exhibition`,
     },
     {
       id: 6,
@@ -48,6 +48,11 @@ const textSliderData: TextSliderData = {
       id: 8,
       text: `Smarter design through design-infused creativity`,
       suffix: `Fueling brand success`,
+    },
+    {
+      id: 9,
+      text: `Exhibiting at Gytex 2025`,
+      suffix: `Meet us at the premier technology exhibition`,
     },
   ],
 };

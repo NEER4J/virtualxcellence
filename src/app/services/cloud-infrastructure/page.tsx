@@ -174,7 +174,7 @@ const CloudInfrastructurePage = (): ReactElement => {
         { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
         { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
         { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" },
-        { name: "Oracle Cloud", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Oracle Cloud", icon: "/assets/imgs/tools/oracle-cloud.png" }
       ]
     },
     {
@@ -190,8 +190,8 @@ const CloudInfrastructurePage = (): ReactElement => {
     {
       title: "Security Tools",
       tools: [
-        { name: "Palo Alto", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Fortinet", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Palo Alto", icon: "/assets/imgs/tools/palo-alto.png" },
+        { name: "Fortinet", icon: "/assets/imgs/tools/fortinet.png" },
         { name: "CrowdStrike", icon: "/assets/imgs/tools/crowd-strike.png" },
         { name: "Okta", icon: "/assets/imgs/tools/okta.png" }
       ]
@@ -199,10 +199,10 @@ const CloudInfrastructurePage = (): ReactElement => {
     {
       title: "Monitoring & Optimization",
       tools: [
-        { name: "Datadog", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "New Relic", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Prometheus", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Grafana", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Datadog", icon: "/assets/imgs/tools/datadog.png" },
+        { name: "New Relic", icon: "/assets/imgs/tools/new-relic.png" },
+        { name: "Prometheus", icon: "/assets/imgs/tools/prometheus.png" },
+        { name: "Grafana", icon: "/assets/imgs/tools/grafana.png" }
       ]
     }
   ];

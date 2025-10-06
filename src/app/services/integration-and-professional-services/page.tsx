@@ -176,36 +176,36 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
       title: "AI Platforms",
       tools: [
         { name: "OpenAI", icon: "/assets/imgs/tools/openai.png" },
-        { name: "Google Gemma 2", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Meta AI", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "BLOOM", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Google Gemma 2", icon: "/assets/imgs/tools/google-gemma-2.png" },
+        { name: "Meta AI", icon: "/assets/imgs/tools/meta-ai.png" },
+        { name: "BLOOM", icon: "/assets/imgs/tools/bloom.png" }
       ]
     },
     {
       title: "Business Platforms", 
       tools: [
-        { name: "Zoho Suite", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Command R+", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "DataDog", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "Zoho Suite", icon: "/assets/imgs/tools/zoho-suite.png" },
+        { name: "Command R+", icon: "/assets/imgs/tools/command-r-plus.png" },
+        { name: "DataDog", icon: "/assets/imgs/tools/datadog.png" },
         { name: "Custom APIs", icon: "/assets/imgs/tools/api.png" }
       ]
     },
     {
       title: "Integration Tools",
       tools: [
-        { name: "Zapier", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Microsoft Power Automate", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "MuleSoft", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Custom Middleware", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Zapier", icon: "/assets/imgs/tools/zapier.png" },
+        { name: "Microsoft Power Automate", icon: "/assets/imgs/tools/power-automate.png" },
+        { name: "MuleSoft", icon: "/assets/imgs/tools/mulesoft.png" },
+        { name: "Custom Middleware", icon: "/assets/imgs/tools/custom-middleware.png" }
       ]
     },
     {
       title: "Development Tools",
       tools: [
-        { name: "Postman", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Insomnia", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Swagger", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Git", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Postman", icon: "/assets/imgs/tools/postman.png" },
+        { name: "Insomnia", icon: "/assets/imgs/tools/insomnia.png" },
+        { name: "Swagger", icon: "/assets/imgs/tools/swagger.png" },
+        { name: "Git", icon: "/assets/imgs/tools/git.png" }
       ]
     },
     {
@@ -214,7 +214,7 @@ const IntegrationAndProfessionalServicesPage = (): ReactElement => {
         { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
         { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
         { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" },
-        { name: "Zoho Cloud", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Zoho Cloud", icon: "/assets/imgs/tools/zoho-cloud.png" }
       ]
     }
   ];

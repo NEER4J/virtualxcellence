@@ -48,7 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ data: heroData }) => {
                 {heroData?.secondaryBtnText}
               </Link>
             </div>
-            <h5 className="brand-title" style={{opacity: 0}} suppressHydrationWarning={true}>{heroData?.brandTitle}</h5>
+            {/* <h5 className="brand-title" style={{opacity: 0}} suppressHydrationWarning={true}>{heroData?.brandTitle}</h5> */}
 
            
           </div>

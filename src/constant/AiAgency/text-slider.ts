@@ -11,18 +11,13 @@ const textSliderData: TextSliderData = {
   items: [
     {
       id: 1,
-      text: `Where Artificial Intelligence Meets Bold Creativity`,
-      suffix: `Empowering Brands Through Intelligent Design`,
+      text: `Exhibiting at Gytex 2025`,
+      suffix: `Meet us at the premier technology exhibition`,
     },
     {
       id: 2,
-      text: `Innovating the Future with AI-Driven Solutions`,
-      suffix: `Redefining User Experiences`,
-    },
-    {
-      id: 3,
-      text: `Intelligence. Impact. Innovation.`,
-      suffix: `We Build the Next Big Thing`,
+      text: `Where Artificial Intelligence Meets Bold Creativity`,
+      suffix: `Empowering Brands Through Intelligent Design`,
     },
     {
       id: 4,
@@ -31,8 +26,8 @@ const textSliderData: TextSliderData = {
     },
     {
       id: 5,
-      text: `Where Artificial Intelligence Meets Bold Creativity`,
-      suffix: `Empowering Brands Through Intelligent Design`,
+      text: `Exhibiting at Gytex 2025`,
+      suffix: `Meet us at the premier technology exhibition`,
     },
     {
       id: 6,
@@ -40,14 +35,14 @@ const textSliderData: TextSliderData = {
       suffix: `Redefining User Experiences`,
     },
     {
-      id: 7,
-      text: `Intelligence. Impact. Innovation.`,
-      suffix: `We Build the Next Big Thing`,
-    },
-    {
       id: 8,
       text: `Smarter Design Through Artificial Intelligence`,
       suffix: `Fueling Brand Transformation`,
+    },
+    {
+      id: 9,
+      text: `Exhibiting at Gytex 2025`,
+      suffix: `Meet us at the premier technology exhibition`,
     },
   ],
 };

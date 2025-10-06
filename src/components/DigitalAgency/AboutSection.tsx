@@ -41,10 +41,10 @@ const AboutSection:React.FC<{className?: string}> = ({className:updateClass}) =>
     },
     mainImage: "/assets/imgs/shape/shape-23.webp",
     counters: [
-      { value: 3.5, suffix: "k", label: "Completed Projects", delay: "0.30" },
-      { value: 25, suffix: "+", label: "Years Of Experience", delay: "0.45" },
-      { value: 1.6, suffix: "k", label: "World Wide Clients", delay: "0.60" },
-      { value: 22, suffix: "+", label: "Trusted Companies", delay: "0.75" },
+      // { value: 3.5, suffix: "k", label: "Completed Projects", delay: "0.30" },
+      { value: 21, suffix: "+", label: "Years Of Experience", delay: "0.45" },
+      // { value: 1.6, suffix: "k", label: "World Wide Clients", delay: "0.60" },
+      // { value: 22, suffix: "+", label: "Trusted Companies", delay: "0.75" },
     ],
   };
   useEffect(() => {
@@ -101,6 +101,22 @@ const AboutSection:React.FC<{className?: string}> = ({className:updateClass}) =>
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                 </div>
+                <div className="counter-wrapper mt-4">
+              {aboutData?.counters?.map((counter:ICounter, index:number) => (
+                <div className="counter-item fade-anim new-counter-item" data-delay={counter?.delay} key={index}>
+                  <span className="number">
+                    <span
+                      className="t-counter-value"
+                      data-value={counter?.value}
+                    >
+                      {counter?.value}
+                    </span>
+                    <span className="counter-suffix">{counter?.suffix}</span>
+                  </span>
+                  <p className="text">{counter?.label}</p>
+                </div>
+              ))}
+            </div>
               </div>
             </div>
 
@@ -117,24 +133,7 @@ const AboutSection:React.FC<{className?: string}> = ({className:updateClass}) =>
             </div>
           </div>
 
-          <div className="counter-wrapper-box fade-anim">
-            <div className="counter-wrapper">
-              {aboutData?.counters?.map((counter:ICounter, index:number) => (
-                <div className="counter-item fade-anim" data-delay={counter?.delay} key={index}>
-                  <span className="number">
-                    <span
-                      className="t-counter-value"
-                      data-value={counter?.value}
-                    >
-                      {counter?.value}
-                    </span>
-                    <span className="counter-suffix">{counter?.suffix}</span>
-                  </span>
-                  <p className="text">{counter?.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        
         </div>
       </div>
     </section>

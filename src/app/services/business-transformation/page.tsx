@@ -171,9 +171,9 @@ const BusinessTransformationPage = (): ReactElement => {
     {
       title: "Automation",
       tools: [
-        { name: "UiPath", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Automation Anywhere", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Power Automate", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "UiPath", icon: "/assets/imgs/tools/uipath.png" },
+        { name: "Automation Anywhere", icon: "/assets/imgs/tools/automation-anywhere.png" },
+        { name: "Power Automate", icon: "/assets/imgs/tools/power-automate.png" }
       ]
     },
     {
@@ -191,7 +191,7 @@ const BusinessTransformationPage = (): ReactElement => {
         { name: "AWS", icon: "/assets/imgs/tools/aws.png" },
         { name: "Azure", icon: "/assets/imgs/tools/azure.png" },
         { name: "GCP", icon: "/assets/imgs/tools/google-cloude.png" },
-        { name: "Oracle Cloud", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Oracle Cloud", icon: "/assets/imgs/tools/oracle-cloud.png" }
       ]
     },
     {
@@ -199,14 +199,14 @@ const BusinessTransformationPage = (): ReactElement => {
       tools: [
         { name: "Tableau", icon: "/assets/imgs/tools/tableau.png" },
         { name: "Power BI", icon: "/assets/imgs/tools/power=bi.png" },
-        { name: "Qlik", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Qlik", icon: "/assets/imgs/tools/qlik.png" }
       ]
     },
     {
       title: "Change Management",
       tools: [
-        { name: "Prosci ADKAR", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Agile Frameworks", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Prosci ADKAR", icon: "/assets/imgs/tools/prosci-adkar.png" },
+        { name: "Agile Frameworks", icon: "/assets/imgs/tools/agile-frameworks.png" }
       ]
     }
   ];

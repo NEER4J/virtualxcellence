@@ -13,6 +13,13 @@ const ContactMetaSection:React.FC = () => {
                   <div className="meta-list">
                     <ul className="meta-list-ul-canada">
                       <li>
+                        <strong>Ontario - Mississauga (HQ):</strong><br />
+                        Virtual Xcellence Inc.<br />
+                        5160 Explorer Dr, Unit-30<br />
+                        Mississauga, ON L4W 4T7<br />
+                        <strong>Tel: 1-905-823-7677</strong>
+                      </li>
+                      <li>
                         <strong>Alberta:</strong><br />
                         Virtual Xcellence Canada Inc.<br />
                         5120 47 St NE Unit #119, Calgary<br />
@@ -23,19 +30,6 @@ const ContactMetaSection:React.FC = () => {
                         Virtual Xcellence Canada Inc.<br />
                         81 Ahmic street, Ahmic Harbour<br />
                         ON P0A 1P0
-                      </li>
-                      <li>
-                        <strong>Ontario - Magnetwan:</strong><br />
-                        Virtual Xcellence Canada Inc.<br />
-                        28 Church St. Magnetwan<br />
-                        ON P0A 1P0
-                      </li>
-                      <li>
-                        <strong>Ontario - Mississauga:</strong><br />
-                        Virtual Xcellence Inc.<br />
-                        5160 Explorer Dr, Unit-30<br />
-                        Mississauga, ON L4W 4T7<br />
-                        <strong>Tel: 1-905-823-7677</strong>
                       </li>
                     </ul>
                   </div>
@@ -53,7 +47,7 @@ const ContactMetaSection:React.FC = () => {
                         332, Angel Corporate Plaza, 3rd Floor<br />
                         Angel Mega Mall, Kaushambi<br />
                         Delhi(NCR)-India<br />
-                        <strong>Tel: +91 120 499 8299</strong>
+                        <strong>Tel: +91 8447100088</strong>
                       </li>
                     </ul>
                   </div>

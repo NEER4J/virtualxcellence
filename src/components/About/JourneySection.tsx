@@ -15,30 +15,36 @@ const JourneySection: React.FC = () => {
   const journeyItems: JourneyItem[] = [
     {
       id: 1,
-      period: "2004–2015",
-      description: "Founded in Ontario, delivering software solutions to SMEs.",
+      period: "2004–2008",
+      description: "Founded in India, delivering software solutions to SMEs.",
       image: "/assets/imgs/about/Founded-420x420.png"
     },
     {
       id: 2,
-      period: "2016–2018",
-      description: "Expanded into consulting and leadership services.",
+      period: "2009–2015",
+      description: "Expanded to Canada, delivering software solutions to SMEs.",
       image: "/assets/imgs/about/Expanded-420x420.png"
     },
     {
       id: 3,
-      period: "2019–2021",
-      description: "Strengthened expertise in AI, automation, and cloud adoption.",
+      period: "2016–2018",
+      description: "Expanded into consulting and leadership services.",
       image: "/assets/imgs/about/AI-Automation-420x420.png"
     },
     {
       id: 4,
-      period: "2022–2024",
-      description: "Partnered with enterprises on large-scale transformation projects.",
+      period: "2019–2021",
+      description: "Strengthened expertise in AI, automation, and cloud adoption.",
       image: "/assets/imgs/about/Partnered-420x420.png"
     },
     {
       id: 5,
+      period: "2022–2024",
+      description: "Partnered with enterprises on large-scale transformation projects.",
+      image: "/assets/imgs/about/Digital-Growth-420x420.png"
+    },
+    {
+      id: 6,
       period: "2025 & Beyond",
       description: "Continuing to drive AI-led innovation and digital growth across industries.",
       image: "/assets/imgs/about/Digital-Growth-420x420.png"

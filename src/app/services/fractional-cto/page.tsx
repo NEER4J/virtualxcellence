@@ -180,22 +180,22 @@ const FractionalCTOPage = (): ReactElement => {
       title: "Agile & DevOps", 
       tools: [
         { name: "Scrum", icon: "/assets/imgs/tools/scrum.png" },
-        { name: "Kanban", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "CI/CD Pipelines", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Kanban", icon: "/assets/imgs/tools/kanban.png" },
+        { name: "CI/CD Pipelines", icon: "/assets/imgs/tools/ci-cd-pipelines.png" }
       ]
     },
     {
       title: "Product Strategy",
       tools: [
-        { name: "Design Thinking", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "Lean Startup", icon: "/assets/imgs/client/client-1.webp" }
+        { name: "Design Thinking", icon: "/assets/imgs/tools/design-thinking.png" },
+        { name: "Lean Startup", icon: "/assets/imgs/tools/lean-startup.png" }
       ]
     },
     {
       title: "Security & Compliance",
       tools: [
-        { name: "NIST", icon: "/assets/imgs/client/client-1.webp" },
-        { name: "ISO", icon: "/assets/imgs/client/client-1.webp" },
+        { name: "NIST", icon: "/assets/imgs/tools/nist.png" },
+        { name: "ISO", icon: "/assets/imgs/tools/iso.png" },
         { name: "HIPAA", icon: "/assets/imgs/tools/ferpa.png" }
       ]
     }

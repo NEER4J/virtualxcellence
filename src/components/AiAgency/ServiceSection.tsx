@@ -9,14 +9,22 @@ const ServiceSection: React.FC = () => {
     exploreLink: "/ai-agency/services",
   };
 
-  const servicesData = [
+  const servicesData = [ 
     {
-      id: "development",
-      title: "Development",
-      image: "/assets/imgs/home-pages/services/development.jpg",
+      id: "ai-automation",
+      title: "AI & Automation",
+      image: "/assets/imgs/home-pages/services/ai.jpg",
       description:
-        "Custom software, web & mobile solutions tailored to your business needs. We build scalable, secure, and user-friendly applications that drive growth and efficiency.",
-      detailLink: "/services/development",
+        "Conversational AI, predictive analytics, and RPA solutions. Leverage artificial intelligence to automate processes, gain insights, and enhance customer experiences.",
+      detailLink: "/services/ai-automation",
+    },
+    {
+      id: "integration-and-professional-services",
+      title: "Integration & Professional Services",
+      image: "/assets/imgs/home-pages/services/integration.jpg",
+      description:
+        "Expert integration and professional services for Zoho, OpenAI, DataDog, Google Gemma 2, Meta AI, Command R+, and BLOOM platforms. Seamless AI integration and professional consulting.",
+      detailLink: "/services/integration-and-professional-services",
     },
     {
       id: "consultation",
@@ -33,6 +41,14 @@ const ServiceSection: React.FC = () => {
       description:
         "On-demand technology leadership for growing companies. Get access to senior-level technical expertise without the full-time commitment, perfect for scaling your tech operations.",
       detailLink: "/services/fractional-cto",
+    },
+    {
+      id: "development",
+      title: "Development",
+      image: "/assets/imgs/home-pages/services/development.jpg",
+      description:
+        "Custom software, web & mobile solutions tailored to your business needs. We build scalable, secure, and user-friendly applications that drive growth and efficiency.",
+      detailLink: "/services/development",
     },
     {
       id: "fractional-cfo",
@@ -57,14 +73,6 @@ const ServiceSection: React.FC = () => {
       description:
         "Comprehensive risk management and data protection solutions. We safeguard your digital assets with advanced security measures and compliance frameworks.",
       detailLink: "/services/cybersecurity",
-    },
-    {
-      id: "ai-automation",
-      title: "AI & Automation",
-      image: "/assets/imgs/home-pages/services/ai.jpg",
-      description:
-        "Conversational AI, predictive analytics, and RPA solutions. Leverage artificial intelligence to automate processes, gain insights, and enhance customer experiences.",
-      detailLink: "/services/ai-automation",
     },
     {
       id: "cloud-infrastructure",
