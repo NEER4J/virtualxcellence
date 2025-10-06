@@ -2,6 +2,8 @@
 
 @import "components/index";
 
+@import "ai-sections";
+
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
   max-width: 1420px;
   @media #{$xl} {

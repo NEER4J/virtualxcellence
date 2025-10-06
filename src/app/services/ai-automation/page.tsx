@@ -2,6 +2,10 @@ import { ReactElement } from "react";
 import { Metadata } from "next";
 import { generateSeoMetadata } from '@/lib/seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+import AIBenefitsSection from "@/components/Services/AIBenefitsSection";
+import AIMetricsSection from "@/components/Services/AIMetricsSection";
+import AIUseCasesSection from "@/components/Services/AIUseCasesSection";
+import AISecuritySection from "@/components/Services/AISecuritySection";
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -292,17 +296,18 @@ const AIAutomationPage = (): ReactElement => {
             title="AI & AUTOMATION"
             subTitle="Smarter, Faster, Future-Ready Businesses"
             pageName="AI & AUTOMATION"
-            subtext="Artificial Intelligence (AI) and Intelligent Automation are no longer 'emerging trends' ,  they're the driving force behind global business transformation. At VirtualXcellence, we help organizations harness AI to reduce costs, improve efficiency, and create entirely new business models."
+            subtext="Artificial Intelligence (AI) and Intelligent Automation are no longer 'emerging trends' - they're the driving force behind global business transformation. At Virtual Xcellence, we help organizations harness AI to reduce costs, improve efficiency, and create entirely new business models."
           />
-          <ServiceChallengeSection 
-            challengeData={challengeData} 
-            imageSrc="/assets/imgs/services/ai-automation/why-ai.png"
-          />
-          <ServiceSection serviceData={serviceData} />
+          <AIBenefitsSection />
           <BusinessImpactSection 
             impactData={businessImpactData} 
             imageSrc="/assets/imgs/services/ai-automation/business-impact.png"
           />
+          <AIMetricsSection />
+          <ServiceSection serviceData={serviceData} />
+          <AIUseCasesSection />
+          <AISecuritySection />
+          
           <ServiceProcessSection 
             processData={processData}
             sectionTitle="Our AI Implementation Approach"
