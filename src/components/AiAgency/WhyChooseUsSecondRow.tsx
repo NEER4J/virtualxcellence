@@ -21,7 +21,7 @@ const WhyChooseUsSecondRow: React.FC = () => {
     {
       title: "Measurable ROI",
       description: "With every engagement",
-      image: "/assets/imgs/home-pages/why-us/Measurable ROI.jpg"
+      image: "/assets/imgs/home-pages/why-us/Measurable-ROI.jpg"
     }
   ];
 

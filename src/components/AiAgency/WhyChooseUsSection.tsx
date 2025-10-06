@@ -15,14 +15,14 @@ const WhyChooseUsSection: React.FC = () => {
 
   const whyChooseUsItems: WhyChooseUsItem[] = [
     {
-      title: "Canada-Headquartered",
-      description: "10+ years of proven success",
-      image: "/assets/imgs/home-pages/why-us/Canada-Headquartered.jpg"
-    },
-    {
       title: "Cross-Industry Expertise",
       description: "Across healthcare, finance, retail, and more",
       image: "/assets/imgs/home-pages/why-us/Cross-Industry Expertise.jpg"
+    },
+    {
+      title: "Canada-Headquartered",
+      description: "21+ years of proven success",
+      image: "/assets/imgs/home-pages/why-us/Canada-Headquartered.jpg"
     }
   ];
 
@@ -43,7 +43,7 @@ const WhyChooseUsSection: React.FC = () => {
             </div>
             <div className="team-members">
               <span className="number">
-                10+
+                21+
               </span>
               <p className="text">Years of Excellence</p>
             </div>
