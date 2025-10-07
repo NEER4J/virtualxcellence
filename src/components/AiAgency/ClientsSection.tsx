@@ -45,11 +45,6 @@ const ClientsSection: React.FC<ClientsSectionProps> = ({ data }) => {
         alt: "iGate Logo"
       },
       {
-        name: "Parvasi",
-        logo: "/assets/imgs/clients/parvasi.png",
-        alt: "Parvasi Logo"
-      },
-      {
         name: "Sony YIO",
         logo: "/assets/imgs/clients/sony-yio.png",
         alt: "Sony YIO Logo"

@@ -10,15 +10,15 @@ import CoreValuesSection from "@/components/About/CoreValuesSection";
 import JourneySection from "@/components/About/JourneySection";
 import TextSliderSection from "@/components/AiAgency/TextSliderSection";
 import FooterSection from "@/components/Home/FooterSection";
-import { createPageMetadata } from "@/lib/page-seo";
+import { createRuntimePageMetadata } from "@/lib/runtime-seo";
 
 // component data
 import videoData from "@/constant/AiAgency/About/video";
 import textSliderData from "@/constant/AiAgency/text-slider";
 
-// Dynamic SEO metadata - will use database data if available, fallback to defaults
+// Runtime Dynamic SEO metadata - updates immediately without rebuild
 export async function generateMetadata(): Promise<Metadata> {
-  return createPageMetadata('/about', {
+  return createRuntimePageMetadata('/about', {
     title: "About Us || Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
     description: "Explore the About Us page of Virtual Xcellence – a modern, high-performance agency template built with Next.js. Meet the team, learn our mission, and discover why Virtual Xcellence is trusted by creative professionals and businesses.",
     keywords: [
