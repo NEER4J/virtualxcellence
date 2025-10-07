@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { IContact } from "@/constant/AiAgency/Contact/contact";
 import Link from "next/link";
-import { createClient } from '@/lib/supabase/client';
 
 interface FormData {
   Name: string;
@@ -49,28 +48,32 @@ const ContactSection: React.FC<ContactProps> = ({ data: contactData }) => {
 
     const toastId = toast.loading("Sending your message...");
     try {
-      const supabase = createClient();
-      
-      // Save lead to database
-      const { error } = await supabase
-        .from('leads')
-        .insert({
+      // Send data to API route which handles both database save and email sending
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           name: Name.trim(),
           email: Email.trim(),
-          phone: Phone.trim() || null,
+          phone: Phone.trim() || undefined,
           message: Messages.trim(),
-          source: 'Contact Form',
-          status: 'new'
-        } as never);
+        }),
+      });
 
-      if (error) throw error;
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
 
       toast.success("Your message has been sent successfully! We'll get back to you soon.", {
         id: toastId,
       });
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error saving lead:', error);
+      console.error('Error sending message:', error);
       toast.error("Something went wrong. Please try again.", { id: toastId });
     }
   };

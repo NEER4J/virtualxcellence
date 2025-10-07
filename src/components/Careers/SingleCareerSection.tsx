@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@/lib/supabase/client'
 import { CareerPost } from '@/types/database.types'
 import { 
   MapPin, 
@@ -33,7 +32,6 @@ export default function SingleCareerSection({ career }: SingleCareerSectionProps
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const supabase = createClient()
 
   const getEmploymentTypeLabel = (type: string) => {
     const labels: { [key: string]: string } = {
@@ -68,26 +66,34 @@ export default function SingleCareerSection({ career }: SingleCareerSectionProps
     setIsSubmitting(true)
 
     try {
-      const { error } = await supabase
-        .from('career_applications')
-        .insert({
+      // Send data to API route which handles both database save and email sending
+      const response = await fetch('/api/send-career-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           career_post_id: career.id,
           applicant_name: applicationData.applicant_name,
           applicant_email: applicationData.applicant_email,
-          applicant_phone: applicationData.applicant_phone || null,
-          cover_letter: applicationData.cover_letter || null,
-          resume_url: applicationData.resume_url || null,
-          portfolio_url: applicationData.portfolio_url || null,
-          linkedin_url: applicationData.linkedin_url || null,
-          experience_years: applicationData.experience_years ? parseInt(applicationData.experience_years) : null,
-          current_position: applicationData.current_position || null,
-          current_company: applicationData.current_company || null,
-          expected_salary: applicationData.expected_salary || null,
-          availability_date: applicationData.availability_date || null,
-          status: 'pending'
-        } as never)
+          applicant_phone: applicationData.applicant_phone || undefined,
+          cover_letter: applicationData.cover_letter || undefined,
+          resume_url: applicationData.resume_url || undefined,
+          portfolio_url: applicationData.portfolio_url || undefined,
+          linkedin_url: applicationData.linkedin_url || undefined,
+          experience_years: applicationData.experience_years || undefined,
+          current_position: applicationData.current_position || undefined,
+          current_company: applicationData.current_company || undefined,
+          expected_salary: applicationData.expected_salary || undefined,
+          availability_date: applicationData.availability_date || undefined,
+        }),
+      });
 
-      if (error) throw error
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit application');
+      }
 
       toast.success('Application submitted successfully! We will get back to you soon.')
       setApplicationData({
