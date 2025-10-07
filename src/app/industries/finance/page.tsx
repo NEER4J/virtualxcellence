@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 import IndustryOverview from "@/components/Industries/IndustryOverview";
@@ -12,10 +15,9 @@ import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/industries/finance', {
     title: "Financial Services Industry Solutions || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Revolutionize financial services with Virtual Xcellence. Fintech solutions, digital banking platforms, payment systems, and financial technology consulting for modern financial institutions.",
+    description: "Revolutionize financial services with Virtual Xcellence. Fintech solutions, digital banking platforms, payment systems, and financial technology consulting for modern financial institutions.",
     keywords: [
       "Virtual Xcellence financial services",
       "fintech solutions",
@@ -33,14 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "insurance technology",
       "financial AI solutions",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Financial Services Industry Page",
-    },
-  };
-
-  return generateSeoMetadata('/industries/financial-services', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/industries/finance"
+  });
 }
 
 const FinancialServicesPage = (): ReactElement => {

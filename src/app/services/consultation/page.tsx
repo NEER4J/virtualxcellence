@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -10,10 +13,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/consultation', {
     title: "Consultation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-    description:
-      "Turning complex challenges into strategic opportunities with Virtual Xcellence. Digital transformation strategy, technology advisory, business process re-engineering, and enterprise architecture consulting.",
+    description: "Turning complex challenges into strategic opportunities with Virtual Xcellence. Digital transformation strategy, technology advisory, business process re-engineering, and enterprise architecture consulting.",
     keywords: [
       "Virtual Xcellence consultation",
       "digital transformation consulting",
@@ -31,14 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "digital strategy planning",
       "technology ROI optimization",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Consultation Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/consultation', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/consultation"
+  });
 }
 
 const ConsultationPage = (): ReactElement => {

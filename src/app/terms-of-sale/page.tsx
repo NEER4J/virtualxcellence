@@ -1,15 +1,17 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Header from "@/components/Home/Header";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/terms-of-sale', {
     title: "Terms of Sale || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Read Virtual Xcellence's Terms of Sale for online and retail stores. Understand our terms for purchasing products, services, and digital content.",
+    description: "Read Virtual Xcellence's Terms of Sale for online and retail stores. Understand our terms for purchasing products, services, and digital content.",
     keywords: [
       "Virtual Xcellence terms of sale",
       "technology consulting purchase terms",
@@ -27,14 +29,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "purchase terms",
       "e-commerce terms",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Terms of Sale Page",
-    },
-  };
-
-  return generateSeoMetadata('/terms-of-sale', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/terms-of-sale"
+  });
 }
 
 const TermsOfSalePage = (): ReactElement => {

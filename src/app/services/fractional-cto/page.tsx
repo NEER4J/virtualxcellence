@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -10,10 +13,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/fractional-cto', {
     title: "Fractional CTO Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-    description:
-      "Technology leadership without the full-time overhead. Virtual Xcellence offers Fractional CTO services providing on-demand access to senior technology leadership for startups, SMEs, and enterprises.",
+    description: "Technology leadership without the full-time overhead. Virtual Xcellence offers Fractional CTO services providing on-demand access to senior technology leadership for startups, SMEs, and enterprises.",
     keywords: [
       "Virtual Xcellence Fractional CTO",
       "fractional CTO services",
@@ -31,14 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "digital transformation leadership",
       "technology executive services",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Fractional CTO Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/fractional-cto', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/fractional-cto"
+  });
 }
 
 const FractionalCTOPage = (): ReactElement => {

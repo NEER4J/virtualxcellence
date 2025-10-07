@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -10,10 +13,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/cloud-infrastructure', {
     title: "Cloud & Infrastructure Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-    description:
-      "Scalable, secure, and future-ready IT foundations with Virtual Xcellence. Cloud migration, modernization, hybrid solutions, DevOps automation, and managed cloud services for enterprise-grade infrastructure.",
+    description: "Scalable, secure, and future-ready IT foundations with Virtual Xcellence. Cloud migration, modernization, hybrid solutions, DevOps automation, and managed cloud services for enterprise-grade infrastructure.",
     keywords: [
       "Virtual Xcellence cloud services",
       "cloud migration services",
@@ -31,14 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "cloud cost optimization",
       "cloud architecture",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Cloud & Infrastructure Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/cloud-infrastructure', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/cloud-infrastructure"
+  });
 }
 
 const CloudInfrastructurePage = (): ReactElement => {

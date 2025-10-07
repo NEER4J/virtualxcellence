@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Header from "@/components/Home/Header";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import ContactMetaSection from "@/components/AiAgency/Contact/ContactMetaSection";
 import ContactSection from "@/components/AiAgency/Contact/ContactSection";
@@ -12,10 +15,9 @@ import FooterSection from "@/components/Home/FooterSection";
 import contactData from "@/constant/AiAgency/Contact/contact";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/contact', {
     title: "Contact || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Get in touch with the Virtual Xcellence team. Whether you have questions, project inquiries, or want to collaborate, our contact page makes it easy to connect.",
+    description: "Get in touch with the Virtual Xcellence team. Whether you have questions, project inquiries, or want to collaborate, our contact page makes it easy to connect.",
     keywords: [
       "Virtual Xcellence contact",
       "technology consulting contact",
@@ -34,14 +36,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "professional contact",
       "customer support",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Contact Page",
-    },
-  };
-
-  return generateSeoMetadata('/contact', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/contact"
+  });
 }
 
 const ContactPage = (): ReactElement => {

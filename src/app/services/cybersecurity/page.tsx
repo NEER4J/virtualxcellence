@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -10,10 +13,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/cybersecurity', {
     title: "Cybersecurity Services || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Explore our comprehensive cybersecurity services with Virtual Xcellence. Professional security solutions, threat protection, and digital safety for your business with advanced security measures.",
+    description: "Explore our comprehensive cybersecurity services with Virtual Xcellence. Professional security solutions, threat protection, and digital safety for your business with advanced security measures.",
     keywords: [
       "Virtual Xcellence cybersecurity",
       "cybersecurity services",
@@ -28,14 +30,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "cyber risk management",
       "data protection",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Cybersecurity Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/cybersecurity', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/cybersecurity"
+  });
 }
 
 const CybersecurityPage = (): ReactElement => {

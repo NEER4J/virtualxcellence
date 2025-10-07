@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 import IndustryOverview from "@/components/Industries/IndustryOverview";
@@ -12,10 +15,9 @@ import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/industries/manufacturing', {
     title: "Manufacturing Industry Solutions || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Transform manufacturing with Virtual Xcellence. Industry 4.0 solutions, IoT integration, smart factory automation, and manufacturing technology consulting for modern production facilities.",
+    description: "Transform manufacturing with Virtual Xcellence. Industry 4.0 solutions, IoT integration, smart factory automation, and manufacturing technology consulting for modern production facilities.",
     keywords: [
       "Virtual Xcellence manufacturing",
       "Industry 4.0 solutions",
@@ -33,14 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "digital twin solutions",
       "manufacturing AI",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Manufacturing Industry Page",
-    },
-  };
-
-  return generateSeoMetadata('/industries/manufacturing', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/industries/manufacturing"
+  });
 }
 
 const ManufacturingPage = (): ReactElement => {

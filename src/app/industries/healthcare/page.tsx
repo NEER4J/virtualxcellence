@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 import IndustryOverview from "@/components/Industries/IndustryOverview";
@@ -12,10 +15,9 @@ import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/industries/healthcare', {
     title: "Healthcare Industry Solutions || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Transform healthcare delivery with Virtual Xcellence. Digital health solutions, AI-powered diagnostics, patient management systems, and healthcare technology consulting for modern medical practices.",
+    description: "Transform healthcare delivery with Virtual Xcellence. Digital health solutions, AI-powered diagnostics, patient management systems, and healthcare technology consulting for modern medical practices.",
     keywords: [
       "Virtual Xcellence healthcare",
       "healthcare technology solutions",
@@ -33,14 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "electronic health records",
       "healthcare AI consulting",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Healthcare Industry Page",
-    },
-  };
-
-  return generateSeoMetadata('/industries/healthcare', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/industries/healthcare"
+  });
 }
 
 const HealthcarePage = (): ReactElement => {

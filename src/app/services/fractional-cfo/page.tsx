@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceIndustrySection from "@/components/Services/IndustrySection";
@@ -11,10 +14,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/fractional-cfo', {
     title: "Fractional CFO Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-    description:
-      "Strategic financial leadership on-demand. Virtual Xcellence offers Fractional CFO services providing experienced finance leaders for cash flow optimization, fundraising support, and financial planning.",
+    description: "Strategic financial leadership on-demand. Virtual Xcellence offers Fractional CFO services providing experienced finance leaders for cash flow optimization, fundraising support, and financial planning.",
     keywords: [
       "Virtual Xcellence Fractional CFO",
       "fractional CFO services",
@@ -32,14 +34,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "financial forecasting",
       "working capital management",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Fractional CFO Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/fractional-cfo', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/fractional-cfo"
+  });
 }
 
 const FractionalCFOPage = (): ReactElement => {

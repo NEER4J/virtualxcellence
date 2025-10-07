@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -10,10 +13,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/integration-and-professional-services', {
     title: "Integration and Professional Services || Virtual Xcellence - AI & Platform Integration Solutions",
-    description:
-      "Expert integration and professional services for Zoho, OpenAI, DataDog, Google Gemma 2, Meta AI, Command R+, and BLOOM platforms. Seamless AI integration, data analytics, and professional consulting services.",
+    description: "Expert integration and professional services for Zoho, OpenAI, DataDog, Google Gemma 2, Meta AI, Command R+, and BLOOM platforms. Seamless AI integration, data analytics, and professional consulting services.",
     keywords: [
       "Virtual Xcellence integration services",
       "Zoho integration",
@@ -31,14 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "enterprise AI solutions",
       "AI consulting services",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Integration and Professional Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/integration-and-professional-services', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/integration-and-professional-services"
+  });
 }
 
 const IntegrationAndProfessionalServicesPage = (): ReactElement => {

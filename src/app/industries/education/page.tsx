@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 import IndustryOverview from "@/components/Industries/IndustryOverview";
@@ -12,10 +15,9 @@ import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/industries/education', {
     title: "Education Industry Solutions || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Transform education with Virtual Xcellence. EdTech solutions, learning management systems, virtual classrooms, and educational technology consulting for modern learning institutions.",
+    description: "Transform education with Virtual Xcellence. EdTech solutions, learning management systems, virtual classrooms, and educational technology consulting for modern learning institutions.",
     keywords: [
       "Virtual Xcellence education",
       "EdTech solutions",
@@ -33,14 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "educational data analytics",
       "e-learning platforms",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Education Industry Page",
-    },
-  };
-
-  return generateSeoMetadata('/industries/education', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/industries/education"
+  });
 }
 
 const EducationPage = (): ReactElement => {

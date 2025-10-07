@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceChallengeSection, { ServiceSection, BusinessImpactSection, IndustryApplicationsSection, WhyWorkWithUsSection } from "@/components/Services/ServiceSection";
 import ServiceProcessSection from "@/components/Services/ProcessSection";
 import ServiceToolsSection from "@/components/Services/ToolsSection";
@@ -10,10 +13,9 @@ import ServiceFaqSection from "@/components/Services/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services/business-transformation', {
     title: "Business Transformation Services || Virtual Xcellence - Creative Digital Agency NextJS Template",
-    description:
-      "Redefining the future of work and business with Virtual Xcellence. Digital transformation services including process automation, AI integration, cloud modernization, and organizational change management.",
+    description: "Redefining the future of work and business with Virtual Xcellence. Digital transformation services including process automation, AI integration, cloud modernization, and organizational change management.",
     keywords: [
       "Virtual Xcellence business transformation",
       "digital transformation services",
@@ -31,14 +33,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "digital-first transformation",
       "business model innovation",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Business Transformation Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services/business-transformation', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services/business-transformation"
+  });
 }
 
 const BusinessTransformationPage = (): ReactElement => {

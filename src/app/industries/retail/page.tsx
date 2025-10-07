@@ -1,7 +1,10 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import IndustriesFaqSection from "@/components/Industries/FaqSection";
 import FooterSection from "@/components/Home/FooterSection";
 import IndustryOverview from "@/components/Industries/IndustryOverview";
@@ -12,10 +15,9 @@ import ImpactWeDeliver from "@/components/Industries/ImpactWeDeliver";
 import ServiceTextSliderSection from "@/components/Services/TextSliderSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/industries/retail', {
     title: "Retail & E-commerce Industry Solutions || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Transform retail and e-commerce with Virtual Xcellence. Digital commerce platforms, omnichannel solutions, customer experience optimization, and retail technology consulting for modern businesses.",
+    description: "Transform retail and e-commerce with Virtual Xcellence. Digital commerce platforms, omnichannel solutions, customer experience optimization, and retail technology consulting for modern businesses.",
     keywords: [
       "Virtual Xcellence retail ecommerce",
       "e-commerce platform development",
@@ -33,14 +35,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "personalization engines",
       "retail AI solutions",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Retail & E-commerce Industry Page",
-    },
-  };
-
-  return generateSeoMetadata('/industries/retail-ecommerce', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/industries/retail"
+  });
 }
 
 const RetailEcommercePage = (): ReactElement => {
