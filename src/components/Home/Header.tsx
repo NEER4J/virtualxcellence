@@ -53,7 +53,7 @@ const headerData:HeaderData = {
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     {
-      title: "Services",
+      title: "Services", href: "/services",
       children: [
         { 
           title: "AI & Automation", 
@@ -118,7 +118,7 @@ const headerData:HeaderData = {
       ],
     },
     {
-      title: "Industries",
+      title: "Industries", href: "/industries",
       children: [
         { 
           title: "Healthcare", 

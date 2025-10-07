@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
+import { Rocket, Building2, Users, Globe, Heart, CreditCard, Factory, ShoppingCart, GraduationCap } from "lucide-react";
 
 interface IIndustry {
   title: string;
   description: string;
   number: string;
   link: string;
-  shapeImage: string;
-  thumb: string;
+  icon: string;
 }
 
 interface ServiceIndustrySectionProps {
@@ -56,11 +56,38 @@ const ServiceIndustrySection: React.FC<ServiceIndustrySectionProps> = ({
                       <p className="text">{item?.description}</p>
                     </div>
                   <div className="service-box-2-inner">
-                    <div className="shape-1">
-                      <img src={item?.shapeImage} alt="shape" />
-                    </div>
-                    <div className="thumb">
-                      <img src={item?.thumb} alt="thumb" />
+                    <div 
+                      className="industry-icon-container"
+                      style={{
+                        width: '300px',
+                        height: '300px',
+                        background: '#dc3545',
+                        borderRadius: '12px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        margin: '0 auto'
+                      }}
+                    >
+                      {(() => {
+                        const IconComponent = {
+                          'Rocket': Rocket,
+                          'Building2': Building2,
+                          'Users': Users,
+                          'Globe': Globe,
+                          'Heart': Heart,
+                          'CreditCard': CreditCard,
+                          'Factory': Factory,
+                          'ShoppingCart': ShoppingCart,
+                          'GraduationCap': GraduationCap
+                        }[item.icon];
+                        
+                        return IconComponent ? (
+                          <IconComponent style={{ width: '200px', height: '200px', color: '#fff' }} />
+                        ) : (
+                          <div style={{ color: '#fff', fontSize: '24px', fontWeight: 'bold' }}>?</div>
+                        );
+                      })()}
                     </div>
                   </div>
                 </div>

@@ -169,32 +169,28 @@ const FractionalCFOPage = (): ReactElement => {
       description: "Needing fundraising, investor-ready models",
       number: "01",
       link: "#",
-      shapeImage: "/assets/imgs/shape/shape-1.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
+      icon: "Rocket"
     },
     {
       title: "SMEs",
       description: "Wanting to scale profitably with financial discipline",
       number: "02",
       link: "#",
-      shapeImage: "/assets/imgs/shape/shape-2.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
+      icon: "Building2"
     },
     {
       title: "Enterprises",
       description: "Requiring interim CFO during leadership transitions",
       number: "03",
       link: "#",
-      shapeImage: "/assets/imgs/shape/shape-3.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
+      icon: "Users"
     },
     {
       title: "Global Expansions",
       description: "Companies entering the Middle East & North America",
       number: "04",
       link: "#",
-      shapeImage: "/assets/imgs/shape/shape-4.webp",
-      thumb: "/assets/imgs/gallery/image-52.webp"
+      icon: "Globe"
     }
   ];
 

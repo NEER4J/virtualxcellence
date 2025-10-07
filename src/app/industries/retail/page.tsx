@@ -122,7 +122,7 @@ const RetailEcommercePage = (): ReactElement => {
           title: "Cloud & Infrastructure",
           technologies: [
             { name: "AWS Commerce", icon: "/assets/imgs/tools/aws.png" },
-            { name: "Google Cloud", icon: "/assets/imgs/tools/cloude.png" }
+            { name: "Google Cloud", icon: "/assets/imgs/tools/google-cloude.png" }
           ]
         },
         {

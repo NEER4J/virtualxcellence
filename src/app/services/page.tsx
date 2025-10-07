@@ -52,131 +52,192 @@ const ServicesPage = (): ReactElement => {
               <div className="col-12">
                 <div className="services-content">
                   
-                  {/* Introduction */}
-                  <div className="services-intro mb-5">
-                    <h2 className="section-title mb-4">Transform Your Business with Technology</h2>
-                    <p className="mb-3">
-                      At Virtual Xcellence, we provide comprehensive technology solutions to help organizations 
-                      transform their operations, improve efficiency, and drive growth. Our expert team delivers 
-                      cutting-edge solutions across multiple domains.
-                    </p>
-                  </div>
-
                   {/* Services Grid */}
                   <div className="services-grid">
                     <div className="row">
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/ai.jpg" alt="AI & Automation" />
+                          </div>
                           <h3 className="service-title">AI & Automation</h3>
                           <p className="service-description">
-                            Leverage artificial intelligence and automation to streamline processes and improve efficiency.
+                            Conversational AI, predictive analytics, and RPA solutions. Leverage artificial intelligence to automate processes, gain insights, and enhance customer experiences.
                           </p>
-                          <a href="/services/ai-automation" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Conversational AI solutions</li>
+                            <li>Predictive analytics and insights</li>
+                            <li>Robotic Process Automation (RPA)</li>
+                          </ul>
+                          <a href="/services/ai-automation" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/cybersecurity.jpg" alt="Cybersecurity" />
+                          </div>
                           <h3 className="service-title">Cybersecurity</h3>
                           <p className="service-description">
-                            Protect your digital assets with comprehensive cybersecurity solutions and best practices.
+                            Comprehensive risk management and data protection solutions. We safeguard your digital assets with advanced security measures and compliance frameworks.
                           </p>
-                          <a href="/services/cybersecurity" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Risk management and assessment</li>
+                            <li>Data protection and compliance</li>
+                            <li>Advanced security frameworks</li>
+                          </ul>
+                          <a href="/services/cybersecurity" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/development.jpg" alt="Development" />
+                          </div>
                           <h3 className="service-title">Development</h3>
                           <p className="service-description">
-                            Custom software development and digital solutions tailored to your business needs.
+                            Custom software, web & mobile solutions tailored to your business needs. We build scalable, secure, and user-friendly applications that drive growth and efficiency.
                           </p>
-                          <a href="/services/development" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Custom web and mobile applications</li>
+                            <li>Scalable and secure solutions</li>
+                            <li>User-friendly interface design</li>
+                          </ul>
+                          <a href="/services/development" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/consultation.jpg" alt="Consultation" />
+                          </div>
                           <h3 className="service-title">Consultation</h3>
                           <p className="service-description">
-                            Expert technology consulting to guide your digital transformation journey.
+                            Strategic technology advisory to help you make informed decisions. Our experts provide guidance on technology roadmaps, digital transformation, and innovation strategies.
                           </p>
-                          <a href="/services/consultation" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Strategic technology advisory</li>
+                            <li>Technology roadmap planning</li>
+                            <li>Digital transformation guidance</li>
+                          </ul>
+                          <a href="/services/consultation" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/cto.jpg" alt="Fractional CTO" />
+                          </div>
                           <h3 className="service-title">Fractional CTO</h3>
                           <p className="service-description">
-                            Access experienced CTO expertise on a part-time basis to drive your technology strategy.
+                            On-demand technology leadership for growing companies. Get access to senior-level technical expertise without the full-time commitment, perfect for scaling your tech operations.
                           </p>
-                          <a href="/services/fractional-cto" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>On-demand technology leadership</li>
+                            <li>Senior-level technical expertise</li>
+                            <li>Scaling tech operations</li>
+                          </ul>
+                          <a href="/services/fractional-cto" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/cfo.jpg" alt="Fractional CFO" />
+                          </div>
                           <h3 className="service-title">Fractional CFO</h3>
                           <p className="service-description">
-                            Strategic financial leadership and analysis to optimize your business performance.
+                            Financial strategy & transformation services. We help optimize your financial operations, implement cost-effective solutions, and drive sustainable business growth.
                           </p>
-                          <a href="/services/fractional-cfo" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Financial strategy and transformation</li>
+                            <li>Cost-effective solutions</li>
+                            <li>Sustainable business growth</li>
+                          </ul>
+                          <a href="/services/fractional-cfo" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/business-transformation-min.jpg" alt="Business Transformation" />
+                          </div>
                           <h3 className="service-title">Business Transformation</h3>
                           <p className="service-description">
-                            Complete business process transformation to modernize your operations.
+                            Process redesign, automation, and AI integration to modernize your operations. We help streamline workflows, reduce costs, and improve overall business efficiency.
                           </p>
-                          <a href="/services/business-transformation" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Process redesign and automation</li>
+                            <li>AI integration and modernization</li>
+                            <li>Workflow optimization</li>
+                          </ul>
+                          <a href="/services/business-transformation" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
-                          <h3 className="service-title">Cloud Infrastructure</h3>
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/cloud-infrastructure.jpg" alt="Cloud Infrastructure" />
+                          </div>
+                          <h3 className="service-title">Cloud & Infrastructure</h3>
                           <p className="service-description">
-                            Scalable cloud solutions to modernize your infrastructure and reduce costs.
+                            Cloud migration, DevOps, and managed services for scalable infrastructure. We help you transition to the cloud and maintain reliable, secure, and cost-effective systems.
                           </p>
-                          <a href="/services/cloud-infrastructure" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Cloud migration and DevOps</li>
+                            <li>Managed services and support</li>
+                            <li>Reliable and secure systems</li>
+                          </ul>
+                          <a href="/services/cloud-infrastructure" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
-                          <h3 className="service-title">Business Process Outsourcing</h3>
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/bpo-min.jpg" alt="Business Process Outsourcing" />
+                          </div>
+                          <h3 className="service-title">BPO & Support Services</h3>
                           <p className="service-description">
-                            Streamline operations with our comprehensive business process outsourcing services.
+                            Transform your operations with scalable, cost-effective outsourcing. Customer support, back-office operations, sales & lead generation, and AI-powered solutions.
                           </p>
-                          <a href="/services/business-process-outsourcing" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>Customer support and service</li>
+                            <li>Back-office operations</li>
+                            <li>Sales and lead generation</li>
+                          </ul>
+                          <a href="/services/business-process-outsourcing" className="service-link">View Details</a>
                         </div>
                       </div>
 
                       <div className="col-md-6 col-lg-4 mb-4">
                         <div className="service-card">
-                          <h3 className="service-title">Systems Integration & Customization</h3>
+                          <div className="service-card-icon">
+                            <img src="/assets/imgs/home-pages/services/integration.jpg" alt="Integration & Professional Services" />
+                          </div>
+                          <h3 className="service-title">Integration & Professional Services</h3>
                           <p className="service-description">
-                            Seamless integration and customization of third-party software like Zoho, Salesforce, and more.
+                            Expert integration and professional services for Zoho, OpenAI, DataDog, Google Gemma 2, Meta AI, Command R+, and BLOOM platforms. Seamless AI integration and professional consulting.
                           </p>
-                          <a href="/services/systems-integration-customization" className="service-link">Learn More</a>
+                          <ul className="service-features">
+                            <li>AI platform integration</li>
+                            <li>Professional consulting services</li>
+                            <li>Seamless system integration</li>
+                          </ul>
+                          <a href="/services/integration-and-professional-services" className="service-link">View Details</a>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* CTA Section */}
-                  <div className="services-cta mt-5">
-                    <div className="cta-content text-center">
-                      <h3 className="cta-title">Ready to Transform Your Business?</h3>
-                      <p className="cta-description">
-                        Contact us today to discuss how our services can help your organization achieve its goals.
-                      </p>
-                      <a href="/contact" className="btn btn-primary">Get Started</a>
-                    </div>
-                  </div>
+               
 
                 </div>
               </div>

@@ -33,25 +33,6 @@ const WorkSection: React.FC<IWorkProps> = ({ all, type }) => {
                   </div>
                 </div>
 
-                <div className="btn-wrapper fade-anim" suppressHydrationWarning={true}>
-                  <div className="t-btn-group">
-                    <button
-                      className="t-btn t-btn-circle"
-                    >
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <button
-                      className="t-btn t-btn-primary"
-                    >
-                      Explore More
-                    </button>
-                    <button
-                      className="t-btn t-btn-circle"
-                    >
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
               </div>
 
               <div className="completed-projects move-anim" suppressHydrationWarning={true}>
