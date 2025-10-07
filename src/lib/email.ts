@@ -43,8 +43,8 @@ class EmailService {
   constructor() {
     const config: EmailConfig = {
       host: process.env.SMTP_HOST || 'smtp.resend.com',
-      port: parseInt(process.env.SMTP_PORT || '465'),
-      secure: true, // Port 465 always requires secure connection
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: false, // Use STARTTLS for port 587
       auth: {
         user: process.env.SMTP_USER || 'resend',
         pass: process.env.SMTP_PASS || '',
