@@ -63,7 +63,28 @@ const ClientsSection: React.FC<ClientsSectionProps> = ({ data }) => {
         name: "SABB",
         logo: "/assets/imgs/clients/sabb.png",
         alt: "SABB Logo"
-      }
+      },
+      {
+        name: "Renault",
+        logo: "/assets/imgs/clients/renault.png",
+        alt: "Renault Logo"
+      },
+      {
+        name: "ALJ Toyota",
+        logo: "/assets/imgs/clients/alj-toyota.png",
+        alt: "ALJ Toyota Logo"
+      },
+      {
+        name: "Petromin",
+        logo: "/assets/imgs/clients/petromin.png",
+        alt: "Petromin Logo"
+      },
+      {
+        name: "Shoemart",
+        logo: "/assets/imgs/clients/shoemart.png",
+        alt: "Shoemart Logo"
+      },
+   
     ]
   };
 
