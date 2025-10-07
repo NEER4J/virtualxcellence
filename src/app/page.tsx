@@ -1,6 +1,9 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
 import HeroSection from "@/components/AiAgency/HeroSection";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import ServiceSection from "@/components/AiAgency/ServiceSection";
 import ServiceArea5Section from "@/components/AiAgency/ServiceArea5Section";
 import WhyChooseUsSection from "@/components/AiAgency/WhyChooseUsSection";
@@ -12,11 +15,11 @@ import DigitalAboutSection from "@/components/DigitalAgency/AboutSection";
 import DigitalWorkSection from "@/components/DigitalAgency/WorkSection";
 import ClientsSection from "@/components/AiAgency/ClientsSection";
 import FooterSection from "@/components/Home/FooterSection";
-import { createPageMetadata } from "@/lib/page-seo";
+import { createRuntimePageMetadata } from "@/lib/runtime-seo";
 
-// Dynamic SEO metadata - will use database data if available, fallback to defaults
+// Runtime Dynamic SEO metadata - updates immediately without rebuild
 export async function generateMetadata(): Promise<Metadata> {
-  return createPageMetadata('/', {
+  return createRuntimePageMetadata('/', {
     title: "Virtual Xcellence - AI, Cloud & Digital Transformation Solutions",
     description: "Virtual Xcellence is a Canada-based technology and consulting company helping organizations transform their operations with AI, automation, cloud, and business innovation. With 21+ years of experience, we deliver solutions that create measurable impact and long-term growth.",
     keywords: [

@@ -1,15 +1,17 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
-import { generateSeoMetadata } from '@/lib/seo'
+import { createRuntimePageMetadata } from '@/lib/runtime-seo'
 import Header from "@/components/Home/Header";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import FooterSection from "@/components/Home/FooterSection";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackMetadata: Metadata = {
+  return createRuntimePageMetadata('/services', {
     title: "Services || Virtual Xcellence - AI, Automation & Business Transformation",
-    description:
-      "Explore Virtual Xcellence's comprehensive technology services including AI automation, cybersecurity, cloud infrastructure, business transformation, and fractional CTO/CFO services.",
+    description: "Explore Virtual Xcellence's comprehensive technology services including AI automation, cybersecurity, cloud infrastructure, business transformation, and fractional CTO/CFO services.",
     keywords: [
       "Virtual Xcellence services",
       "AI automation services",
@@ -27,14 +29,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "technology solutions",
       "digital solutions",
     ],
-    creator: "Virtual Xcellence",
-    other: {
-      developer: "Virtual Xcellence",
-      section: "Services Page",
-    },
-  };
-
-  return generateSeoMetadata('/services', fallbackMetadata);
+    canonicalUrl: "https://virtualxcellence.com/services"
+  });
 }
 
 const ServicesPage = (): ReactElement => {
