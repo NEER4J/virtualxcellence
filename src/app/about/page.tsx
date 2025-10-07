@@ -1,6 +1,9 @@
 import { ReactElement } from "react";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import AboutSection from "@/components/AiAgency/AboutSection";
 import VisionMissionSection from "@/components/About/VisionMissionSection";
 import LifeAtVXSection from "@/components/About/LifeAtVXSection";

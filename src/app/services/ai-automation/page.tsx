@@ -1,6 +1,9 @@
 import { ReactElement } from "react";
 import { Metadata } from "next";
 import { createRuntimePageMetadata } from '@/lib/runtime-seo'
+
+// Force dynamic rendering - prevents static generation
+export const dynamic = 'force-dynamic'
 import Breadcrumb from "@/components/AiAgency/common/Breadcrumb";
 import AIBenefitsSection from "@/components/Services/AIBenefitsSection";
 import AIMetricsSection from "@/components/Services/AIMetricsSection";
