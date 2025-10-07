@@ -12,7 +12,7 @@ const textSliderData: TextSliderData = {
     {
       id: 1,
       text: `Exhibiting at Gytex 2025`,
-      suffix: `Meet us at the premier technology exhibition`,
+      suffix: `Meet us at the premier technology exhibition Gytex 2025`,
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const textSliderData: TextSliderData = {
     {
       id: 5,
       text: `Exhibiting at Gytex 2025`,
-      suffix: `Meet us at the premier technology exhibition`,
+      suffix: `Meet us at the premier technology exhibition Gytex 2025`,
     },
     {
       id: 6,
@@ -42,7 +42,7 @@ const textSliderData: TextSliderData = {
     {
       id: 9,
       text: `Exhibiting at Gytex 2025`,
-      suffix: `Meet us at the premier technology exhibition`,
+      suffix: `Meet us at the premier technology exhibition Gytex 2025`,
     },
   ],
 };
