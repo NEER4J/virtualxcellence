@@ -12,6 +12,34 @@ export default function SitemapPage() {
   const [seoPages, setSeoPages] = useState<SeoPage[]>([])
   const [loading, setLoading] = useState(true)
 
+  // Default static pages that should always be in sitemap
+  const defaultPages = [
+    { path: '/about', title: 'About Us', category: 'Company' },
+    { path: '/contact', title: 'Contact Us', category: 'Company' },
+    { path: '/services', title: 'Our Services', category: 'Services' },
+    { path: '/services/ai-automation', title: 'AI Automation', category: 'Services' },
+    { path: '/services/cybersecurity', title: 'Cybersecurity', category: 'Services' },
+    { path: '/services/cloud-infrastructure', title: 'Cloud Infrastructure', category: 'Services' },
+    { path: '/services/development', title: 'Development', category: 'Services' },
+    { path: '/services/business-transformation', title: 'Business Transformation', category: 'Services' },
+    { path: '/services/business-process-outsourcing', title: 'Business Process Outsourcing', category: 'Services' },
+    { path: '/services/consultation', title: 'Consultation', category: 'Services' },
+    { path: '/services/fractional-cto', title: 'Fractional CTO', category: 'Services' },
+    { path: '/services/fractional-cfo', title: 'Fractional CFO', category: 'Services' },
+    { path: '/services/integration-and-professional-services', title: 'Integration & Professional Services', category: 'Services' },
+    { path: '/careers', title: 'Careers', category: 'Company' },
+    { path: '/industries/education', title: 'Education Industry', category: 'Industries' },
+    { path: '/industries/finance', title: 'Finance Industry', category: 'Industries' },
+    { path: '/industries/healthcare', title: 'Healthcare Industry', category: 'Industries' },
+    { path: '/industries/manufacturing', title: 'Manufacturing Industry', category: 'Industries' },
+    { path: '/industries/retail', title: 'Retail Industry', category: 'Industries' },
+    { path: '/privacy-policy', title: 'Privacy Policy', category: 'Legal' },
+    { path: '/terms-conditions', title: 'Terms & Conditions', category: 'Legal' },
+    { path: '/terms-of-sale', title: 'Terms of Sale', category: 'Legal' },
+    { path: '/refund-policy', title: 'Refund Policy', category: 'Legal' },
+    { path: '/sitemap', title: 'Sitemap', category: 'Other' }
+  ]
+
   useEffect(() => {
     const fetchPages = async () => {
       try {
@@ -36,14 +64,27 @@ export default function SitemapPage() {
 
   // Group pages by category for better organization
   const organizePages = (pages: SeoPage[]) => {
-    const organized: { [key: string]: SeoPage[] } = {
+    const organized: { [key: string]: any[] } = {
       'Main Pages': [],
       'Services': [],
       'Company': [],
+      'Industries': [],
       'Legal': [],
       'Other': []
     }
 
+    // Add default pages first
+    defaultPages.forEach(page => {
+      organized[page.category].push({
+        id: `default-${page.path}`,
+        page_path: page.path,
+        title: page.title,
+        updated_at: new Date().toISOString(),
+        isDefault: true
+      })
+    })
+
+    // Add dynamic pages
     pages.forEach(page => {
       const path = page.page_path.toLowerCase()
       
@@ -53,6 +94,8 @@ export default function SitemapPage() {
         organized['Services'].push(page)
       } else if (path.includes('/about') || path.includes('/contact') || path.includes('/careers')) {
         organized['Company'].push(page)
+      } else if (path.includes('/industries')) {
+        organized['Industries'].push(page)
       } else if (path.includes('/privacy') || path.includes('/terms') || path.includes('/policy')) {
         organized['Legal'].push(page)
       } else {
@@ -124,6 +167,9 @@ export default function SitemapPage() {
                       <span className="page-date">
                         {new Date(page.updated_at).toLocaleDateString()}
                       </span>
+                      {page.isDefault && (
+                        <span className="default-badge">Default</span>
+                      )}
                     </li>
                   ))}
                 </ul>
