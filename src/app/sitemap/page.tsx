@@ -64,7 +64,7 @@ export default function SitemapPage() {
 
   // Group pages by category for better organization
   const organizePages = (pages: SeoPage[]) => {
-    const organized: { [key: string]: any[] } = {
+    const organized: { [key: string]: (SeoPage | { id: string; page_path: string; title: string; updated_at: string; isDefault: boolean })[] } = {
       'Main Pages': [],
       'Services': [],
       'Company': [],
@@ -167,7 +167,7 @@ export default function SitemapPage() {
                       <span className="page-date">
                         {new Date(page.updated_at).toLocaleDateString()}
                       </span>
-                      {page.isDefault && (
+                      {'isDefault' in page && page.isDefault && (
                         <span className="default-badge">Default</span>
                       )}
                     </li>
